@@ -1,0 +1,72 @@
+site_name: Plantilla para MkDocs Tutorial
+site_url: https://jminsausti.github.io/Plantilla_mkdocs_es-eu
+site_description: Plantilla bilingüe para crear tutoriales
+site_author: Jose Insausti - CIFP Txurdinaga LHII
+theme:
+  name: material
+  language: es
+  logo: images/Icono_TX.png
+  favicon: http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png
+  custom_dir: overrides
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.expand
+  palette:
+    - scheme: default
+      primary: '#004c95'
+      accent: '#e95f15'
+      toggle:
+        icon: material/brightness-7
+        name: Aldatu modu ilunera
+    - scheme: slate
+      primary: '#004c95'
+      accent: '#e95f15'
+      toggle:
+        icon: material/brightness-4
+        name: Aldatu modu argira
+extra_css:
+- stylesheets/extra.css
+extra_javascript:
+- scripts/checkboxes.js
+- javascripts/sidebar.js
+plugins:
+- search
+- i18n:
+    docs_structure: folder
+    languages:
+      - locale: es
+        name: Español
+        default: true
+        nav: 
+          - Inicio: index.md
+          - '1. Tema 1':
+            - '1.1. Subtema 1': 1.introduccion/1.1.subtema_1.md
+            - '1.2. Subtema 2': 1.introduccion/1.2.subtema_2.md
+          
+          - 'Tareas':
+            - '1. Tarea 1': tareas/1.tarea_1.md
+            
+      - locale: eu
+        name: Euskara
+        nav:
+          - Hasiera: index.md
+          - '1. Gaia':
+            - '1.1. azpigaia_1': 1.sarrera/1.1.azpigaia_1-1.md
+            - '1.2. azpigaia_2': 1.sarrera/1.2.azpigaia_1-2.md
+          
+          - 'Atazak':
+            - '1. Ataza 1': atazak/1.ataza_1.md
+           
+markdown_extensions:
+- admonition
+- pymdownx.tasklist:
+    clickable_checkbox: true
+    custom_checkbox: true
+- toc:
+    permalink: true
+- footnotes
+- tables
+- attr_list
