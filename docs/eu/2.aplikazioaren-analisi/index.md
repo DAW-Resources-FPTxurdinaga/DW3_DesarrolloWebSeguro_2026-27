@@ -1,0 +1,1 @@
+# Aplikazioaren analisia

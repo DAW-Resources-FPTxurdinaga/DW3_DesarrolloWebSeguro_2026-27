@@ -1,0 +1,1 @@
+# Segurtasunez zabaltzea

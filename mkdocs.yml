@@ -1,7 +1,9 @@
-site_name: Plantilla para MkDocs Tutorial
+site_name: DAW Desarrollo Web Seguro
 site_url: https://jminsausti.github.io/Plantilla_mkdocs_es-eu
-site_description: Plantilla bilingüe para crear tutoriales
+site_description: Apuntes bilingues del modulo optativo Desarrollo Web Seguro
 site_author: Jose Insausti - CIFP Txurdinaga LHII
+docs_dir: docs
+use_directory_urls: true
 theme:
   name: material
   language: es
@@ -36,29 +38,44 @@ plugins:
 - search
 - i18n:
     docs_structure: folder
+    reconfigure_material: true
+    reconfigure_search: true
+    fallback_to_default: true
     languages:
       - locale: es
         name: Español
         default: true
-        nav: 
+        nav:
           - Inicio: index.md
-          - '1. Tema 1':
-            - '1.1. Subtema 1': 1.introduccion/1.1.subtema_1.md
-            - '1.2. Subtema 2': 1.introduccion/1.2.subtema_2.md
-          
-          - 'Tareas':
-            - '1. Tarea 1': tareas/1.tarea_1.md
+          - 0. Presentación: 0.presentacion/index.md
+          - 1. Fundamentos: 1.fundamentos/index.md
+          - 2. Análisis de la aplicación: 2.analisis-aplicacion/index.md
+          - 3. Entrada y salida de datos: 3.entrada-salida-datos/index.md
+          - 4. Formularios y CSRF: 4.formularios-csrf/index.md
+          - 5. Base de datos: 5.base-datos/index.md
+          - 6. Autenticación y autorización: 6.autenticacion-autorizacion/index.md
+          - 7. Despliegue seguro: 7.despliegue-seguro/index.md
+          - 8. Auditoría y verificación: 8.auditoria-verificacion/index.md
+          - 9. Laravel: 9.laravel/index.md
+          - 10. Recursos: 10.recursos/index.md
+          - 11. Anexos: 11.anexos/index.md
             
       - locale: eu
         name: Euskara
         nav:
           - Hasiera: index.md
-          - '1. Gaia':
-            - '1.1. azpigaia_1': 1.sarrera/1.1.azpigaia_1-1.md
-            - '1.2. azpigaia_2': 1.sarrera/1.2.azpigaia_1-2.md
-          
-          - 'Atazak':
-            - '1. Ataza 1': atazak/1.ataza_1.md
+          - 0. Sarrera: 0.sarrera/index.md
+          - 1. Oinarriak: 1.oinarriak/index.md
+          - 2. Aplikazioaren analisia: 2.aplikazioaren-analisi/index.md
+          - 3. Datuen sarrera eta irteera: 3.datuen-sarrera-irteera/index.md
+          - 4. Formularioak eta CSRF: 4.formularioak-csrf/index.md
+          - 5. Datu-basea: 5.datu-basea/index.md
+          - 6. Autentifikazioa eta baimena: 6.autentifikazioa-baimena/index.md
+          - 7. Segurtasunez zabaltzea: 7.despliegua-segurtasunez/index.md
+          - 8. Auditoretza eta egiaztapena: 8.auditoretza-eta-egiaztapena/index.md
+          - 9. Laravel: 9.laravel/index.md
+          - 10. Baliabideak: 10.baliabideak/index.md
+          - 11. Eranskinak: 11.eranskinak/index.md
            
 markdown_extensions:
 - admonition

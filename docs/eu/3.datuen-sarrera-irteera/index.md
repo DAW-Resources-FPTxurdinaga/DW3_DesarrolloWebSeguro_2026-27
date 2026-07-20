@@ -1,0 +1,1 @@
+# Datuen sarrera eta irteera
