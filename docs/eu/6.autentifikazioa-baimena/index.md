@@ -1,1 +1,0 @@
-# Autentifikazioa eta baimena

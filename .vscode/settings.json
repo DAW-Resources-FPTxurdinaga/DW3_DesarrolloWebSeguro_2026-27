@@ -1,0 +1,5 @@
+{
+  "terminal.integrated.env.linux": {
+    "NO_MKDOCS_2_WARNING": "true"
+  }
+}

@@ -1,0 +1,1060 @@
+
+<!doctype html>
+<html lang="eu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desarrollo Web Seguro - CFGS Desarrollo de Aplicaciones Web">
+      
+      
+        <meta name="author" content="Jose Insausti - CIFP Txurdinaga LHII">
+      
+      
+        <link rel="canonical" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/1.introduccion-desarrollo-web-seguro/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../2.arquitectura-aplicacion-web/">
+      
+      
+        
+          <link rel="alternate" href="../../../1.fundamentos/1.introduccion-desarrollo-web-seguro/" hreflang="es">
+        
+          <link rel="alternate" href="./" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Garapen web seguruaren sarrera - DAW Desarrollo Web Seguro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-garapen-seguruaren-sarrera" class="md-skip">
+          Joan zuzenean edukira
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Atalburua">
+    <a href="../../" title="DAW Desarrollo Web Seguro" class="md-header__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW Desarrollo Web Seguro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Garapen web seguruaren sarrera
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Hautatu hizkuntza">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../1.fundamentos/1.introduccion-desarrollo-web-seguro/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Bilatu" placeholder="Bilatu" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Bilatu">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Partekatu" aria-label="Partekatu" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Garbitu" aria-label="Garbitu" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Bilaketa hasieratzen
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Nabigazioa" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="DAW Desarrollo Web Seguro" class="md-nav__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    DAW Desarrollo Web Seguro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garapen web seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garapen web seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zer-esan-nahi-du-web-aplikazio-seguruak-garatzeak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer esan nahi du web aplikazio seguruak garatzeak?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zergatik-da-garrantzitsua-garatzaile-batentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zergatik da garrantzitsua garatzaile batentzat?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#garapen-segurua-eta-pentestinga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Garapen segurua eta pentestinga
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segurtasuna-softwarearen-bizi-zikloan-zehar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segurtasuna softwarearen bizi-zikloan zehar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulu-honek-daw-zikloaren-barruan-duen-rola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulu honek DAW zikloaren barruan duen rola
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nola-lan-egingo-dugu-ikasturtean-zehar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola lan egingo dugu ikasturtean zehar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulu-honetan-zer-ez-duzu-ikasiko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulu honetan zer ez duzu ikasiko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laburpena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laburpena
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funtsezko-ideiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funtsezko ideiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nabigazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nabigazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.arquitectura-aplicacion-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web aplikazio baten arkitektura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.protocolo-http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP protokoloa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.cookies-sesiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookieak, saioak eta egoeraren kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.https-certificados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS eta ziurtagiri digitalak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.herramientas-analisis-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web analisi tresnak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blokearen laburpena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zer-esan-nahi-du-web-aplikazio-seguruak-garatzeak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer esan nahi du web aplikazio seguruak garatzeak?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zergatik-da-garrantzitsua-garatzaile-batentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zergatik da garrantzitsua garatzaile batentzat?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#garapen-segurua-eta-pentestinga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Garapen segurua eta pentestinga
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segurtasuna-softwarearen-bizi-zikloan-zehar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segurtasuna softwarearen bizi-zikloan zehar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulu-honek-daw-zikloaren-barruan-duen-rola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulu honek DAW zikloaren barruan duen rola
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nola-lan-egingo-dugu-ikasturtean-zehar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola lan egingo dugu ikasturtean zehar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulu-honetan-zer-ez-duzu-ikasiko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulu honetan zer ez duzu ikasiko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laburpena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laburpena
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funtsezko-ideiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funtsezko ideiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nabigazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nabigazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="web-garapen-seguruaren-sarrera">Web garapen seguruaren sarrera<a class="headerlink" href="#web-garapen-seguruaren-sarrera" title="Permanent link">&para;</a></h1>
+<p>Egunero erabiltzen ditugu web aplikazioak banku-eragiketak egiteko, Internet bidez erosketak egiteko, historia klinikoak kudeatzeko, zerga-aitorpenak aurkezteko edo beste pertsona batzuekin komunikatzeko. Aplikazio horietan guztietan, segurtasuna softwarearen kalitatearen parte da. Akats batek informazioa arriskuan jar dezake, zerbitzu bat eten dezake edo baimenik gabeko ekintzak ahalbidetu ditzake.</p>
+<p>Web garapen modernoak segurtasuna proiektuaren lehen faseetatik txertatzen du, eta ez azken berrikuspen gisa. Aplikazio seguruak eraikitzea garapen-taldearen erantzukizuna da, eta funtsezko konpetentzia da edozein garatzaile profesionalentzat.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Orrialde honen helburuak</p>
+<p>Orrialde hau amaitzean gai izango zara:</p>
+<ul>
+<li>Web aplikazio seguruak garatzeak zer esan nahi duen ulertzeko.</li>
+<li>Garapen segurua eta pentestinga bereizteko.</li>
+<li>Segurtasuna softwarearen bizi-zikloaren parte zergatik den ulertzeko.</li>
+<li>Modulu honek DAW zikloaren barruan duen rola ulertzeko.</li>
+<li>Ikasturtean zehar nola lan egingo den ezagutzeko.</li>
+</ul>
+</div>
+<hr />
+<h2 id="zer-esan-nahi-du-web-aplikazio-seguruak-garatzeak">Zer esan nahi du web aplikazio seguruak garatzeak?<a class="headerlink" href="#zer-esan-nahi-du-web-aplikazio-seguruak-garatzeak" title="Permanent link">&para;</a></h2>
+<p>Web aplikazio seguruak garatzea ez da babes-geruza bat amaieran gehitzea, ezta arazoa dagoenean erreakzionatzea ere. Aplikazio baten analisian, diseinuan, inplementazioan, probetan, hedapenean eta mantentze-lanetan erabaki egokiak hartzea da, arriskuak murrizteko eta fidagarritasuna handitzeko.</p>
+<p>Garatzailearen ikuspegitik, segurtasunak esan nahi du aplikazioak aurreikusitako funtzioa betetzeko gai izatea, baita ustekabeko sarrerak jasotzen dituenean, beste sistema batzuekin elkarreraginean ari denean edo denborarekin eboluzionatzen duenean ere.</p>
+<p>Aplikazio bat ez da segurua erabaki zuzen bakar batengatik, baizik eta erabaki koherente askoren baturagatik. Informazioa behar bezala balioztatzea, baliabideetarako sarbidea kontrolatzea, erantzukizunak bereiztea edo osagaien arteko komunikazioa babestea helburu beraren parte dira: kalitatezko softwarea garatzea.</p>
+<p>Modulu honetan segurtasuna ez da garapenetik bereizitako diziplina gisa landuko, baizik eta hobeto garatzeko modu gisa.</p>
+<hr />
+<h2 id="zergatik-da-garrantzitsua-garatzaile-batentzat">Zergatik da garrantzitsua garatzaile batentzat?<a class="headerlink" href="#zergatik-da-garrantzitsua-garatzaile-batentzat" title="Permanent link">&para;</a></h2>
+<p>Garapenean hartzen den erabaki bakoitzak zuzenean eragiten dio softwarearen azken kalitateari. Segurtasuna produktuaren beste ezaugarri bat da, errendimendua, mantengarritasuna edo erabilgarritasuna bezala.</p>
+<p>Aplikazio bat segurtasun-irizpiderik gabe garatzen denean, arazoak berandu atzematen dira, eta horiek zuzentzea askoz ere garestiagoa izaten da. Segurtasuna hasieratik txertatzeak akatsak murrizten ditu, mantentzea errazten du eta azken produktuan konfiantza handitzen du.</p>
+<p>Garatzaile profesional batentzat, segurtasun-irizpideekin lan egiteak eraikitzen duen softwarearen gaineko erantzukizun osoagoa hartzea esan nahi du.</p>
+<div class="admonition note">
+<p class="admonition-title">Segurtasuna eta softwarearen kalitatea</p>
+<p>Modulu honetan segurtasuna softwarearen kalitatearen dimentsio gisa landuko da. Ez da zeregin independentea, ezta proiektuaren amaierarako gordetako jarduera ere.</p>
+</div>
+<hr />
+<h2 id="garapen-segurua-eta-pentestinga">Garapen segurua eta pentestinga<a class="headerlink" href="#garapen-segurua-eta-pentestinga" title="Permanent link">&para;</a></h2>
+<p>Bi kontzeptuak lotuta dauden arren, helburu desberdinak dituzte.</p>
+<p>Web garapen seguruaren helburua aplikazioa eraikitzen den bitartean arazoak prebenitzea da. Pentestingak, aldiz, dagoeneko garatutako aplikazio batean probak eginez ahuleziak aurkitzea du helburu.</p>
+<p>Modulu honetan helburua aplikazio sendoagoak eraikitzen ikastea izango da, ez eraso-teknika aurreratuak ikastea.</p>
+<table>
+<thead>
+<tr>
+<th>Web garapen segurua</th>
+<th>Pentestinga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Garapenean zehar arazoak prebenitzen ditu</td>
+<td>Arazoak proben bidez detektatzen ditu</td>
+</tr>
+<tr>
+<td>Proiektuaren fase guztietan txertatzen da</td>
+<td>Dagoeneko garatutako aplikazioetan egiten da</td>
+</tr>
+<tr>
+<td>Garatzailearen eguneroko lanaren parte da</td>
+<td>Ohikoena auditore edo espezialista batek egitea da</td>
+</tr>
+<tr>
+<td>Ahulezien probabilitatea murrizten du</td>
+<td>Ahuleziarik dagoen ebaluatzen du</td>
+</tr>
+</tbody>
+</table>
+<p>Desberdintasun horrek ikasturte osoaren ikuspegia markatuko du.</p>
+<hr />
+<h2 id="segurtasuna-softwarearen-bizi-zikloan-zehar">Segurtasuna softwarearen bizi-zikloan zehar<a class="headerlink" href="#segurtasuna-softwarearen-bizi-zikloan-zehar" title="Permanent link">&para;</a></h2>
+<p>Segurtasuna ez da garapenaren fase bakar batean agertzen. Aplikazioaren bizi-ziklo osoan egon behar du presente.</p>
+<p>Analisian, eskakizun osoagoak definitzen laguntzen du. Diseinuan, osagaien arteko erantzukizunak eta mugak ezartzen laguntzen du. Inplementazioan, programazio-erabaki zehatzak gidatzen ditu. Probek erabaki horiek behar bezala funtzionatzen dutela egiaztatzen dute. Hedapenak irizpide horiek produkzio-ingurunera eramaten ditu, eta mantentze-lanek aplikazioak eboluzionatu ahala seguru izaten jarraitzea bermatzen dute.</p>
+<pre class="mermaid"><code>flowchart LR
+
+A[Analisia] --&gt; B[Diseinua]
+B --&gt; C[Inplementazioa]
+C --&gt; D[Probak]
+D --&gt; E[Hedapena]
+E --&gt; F[Mantentzea]
+
+classDef secure fill:#E8F5E9,stroke:#2E7D32,stroke-width:2;
+
+class A,B,C,D,E,F secure;</code></pre>
+<p>Diagramak ideia nagusi bat islatzen du: segurtasunak etengabe laguntzen dio garapenari, eta aplikazioa aldatzen den bakoitzean berrikusi egin behar da.</p>
+<div class="admonition note">
+<p class="admonition-title">Funtsezko ideia</p>
+<p>Ahulezi gehienak ez dira agertzen programazio-lengoaia bat berez ez-segurua delako, baizik eta garapenean erabaki okerrak edo osatugabeak hartzen direlako.</p>
+</div>
+<hr />
+<h2 id="modulu-honek-daw-zikloaren-barruan-duen-rola">Modulu honek DAW zikloaren barruan duen rola<a class="headerlink" href="#modulu-honek-daw-zikloaren-barruan-duen-rola" title="Permanent link">&para;</a></h2>
+<p>Modulu hau zeharkako konpetentzia gisa kokatzen da Web Aplikazioen Garapeneko goi-mailako zikloko bigarren mailan.</p>
+<p>Ez du programazio, datu-base, hedapen edo interfaze-diseinuko moduluak ordezkatu nahi. Helburua da horietan guztietan egiten den lanean segurtasun-irizpideak txertatzea.</p>
+<p>Ikasturtean zehar, garapenean ohikoak diren erabakiak aztertuko dira, eta haietako bakoitzari lotutako arriskuak nola murriztu aztertuko da. Horrela, segurtasuna ez da ezagutza isolatu gisa ikusiko, garapen-prozesuaren parte natural gisa baizik.</p>
+<hr />
+<h2 id="nola-lan-egingo-dugu-ikasturtean-zehar">Nola lan egingo dugu ikasturtean zehar<a class="headerlink" href="#nola-lan-egingo-dugu-ikasturtean-zehar" title="Permanent link">&para;</a></h2>
+<p>Modulua <strong>ETHAZI</strong> metodologiari jarraituz garatuko da, erronketan oinarritutako ikaskuntzarekin.</p>
+<p>Kontzeptu nagusiak bloke bakoitzaren hasieran aurkeztuko dira, eta ondoren, ikasturtean garatutako proiektuetan zuzenean aplikatuko dira.</p>
+<p>Ikaskuntzaren zati handiena ikasleek bigarren mailako bi erronkak garatzen dituzten bitartean egingo da. Dokumentazioa erreferentzia tekniko gisa erabiliko da kontzeptuak ulertzeko, erabakiak justifikatzeko eta aplikazioen garapenean jardunbide egokiak aplikatzeko.</p>
+<p>Helburua ez da ahuleziak memorizatzea, baizik eta garapen-erabaki hobeak hartzen ikastea.</p>
+<hr />
+<h2 id="modulu-honetan-zer-ez-duzu-ikasiko">Modulu honetan zer ez duzu ikasiko<a class="headerlink" href="#modulu-honetan-zer-ez-duzu-ikasiko" title="Permanent link">&para;</a></h2>
+<p>Modulu honek ez du pentestingean edo hacking ofentsiboan espezialistak prestatzea helburu.</p>
+<p>Era berean, ez du dauden ahulezi guztiak edo eskuragarri dauden auditoretza-tresna guztiak modu zorrotzean aztertzea helburu.</p>
+<p>Bere xedea da web aplikazio seguruagoak, sendoagoak eta mantengarriagoak garatzeko aukera emango duten irizpide teknikoak ematea.</p>
+<hr />
+<h2 id="laburpena">Laburpena<a class="headerlink" href="#laburpena" title="Permanent link">&para;</a></h2>
+<p>Web garapen segurua da segurtasuna garapen-prozesuaren parte natural gisa txertatzea. Ez da proiektuaren amaieran babes-mekanismoak gehitzea, baizik eta aplikazioaren analisitik mantentze-lanetaraino erabaki egokiak hartzea.</p>
+<p>Modulu honek filosofia hori hartzen du, eta DAW zikloko erronketan txertatzen du, segurtasuna garatzailearen eguneroko lanaren parte izan dadin.</p>
+<p>Hurrengo orrian web aplikazio baten egitura eta osagai desberdinen arteko elkarreragina aztertuko ditugu. Arkitektura hori ulertzea izango da segurtasun-arriskuak non ager daitezkeen identifikatzeko eta horiek prebenitzeko lehen urratsa.</p>
+<hr />
+<h2 id="funtsezko-ideiak">Funtsezko ideiak<a class="headerlink" href="#funtsezko-ideiak" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Segurtasuna softwarearen kalitate-ezaugarri bat da.</li>
+<li>Modu seguruan garatzeak bizi-ziklo osoan erabaki egokiak hartzea eskatzen du.</li>
+<li>Garapen segurua eta pentestinga diziplina osagarriak dira, baina helburu desberdinekin.</li>
+<li>Segurtasunak aplikazio baten garapeneko fase guztiak laguntzen ditu.</li>
+<li>Modulu honek segurtasuna garatzailearen ohiko lanaren eta ETHAZI erronken barruan txertatzen du.</li>
+</ul>
+<hr />
+<h2 id="nabigazioa">Nabigazioa<a class="headerlink" href="#nabigazioa" title="Permanent link">&para;</a></h2>
+<p><strong>← Aurrekoa:</strong> <a href="../">Web garapen seguruaren oinarriak</a></p>
+<p><strong>Hurrengoa →:</strong> <a href="../2.arquitectura-aplicacion-web/">Web aplikazio baten arkitektura</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Igo goraino
+</button>
+        
+      </main>
+      
+        <style>
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  .footer-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-logo img {
+    height: 50px;
+    width: auto;
+  }
+</style>
+
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../../../images/logo.png" alt="Logo CIFP Txurdinaga">
+        </div>
+        <div class="footer-text">
+          Jose Insausti - CIFP Txurdinaga LHII
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Arbelean kopiatuta", "clipboard.copy": "Kopiatu arbelean", "search.result.more.one": "Bat gehiago orri honetan", "search.result.more.other": "# gehiago orri honetan", "search.result.none": "Bat datorren dokumenturik ez", "search.result.one": "Bat datorren dokumentu bat", "search.result.other": "Bat datozen # dokumentu", "search.result.placeholder": "Idatzi bilatzen hasteko", "search.result.term.missing": "Falta da", "select.version": "Hautatu bertsioa"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid.js"></script>
+      
+        <script src="../../../scripts/checkboxes.js"></script>
+      
+        <script src="../../../javascripts/sidebar.js"></script>
+      
+    
+  </body>
+</html>

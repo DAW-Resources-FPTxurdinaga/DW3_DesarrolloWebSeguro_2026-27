@@ -1,1 +1,0 @@
-# Auditoretza eta egiaztapena

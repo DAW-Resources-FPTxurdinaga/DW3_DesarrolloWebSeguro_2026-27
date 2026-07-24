@@ -1,0 +1,2142 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desarrollo Web Seguro - CFGS Desarrollo de Aplicaciones Web">
+      
+      
+        <meta name="author" content="Jose Insausti - CIFP Txurdinaga LHII">
+      
+      
+        <link rel="canonical" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/3.protocolo-http/">
+      
+      
+        <link rel="prev" href="../2.arquitectura-aplicacion-web/">
+      
+      
+        <link rel="next" href="../4.cookies-sesiones/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../eu/1.fundamentos/3.protocolo-http/" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Protocolo HTTP - DAW Desarrollo Web Seguro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#protocolo-http" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAW Desarrollo Web Seguro" class="md-header__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW Desarrollo Web Seguro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Protocolo HTTP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../eu/1.fundamentos/3.protocolo-http/" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAW Desarrollo Web Seguro" class="md-nav__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    DAW Desarrollo Web Seguro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 1. Fundamentos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloque 1. Fundamentos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.introduccion-desarrollo-web-seguro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al desarrollo web seguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.arquitectura-aplicacion-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura de una aplicación web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo HTTP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-existe-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué existe HTTP?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-desarrolla-una-comunicacion-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se desarrolla una comunicación HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo se desarrolla una comunicación HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-ejemplo-sencillo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un ejemplo sencillo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-de-una-peticion-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomía de una petición HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomía de una petición HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-linea-de-peticion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La línea de petición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-cabeceras-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las cabeceras HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-cuerpo-de-la-peticion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El cuerpo de la petición
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-de-una-respuesta-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomía de una respuesta HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomía de una respuesta HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-linea-de-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La línea de estado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-cabeceras-http_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las cabeceras HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-cuerpo-de-la-respuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El cuerpo de la respuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-http-mas-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos HTTP más habituales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos HTTP más habituales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-http-y-aplicaciones-modernas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos HTTP y aplicaciones modernas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigos-de-estado-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos de estado HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Códigos de estado HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-satisfactorias-2xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Respuestas satisfactorias (2xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirecciones-3xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redirecciones (3xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-del-cliente-4xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores del cliente (4xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-del-servidor-5xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores del servidor (5xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-de-http-y-origen-de-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones de HTTP y origen de las sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitaciones de HTTP y origen de las sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-significa-que-http-sea-un-protocolo-sin-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué significa que HTTP sea un protocolo sin estado?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-problema-para-las-aplicaciones-modernas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un problema para las aplicaciones modernas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-resuelve-este-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo se resuelve este problema?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-implicaciones-tiene-http-para-la-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué implicaciones tiene HTTP para la seguridad?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué implicaciones tiene HTTP para la seguridad?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-no-distingue-entre-usuarios-legitimos-y-atacantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP no distingue entre usuarios legítimos y atacantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprender-http-facilita-el-analisis-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprender HTTP facilita el análisis de problemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para recordar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.cookies-sesiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookies, sesiones y gestión del estado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.https-certificados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS y certificados digitales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.herramientas-analisis-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas de análisis web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen del bloque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#por-que-existe-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué existe HTTP?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-desarrolla-una-comunicacion-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se desarrolla una comunicación HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cómo se desarrolla una comunicación HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-ejemplo-sencillo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un ejemplo sencillo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-de-una-peticion-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomía de una petición HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomía de una petición HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-linea-de-peticion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La línea de petición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-cabeceras-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las cabeceras HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-cuerpo-de-la-peticion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El cuerpo de la petición
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomia-de-una-respuesta-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomía de una respuesta HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomía de una respuesta HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-linea-de-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La línea de estado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#las-cabeceras-http_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Las cabeceras HTTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-cuerpo-de-la-respuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El cuerpo de la respuesta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodos-http-mas-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos HTTP más habituales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Métodos HTTP más habituales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-http-y-aplicaciones-modernas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métodos HTTP y aplicaciones modernas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigos-de-estado-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Códigos de estado HTTP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Códigos de estado HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuestas-satisfactorias-2xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Respuestas satisfactorias (2xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redirecciones-3xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redirecciones (3xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-del-cliente-4xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores del cliente (4xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-del-servidor-5xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores del servidor (5xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-de-http-y-origen-de-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitaciones de HTTP y origen de las sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitaciones de HTTP y origen de las sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-significa-que-http-sea-un-protocolo-sin-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué significa que HTTP sea un protocolo sin estado?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-problema-para-las-aplicaciones-modernas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Un problema para las aplicaciones modernas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-se-resuelve-este-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo se resuelve este problema?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-implicaciones-tiene-http-para-la-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué implicaciones tiene HTTP para la seguridad?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué implicaciones tiene HTTP para la seguridad?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-no-distingue-entre-usuarios-legitimos-y-atacantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP no distingue entre usuarios legítimos y atacantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprender-http-facilita-el-analisis-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprender HTTP facilita el análisis de problemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para recordar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navegación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="protocolo-http">Protocolo HTTP<a class="headerlink" href="#protocolo-http" title="Permanent link">&para;</a></h1>
+<p>La arquitectura de una aplicación web explica cómo se organizan sus componentes y cuál es la función de cada uno de ellos. Sin embargo, todavía queda una pregunta por responder: ¿cómo se comunican esos componentes?</p>
+<p>Cuando un usuario pulsa un botón, envía un formulario o accede a una página web, el navegador necesita intercambiar información con un servidor. Esa comunicación debe seguir unas reglas comunes para que ambos puedan entenderse correctamente. El protocolo HTTP define precisamente esas reglas.</p>
+<p>Comprender el funcionamiento de HTTP es fundamental para cualquier desarrollador web. Gran parte de las decisiones relacionadas con la autenticación, las sesiones, las APIs, la gestión de errores o la seguridad dependen directamente de cómo funciona este protocolo.</p>
+<p>En este capítulo se estudiará cómo se desarrolla una comunicación HTTP, qué información intercambian cliente y servidor y qué implicaciones tiene este protocolo desde la perspectiva del desarrollo seguro.</p>
+<hr />
+<h2 id="por-que-existe-http">¿Por qué existe HTTP?<a class="headerlink" href="#por-que-existe-http" title="Permanent link">&para;</a></h2>
+<p>Cuando un usuario escribe la dirección de una página web en el navegador o hace clic sobre un enlace, espera obtener una respuesta casi inmediata. Sin embargo, el navegador y el servidor son programas diferentes que se ejecutan en equipos distintos y, en muchas ocasiones, separados por miles de kilómetros. Para poder intercambiar información necesitan hablar un lenguaje común.</p>
+<p>Ese lenguaje es el <strong>HyperText Transfer Protocol (HTTP)</strong>.</p>
+<p>HTTP es un protocolo de comunicación que establece las reglas que deben seguir el cliente y el servidor para intercambiar peticiones y respuestas. Gracias a esas reglas, cualquier navegador moderno puede comunicarse con cualquier servidor web independientemente del sistema operativo, del lenguaje de programación utilizado o de la tecnología con la que se haya desarrollado la aplicación.</p>
+<p>En una comunicación HTTP siempre participan, al menos, dos elementos:</p>
+<ul>
+<li><strong>Un cliente</strong>, normalmente un navegador web, que solicita un recurso.</li>
+<li><strong>Un servidor</strong>, que recibe la petición, la procesa y devuelve una respuesta.</li>
+</ul>
+<p>El recurso solicitado puede ser una página HTML, una imagen, un documento PDF, un archivo JSON, un vídeo o cualquier otro contenido que el servidor sea capaz de proporcionar.</p>
+<p>El protocolo HTTP no define cómo debe implementarse una aplicación ni qué lenguaje debe utilizar el servidor. Un mismo navegador puede acceder sin diferencias aparentes a aplicaciones desarrolladas con PHP, Laravel, Java, .NET, Node.js o Python, porque todas ellas utilizan el mismo protocolo de comunicación.</p>
+<p>Esta independencia tecnológica ha sido uno de los factores que han permitido el enorme crecimiento de la Web. Los desarrolladores pueden elegir las herramientas que consideren más adecuadas para cada proyecto, mientras que el navegador continúa comunicándose siempre mediante HTTP.</p>
+<div class="admonition note">
+<p class="admonition-title">HTTP es un estándar</p>
+<p>HTTP es un estándar abierto definido por el <strong>IETF (Internet Engineering Task Force)</strong>. Gracias a ello, cualquier fabricante de navegadores o servidores puede implementar el protocolo siguiendo las mismas especificaciones, garantizando la interoperabilidad entre sistemas.</p>
+</div>
+<p>Desde la perspectiva del desarrollo seguro, comprender HTTP es mucho más que conocer un protocolo de comunicación. Significa entender cómo viajan los datos entre cliente y servidor, qué información se transmite en cada petición y en qué puntos pueden aparecer riesgos de seguridad. Todo el resto del módulo se apoyará sobre esta base.</p>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Cada vez que un usuario pulsa un botón, inicia sesión, envía un formulario o consulta información, el navegador genera una o varias peticiones HTTP.</p>
+<p>Comprender qué contienen esas peticiones y cómo responde el servidor permitirá interpretar posteriormente el funcionamiento de herramientas como las DevTools del navegador, Burp Suite o OWASP ZAP, además de entender por qué determinadas medidas de seguridad deben implementarse en el servidor y no únicamente en el cliente.</p>
+<hr />
+</div>
+<h2 id="como-se-desarrolla-una-comunicacion-http">Cómo se desarrolla una comunicación HTTP<a class="headerlink" href="#como-se-desarrolla-una-comunicacion-http" title="Permanent link">&para;</a></h2>
+<p>Toda comunicación HTTP sigue un patrón muy sencillo: un cliente realiza una petición y un servidor devuelve una respuesta.</p>
+<p>El cliente suele ser un navegador web, aunque también puede ser una aplicación móvil, un programa de escritorio o incluso otra aplicación que consume una API. El servidor recibe la petición, la procesa y genera una respuesta adecuada.</p>
+<p>Esta comunicación recibe el nombre de <strong>modelo petición-respuesta (request-response)</strong> y constituye el funcionamiento básico de prácticamente todas las aplicaciones web.</p>
+<p>El siguiente diagrama resume este proceso.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant U as Usuario
+    participant B as Navegador
+    participant S as Servidor Web
+
+    U-&gt;&gt;B: Solicita un recurso
+    B-&gt;&gt;S: HTTP Request
+    S-&gt;&gt;S: Procesa la petición
+    S--&gt;&gt;B: HTTP Response
+    B--&gt;&gt;U: Muestra el resultado</code></pre>
+<p>Aunque el diagrama parece muy simple, en una aplicación real pueden producirse decenas o incluso cientos de peticiones HTTP para construir una única página. El navegador solicita el documento HTML principal, pero también descarga hojas de estilo, archivos JavaScript, imágenes, tipografías y otros recursos necesarios para representar correctamente la interfaz.</p>
+<p>Por este motivo, al abrir las herramientas de desarrollo del navegador o Burp Suite es habitual observar numerosas peticiones asociadas a una sola acción del usuario.</p>
+<h3 id="un-ejemplo-sencillo">Un ejemplo sencillo<a class="headerlink" href="#un-ejemplo-sencillo" title="Permanent link">&para;</a></h3>
+<p>Supongamos que un usuario escribe la siguiente dirección en el navegador:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://www.ejemplo.com/productos
+</span></code></pre></div>
+<p>A partir de ese momento se produce una secuencia de acciones similar a la siguiente:</p>
+<ol>
+<li>El navegador prepara una petición HTTP para solicitar el recurso <code>/productos</code>.</li>
+<li>La petición se envía al servidor.</li>
+<li>El servidor interpreta la solicitud y ejecuta la lógica correspondiente.</li>
+<li>Si es necesario, consulta la base de datos.</li>
+<li>Genera una respuesta HTTP.</li>
+<li>El navegador recibe la respuesta.</li>
+<li>Finalmente, representa el contenido al usuario.</li>
+</ol>
+<p>Todo este proceso suele completarse en unas pocas décimas de segundo.</p>
+<div class="admonition note">
+<p class="admonition-title">Una conversación breve</p>
+<p>HTTP no mantiene una conversación permanente entre cliente y servidor. Cada petición es independiente de las anteriores y termina cuando el servidor devuelve la respuesta.</p>
+</div>
+<p>Esta característica tendrá una consecuencia muy importante que estudiaremos más adelante: <strong>HTTP es un protocolo sin estado (stateless)</strong>. Precisamente por ello será necesario utilizar mecanismos como las cookies y las sesiones para recordar la información entre distintas peticiones.</p>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Cuando una aplicación "parece" realizar una única operación, normalmente está intercambiando múltiples peticiones HTTP.
+Aprender a observar esas peticiones permitirá comprender cómo funcionan las aplicaciones modernas, localizar errores y analizar problemas de seguridad durante el desarrollo.</p>
+<hr />
+</div>
+<h2 id="anatomia-de-una-peticion-http">Anatomía de una petición HTTP<a class="headerlink" href="#anatomia-de-una-peticion-http" title="Permanent link">&para;</a></h2>
+<p>Cada vez que un cliente solicita un recurso a un servidor, envía una <strong>petición HTTP</strong> (<em>HTTP Request</em>). Esta petición es un mensaje estructurado que contiene toda la información necesaria para que el servidor pueda interpretar qué recurso se solicita y cómo debe procesar la solicitud.</p>
+<p>Aunque la mayoría de los usuarios nunca llegan a verla, todas las aplicaciones web intercambian miles de peticiones HTTP cada día.</p>
+<p>La siguiente petición corresponde a una solicitud sencilla para acceder a una lista de productos.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">GET</span> <span class="nn">/productos</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">www.ejemplo.com</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">User-Agent</span><span class="o">:</span> <span class="l">Mozilla/5.0</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">Accept</span><span class="o">:</span> <span class="l">text/html</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="na">Accept-Language</span><span class="o">:</span> <span class="l">es-ES</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="na">Connection</span><span class="o">:</span> <span class="l">keep-alive</span>
+</span></code></pre></div>
+<p>A primera vista puede parecer un conjunto de líneas sin relación, pero cada una tiene un significado concreto.</p>
+<h3 id="la-linea-de-peticion">La línea de petición<a class="headerlink" href="#la-linea-de-peticion" title="Permanent link">&para;</a></h3>
+<p>La primera línea indica tres datos fundamentales:</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">GET</span> <span class="nn">/productos</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<ul>
+<li><strong>GET</strong> → método HTTP utilizado.</li>
+<li><strong>/productos</strong> → recurso solicitado.</li>
+<li><strong>HTTP/1.1</strong> → versión del protocolo utilizada.</li>
+</ul>
+<p>Esta información permite al servidor identificar qué operación desea realizar el cliente.</p>
+<h3 id="las-cabeceras-http">Las cabeceras HTTP<a class="headerlink" href="#las-cabeceras-http" title="Permanent link">&para;</a></h3>
+<p>Después de la línea de petición aparecen una serie de <strong>cabeceras</strong> (<em>HTTP Headers</em>).</p>
+<p>Las cabeceras aportan información adicional sobre la petición. Algunas identifican el servidor al que se dirige la solicitud, otras describen el navegador utilizado o indican qué tipo de respuesta espera recibir el cliente.</p>
+<p>En el ejemplo anterior aparecen algunas de las más habituales.</p>
+<table>
+<thead>
+<tr>
+<th>Cabecera</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td>Indica el servidor de destino.</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>Identifica el navegador o aplicación cliente.</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>Especifica el tipo de contenido que el cliente puede recibir.</td>
+</tr>
+<tr>
+<td>Accept-Language</td>
+<td>Indica el idioma preferido.</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>Define cómo gestionar la conexión con el servidor.</td>
+</tr>
+</tbody>
+</table>
+<p>A lo largo del módulo aparecerán otras cabeceras relacionadas con autenticación, cookies, caché o seguridad.</p>
+<div class="admonition note">
+<p class="admonition-title">Las cabeceras son metadatos</p>
+<p>Las cabeceras no forman parte del contenido de la petición. Proporcionan información adicional que ayuda al servidor a interpretar correctamente la solicitud.</p>
+</div>
+<h3 id="el-cuerpo-de-la-peticion">El cuerpo de la petición<a class="headerlink" href="#el-cuerpo-de-la-peticion" title="Permanent link">&para;</a></h3>
+<p>No todas las peticiones incluyen un cuerpo (<em>Body</em>).</p>
+<p>Los métodos como <strong>GET</strong> suelen enviar toda la información en la propia URL, por lo que normalmente no incorporan datos adicionales.</p>
+<p>Sin embargo, otros métodos, como <strong>POST</strong>, <strong>PUT</strong> o <strong>PATCH</strong>, utilizan el cuerpo de la petición para enviar información al servidor.</p>
+<p>Por ejemplo, cuando un usuario completa un formulario de inicio de sesión, los datos enviados viajan habitualmente en el cuerpo de la petición.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">POST</span> <span class="nn">/login</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">www.ejemplo.com</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/x-www-form-urlencoded</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">usuario</span><span class="o">=</span><span class="s">juan</span><span class="p">&amp;</span><span class="nt">password</span><span class="o">=</span><span class="s">123456</span>
+</span></code></pre></div>
+<p>En este ejemplo, las dos primeras líneas corresponden a la petición HTTP, mientras que los datos del formulario aparecen en el cuerpo del mensaje.</p>
+<p>Durante el resto del curso analizaremos numerosas peticiones reales utilizando las herramientas de desarrollo del navegador y Burp Suite para comprender cómo viaja esta información entre cliente y servidor.</p>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Una petición HTTP contiene mucha más información que la URL visible en el navegador.
+Aprender a interpretar sus cabeceras y su cuerpo permitirá comprender cómo funcionan los formularios, las APIs, la autenticación, las cookies y muchas de las vulnerabilidades que se estudiarán más adelante.</p>
+<hr />
+</div>
+<h2 id="anatomia-de-una-respuesta-http">Anatomía de una respuesta HTTP<a class="headerlink" href="#anatomia-de-una-respuesta-http" title="Permanent link">&para;</a></h2>
+<p>Una vez que el servidor ha recibido y procesado la petición, genera una <strong>respuesta HTTP</strong> (<em>HTTP Response</em>). Este mensaje contiene el resultado de la solicitud y toda la información necesaria para que el cliente sepa cómo debe interpretarlo.</p>
+<p>La estructura de una respuesta HTTP es muy similar a la de una petición. También está formada por una línea inicial, un conjunto de cabeceras y, normalmente, un cuerpo con el contenido solicitado.</p>
+<p>El siguiente ejemplo muestra una respuesta sencilla.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html; charset=UTF-8</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">1256</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="na">Date</span><span class="o">:</span> <span class="l">Tue, 29 Jul 2025 10:15:00 GMT</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>...
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>Cada una de estas partes cumple una función específica.</p>
+<h3 id="la-linea-de-estado">La línea de estado<a class="headerlink" href="#la-linea-de-estado" title="Permanent link">&para;</a></h3>
+<p>La primera línea informa del resultado de la petición.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></code></pre></div>
+<p>Está formada por tres elementos:</p>
+<ul>
+<li><strong>HTTP/1.1</strong> → versión del protocolo utilizada.</li>
+<li><strong>200</strong> → código de estado.</li>
+<li><strong>OK</strong> → descripción textual del resultado.</li>
+</ul>
+<p>El código de estado es uno de los elementos más importantes de la respuesta, ya que permite al cliente conocer si la operación se ha realizado correctamente o si se ha producido algún problema.</p>
+<p>En la siguiente sección estudiaremos con detalle los códigos de estado más habituales.</p>
+<h3 id="las-cabeceras-http_1">Las cabeceras HTTP<a class="headerlink" href="#las-cabeceras-http_1" title="Permanent link">&para;</a></h3>
+<p>Después de la línea de estado aparecen las cabeceras de la respuesta.</p>
+<p>Estas cabeceras proporcionan información adicional sobre el contenido devuelto por el servidor y sobre la forma en que el navegador debe tratarlo.</p>
+<p>Algunas de las más habituales son:</p>
+<table>
+<thead>
+<tr>
+<th>Cabecera</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>Indica el tipo de contenido devuelto.</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>Especifica el tamaño del contenido.</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Fecha y hora de generación de la respuesta.</td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>Define cómo puede almacenarse la respuesta en caché.</td>
+</tr>
+<tr>
+<td>Set-Cookie</td>
+<td>Envía cookies al navegador.</td>
+</tr>
+</tbody>
+</table>
+<p>A lo largo del módulo aparecerán otras cabeceras especialmente relacionadas con la seguridad, como <strong>Content-Security-Policy</strong>, <strong>Strict-Transport-Security</strong> o <strong>X-Frame-Options</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Las cabeceras también protegen</p>
+<p>Muchas medidas de seguridad modernas no requieren modificar el código de la aplicación, sino configurar correctamente determinadas cabeceras HTTP enviadas por el servidor.</p>
+</div>
+<h3 id="el-cuerpo-de-la-respuesta">El cuerpo de la respuesta<a class="headerlink" href="#el-cuerpo-de-la-respuesta" title="Permanent link">&para;</a></h3>
+<p>El cuerpo (<em>Body</em>) contiene el recurso solicitado por el cliente.</p>
+<p>Dependiendo de la aplicación, el contenido puede ser muy diferente.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Una página HTML.</li>
+<li>Una imagen.</li>
+<li>Un documento PDF.</li>
+<li>Un archivo CSS.</li>
+<li>Un archivo JavaScript.</li>
+<li>Un objeto JSON devuelto por una API.</li>
+<li>Un vídeo o cualquier otro recurso.</li>
+</ul>
+<p>En una aplicación web moderna es muy habitual que el servidor responda con datos en formato <strong>JSON</strong>, especialmente cuando el frontend y el backend están separados.</p>
+<p>Más adelante, cuando trabajemos con JavaScript, Vue y Laravel, veremos que muchas de las respuestas intercambiadas entre cliente y servidor ya no contienen páginas HTML completas, sino únicamente datos que el navegador utiliza para actualizar la interfaz.</p>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Comprender una respuesta HTTP permite interpretar mucho más que el contenido visible en el navegador.
+Los códigos de estado, las cabeceras y el tipo de contenido ofrecen información muy valiosa para depurar errores, optimizar aplicaciones y detectar problemas de seguridad.</p>
+<hr />
+</div>
+<h2 id="metodos-http-mas-habituales">Métodos HTTP más habituales<a class="headerlink" href="#metodos-http-mas-habituales" title="Permanent link">&para;</a></h2>
+<p>Cada petición HTTP indica al servidor qué operación desea realizar sobre un recurso. Para ello utiliza un <strong>método HTTP</strong>, también denominado <strong>HTTP Method</strong> o <strong>HTTP Verb</strong>.</p>
+<p>El método forma parte de la primera línea de la petición y expresa la intención del cliente. No es lo mismo solicitar información que crear un nuevo recurso, modificarlo o eliminarlo.</p>
+<p>Los métodos más utilizados en el desarrollo de aplicaciones web son los siguientes.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Finalidad</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Obtener información</td>
+<td>Consultar un producto</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Crear un nuevo recurso</td>
+<td>Registrar un usuario</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>Sustituir completamente un recurso</td>
+<td>Actualizar un perfil</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Modificar parcialmente un recurso</td>
+<td>Cambiar una contraseña</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Eliminar un recurso</td>
+<td>Borrar un comentario</td>
+</tr>
+</tbody>
+</table>
+<p>Aunque el protocolo HTTP define otros métodos, estos cinco cubren la mayoría de las necesidades de una aplicación web moderna.</p>
+<h3 id="get">GET<a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
+<p>El método <strong>GET</strong> solicita información al servidor sin modificar el estado de la aplicación.</p>
+<p>Por ejemplo, cuando un usuario visita la página de un producto, consulta una noticia o accede a su perfil, el navegador suele enviar una petición GET.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">GET</span> <span class="nn">/productos/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>Las peticiones GET deben utilizarse únicamente para consultar información y no para realizar operaciones que modifiquen datos.</p>
+<h3 id="post">POST<a class="headerlink" href="#post" title="Permanent link">&para;</a></h3>
+<p>El método <strong>POST</strong> envía información al servidor para crear un nuevo recurso o ejecutar una acción.</p>
+<p>Es habitual utilizarlo en formularios de registro, inicio de sesión, envío de comentarios o creación de pedidos.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">POST</span> <span class="nn">/usuarios</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>Normalmente, los datos enviados viajan en el cuerpo de la petición.</p>
+<h3 id="put">PUT<a class="headerlink" href="#put" title="Permanent link">&para;</a></h3>
+<p>El método <strong>PUT</strong> sustituye completamente un recurso existente.</p>
+<p>Si el recurso ya existe, su contenido se reemplaza por la nueva información enviada por el cliente.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">PUT</span> <span class="nn">/usuarios/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>En aplicaciones REST suele emplearse para actualizaciones completas.</p>
+<h3 id="patch">PATCH<a class="headerlink" href="#patch" title="Permanent link">&para;</a></h3>
+<p>El método <strong>PATCH</strong> modifica únicamente una parte del recurso.</p>
+<p>Por ejemplo, cambiar únicamente la dirección de correo electrónico de un usuario o actualizar su fotografía de perfil.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">PATCH</span> <span class="nn">/usuarios/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>Actualmente es uno de los métodos más utilizados en aplicaciones web modernas.</p>
+<h3 id="delete">DELETE<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
+<p>El método <strong>DELETE</strong> solicita la eliminación de un recurso.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">DELETE</span> <span class="nn">/usuarios/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>El servidor decidirá finalmente si esa operación está permitida en función de los permisos del usuario y de las reglas de negocio de la aplicación.</p>
+<div class="admonition warning">
+<p class="admonition-title">El método no garantiza la seguridad</p>
+<p>Utilizar correctamente los métodos HTTP mejora la organización de una aplicación, pero no impide que un usuario intente realizar operaciones no autorizadas. Todas las comprobaciones de seguridad deben realizarse siempre en el servidor.</p>
+</div>
+<h3 id="metodos-http-y-aplicaciones-modernas">Métodos HTTP y aplicaciones modernas<a class="headerlink" href="#metodos-http-y-aplicaciones-modernas" title="Permanent link">&para;</a></h3>
+<p>En aplicaciones desarrolladas con frameworks como Laravel, Spring Boot o ASP.NET, los métodos HTTP forman parte del propio diseño de la aplicación.</p>
+<p>De la misma forma, bibliotecas y frameworks de frontend como Vue, React o Angular utilizan estos métodos para comunicarse con APIs REST mediante peticiones asíncronas.</p>
+<p>Comprender cuándo utilizar cada método facilita el desarrollo de aplicaciones más coherentes, mantenibles y alineadas con los estándares actuales.</p>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Elegir correctamente el método HTTP no es solo una cuestión de estilo. Permite que otros desarrolladores comprendan mejor la intención de la aplicación y facilita la integración con APIs, herramientas de prueba y frameworks modernos.</p>
+<hr />
+</div>
+<h2 id="codigos-de-estado-http">Códigos de estado HTTP<a class="headerlink" href="#codigos-de-estado-http" title="Permanent link">&para;</a></h2>
+<p>Cada respuesta HTTP incluye un <strong>código de estado</strong> (<em>HTTP Status Code</em>) que informa al cliente del resultado de la petición realizada.</p>
+<p>Gracias a este código, el navegador, una aplicación móvil o cualquier otro cliente puede saber si la operación se ha realizado correctamente o si se ha producido algún problema.</p>
+<p>Los códigos de estado están formados por tres cifras y se agrupan en cinco grandes categorías.</p>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1xx</td>
+<td>Información</td>
+</tr>
+<tr>
+<td>2xx</td>
+<td>La petición se ha procesado correctamente</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>Redirección</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>Error provocado por el cliente</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>Error producido en el servidor</td>
+</tr>
+</tbody>
+</table>
+<p>En el desarrollo diario no es necesario memorizar todos los códigos definidos por el protocolo. Sin embargo, sí conviene conocer los más habituales.</p>
+<h3 id="respuestas-satisfactorias-2xx">Respuestas satisfactorias (2xx)<a class="headerlink" href="#respuestas-satisfactorias-2xx" title="Permanent link">&para;</a></h3>
+<p>Indican que el servidor ha procesado correctamente la petición.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Significado</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 OK</td>
+<td>Operación realizada correctamente</td>
+<td>Consulta de información</td>
+</tr>
+<tr>
+<td>201 Created</td>
+<td>Recurso creado correctamente</td>
+<td>Alta de usuarios, pedidos o productos</td>
+</tr>
+<tr>
+<td>204 No Content</td>
+<td>Operación correcta sin contenido de respuesta</td>
+<td>Eliminaciones o actualizaciones</td>
+</tr>
+</tbody>
+</table>
+<h3 id="redirecciones-3xx">Redirecciones (3xx)<a class="headerlink" href="#redirecciones-3xx" title="Permanent link">&para;</a></h3>
+<p>Indican que el cliente debe realizar una nueva petición a otra dirección.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>301 Moved Permanently</td>
+<td>Redirección permanente</td>
+</tr>
+<tr>
+<td>302 Found</td>
+<td>Redirección temporal</td>
+</tr>
+<tr>
+<td>304 Not Modified</td>
+<td>El recurso no ha cambiado desde la última consulta</td>
+</tr>
+</tbody>
+</table>
+<p>Las redirecciones son habituales después de un inicio de sesión o cuando una página cambia de ubicación.</p>
+<h3 id="errores-del-cliente-4xx">Errores del cliente (4xx)<a class="headerlink" href="#errores-del-cliente-4xx" title="Permanent link">&para;</a></h3>
+<p>Estos códigos indican que el servidor ha recibido la petición, pero no puede procesarla debido a algún problema relacionado con el cliente.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Bad Request</td>
+<td>La petición contiene errores de formato</td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>Es necesario autenticarse</td>
+</tr>
+<tr>
+<td>403 Forbidden</td>
+<td>El usuario está autenticado, pero no tiene permisos</td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>El recurso solicitado no existe</td>
+</tr>
+</tbody>
+</table>
+<p>Es importante distinguir entre <strong>401</strong> y <strong>403</strong>, ya que representan situaciones diferentes.</p>
+<ul>
+<li><strong>401</strong> significa que el usuario todavía no ha demostrado su identidad.</li>
+<li><strong>403</strong> indica que el servidor conoce la identidad del usuario, pero no le permite realizar esa operación.</li>
+</ul>
+<h3 id="errores-del-servidor-5xx">Errores del servidor (5xx)<a class="headerlink" href="#errores-del-servidor-5xx" title="Permanent link">&para;</a></h3>
+<p>Estos códigos indican que el problema se ha producido durante el procesamiento de la petición.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500 Internal Server Error</td>
+<td>Error interno de la aplicación</td>
+</tr>
+<tr>
+<td>502 Bad Gateway</td>
+<td>Error de comunicación entre servidores</td>
+</tr>
+<tr>
+<td>503 Service Unavailable</td>
+<td>Servicio temporalmente no disponible</td>
+</tr>
+</tbody>
+</table>
+<p>En una aplicación correctamente desarrollada, estos errores deberían ser poco frecuentes y registrarse para facilitar su análisis y corrección.</p>
+<div class="admonition note">
+<p class="admonition-title">Los códigos de estado también forman parte del diseño</p>
+<p>Una API o una aplicación web bien diseñada utiliza los códigos de estado adecuados para comunicar claramente el resultado de cada operación. Elegir correctamente el código facilita la integración con otras aplicaciones y simplifica la depuración de errores.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Cuando una aplicación no funciona como esperabas, uno de los primeros datos que conviene comprobar es el código de estado HTTP.
+Herramientas como las DevTools del navegador, Burp Suite o OWASP ZAP muestran este código en todas las respuestas, convirtiéndolo en una de las primeras pistas para localizar problemas durante el desarrollo.</p>
+<hr />
+</div>
+<h2 id="limitaciones-de-http-y-origen-de-las-sesiones">Limitaciones de HTTP y origen de las sesiones<a class="headerlink" href="#limitaciones-de-http-y-origen-de-las-sesiones" title="Permanent link">&para;</a></h2>
+<p>Hasta este momento hemos visto que HTTP permite intercambiar peticiones y respuestas entre un cliente y un servidor. Sin embargo, este protocolo tiene una característica muy importante: <strong>no recuerda las comunicaciones anteriores</strong>.</p>
+<p>Cada petición HTTP es completamente independiente de las demás. Cuando un servidor recibe una solicitud, la procesa, genera una respuesta y da por finalizada esa comunicación. Si unos segundos después el mismo usuario realiza otra petición, el servidor la tratará como si fuera la primera vez que se comunica con él.</p>
+<p>Por este motivo se dice que <strong>HTTP es un protocolo sin estado</strong> (<em>stateless</em>).</p>
+<h3 id="que-significa-que-http-sea-un-protocolo-sin-estado">¿Qué significa que HTTP sea un protocolo sin estado?<a class="headerlink" href="#que-significa-que-http-sea-un-protocolo-sin-estado" title="Permanent link">&para;</a></h3>
+<p>Imaginemos que un usuario accede a una tienda en línea.</p>
+<ol>
+<li>Consulta el catálogo de productos.</li>
+<li>Añade un artículo al carrito.</li>
+<li>Visualiza el carrito.</li>
+<li>Inicia sesión.</li>
+<li>Finaliza la compra.</li>
+</ol>
+<p>Desde el punto de vista del usuario, todas estas acciones forman parte de una misma sesión de navegación.</p>
+<p>Sin embargo, desde el punto de vista del protocolo HTTP, cada una de ellas corresponde a una petición completamente independiente.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant C as Cliente
+    participant S as Servidor
+
+    C-&gt;&gt;S: GET /productos
+    S--&gt;&gt;C: 200 OK
+
+    C-&gt;&gt;S: POST /carrito
+    S--&gt;&gt;C: 201 Created
+
+    C-&gt;&gt;S: POST /login
+    S--&gt;&gt;C: 302 Redirect
+
+    C-&gt;&gt;S: GET /pedido
+    S--&gt;&gt;C: 200 OK</code></pre>
+<p>Si HTTP no incorporara ningún mecanismo adicional, el servidor no tendría forma de saber que todas esas peticiones pertenecen al mismo usuario.</p>
+<p>Cada solicitud llegaría como una petición completamente nueva.</p>
+<h3 id="un-problema-para-las-aplicaciones-modernas">Un problema para las aplicaciones modernas<a class="headerlink" href="#un-problema-para-las-aplicaciones-modernas" title="Permanent link">&para;</a></h3>
+<p>La mayoría de las aplicaciones web necesitan recordar información entre distintas peticiones.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Saber qué usuario ha iniciado sesión.</li>
+<li>Mantener el contenido del carrito de compra.</li>
+<li>Recordar el idioma seleccionado.</li>
+<li>Conservar determinadas preferencias de navegación.</li>
+<li>Identificar permisos o roles de acceso.</li>
+</ul>
+<p>Sin algún mecanismo que permita conservar ese contexto, cada petición obligaría al usuario a empezar desde cero.</p>
+<p>Resultaría imposible desarrollar aplicaciones como plataformas de comercio electrónico, redes sociales, banca electrónica o gestores de contenidos.</p>
+<h3 id="como-se-resuelve-este-problema">¿Cómo se resuelve este problema?<a class="headerlink" href="#como-se-resuelve-este-problema" title="Permanent link">&para;</a></h3>
+<p>Aunque HTTP es un protocolo sin estado, las aplicaciones web utilizan distintos mecanismos para mantener información entre peticiones.</p>
+<p>Los dos más importantes son:</p>
+<ul>
+<li><strong>Las cookies</strong>, que permiten almacenar pequeños datos en el navegador.</li>
+<li><strong>Las sesiones</strong>, que permiten asociar varias peticiones con un mismo usuario manteniendo la información en el servidor.</li>
+</ul>
+<p>Estos mecanismos no modifican el funcionamiento de HTTP. Lo que hacen es añadir la información necesaria para que la aplicación pueda reconocer distintas peticiones como parte de una misma interacción.</p>
+<p>En el siguiente capítulo estudiaremos con detalle cómo funcionan las cookies y las sesiones, cómo colaboran entre sí y por qué son elementos esenciales en prácticamente cualquier aplicación web.</p>
+<div class="admonition note">
+<p class="admonition-title">HTTP sigue siendo un protocolo sin estado</p>
+<p>Aunque una aplicación recuerde al usuario entre distintas peticiones, HTTP no deja de ser un protocolo sin estado. Son las cookies, las sesiones y otros mecanismos similares los que permiten mantener el contexto de la comunicación.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Muchas vulnerabilidades relacionadas con la autenticación y el control de acceso no se deben al protocolo HTTP, sino a una gestión incorrecta de las cookies, las sesiones o la identidad del usuario.</p>
+<p>Comprender esta diferencia será fundamental para entender los mecanismos de autenticación que estudiaremos en los próximos capítulos.</p>
+<hr />
+</div>
+<h2 id="que-implicaciones-tiene-http-para-la-seguridad">¿Qué implicaciones tiene HTTP para la seguridad?<a class="headerlink" href="#que-implicaciones-tiene-http-para-la-seguridad" title="Permanent link">&para;</a></h2>
+<p>Hasta ahora hemos estudiado HTTP como un protocolo de comunicación entre clientes y servidores. Sin embargo, desde la perspectiva del desarrollo seguro, HTTP es mucho más que un mecanismo para intercambiar información.</p>
+<p>Toda la comunicación entre una aplicación web y sus usuarios viaja mediante peticiones y respuestas HTTP. Por este motivo, cualquier decisión relacionada con la autenticación, la autorización, el intercambio de datos, las cookies, las sesiones o las APIs termina reflejándose en ese intercambio de mensajes.</p>
+<p>Comprender cómo funciona HTTP permite responder a preguntas como las siguientes:</p>
+<ul>
+<li>¿Qué información envía realmente el navegador al servidor?</li>
+<li>¿Dónde viajan las credenciales de autenticación?</li>
+<li>¿Cómo mantiene una aplicación la identidad del usuario?</li>
+<li>¿Qué datos puede modificar un atacante antes de que lleguen al servidor?</li>
+<li>¿Qué información devuelve la aplicación en cada respuesta?</li>
+</ul>
+<p>Responder correctamente a estas preguntas resulta fundamental para desarrollar aplicaciones más robustas y reducir los riesgos de seguridad.</p>
+<h3 id="http-no-distingue-entre-usuarios-legitimos-y-atacantes">HTTP no distingue entre usuarios legítimos y atacantes<a class="headerlink" href="#http-no-distingue-entre-usuarios-legitimos-y-atacantes" title="Permanent link">&para;</a></h3>
+<p>Desde el punto de vista del protocolo, todas las peticiones HTTP tienen el mismo formato.</p>
+<p>HTTP no sabe si una petición procede de un usuario autorizado, de un atacante o de una herramienta automatizada. Su única función consiste en transportar información entre el cliente y el servidor.</p>
+<p>Por este motivo, la responsabilidad de comprobar la validez de cada petición corresponde siempre a la aplicación.</p>
+<p>El servidor debe verificar, entre otros aspectos:</p>
+<ul>
+<li>Que los datos recibidos son válidos.</li>
+<li>Que el usuario está autenticado cuando sea necesario.</li>
+<li>Que dispone de permisos suficientes para realizar la operación.</li>
+<li>Que los recursos solicitados pueden compartirse.</li>
+<li>Que la información devuelta no expone datos innecesarios.</li>
+</ul>
+<p>Estas comprobaciones forman parte del desarrollo de la aplicación, no del protocolo HTTP.</p>
+<h3 id="comprender-http-facilita-el-analisis-de-problemas">Comprender HTTP facilita el análisis de problemas<a class="headerlink" href="#comprender-http-facilita-el-analisis-de-problemas" title="Permanent link">&para;</a></h3>
+<p>Durante el desarrollo es habitual utilizar herramientas que permiten observar las peticiones y respuestas HTTP.</p>
+<p>Gracias a ellas es posible:</p>
+<ul>
+<li>Analizar el funcionamiento de una aplicación.</li>
+<li>Localizar errores de comunicación.</li>
+<li>Comprobar los datos enviados al servidor.</li>
+<li>Revisar las cabeceras HTTP.</li>
+<li>Verificar los códigos de estado.</li>
+<li>Detectar configuraciones inseguras.</li>
+</ul>
+<p>En los siguientes bloques del módulo utilizaremos de forma habitual las herramientas de desarrollo del navegador, Burp Suite y OWASP ZAP para analizar este tráfico y comprender mejor el comportamiento de las aplicaciones.</p>
+<div class="admonition note">
+<p class="admonition-title">La seguridad comienza entendiendo la comunicación</p>
+<p>Antes de aplicar mecanismos de protección es necesario comprender cómo se intercambia la información entre el cliente y el servidor. Solo así es posible identificar dónde aparecen los riesgos y cómo reducirlos mediante decisiones de desarrollo.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Un desarrollador que comprende HTTP puede interpretar con mayor facilidad los problemas que aparecen durante la implementación de una aplicación.</p>
+<p>Muchas incidencias que inicialmente parecen errores de programación terminan estando relacionadas con una petición mal construida, una respuesta inesperada o una configuración incorrecta del protocolo de comunicación.</p>
+<hr />
+</div>
+<h2 id="para-recordar">Para recordar<a class="headerlink" href="#para-recordar" title="Permanent link">&para;</a></h2>
+<p>En este capítulo se ha estudiado el funcionamiento básico del protocolo HTTP como mecanismo de comunicación entre clientes y servidores.</p>
+<p>Se ha analizado cómo se estructura una petición y una respuesta HTTP, qué función desempeñan los principales métodos y códigos de estado, y por qué HTTP se considera un protocolo sin estado.</p>
+<p>Estos conceptos constituyen la base necesaria para comprender el resto del módulo, ya que la autenticación, las sesiones, las APIs, el despliegue y la auditoría de aplicaciones web se apoyan directamente en este protocolo.</p>
+<hr />
+<h2 id="ideas-clave">Ideas clave<a class="headerlink" href="#ideas-clave" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HTTP define las reglas de comunicación entre clientes y servidores.</li>
+<li>Toda comunicación HTTP sigue un modelo de petición y respuesta.</li>
+<li>Las peticiones y las respuestas están formadas por una línea inicial, cabeceras y, en muchos casos, un cuerpo.</li>
+<li>Los métodos HTTP indican la intención de la operación solicitada.</li>
+<li>Los códigos de estado informan del resultado de cada petición.</li>
+<li>HTTP es un protocolo sin estado, por lo que necesita mecanismos adicionales para mantener el contexto entre distintas peticiones.</li>
+<li>Comprender HTTP es imprescindible para desarrollar, desplegar y auditar aplicaciones web seguras.</li>
+</ul>
+<hr />
+<h2 id="navegacion">Navegación<a class="headerlink" href="#navegacion" title="Permanent link">&para;</a></h2>
+<p><strong>Página anterior:</strong> <a href="../2.arquitectura-aplicacion-web/">Arquitectura de una aplicación web</a></p>
+<p><strong>Página siguiente:</strong> <a href="../4.cookies-sesiones/">Cookies, sesiones y gestión del estado</a></p>
+<p><strong>Volver al índice del bloque:</strong> <a href="../">Fundamentos del desarrollo web seguro</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <style>
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  .footer-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-logo img {
+    height: 50px;
+    width: auto;
+  }
+</style>
+
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../../images/logo.png" alt="Logo CIFP Txurdinaga">
+        </div>
+        <div class="footer-text">
+          Jose Insausti - CIFP Txurdinaga LHII
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="../../scripts/checkboxes.js"></script>
+      
+        <script src="../../javascripts/sidebar.js"></script>
+      
+    
+  </body>
+</html>

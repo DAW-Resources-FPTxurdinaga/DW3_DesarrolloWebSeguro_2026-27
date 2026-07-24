@@ -1,0 +1,2142 @@
+
+<!doctype html>
+<html lang="eu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desarrollo Web Seguro - CFGS Desarrollo de Aplicaciones Web">
+      
+      
+        <meta name="author" content="Jose Insausti - CIFP Txurdinaga LHII">
+      
+      
+        <link rel="canonical" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/3.protocolo-http/">
+      
+      
+        <link rel="prev" href="../2.arquitectura-aplicacion-web/">
+      
+      
+        <link rel="next" href="../4.cookies-sesiones/">
+      
+      
+        
+          <link rel="alternate" href="../../../1.fundamentos/3.protocolo-http/" hreflang="es">
+        
+          <link rel="alternate" href="./" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>HTTP protokoloa - DAW Desarrollo Web Seguro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#http-protokoloa" class="md-skip">
+          Joan zuzenean edukira
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Atalburua">
+    <a href="../../" title="DAW Desarrollo Web Seguro" class="md-header__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW Desarrollo Web Seguro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTTP protokoloa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Hautatu hizkuntza">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../1.fundamentos/3.protocolo-http/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Bilatu" placeholder="Bilatu" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Bilatu">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Partekatu" aria-label="Partekatu" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Garbitu" aria-label="Garbitu" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Bilaketa hasieratzen
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Nabigazioa" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="DAW Desarrollo Web Seguro" class="md-nav__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    DAW Desarrollo Web Seguro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.introduccion-desarrollo-web-seguro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garapen web seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.arquitectura-aplicacion-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web aplikazio baten arkitektura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP protokoloa
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP protokoloa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zergatik-existitzen-da-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zergatik existitzen da HTTP?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nola-garatzen-da-http-komunikazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola garatzen da HTTP komunikazioa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nola garatzen da HTTP komunikazioa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adibide-sinple-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibide sinple bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-eskaera-baten-anatomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP eskaera baten anatomia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP eskaera baten anatomia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eskaera-lerroa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eskaera-lerroa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-goiburuak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP goiburuak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eskaeraren-gorputza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eskaeraren gorputza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-erantzun-baten-anatomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP erantzun baten anatomia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP erantzun baten anatomia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#egoera-lerroa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Egoera-lerroa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-goiburuak_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP goiburuak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erantzunaren-gorputza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erantzunaren gorputza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-metodo-ohikoenak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP metodo ohikoenak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP metodo ohikoenak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-metodoak-eta-aplikazio-modernoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP metodoak eta aplikazio modernoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-egoera-kodeak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP egoera-kodeak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP egoera-kodeak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erantzun-arrakastatsuak-2xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erantzun arrakastatsuak (2xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#berbideratzeak-3xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berbideratzeak (3xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezeroaren-erroreak-4xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bezeroaren erroreak (4xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zerbitzariaren-erroreak-5xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zerbitzariaren erroreak (5xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpren-mugak-eta-saioen-jatorria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPren mugak eta saioen jatorria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTPren mugak eta saioen jatorria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zer-esan-nahi-du-http-egoerarik-gabeko-protokoloa-izateak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer esan nahi du HTTP egoerarik gabeko protokoloa izateak?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arazo-bat-aplikazio-modernoentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arazo bat aplikazio modernoentzat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nola-konpontzen-da-arazo-hau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola konpontzen da arazo hau?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-ondorio-ditu-httpk-segurtasunerako" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer ondorio ditu HTTPk segurtasunerako?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zer ondorio ditu HTTPk segurtasunerako?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpk-ez-ditu-erabiltzaile-legitimoak-eta-erasotzaileak-bereizten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPk ez ditu erabiltzaile legitimoak eta erasotzaileak bereizten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-ulertzeak-arazoen-analisia-errazten-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP ulertzeak arazoen analisia errazten du
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gogoratzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gogoratzeko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funtsezko-ideiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funtsezko ideiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nabigazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nabigazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.cookies-sesiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookieak, saioak eta egoeraren kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.https-certificados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS eta ziurtagiri digitalak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.herramientas-analisis-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web analisi tresnak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blokearen laburpena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zergatik-existitzen-da-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zergatik existitzen da HTTP?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nola-garatzen-da-http-komunikazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola garatzen da HTTP komunikazioa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nola garatzen da HTTP komunikazioa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adibide-sinple-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibide sinple bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-eskaera-baten-anatomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP eskaera baten anatomia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP eskaera baten anatomia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eskaera-lerroa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eskaera-lerroa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-goiburuak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP goiburuak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eskaeraren-gorputza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eskaeraren gorputza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-erantzun-baten-anatomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP erantzun baten anatomia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP erantzun baten anatomia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#egoera-lerroa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Egoera-lerroa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-goiburuak_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP goiburuak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erantzunaren-gorputza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erantzunaren gorputza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-metodo-ohikoenak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP metodo ohikoenak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP metodo ohikoenak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-metodoak-eta-aplikazio-modernoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP metodoak eta aplikazio modernoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-egoera-kodeak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP egoera-kodeak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP egoera-kodeak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erantzun-arrakastatsuak-2xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erantzun arrakastatsuak (2xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#berbideratzeak-3xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berbideratzeak (3xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezeroaren-erroreak-4xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bezeroaren erroreak (4xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zerbitzariaren-erroreak-5xx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zerbitzariaren erroreak (5xx)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpren-mugak-eta-saioen-jatorria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPren mugak eta saioen jatorria
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTPren mugak eta saioen jatorria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zer-esan-nahi-du-http-egoerarik-gabeko-protokoloa-izateak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer esan nahi du HTTP egoerarik gabeko protokoloa izateak?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arazo-bat-aplikazio-modernoentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arazo bat aplikazio modernoentzat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nola-konpontzen-da-arazo-hau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola konpontzen da arazo hau?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-ondorio-ditu-httpk-segurtasunerako" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer ondorio ditu HTTPk segurtasunerako?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zer ondorio ditu HTTPk segurtasunerako?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httpk-ez-ditu-erabiltzaile-legitimoak-eta-erasotzaileak-bereizten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPk ez ditu erabiltzaile legitimoak eta erasotzaileak bereizten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-ulertzeak-arazoen-analisia-errazten-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP ulertzeak arazoen analisia errazten du
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gogoratzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gogoratzeko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funtsezko-ideiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funtsezko ideiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nabigazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nabigazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="http-protokoloa">HTTP protokoloa<a class="headerlink" href="#http-protokoloa" title="Permanent link">&para;</a></h1>
+<p>Web aplikazio baten arkitekturak bere osagaiak nola antolatzen diren eta bakoitzak zer funtzio betetzen duen azaltzen du. Hala ere, oraindik galdera bat dago erantzuteko: nola komunikatzen dira osagai horiek?</p>
+<p>Erabiltzaile batek botoi bat sakatzen duenean, formulario bat bidaltzen duenean edo web orri batera sartzen denean, nabigatzaileak informazioa trukatu behar du zerbitzari batekin. Komunikazio horrek arau komunak jarraitu behar ditu, biek elkar ondo ulertu ahal izateko. HTTP protokoloak, hain zuzen ere, arau horiek definitzen ditu.</p>
+<p>HTTPren funtzionamendua ulertzea funtsezkoa da edozein web garatzailerentzat. Autentikazioarekin, saioekin, APIekin, erroreen kudeaketarekin edo segurtasunarekin lotutako erabaki asko zuzenean protokolo honek nola funtzionatzen duenaren araberakoak dira.</p>
+<p>Kapitulu honetan HTTP komunikazio bat nola garatzen den aztertuko da, bezeroak eta zerbitzariak zer informazio trukatzen duten, eta protokolo honek garapen seguruaren ikuspegitik zer ondorio dituen.</p>
+<hr />
+<h2 id="zergatik-existitzen-da-http">Zergatik existitzen da HTTP?<a class="headerlink" href="#zergatik-existitzen-da-http" title="Permanent link">&para;</a></h2>
+<p>Erabiltzaile batek web orri baten helbidea nabigatzailean idazten duenean edo esteka batean klik egiten duenean, erantzun ia berehalakoa jasotzea espero du. Hala ere, nabigatzailea eta zerbitzaria programa desberdinak dira, eta ekipo desberdinetan exekutatzen dira; askotan, milaka kilometrora banatuta egoten dira. Informazioa trukatu ahal izateko, hizkuntza komun bat erabili behar dute.</p>
+<p>Hizkuntza hori <strong>HyperText Transfer Protocol (HTTP)</strong> da.</p>
+<p>HTTP komunikazio-protokolo bat da, eta bezeroak eta zerbitzariak eskaerak eta erantzunak trukatzeko jarraitu behar dituzten arauak ezartzen ditu. Arau horiei esker, edozein nabigatzaile modernok edozein web zerbitzarirekin komunikatu daiteke, sistema eragilea, erabilitako programazio-lengoaia edo aplikazioa garatzeko erabilitako teknologia edozein dela ere.</p>
+<p>HTTP komunikazio batean gutxienez bi elementuk hartzen dute parte beti:</p>
+<ul>
+<li><strong>Bezero batek</strong>, normalean web nabigatzaile batek, baliabide bat eskatzen du.</li>
+<li><strong>Zerbitzari batek</strong>, eskaera jasotzen du, prozesatzen du eta erantzuna itzultzen du.</li>
+</ul>
+<p>Eskatutako baliabidea HTML orri bat, irudi bat, PDF dokumentu bat, JSON fitxategi bat, bideo bat edo zerbitzariak eman dezakeen beste edozein eduki izan daiteke.</p>
+<p>HTTP protokoloak ez du definitzen aplikazio bat nola inplementatu behar den, ezta zerbitzariak zein lengoaia erabili behar duen ere. Nabigatzaile berak, itxurazko diferentziarik gabe, PHP, Laravel, Java, .NET, Node.js edo Python bidez garatutako aplikazioetara sar daiteke, denek komunikazio-protokolo bera erabiltzen dutelako.</p>
+<p>Independentzia teknologiko hori Webaren hazkunde handia ahalbidetu duten faktoreetako bat izan da. Garatzaileek proiektu bakoitzerako egokienak iruditzen zaizkien tresnak hauta ditzakete; nabigatzaileak, berriz, HTTP bidez komunikatzen jarraitzen du beti.</p>
+<div class="admonition note">
+<p class="admonition-title">HTTP estandar bat da</p>
+<p>HTTP <strong>IETFk (Internet Engineering Task Force)</strong> definitutako estandar irekia da. Horri esker, nabigatzaileen edo zerbitzarien edozein fabrikatzailek protokoloa inplementa dezake zehaztapen berak jarraituz, sistemen arteko elkarreragingarritasuna bermatuz.</p>
+</div>
+<p>Garapen seguruaren ikuspegitik, HTTP ulertzea komunikazio-protokolo bat ezagutzea baino askoz gehiago da. Bezeroaren eta zerbitzariaren artean datuak nola bidaiatzen diren, eskaera bakoitzean zer informazio transmititzen den eta segurtasun-arriskuak zein puntutan ager daitezkeen ulertzea esan nahi du. Moduluaren gainerakoa oinarri horren gainean eraikiko da.</p>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Erabiltzaile batek botoi bat sakatzen duen bakoitzean, saioa hasten duen bakoitzean, formulario bat bidaltzen duen bakoitzean edo informazioa kontsultatzen duen bakoitzean, nabigatzaileak HTTP eskaera bat edo gehiago sortzen ditu.</p>
+<p>Eskaera horiek zer daukaten eta zerbitzariak nola erantzuten duen ulertzeak, geroago, nabigatzailearen DevTools, Burp Suite edo OWASP ZAP bezalako tresnen funtzionamendua interpretatzeko aukera emango du; eta, gainera, ulertaraziko du zergatik segurtasun-neurri jakin batzuk zerbitzarian inplementatu behar diren, eta ez bezeroan bakarrik.</p>
+<hr />
+</div>
+<h2 id="nola-garatzen-da-http-komunikazioa">Nola garatzen da HTTP komunikazioa<a class="headerlink" href="#nola-garatzen-da-http-komunikazioa" title="Permanent link">&para;</a></h2>
+<p>HTTP komunikazio guztiek oso eredu sinplea jarraitzen dute: bezero batek eskaera egiten du, eta zerbitzari batek erantzuna itzultzen du.</p>
+<p>Bezeroa normalean web nabigatzaile bat izaten da, baina mugikorreko aplikazio bat, mahaigaineko programa bat edo API bat kontsumitzen duen beste aplikazio bat ere izan daiteke. Zerbitzariak eskaera jasotzen du, prozesatzen du eta erantzun egokia sortzen du.</p>
+<p>Komunikazio horri <strong>eskaera-erantzun eredua (request-response)</strong> deitzen zaio, eta ia web aplikazio guztien oinarrizko funtzionamendua da.</p>
+<p>Hurrengo diagramak prozesu hori laburbiltzen du.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant U as Erabiltzailea
+    participant B as Nabigatzailea
+    participant S as Web Zerbitzaria
+
+    U-&gt;&gt;B: Baliabide bat eskatzen du
+    B-&gt;&gt;S: HTTP Request
+    S-&gt;&gt;S: Eskaera prozesatzen du
+    S--&gt;&gt;B: HTTP Response
+    B--&gt;&gt;U: Emaitza erakusten du</code></pre>
+<p>Diagrama oso sinplea dirudien arren, aplikazio erreal batean hamarnaka edo ehunka HTTP eskaera gerta daitezke orri bakar bat eraikitzeko. Nabigatzaileak HTML dokumentu nagusia eskatzen du, baina baita estilo-orriak, JavaScript fitxategiak, irudiak, tipografiak eta interfazea behar bezala irudikatzeko beharrezkoak diren beste baliabide batzuk ere deskargatzen ditu.</p>
+<p>Horregatik, nabigatzailearen garapen-tresnak edo Burp Suite irekitzean, ohikoa da erabiltzailearen ekintza bakar bati lotutako eskaera ugari ikustea.</p>
+<h3 id="adibide-sinple-bat">Adibide sinple bat<a class="headerlink" href="#adibide-sinple-bat" title="Permanent link">&para;</a></h3>
+<p>Demagun erabiltzaile batek honako helbide hau idazten duela nabigatzailean:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://www.ejemplo.com/productos
+</span></code></pre></div>
+<p>Une horretatik aurrera, honakoaren antzeko ekintza-sekuentzia bat gertatzen da:</p>
+<ol>
+<li>Nabigatzaileak HTTP eskaera prestatzen du <code>/productos</code> baliabidea eskatzeko.</li>
+<li>Eskaera zerbitzarira bidaltzen da.</li>
+<li>Zerbitzariak eskaera interpretatu eta dagokion logika exekutatzen du.</li>
+<li>Beharrezkoa bada, datu-basea kontsultatzen du.</li>
+<li>HTTP erantzuna sortzen du.</li>
+<li>Nabigatzaileak erantzuna jasotzen du.</li>
+<li>Azkenik, edukia erabiltzaileari bistaratzen dio.</li>
+</ol>
+<p>Prozesu hori guztia normalean segundoaren hamarren gutxi batzuetan osatzen da.</p>
+<div class="admonition note">
+<p class="admonition-title">Elkarrizketa laburra</p>
+<p>HTTPk ez du bezeroaren eta zerbitzariaren arteko elkarrizketa iraunkorrik mantentzen. Eskaera bakoitza aurrekoetatik independentea da, eta zerbitzariak erantzuna itzultzen duenean amaitzen da.</p>
+</div>
+<p>Ezaugarri honek ondorio oso garrantzitsua izango du, aurrerago aztertuko duguna: <strong>HTTP egoerarik gabeko protokoloa da (stateless)</strong>. Hori dela eta, cookieak eta saioak bezalako mekanismoak erabili beharko dira eskaera desberdinen arteko informazioa gogoratzeko.</p>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Aplikazio batek eragiketa bakarra egiten duela "dirudienean", normalean HTTP eskaera ugari trukatzen ari da.
+Eskaera horiek behatzen ikasteak aplikazio modernoak nola funtzionatzen duten ulertzeko, erroreak lokalizatzeko eta garapenean segurtasun-arazoak aztertzeko aukera emango du.</p>
+<hr />
+</div>
+<h2 id="http-eskaera-baten-anatomia">HTTP eskaera baten anatomia<a class="headerlink" href="#http-eskaera-baten-anatomia" title="Permanent link">&para;</a></h2>
+<p>Bezero batek zerbitzari bati baliabide bat eskatzen dion bakoitzean, <strong>HTTP eskaera</strong> (<em>HTTP Request</em>) bidaltzen du. Eskaera hori mezu egituratu bat da, eta zerbitzariak zer baliabide eskatzen den eta eskaera nola prozesatu behar duen interpretatzeko behar duen informazio guztia dauka.</p>
+<p>Erabiltzaile gehienek inoiz ikusten ez badute ere, web aplikazio guztiek milaka HTTP eskaera trukatzen dituzte egunero.</p>
+<p>Hurrengo eskaera produktu-zerrenda batera sartzeko eskaera sinple bati dagokio.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">GET</span> <span class="nn">/productos</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">www.ejemplo.com</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">User-Agent</span><span class="o">:</span> <span class="l">Mozilla/5.0</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="na">Accept</span><span class="o">:</span> <span class="l">text/html</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="na">Accept-Language</span><span class="o">:</span> <span class="l">es-ES</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="na">Connection</span><span class="o">:</span> <span class="l">keep-alive</span>
+</span></code></pre></div>
+<p>Lehen begiratuan loturarik gabeko lerro multzo bat dirudien arren, bakoitzak esanahi zehatza du.</p>
+<h3 id="eskaera-lerroa">Eskaera-lerroa<a class="headerlink" href="#eskaera-lerroa" title="Permanent link">&para;</a></h3>
+<p>Lehen lerroak funtsezko hiru datu adierazten ditu:</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">GET</span> <span class="nn">/productos</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<ul>
+<li><strong>GET</strong> → erabilitako HTTP metodoa.</li>
+<li><strong>/productos</strong> → eskatutako baliabidea.</li>
+<li><strong>HTTP/1.1</strong> → erabilitako protokoloaren bertsioa.</li>
+</ul>
+<p>Informazio horri esker, zerbitzariak bezeroak zer eragiketa egin nahi duen identifika dezake.</p>
+<h3 id="http-goiburuak">HTTP goiburuak<a class="headerlink" href="#http-goiburuak" title="Permanent link">&para;</a></h3>
+<p>Eskaera-lerroaren ondoren, <strong>goiburu</strong> (<em>HTTP Headers</em>) batzuk agertzen dira.</p>
+<p>Goiburuek eskaerari buruzko informazio osagarria ematen dute. Batzuek eskaera zein zerbitzaritara doan identifikatzen dute; beste batzuek erabilitako nabigatzailea deskribatzen dute edo bezeroak zer motatako erantzuna jaso nahi duen adierazten dute.</p>
+<p>Aurreko adibidean ohikoenetako batzuk agertzen dira.</p>
+<table>
+<thead>
+<tr>
+<th>Goiburua</th>
+<th>Funtzioa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td>Helmugako zerbitzaria adierazten du.</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>Nabigatzailea edo bezero-aplikazioa identifikatzen du.</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>Bezeroak jaso dezakeen eduki mota zehazten du.</td>
+</tr>
+<tr>
+<td>Accept-Language</td>
+<td>Hobetsitako hizkuntza adierazten du.</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>Zerbitzariarekiko konexioa nola kudeatu definitzen du.</td>
+</tr>
+</tbody>
+</table>
+<p>Moduluan zehar autentikazioarekin, cookieekin, cachearekin edo segurtasunarekin lotutako beste goiburu batzuk ere agertuko dira.</p>
+<div class="admonition note">
+<p class="admonition-title">Goiburuak metadatuak dira</p>
+<p>Goiburuak ez dira eskaeraren edukiaren parte. Zerbitzariari eskaera behar bezala interpretatzen laguntzen dion informazio osagarria ematen dute.</p>
+</div>
+<h3 id="eskaeraren-gorputza">Eskaeraren gorputza<a class="headerlink" href="#eskaeraren-gorputza" title="Permanent link">&para;</a></h3>
+<p>Eskaera guztiek ez dute gorputza (<em>Body</em>) izaten.</p>
+<p><strong>GET</strong> bezalako metodoek normalean informazio guztia URLan bertan bidaltzen dute; horregatik, normalean ez dute datu osagarririk eramaten.</p>
+<p>Hala ere, <strong>POST</strong>, <strong>PUT</strong> edo <strong>PATCH</strong> bezalako beste metodo batzuek eskaeraren gorputza erabiltzen dute informazioa zerbitzarira bidaltzeko.</p>
+<p>Adibidez, erabiltzaile batek saioa hasteko formularioa betetzen duenean, bidalitako datuak normalean eskaeraren gorputzean doaz.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">POST</span> <span class="nn">/login</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="na">Host</span><span class="o">:</span> <span class="l">www.ejemplo.com</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/x-www-form-urlencoded</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">usuario</span><span class="o">=</span><span class="s">juan</span><span class="p">&amp;</span><span class="nt">password</span><span class="o">=</span><span class="s">123456</span>
+</span></code></pre></div>
+<p>Adibide honetan, lehen bi lerroak HTTP eskaerari dagozkio, eta formularioaren datuak mezuaren gorputzean agertzen dira.</p>
+<p>Ikastaroaren gainerakoan eskaera erreal ugari aztertuko ditugu nabigatzailearen garapen-tresnak eta Burp Suite erabiliz, informazio hori bezeroaren eta zerbitzariaren artean nola bidaiatzen duen ulertzeko.</p>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>HTTP eskaera batek nabigatzailean ikus daitekeen URLak baino askoz informazio gehiago dauka.
+Bere goiburuak eta gorputza interpretatzen ikasteak formularioak, APIak, autentikazioa, cookieak eta aurrerago aztertuko diren ahulezia asko nola funtzionatzen duten ulertzeko aukera emango du.</p>
+<hr />
+</div>
+<h2 id="http-erantzun-baten-anatomia">HTTP erantzun baten anatomia<a class="headerlink" href="#http-erantzun-baten-anatomia" title="Permanent link">&para;</a></h2>
+<p>Zerbitzariak eskaera jaso eta prozesatu ondoren, <strong>HTTP erantzun</strong> bat (<em>HTTP Response</em>) sortzen du. Mezu horrek eskaeraren emaitza eta bezeroak nola interpretatu behar duen jakiteko behar duen informazio guztia jasotzen du.</p>
+<p>HTTP erantzun baten egitura eskaerarena bezalakoa da. Hasierako lerro batez, goiburu multzo batez eta, normalean, eskatutako edukia duen gorputz batez osatuta dago.</p>
+<p>Hurrengo adibidean erantzun sinple bat ikus daiteke.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html; charset=UTF-8</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">Content-Length</span><span class="o">:</span> <span class="l">1256</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="na">Date</span><span class="o">:</span> <span class="l">Tue, 29 Jul 2025 10:15:00 GMT</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>...
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>Atal horietako bakoitzak funtzio zehatza betetzen du.</p>
+<h3 id="egoera-lerroa">Egoera-lerroa<a class="headerlink" href="#egoera-lerroa" title="Permanent link">&para;</a></h3>
+<p>Lehen lerroak eskaeraren emaitzari buruzko informazioa ematen du.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+</span></code></pre></div>
+<p>Hiru elementuk osatzen dute:</p>
+<ul>
+<li><strong>HTTP/1.1</strong> → erabilitako protokoloaren bertsioa.</li>
+<li><strong>200</strong> → egoera-kodea.</li>
+<li><strong>OK</strong> → emaitzaren deskribapen testuala.</li>
+</ul>
+<p>Egoera-kodea erantzuneko elementu garrantzitsuenetako bat da, bezeroari eragiketa ondo egin den edo arazoren bat gertatu den jakinarazten diolako.</p>
+<p>Hurrengo atalean ohikoenak diren egoera-kodeak xehetasunez aztertuko ditugu.</p>
+<h3 id="http-goiburuak_1">HTTP goiburuak<a class="headerlink" href="#http-goiburuak_1" title="Permanent link">&para;</a></h3>
+<p>Egoera-lerroaren ondoren, erantzunaren goiburuak agertzen dira.</p>
+<p>Goiburu horiek zerbitzariak itzulitako edukiari eta nabigatzaileak hori tratatzeko moduari buruzko informazio osagarria ematen dute.</p>
+<p>Ohikoenetako batzuk hauek dira:</p>
+<table>
+<thead>
+<tr>
+<th>Goiburua</th>
+<th>Funtzioa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>Itzulitako eduki mota adierazten du.</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>Edukiaren tamaina zehazten du.</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Erantzuna sortu den data eta ordua.</td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>Erantzuna cachean nola gorde daitekeen definitzen du.</td>
+</tr>
+<tr>
+<td>Set-Cookie</td>
+<td>Cookieak bidaltzen dizkio nabigatzaileari.</td>
+</tr>
+</tbody>
+</table>
+<p>Moduluan zehar segurtasunarekin bereziki lotutako beste goiburu batzuk ere agertuko dira, hala nola <strong>Content-Security-Policy</strong>, <strong>Strict-Transport-Security</strong> edo <strong>X-Frame-Options</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Goiburuek ere babesten dute</p>
+<p>Segurtasun-neurri moderno askok ez dute aplikazioaren kodea aldatzea eskatzen; nahikoa da zerbitzariak bidalitako HTTP goiburu jakin batzuk ondo konfiguratzea.</p>
+</div>
+<h3 id="erantzunaren-gorputza">Erantzunaren gorputza<a class="headerlink" href="#erantzunaren-gorputza" title="Permanent link">&para;</a></h3>
+<p>Gorputzak (<em>Body</em>) bezeroak eskatutako baliabidea dauka.</p>
+<p>Aplikazioaren arabera, edukia oso desberdina izan daiteke.</p>
+<p>Adibidez:</p>
+<ul>
+<li>HTML orri bat.</li>
+<li>Irudi bat.</li>
+<li>PDF dokumentu bat.</li>
+<li>CSS fitxategi bat.</li>
+<li>JavaScript fitxategi bat.</li>
+<li>API batek itzulitako JSON objektu bat.</li>
+<li>Bideo bat edo beste edozein baliabide.</li>
+</ul>
+<p>Web aplikazio moderno batean oso ohikoa da zerbitzariak <strong>JSON</strong> formatuan erantzutea, bereziki frontend-a eta backend-a bereizita daudenean.</p>
+<p>Aurrerago, JavaScript, Vue eta Laravelrekin lan egiten dugunean, ikusiko dugu bezeroaren eta zerbitzariaren artean trukatutako erantzun askok ez dutela HTML orri osoa eramaten; nabigatzaileak interfazea eguneratzeko erabiltzen dituen datuak baino ez dituzte eramaten.</p>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>HTTP erantzun bat ulertzeak nabigatzailean ikus daitekeen edukia baino askoz gehiago interpretatzeko aukera ematen du.
+Egoera-kodeek, goiburuek eta eduki motak informazio oso baliotsua eskaintzen dute erroreak arazteko, aplikazioak optimizatzeko eta segurtasun-arazoak detektatzeko.</p>
+<hr />
+</div>
+<h2 id="http-metodo-ohikoenak">HTTP metodo ohikoenak<a class="headerlink" href="#http-metodo-ohikoenak" title="Permanent link">&para;</a></h2>
+<p>HTTP eskaera bakoitzak zerbitzariari adierazten dio baliabide baten gainean zer eragiketa egin nahi duen. Horretarako, <strong>HTTP metodo</strong> bat erabiltzen du; <strong>HTTP Method</strong> edo <strong>HTTP Verb</strong> ere deitzen zaio.</p>
+<p>Metodoa eskaeraren lehen lerroaren parte da, eta bezeroaren asmoa adierazten du. Ez da gauza bera informazioa eskatzea, baliabide berri bat sortzea, aldatzea edo ezabatzea.</p>
+<p>Web aplikazioen garapenean gehien erabiltzen diren metodoak hauek dira.</p>
+<table>
+<thead>
+<tr>
+<th>Metodoa</th>
+<th>Helburua</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Informazioa lortu</td>
+<td>Produktu bat kontsultatu</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Baliabide berri bat sortu</td>
+<td>Erabiltzaile bat erregistratu</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>Baliabide bat osorik ordezkatu</td>
+<td>Profil bat eguneratu</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Baliabide bat partzialki aldatu</td>
+<td>Pasahitz bat aldatu</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Baliabide bat ezabatu</td>
+<td>Iruzkin bat ezabatu</td>
+</tr>
+</tbody>
+</table>
+<p>HTTP protokoloak beste metodo batzuk ere definitzen baditu ere, bost hauek web aplikazio moderno baten behar gehienak estaltzen dituzte.</p>
+<h3 id="get">GET<a class="headerlink" href="#get" title="Permanent link">&para;</a></h3>
+<p><strong>GET</strong> metodoak zerbitzariari informazioa eskatzen dio, aplikazioaren egoera aldatu gabe.</p>
+<p>Adibidez, erabiltzaile batek produktu baten orria bisitatzen duenean, albiste bat kontsultatzen duenean edo bere profilera sartzen denean, nabigatzaileak normalean GET eskaera bidaltzen du.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">GET</span> <span class="nn">/productos/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>GET eskaerak informazioa kontsultatzeko bakarrik erabili behar dira, ez datuak aldatzen dituzten eragiketak egiteko.</p>
+<h3 id="post">POST<a class="headerlink" href="#post" title="Permanent link">&para;</a></h3>
+<p><strong>POST</strong> metodoak informazioa zerbitzarira bidaltzen du, baliabide berri bat sortzeko edo ekintza bat exekutatzeko.</p>
+<p>Ohikoa da erregistro-formularioetan, saio-hasieran, iruzkinak bidaltzean edo eskaerak sortzean erabiltzea.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">POST</span> <span class="nn">/usuarios</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>Normalean, bidalitako datuak eskaeraren gorputzean bidaiatzen dira.</p>
+<h3 id="put">PUT<a class="headerlink" href="#put" title="Permanent link">&para;</a></h3>
+<p><strong>PUT</strong> metodoak dagoen baliabide bat osorik ordezkatzen du.</p>
+<p>Baliabidea existitzen bada, bere edukia bezeroak bidalitako informazio berriarekin ordezkatzen da.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">PUT</span> <span class="nn">/usuarios/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>REST aplikazioetan eguneratze osoetarako erabiltzen da maiz.</p>
+<h3 id="patch">PATCH<a class="headerlink" href="#patch" title="Permanent link">&para;</a></h3>
+<p><strong>PATCH</strong> metodoak baliabidearen zati bat bakarrik aldatzen du.</p>
+<p>Adibidez, erabiltzaile baten helbide elektronikoa bakarrik aldatzea edo profil-argazkia eguneratzea.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">PATCH</span> <span class="nn">/usuarios/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>Gaur egun, web aplikazio modernoetan gehien erabiltzen den metodoetako bat da.</p>
+<h3 id="delete">DELETE<a class="headerlink" href="#delete" title="Permanent link">&para;</a></h3>
+<p><strong>DELETE</strong> metodoak baliabide bat ezabatzeko eskaera egiten du.</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">DELETE</span> <span class="nn">/usuarios/15</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</span></code></pre></div>
+<p>Zerbitzariak erabakiko du azkenean eragiketa hori baimenduta dagoen ala ez, erabiltzailearen baimenen eta aplikazioaren negozio-arauen arabera.</p>
+<div class="admonition warning">
+<p class="admonition-title">Metodoak ez du segurtasuna bermatzen</p>
+<p>HTTP metodoak ondo erabiltzeak aplikazio baten antolaketa hobetzen du, baina ez du eragozten erabiltzaile batek baimenik gabeko eragiketak egiten saiatzea. Segurtasun-egiaztapen guztiak beti zerbitzarian egin behar dira.</p>
+</div>
+<h3 id="http-metodoak-eta-aplikazio-modernoak">HTTP metodoak eta aplikazio modernoak<a class="headerlink" href="#http-metodoak-eta-aplikazio-modernoak" title="Permanent link">&para;</a></h3>
+<p>Laravel, Spring Boot edo ASP.NET bezalako frameworkekin garatutako aplikazioetan, HTTP metodoak aplikazioaren diseinuaren beraren parte dira.</p>
+<p>Era berean, Vue, React edo Angular bezalako frontend liburutegi eta frameworkek metodo horiek erabiltzen dituzte REST APIekin komunikatzeko, eskaera asinkronoen bidez.</p>
+<p>Metodo bakoitza noiz erabili behar den ulertzeak aplikazio koherenteagoak, mantengarriagoak eta egungo estandarrekin lerrokatuagoak garatzea errazten du.</p>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>HTTP metodoa ondo aukeratzea ez da estilo kontu hutsa. Beste garatzaile batzuek aplikazioaren asmoa hobeto ulertzea ahalbidetzen du, eta APIekin, proba-tresnekin eta framework modernoekin integrazioa errazten du.</p>
+<hr />
+</div>
+<h2 id="http-egoera-kodeak">HTTP egoera-kodeak<a class="headerlink" href="#http-egoera-kodeak" title="Permanent link">&para;</a></h2>
+<p>HTTP erantzun bakoitzak <strong>egoera-kode</strong> (<em>HTTP Status Code</em>) bat dauka, egindako eskaeraren emaitza bezeroari jakinarazteko.</p>
+<p>Kode horri esker, nabigatzaile batek, mugikorreko aplikazio batek edo beste edozein bezerok jakin dezake eragiketa ondo egin den ala arazoren bat gertatu den.</p>
+<p>Egoera-kodeak hiru zifraz osatuta daude, eta bost kategoria handitan multzokatzen dira.</p>
+<table>
+<thead>
+<tr>
+<th>Kategoria</th>
+<th>Esanahia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1xx</td>
+<td>Informazioa</td>
+</tr>
+<tr>
+<td>2xx</td>
+<td>Eskaera ondo prozesatu da</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>Berbideratzea</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>Bezeroak eragindako errorea</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>Zerbitzarian sortutako errorea</td>
+</tr>
+</tbody>
+</table>
+<p>Eguneroko garapenean ez da beharrezkoa protokoloak definitutako kode guztiak buruz ikastea. Hala ere, komeni da ohikoenak ezagutzea.</p>
+<h3 id="erantzun-arrakastatsuak-2xx">Erantzun arrakastatsuak (2xx)<a class="headerlink" href="#erantzun-arrakastatsuak-2xx" title="Permanent link">&para;</a></h3>
+<p>Zerbitzariak eskaera ondo prozesatu duela adierazten dute.</p>
+<table>
+<thead>
+<tr>
+<th>Kodea</th>
+<th>Esanahia</th>
+<th>Ohiko erabilera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200 OK</td>
+<td>Eragiketa ondo egin da</td>
+<td>Informazio-kontsulta</td>
+</tr>
+<tr>
+<td>201 Created</td>
+<td>Baliabidea ondo sortu da</td>
+<td>Erabiltzaileen, eskaeren edo produktuen alta</td>
+</tr>
+<tr>
+<td>204 No Content</td>
+<td>Eragiketa zuzena, erantzun-edukirik gabe</td>
+<td>Ezabaketak edo eguneratzeak</td>
+</tr>
+</tbody>
+</table>
+<h3 id="berbideratzeak-3xx">Berbideratzeak (3xx)<a class="headerlink" href="#berbideratzeak-3xx" title="Permanent link">&para;</a></h3>
+<p>Bezeroak beste helbide batera eskaera berri bat egin behar duela adierazten dute.</p>
+<table>
+<thead>
+<tr>
+<th>Kodea</th>
+<th>Esanahia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>301 Moved Permanently</td>
+<td>Berbideratze iraunkorra</td>
+</tr>
+<tr>
+<td>302 Found</td>
+<td>Aldi baterako berbideratzea</td>
+</tr>
+<tr>
+<td>304 Not Modified</td>
+<td>Baliabidea ez da aldatu azken kontsultatik</td>
+</tr>
+</tbody>
+</table>
+<p>Berbideratzeak ohikoak dira saioa hasi ondoren edo orri baten kokapena aldatzen denean.</p>
+<h3 id="bezeroaren-erroreak-4xx">Bezeroaren erroreak (4xx)<a class="headerlink" href="#bezeroaren-erroreak-4xx" title="Permanent link">&para;</a></h3>
+<p>Kode horiek adierazten dute zerbitzariak eskaera jaso duela, baina ezin duela prozesatu bezeroarekin lotutako arazoren bat dela eta.</p>
+<table>
+<thead>
+<tr>
+<th>Kodea</th>
+<th>Esanahia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Bad Request</td>
+<td>Eskaerak formatu-erroreak ditu</td>
+</tr>
+<tr>
+<td>401 Unauthorized</td>
+<td>Autentikatu behar da</td>
+</tr>
+<tr>
+<td>403 Forbidden</td>
+<td>Erabiltzailea autentikatuta dago, baina ez du baimenik</td>
+</tr>
+<tr>
+<td>404 Not Found</td>
+<td>Eskatutako baliabidea ez da existitzen</td>
+</tr>
+</tbody>
+</table>
+<p>Garrantzitsua da <strong>401</strong> eta <strong>403</strong> bereiztea, egoera desberdinak adierazten dituztelako.</p>
+<ul>
+<li><strong>401</strong> esan nahi du erabiltzaileak oraindik ez duela bere identitatea frogatu.</li>
+<li><strong>403</strong>k adierazten du zerbitzariak erabiltzailearen identitatea ezagutzen duela, baina ez diola eragiketa hori egiten uzten.</li>
+</ul>
+<h3 id="zerbitzariaren-erroreak-5xx">Zerbitzariaren erroreak (5xx)<a class="headerlink" href="#zerbitzariaren-erroreak-5xx" title="Permanent link">&para;</a></h3>
+<p>Kode horiek adierazten dute arazoa eskaera prozesatzean gertatu dela.</p>
+<table>
+<thead>
+<tr>
+<th>Kodea</th>
+<th>Esanahia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500 Internal Server Error</td>
+<td>Aplikazioaren barne-errorea</td>
+</tr>
+<tr>
+<td>502 Bad Gateway</td>
+<td>Zerbitzarien arteko komunikazio-errorea</td>
+</tr>
+<tr>
+<td>503 Service Unavailable</td>
+<td>Zerbitzua aldi baterako erabilgarri ez</td>
+</tr>
+</tbody>
+</table>
+<p>Ondo garatutako aplikazio batean, errore horiek ez lukete oso maiz gertatu behar, eta erregistratu egin behar dira analisia eta zuzenketa errazteko.</p>
+<div class="admonition note">
+<p class="admonition-title">Egoera-kodeak diseinuaren parte ere badira</p>
+<p>Ondo diseinatutako API edo web aplikazio batek egoera-kode egokiak erabiltzen ditu eragiketa bakoitzaren emaitza argi komunikatzeko. Kodea ondo aukeratzeak beste aplikazio batzuekin integrazioa errazten du, eta erroreen arazketa sinplifikatzen du.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Aplikazio batek espero zenuen bezala funtzionatzen ez duenean, begiratu beharreko lehen datuetako bat HTTP egoera-kodea da.
+Nabigatzailearen DevTools, Burp Suite edo OWASP ZAP bezalako tresnek kode hori erantzun guztietan erakusten dute, eta garapenean arazoak aurkitzeko lehen pistetako bat bihurtzen dute.</p>
+<hr />
+</div>
+<h2 id="httpren-mugak-eta-saioen-jatorria">HTTPren mugak eta saioen jatorria<a class="headerlink" href="#httpren-mugak-eta-saioen-jatorria" title="Permanent link">&para;</a></h2>
+<p>Orain arte ikusi dugu HTTPk bezeroaren eta zerbitzariaren arteko eskaerak eta erantzunak trukatzeko aukera ematen duela. Hala ere, protokolo honek ezaugarri oso garrantzitsu bat dauka: <strong>ez ditu aurreko komunikazioak gogoratzen</strong>.</p>
+<p>HTTP eskaera bakoitza gainerakoetatik erabat independentea da. Zerbitzari batek eskaera bat jasotzen duenean, prozesatu egiten du, erantzuna sortzen du eta komunikazio hori amaitutzat ematen du. Segundo batzuk geroago erabiltzaile berak beste eskaera bat egiten badu, zerbitzariak lehen aldiz komunikatuko balitz bezala tratatuko du.</p>
+<p>Horregatik esaten da <strong>HTTP egoerarik gabeko protokoloa dela</strong> (<em>stateless</em>).</p>
+<h3 id="zer-esan-nahi-du-http-egoerarik-gabeko-protokoloa-izateak">Zer esan nahi du HTTP egoerarik gabeko protokoloa izateak?<a class="headerlink" href="#zer-esan-nahi-du-http-egoerarik-gabeko-protokoloa-izateak" title="Permanent link">&para;</a></h3>
+<p>Imajina dezagun erabiltzaile bat online denda batera sartzen dela.</p>
+<ol>
+<li>Produktuen katalogoa kontsultatzen du.</li>
+<li>Artikulu bat gehitzen du saskira.</li>
+<li>Saskia bistaratzen du.</li>
+<li>Saioa hasten du.</li>
+<li>Erosketa amaitzen du.</li>
+</ol>
+<p>Erabiltzailearen ikuspegitik, ekintza horiek guztiak nabigazio-saio beraren parte dira.</p>
+<p>Hala ere, HTTP protokoloaren ikuspegitik, horietako bakoitza guztiz independentea den eskaera bati dagokio.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant C as Bezeroa
+    participant S as Zerbitzaria
+
+    C-&gt;&gt;S: GET /productos
+    S--&gt;&gt;C: 200 OK
+
+    C-&gt;&gt;S: POST /carrito
+    S--&gt;&gt;C: 201 Created
+
+    C-&gt;&gt;S: POST /login
+    S--&gt;&gt;C: 302 Redirect
+
+    C-&gt;&gt;S: GET /pedido
+    S--&gt;&gt;C: 200 OK</code></pre>
+<p>HTTPk mekanismo osagarririk izango ez balu, zerbitzariak ez luke modurik izango eskaera horiek guztiak erabiltzaile berari dagozkiola jakiteko.</p>
+<p>Eskaera bakoitza guztiz berria balitz bezala iritsiko litzateke.</p>
+<h3 id="arazo-bat-aplikazio-modernoentzat">Arazo bat aplikazio modernoentzat<a class="headerlink" href="#arazo-bat-aplikazio-modernoentzat" title="Permanent link">&para;</a></h3>
+<p>Web aplikazio gehienek informazioa gogoratu behar dute eskaera desberdinen artean.</p>
+<p>Adibidez:</p>
+<ul>
+<li>Zein erabiltzailek hasi duen saioa jakitea.</li>
+<li>Erosketa-saskiaren edukia mantentzea.</li>
+<li>Hautatutako hizkuntza gogoratzea.</li>
+<li>Nabigazio-hobespen jakin batzuk mantentzea.</li>
+<li>Sarbide-baimenak edo rolak identifikatzea.</li>
+</ul>
+<p>Testuinguru hori gordetzeko mekanismorik gabe, eskaera bakoitzean erabiltzaileak hutsetik hasi beharko luke.</p>
+<p>Ezinezkoa litzateke merkataritza elektronikoko plataformak, sare sozialak, online banka edo eduki-kudeatzaileak bezalako aplikazioak garatzea.</p>
+<h3 id="nola-konpontzen-da-arazo-hau">Nola konpontzen da arazo hau?<a class="headerlink" href="#nola-konpontzen-da-arazo-hau" title="Permanent link">&para;</a></h3>
+<p>HTTP egoerarik gabeko protokoloa den arren, web aplikazioek hainbat mekanismo erabiltzen dituzte eskaeren artean informazioa mantentzeko.</p>
+<p>Bi garrantzitsuenak hauek dira:</p>
+<ul>
+<li><strong>Cookieak</strong>, datu txikiak nabigatzailean gordetzeko aukera ematen dutenak.</li>
+<li><strong>Saioak</strong>, hainbat eskaera erabiltzaile berarekin lotzeko aukera ematen dutenak, informazioa zerbitzarian mantenduz.</li>
+</ul>
+<p>Mekanismo horiek ez dute HTTPren funtzionamendua aldatzen. Egin dutena da aplikazioak eskaera desberdinak elkarreragin beraren parte gisa ezagutzeko behar duen informazioa gehitzea.</p>
+<p>Hurrengo kapituluan cookieek eta saioek nola funtzionatzen duten zehaztasunez aztertuko dugu, nola elkarlanean aritzen diren eta zergatik diren funtsezko elementuak ia edozein web aplikaziotan.</p>
+<div class="admonition note">
+<p class="admonition-title">HTTPk egoerarik gabeko protokoloa izaten jarraitzen du</p>
+<p>Aplikazio batek erabiltzailea hainbat eskaeren artean gogoratu arren, HTTPk ez dio egoerarik gabeko protokoloa izateari uzten. Cookieek, saioek eta antzeko beste mekanismo batzuek ahalbidetzen dute komunikazioaren testuingurua mantentzea.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Autentikazioarekin eta sarbide-kontrolarekin lotutako ahulezia asko ez dira HTTP protokoloaren ondorio, cookieen, saioen edo erabiltzailearen identitatearen kudeaketa okerraren ondorio baizik.</p>
+<p>Desberdintasun hori ulertzea funtsezkoa izango da hurrengo kapituluetan aztertuko ditugun autentikazio-mekanismoak ulertzeko.</p>
+<hr />
+</div>
+<h2 id="zer-ondorio-ditu-httpk-segurtasunerako">Zer ondorio ditu HTTPk segurtasunerako?<a class="headerlink" href="#zer-ondorio-ditu-httpk-segurtasunerako" title="Permanent link">&para;</a></h2>
+<p>Orain arte HTTP bezeroen eta zerbitzarien arteko komunikazio-protokolo gisa aztertu dugu. Hala ere, garapen seguruaren ikuspegitik, HTTP informazioa trukatzeko mekanismo hutsa baino askoz gehiago da.</p>
+<p>Web aplikazio baten eta haren erabiltzaileen arteko komunikazio osoa HTTP eskaeren eta erantzunen bidez bidaiatzen da. Horregatik, autentikazioarekin, baimenekin, datu-trukearekin, cookieekin, saioekin edo APIekin lotutako edozein erabaki mezu-truke horretan islatzen da.</p>
+<p>HTTP nola funtzionatzen duen ulertzeak honako galdera hauei erantzuten laguntzen du:</p>
+<ul>
+<li>Zer informazio bidaltzen dio benetan nabigatzaileak zerbitzariari?</li>
+<li>Non bidaiatzen dute autentikazio-kredentzialek?</li>
+<li>Nola mantentzen du aplikazio batek erabiltzailearen identitatea?</li>
+<li>Zer datu alda ditzake erasotzaile batek zerbitzarira iritsi aurretik?</li>
+<li>Zer informazio itzultzen du aplikazioak erantzun bakoitzean?</li>
+</ul>
+<p>Galdera horiei ondo erantzutea funtsezkoa da aplikazio sendoagoak garatzeko eta segurtasun-arriskuak murrizteko.</p>
+<h3 id="httpk-ez-ditu-erabiltzaile-legitimoak-eta-erasotzaileak-bereizten">HTTPk ez ditu erabiltzaile legitimoak eta erasotzaileak bereizten<a class="headerlink" href="#httpk-ez-ditu-erabiltzaile-legitimoak-eta-erasotzaileak-bereizten" title="Permanent link">&para;</a></h3>
+<p>Protokoloaren ikuspegitik, HTTP eskaera guztiek formatu bera dute.</p>
+<p>HTTPk ez daki eskaera erabiltzaile baimendu batetik, erasotzaile batetik edo tresna automatizatu batetik datorren. Bere funtzio bakarra bezeroaren eta zerbitzariaren artean informazioa garraiatzea da.</p>
+<p>Horregatik, eskaera bakoitzaren baliozkotasuna egiaztatzeko erantzukizuna aplikazioarena da beti.</p>
+<p>Zerbitzariak, besteak beste, honako alderdi hauek egiaztatu behar ditu:</p>
+<ul>
+<li>Jasotako datuak baliozkoak direla.</li>
+<li>Behar denean erabiltzailea autentikatuta dagoela.</li>
+<li>Eragiketa egiteko nahikoa baimen dituela.</li>
+<li>Eskatutako baliabideak parteka daitezkeela.</li>
+<li>Itzulitako informazioak alferrikako daturik ez duela agerian uzten.</li>
+</ul>
+<p>Egiaztapen horiek aplikazioaren garapenaren parte dira, ez HTTP protokoloaren parte.</p>
+<h3 id="http-ulertzeak-arazoen-analisia-errazten-du">HTTP ulertzeak arazoen analisia errazten du<a class="headerlink" href="#http-ulertzeak-arazoen-analisia-errazten-du" title="Permanent link">&para;</a></h3>
+<p>Garapenean ohikoa da HTTP eskaerak eta erantzunak behatzeko aukera ematen duten tresnak erabiltzea.</p>
+<p>Horien bidez posible da:</p>
+<ul>
+<li>Aplikazio baten funtzionamendua aztertzea.</li>
+<li>Komunikazio-erroreak lokalizatzea.</li>
+<li>Zerbitzarira bidalitako datuak egiaztatzea.</li>
+<li>HTTP goiburuak berrikustea.</li>
+<li>Egoera-kodeak egiaztatzea.</li>
+<li>Konfigurazio ez-seguruak detektatzea.</li>
+</ul>
+<p>Moduluaren hurrengo blokeetan nabigatzailearen garapen-tresnak, Burp Suite eta OWASP ZAP ohikotasunez erabiliko ditugu trafiko hori aztertzeko eta aplikazioen portaera hobeto ulertzeko.</p>
+<div class="admonition note">
+<p class="admonition-title">Segurtasuna komunikazioa ulertzetik hasten da</p>
+<p>Babes-mekanismoak aplikatu aurretik, bezeroaren eta zerbitzariaren artean informazioa nola trukatzen den ulertu behar da. Horrela bakarrik identifika daiteke non agertzen diren arriskuak eta nola murriztu daitezkeen garapen-erabakien bidez.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>HTTP ulertzen duen garatzaile batek errazago interpretatzen ditu aplikazio baten inplementazioan agertzen diren arazoak.</p>
+<p>Hasieran programazio-erroreak diruditen gorabehera askok, azkenean, gaizki eraikitako eskaera batekin, ustekabeko erantzun batekin edo komunikazio-protokoloaren konfigurazio oker batekin dute zerikusia.</p>
+<hr />
+</div>
+<h2 id="gogoratzeko">Gogoratzeko<a class="headerlink" href="#gogoratzeko" title="Permanent link">&para;</a></h2>
+<p>Kapitulu honetan HTTP protokoloaren oinarrizko funtzionamendua aztertu da, bezeroen eta zerbitzarien arteko komunikazio-mekanismo gisa.</p>
+<p>HTTP eskaera eta erantzun baten egitura aztertu da, metodo eta egoera-kode nagusien funtzioa, eta zergatik jotzen den HTTP egoerarik gabeko protokolotzat.</p>
+<p>Kontzeptu horiek beharrezko oinarria dira moduluaren gainerakoa ulertzeko; izan ere, autentikazioa, saioak, APIak, hedapena eta web aplikazioen auditoria zuzenean protokolo honetan oinarritzen dira.</p>
+<hr />
+<h2 id="funtsezko-ideiak">Funtsezko ideiak<a class="headerlink" href="#funtsezko-ideiak" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HTTPk bezeroen eta zerbitzarien arteko komunikazio-arauak definitzen ditu.</li>
+<li>HTTP komunikazio orok eskaera eta erantzun eredua jarraitzen du.</li>
+<li>Eskaerak eta erantzunak hasierako lerro batez, goiburuez eta, kasu askotan, gorputz batez osatzen dira.</li>
+<li>HTTP metodoek eskatutako eragiketaren asmoa adierazten dute.</li>
+<li>Egoera-kodeek eskaera bakoitzaren emaitza jakinarazten dute.</li>
+<li>HTTP egoerarik gabeko protokoloa da; horregatik, mekanismo osagarriak behar ditu eskaera desberdinen artean testuingurua mantentzeko.</li>
+<li>HTTP ulertzea ezinbestekoa da web aplikazio seguruak garatzeko, hedatzeko eta auditatzerakoan.</li>
+</ul>
+<hr />
+<h2 id="nabigazioa">Nabigazioa<a class="headerlink" href="#nabigazioa" title="Permanent link">&para;</a></h2>
+<p><strong>Aurreko orria:</strong> <a href="../2.arquitectura-aplicacion-web/">Web aplikazio baten arkitektura</a></p>
+<p><strong>Hurrengo orria:</strong> <a href="../4.cookies-sesiones/">Cookieak, saioak eta egoeraren kudeaketa</a></p>
+<p><strong>Itzuli blokearen index-era:</strong> <a href="../">Web garapen seguruaren oinarriak</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Igo goraino
+</button>
+        
+      </main>
+      
+        <style>
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  .footer-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-logo img {
+    height: 50px;
+    width: auto;
+  }
+</style>
+
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="../../../images/logo.png" alt="Logo CIFP Txurdinaga">
+        </div>
+        <div class="footer-text">
+          Jose Insausti - CIFP Txurdinaga LHII
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Arbelean kopiatuta", "clipboard.copy": "Kopiatu arbelean", "search.result.more.one": "Bat gehiago orri honetan", "search.result.more.other": "# gehiago orri honetan", "search.result.none": "Bat datorren dokumenturik ez", "search.result.one": "Bat datorren dokumentu bat", "search.result.other": "Bat datozen # dokumentu", "search.result.placeholder": "Idatzi bilatzen hasteko", "search.result.term.missing": "Falta da", "select.version": "Hautatu bertsioa"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid.js"></script>
+      
+        <script src="../../../scripts/checkboxes.js"></script>
+      
+        <script src="../../../javascripts/sidebar.js"></script>
+      
+    
+  </body>
+</html>
