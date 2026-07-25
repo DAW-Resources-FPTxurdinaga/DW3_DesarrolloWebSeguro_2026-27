@@ -1,0 +1,1787 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desarrollo Web Seguro - CFGS Desarrollo de Aplicaciones Web">
+      
+      
+        <meta name="author" content="Jose Insausti - CIFP Txurdinaga LHII">
+      
+      
+        <link rel="canonical" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/">
+      
+      
+        <link rel="prev" href="../5.autorizacion/">
+      
+      
+        <link rel="next" href="../7.resumen/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Gestión de secretos y configuración - DAW Desarrollo Web Seguro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gestion-de-secretos-y-configuracion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAW Desarrollo Web Seguro" class="md-header__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW Desarrollo Web Seguro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestión de secretos y configuración
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAW Desarrollo Web Seguro" class="md-nav__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    DAW Desarrollo Web Seguro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../0.proyecto/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de referencia
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de referencia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0.proyecto/txurdigest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TxurdiGest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../1.fundamentos/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 1. Fundamentos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloque 1. Fundamentos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/1.introduccion-desarrollo-web-seguro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al desarrollo web seguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/2.arquitectura-aplicacion-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura de una aplicación web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/3.protocolo-http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/4.cookies-sesiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookies, sesiones y gestión del estado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/5.https-certificados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS y certificados digitales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/6.herramientas-analisis-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas de análisis web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen del bloque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 2. Desarrollo seguro
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloque 2. Desarrollo seguro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.introduccion-desarrollo-seguro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al desarrollo seguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.validacion-de-entradas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validación de entradas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.gestion-de-errores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de errores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.autenticacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.autorizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autorización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de secretos y configuración
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de secretos y configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-los-secretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué son los secretos?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué son los secretos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-entorno-y-archivos-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables de entorno y archivos de configuración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables de entorno y archivos de configuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-segura-de-secretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión segura de secretos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión segura de secretos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de las sesiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-cambia-para-el-desarrollador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué cambia para el desarrollador?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-gestion-de-secretos-y-configuracion-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de la gestión de secretos y configuración en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para recordar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esquema-de-sintesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esquema de síntesis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen del bloque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-los-secretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué son los secretos?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué son los secretos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-entorno-y-archivos-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables de entorno y archivos de configuración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables de entorno y archivos de configuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-segura-de-secretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión segura de secretos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión segura de secretos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de sesiones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de sesiones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de las sesiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-frecuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores frecuentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-cambia-para-el-desarrollador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué cambia para el desarrollador?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-de-la-gestion-de-secretos-y-configuracion-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen de la gestión de secretos y configuración en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para recordar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esquema-de-sintesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esquema de síntesis
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gestion-de-secretos-y-configuracion">Gestión de secretos y configuración<a class="headerlink" href="#gestion-de-secretos-y-configuracion" title="Permanent link">&para;</a></h1>
+<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
+<p>En los capítulos anteriores hemos estudiado cómo una aplicación identifica a los usuarios mediante la autenticación y cómo controla las acciones que pueden realizar mediante la autorización.</p>
+<p>Sin embargo, la seguridad de una aplicación no depende únicamente de sus usuarios.</p>
+<p>Las propias aplicaciones necesitan almacenar información confidencial para poder funcionar correctamente, como contraseñas de bases de datos, claves de cifrado, credenciales de servicios externos o identificadores de sesión.</p>
+<p>Proteger esta información resulta fundamental para evitar accesos no autorizados y reducir el impacto de posibles incidentes de seguridad.</p>
+<p>En este capítulo estudiaremos qué son los secretos, cómo deben gestionarse de forma segura, cómo configurar una aplicación sin exponer información sensible y qué buenas prácticas deben seguirse para proteger estos datos.</p>
+<h2 id="objetivos">Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
+<p>Al finalizar este capítulo serás capaz de:</p>
+<ul>
+<li>Comprender qué es un secreto dentro de una aplicación web.</li>
+<li>Identificar la información sensible que no debe incorporarse al código fuente.</li>
+<li>Entender cómo utilizar variables de entorno y archivos de configuración.</li>
+<li>Conocer cómo se gestionan las sesiones desde el punto de vista de la seguridad.</li>
+<li>Aplicar buenas prácticas para proteger secretos y configuraciones.</li>
+</ul>
+<h2 id="que-son-los-secretos">¿Qué son los secretos?<a class="headerlink" href="#que-son-los-secretos" title="Permanent link">&para;</a></h2>
+<p>En una aplicación web existen datos que deben permanecer confidenciales porque permiten acceder a recursos o realizar operaciones sensibles.</p>
+<p>Estos datos reciben el nombre de <strong>secretos</strong>.</p>
+<p>Algunos ejemplos habituales son:</p>
+<ul>
+<li>Contraseñas de bases de datos.</li>
+<li>Claves de cifrado.</li>
+<li>Claves de API.</li>
+<li>Credenciales de servicios externos.</li>
+<li>Certificados y claves privadas.</li>
+<li>Secretos utilizados para firmar o verificar información.</li>
+</ul>
+<p>Si un atacante obtiene alguno de estos secretos, podría acceder a recursos protegidos, modificar información o incluso comprometer completamente la aplicación.</p>
+<p>Por este motivo, los secretos deben protegerse con el mismo nivel de cuidado que la información de los usuarios.</p>
+<div class="admonition note">
+<p class="admonition-title">Secreto</p>
+<p>Un secreto es cualquier información que debe mantenerse confidencial para garantizar la seguridad de una aplicación o de los servicios con los que se comunica.</p>
+</div>
+<h3 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h3>
+<p>Para conectarse a la base de datos, <strong>TxurdiGest</strong> necesita conocer el servidor, el usuario y la contraseña de acceso.</p>
+<p>Estos datos son imprescindibles para el funcionamiento de la aplicación, pero nunca deben aparecer directamente en el código fuente ni publicarse en un repositorio.</p>
+<div class="admonition tip">
+<p class="admonition-title">Idea clave</p>
+<p>Un secreto no protege únicamente a los usuarios; también protege la propia infraestructura de la aplicación.</p>
+</div>
+<h2 id="variables-de-entorno-y-archivos-de-configuracion">Variables de entorno y archivos de configuración<a class="headerlink" href="#variables-de-entorno-y-archivos-de-configuracion" title="Permanent link">&para;</a></h2>
+<p>Una aplicación necesita conocer determinados valores para poder funcionar correctamente.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>La dirección del servidor de bases de datos.</li>
+<li>El nombre de la base de datos.</li>
+<li>Las credenciales de acceso.</li>
+<li>Las claves utilizadas para cifrar información.</li>
+<li>Las credenciales de servicios externos.</li>
+</ul>
+<p>Aunque estos datos forman parte de la configuración de la aplicación, muchos de ellos son secretos y deben protegerse adecuadamente.</p>
+<p>Por este motivo, las aplicaciones modernas suelen separar el código fuente de la configuración mediante <strong>variables de entorno</strong>.</p>
+<p>Las variables de entorno permiten almacenar información sensible fuera del código de la aplicación, facilitando además que una misma aplicación pueda utilizar configuraciones distintas en desarrollo, pruebas y producción.</p>
+<div class="admonition note">
+<p class="admonition-title">Variables de entorno</p>
+<p>Una variable de entorno es un valor de configuración proporcionado por el sistema operativo o por el entorno de ejecución que la aplicación puede consultar mientras se está ejecutando.</p>
+</div>
+<h3 id="ejemplo-en-txurdigest_1">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest_1" title="Permanent link">&para;</a></h3>
+<p>Durante el desarrollo, <strong>TxurdiGest</strong> utiliza una base de datos de pruebas.</p>
+<p>Sin modificar el código de la aplicación, basta con cambiar las variables de entorno para que, al desplegarla en producción, utilice la base de datos definitiva.</p>
+<p>Este enfoque evita modificar el código cada vez que cambia el entorno de ejecución.</p>
+<div class="admonition tip">
+<p class="admonition-title">Buena práctica</p>
+<p>Mantén el código independiente de la configuración. Así será posible desplegar la misma aplicación en distintos entornos modificando únicamente los valores de configuración.</p>
+</div>
+<h2 id="gestion-segura-de-secretos">Gestión segura de secretos<a class="headerlink" href="#gestion-segura-de-secretos" title="Permanent link">&para;</a></h2>
+<p>Almacenar correctamente los secretos es tan importante como utilizarlos.</p>
+<p>Una mala gestión de los secretos puede permitir que un atacante acceda a la infraestructura de la aplicación incluso aunque el código no presente vulnerabilidades.</p>
+<p>Por este motivo, nunca deben incorporarse secretos directamente en el código fuente.</p>
+<p>Tampoco deben almacenarse en repositorios públicos ni compartirse mediante correo electrónico o aplicaciones de mensajería.</p>
+<p>Cuando varios desarrolladores trabajan en un mismo proyecto, cada uno debe disponer de sus propios secretos o utilizar mecanismos específicos para compartir la configuración de forma segura.</p>
+<h3 id="ejemplo-en-txurdigest_2">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest_2" title="Permanent link">&para;</a></h3>
+<p>Durante el desarrollo de <strong>TxurdiGest</strong>, todos los miembros del equipo utilizan el mismo código fuente.</p>
+<p>Sin embargo, cada entorno dispone de su propia configuración y de sus propias credenciales de acceso.</p>
+<p>De este modo, las claves de producción permanecen protegidas y nunca se incluyen en el repositorio del proyecto.</p>
+<div class="admonition warning">
+<p class="admonition-title">Nunca publiques secretos</p>
+<p>Una vez que una contraseña o una clave privada se ha publicado en un repositorio, debe considerarse comprometida, aunque posteriormente sea eliminada del historial más reciente.</p>
+</div>
+<h2 id="gestion-de-sesiones">Gestión de sesiones<a class="headerlink" href="#gestion-de-sesiones" title="Permanent link">&para;</a></h2>
+<p>Cuando un usuario inicia sesión correctamente, la aplicación necesita recordar su identidad mientras navega por las distintas páginas.</p>
+<p>Para ello utiliza una <strong>sesión</strong>, que permite asociar las diferentes peticiones HTTP al mismo usuario.</p>
+<p>La sesión suele identificarse mediante un <strong>identificador de sesión</strong> (<em>Session ID</em>), que el navegador envía automáticamente en cada petición.</p>
+<p>Este identificador es un dato sensible. Si un atacante consigue obtenerlo, podría hacerse pasar por el usuario sin necesidad de conocer su contraseña.</p>
+<p>Por este motivo, la gestión de las sesiones forma parte de la configuración de seguridad de una aplicación y debe realizarse cuidadosamente.</p>
+<h3 id="proteccion-de-las-sesiones">Protección de las sesiones<a class="headerlink" href="#proteccion-de-las-sesiones" title="Permanent link">&para;</a></h3>
+<p>Para reducir el riesgo de robo o uso indebido de una sesión, las aplicaciones deben aplicar diferentes medidas de protección:</p>
+<ul>
+<li>Utilizar conexiones HTTPS para impedir que el identificador de sesión viaje sin cifrar.</li>
+<li>Configurar las cookies de sesión con los atributos de seguridad adecuados.</li>
+<li>Regenerar el identificador de sesión después de la autenticación.</li>
+<li>Finalizar la sesión tras un periodo de inactividad o cuando el usuario cierre la sesión.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Identificador de sesión</p>
+<p>El identificador de sesión permite reconocer a un usuario entre distintas peticiones HTTP. Debe tratarse como información confidencial.</p>
+</div>
+<h3 id="ejemplo-en-txurdigest_3">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest_3" title="Permanent link">&para;</a></h3>
+<p>Un profesor inicia sesión en <strong>TxurdiGest</strong> y comienza a registrar las calificaciones de su alumnado.</p>
+<p>Mientras trabaja, el navegador envía automáticamente el identificador de sesión en cada petición, permitiendo que la aplicación reconozca al usuario sin solicitar nuevamente sus credenciales.</p>
+<p>Cuando el profesor cierra la sesión, dicho identificador deja de ser válido y ya no puede utilizarse para acceder a la aplicación.</p>
+<div class="admonition tip">
+<p class="admonition-title">Buena práctica</p>
+<p>Una sesión debe durar únicamente el tiempo necesario. Mantener sesiones activas durante largos periodos incrementa el riesgo de accesos no autorizados.</p>
+</div>
+<h2 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h2>
+<p>Una gestión adecuada de los secretos y de la configuración reduce considerablemente la superficie de ataque de una aplicación.</p>
+<p>Al desarrollar una aplicación web conviene seguir estas recomendaciones:</p>
+<ul>
+<li>Mantener los secretos fuera del código fuente.</li>
+<li>Utilizar variables de entorno para almacenar información sensible.</li>
+<li>Proteger las sesiones mediante HTTPS y cookies seguras.</li>
+<li>Limitar la duración de las sesiones.</li>
+<li>Utilizar credenciales diferentes para desarrollo, pruebas y producción.</li>
+<li>Revisar periódicamente la configuración de seguridad.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Buena práctica</p>
+<p>Considera que cualquier secreto publicado deja de ser secreto. Si una credencial se expone, debe sustituirse inmediatamente por otra nueva.</p>
+</div>
+<h2 id="errores-frecuentes">Errores frecuentes<a class="headerlink" href="#errores-frecuentes" title="Permanent link">&para;</a></h2>
+<p>Una mala gestión de los secretos puede comprometer toda la aplicación, incluso aunque el código no presente vulnerabilidades.</p>
+<p>Los errores más habituales son:</p>
+<ul>
+<li>Incluir contraseñas o claves directamente en el código.</li>
+<li>Compartir secretos mediante canales inseguros.</li>
+<li>Publicar archivos de configuración con información sensible.</li>
+<li>Utilizar las mismas credenciales en todos los entornos.</li>
+<li>Mantener sesiones activas durante más tiempo del necesario.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Recuerda</p>
+<p>La mayoría de las fugas de secretos no se producen por fallos criptográficos, sino por errores de configuración o de gestión.</p>
+</div>
+<h2 id="que-cambia-para-el-desarrollador">¿Qué cambia para el desarrollador?<a class="headerlink" href="#que-cambia-para-el-desarrollador" title="Permanent link">&para;</a></h2>
+<p>Desarrollar una aplicación segura implica proteger tanto el código como la información necesaria para que la aplicación funcione.</p>
+<p>El desarrollador debe separar la configuración del código fuente, gestionar correctamente los secretos y configurar adecuadamente las sesiones para reducir el riesgo de accesos no autorizados.</p>
+<p>Estas medidas no solo mejoran la seguridad de la aplicación, sino que también facilitan su despliegue y mantenimiento en diferentes entornos.</p>
+<h2 id="resumen-de-la-gestion-de-secretos-y-configuracion-en-txurdigest">Resumen de la gestión de secretos y configuración en TxurdiGest<a class="headerlink" href="#resumen-de-la-gestion-de-secretos-y-configuracion-en-txurdigest" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Aplicación en TxurdiGest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Secretos</td>
+<td>Credenciales de la base de datos, claves de cifrado y configuración sensible.</td>
+</tr>
+<tr>
+<td>Configuración</td>
+<td>Se mantiene separada del código fuente mediante variables de entorno.</td>
+</tr>
+<tr>
+<td>Sesiones</td>
+<td>La aplicación utiliza identificadores de sesión para reconocer al usuario autenticado.</td>
+</tr>
+<tr>
+<td>Protección</td>
+<td>Los secretos no se almacenan en el código y las sesiones se protegen mediante una configuración segura.</td>
+</tr>
+<tr>
+<td>Objetivo</td>
+<td>Proteger tanto la infraestructura de la aplicación como la información de los usuarios.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="para-recordar">Para recordar<a class="headerlink" href="#para-recordar" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Los secretos permiten acceder a recursos sensibles de la aplicación.</li>
+<li>La configuración debe mantenerse separada del código fuente.</li>
+<li>Las variables de entorno facilitan una gestión segura de la configuración.</li>
+<li>El identificador de sesión debe protegerse como cualquier otro secreto.</li>
+<li>Una buena configuración reduce el riesgo de incidentes de seguridad.</li>
+</ul>
+<h2 id="ideas-clave">Ideas clave<a class="headerlink" href="#ideas-clave" title="Permanent link">&para;</a></h2>
+<ul>
+<li>No toda la información sensible pertenece a los usuarios; la aplicación también tiene sus propios secretos.</li>
+<li>Los secretos nunca deben incorporarse al código fuente.</li>
+<li>La configuración debe adaptarse a cada entorno sin modificar la aplicación.</li>
+<li>Las sesiones permiten mantener autenticado al usuario y deben protegerse adecuadamente.</li>
+<li>La gestión de secretos y configuración es un elemento esencial del desarrollo web seguro.</li>
+</ul>
+<h2 id="esquema-de-sintesis">Esquema de síntesis<a class="headerlink" href="#esquema-de-sintesis" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+
+A[Aplicación web]
+
+A --&gt; B[Secretos]
+A --&gt; C[Configuración]
+
+B --&gt; D[Contraseñas]
+B --&gt; E[Claves API]
+B --&gt; F[Claves de cifrado]
+
+C --&gt; G[Variables de entorno]
+C --&gt; H[Sesiones]
+C --&gt; I[Configuración por entorno]
+
+G --&gt; J[Desarrollo]
+G --&gt; K[Pruebas]
+G --&gt; L[Producción]
+
+H --&gt; M[Session ID protegido]</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../5.autorizacion/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Autorización">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Autorización
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../7.resumen/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Resumen del bloque">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Resumen del bloque
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  <div class="md-copyright__highlight">
+    © 2026 Jose Insausti · CIFP Txurdinaga LHII
+  </div>
+
+  Material desarrollado para el módulo Desarrollo Web Seguro.
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="../../scripts/checkboxes.js"></script>
+      
+        <script src="../../javascripts/sidebar.js"></script>
+      
+    
+  </body>
+</html>

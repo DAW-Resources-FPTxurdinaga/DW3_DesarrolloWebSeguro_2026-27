@@ -19,6 +19,7 @@ theme:
     - navigation.expand
     - navigation.indexes
     - navigation.top
+    - navigation.footer
     - content.code.copy
     - content.code.annotate
     - search.highlight
@@ -51,6 +52,10 @@ plugins:
           nav:
             - Inicio: index.md
 
+            - Proyecto de referencia:
+              - Presentación del proyecto: 0.proyecto/index.md
+              - TxurdiGest: 0.proyecto/txurdigest.md
+
             - Bloque 1. Fundamentos:
                 - Presentación del bloque: 1.fundamentos/index.md
                 - Introducción al desarrollo web seguro: 1.fundamentos/1.introduccion-desarrollo-web-seguro.md
@@ -61,11 +66,25 @@ plugins:
                 - Herramientas de análisis web: 1.fundamentos/6.herramientas-analisis-web.md
                 - Resumen del bloque: 1.fundamentos/7.resumen.md
 
+            - Bloque 2. Desarrollo seguro:
+              - Presentación del bloque: 2.desarrollo-seguro/index.md
+              - Introducción al desarrollo seguro: 2.desarrollo-seguro/1.introduccion-desarrollo-seguro.md
+              - Validación de entradas: 2.desarrollo-seguro/2.validacion-de-entradas.md
+              - Gestión de errores: 2.desarrollo-seguro/3.gestion-de-errores.md
+              - Autenticación: 2.desarrollo-seguro/4.autenticacion.md
+              - Autorización: 2.desarrollo-seguro/5.autorizacion.md
+              - Gestión de secretos y configuración: 2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion.md
+              - Resumen del bloque: 2.desarrollo-seguro/7.resumen.md
+
         - locale: eu
           name: Euskara
 
           nav:
             - Hasiera: index.md
+
+            - Erreferentziazko proiektua:
+                - Proiektuaren aurkezpena: 0.proyecto/index.md
+                - TxurdiGest: 0.proyecto/txurdigest.md
 
             - 1. blokea. Web garapen seguruaren oinarriak:
                 - Blokearen aurkezpena: 1.fundamentos/index.md
@@ -76,6 +95,16 @@ plugins:
                 - HTTPS eta ziurtagiri digitalak: 1.fundamentos/5.https-certificados.md
                 - Web analisi tresnak: 1.fundamentos/6.herramientas-analisis-web.md
                 - Blokearen laburpena: 1.fundamentos/7.resumen.md
+
+            - 2. blokea. Web aplikazioen garapen segurua:
+              - Blokearen aurkezpena: 2.desarrollo-seguro/index.md
+              - Garapen seguruaren sarrera: 2.desarrollo-seguro/1.introduccion-desarrollo-seguro.md
+              - Sarreren balidazioa: 2.desarrollo-seguro/2.validacion-de-entradas.md
+              - Erroreen kudeaketa: 2.desarrollo-seguro/3.gestion-de-errores.md
+              - Autentifikazioa: 2.desarrollo-seguro/4.autenticacion.md
+              - Baimen-kudeaketa: 2.desarrollo-seguro/5.autorizacion.md
+              - Sekretuen eta konfigurazioaren kudeaketa: 2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion.md
+              - Blokearen laburpena: 2.desarrollo-seguro/7.resumen.md
 
 markdown_extensions:
 

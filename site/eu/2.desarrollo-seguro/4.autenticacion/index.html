@@ -1,0 +1,2052 @@
+
+<!doctype html>
+<html lang="eu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desarrollo Web Seguro - CFGS Desarrollo de Aplicaciones Web">
+      
+      
+        <meta name="author" content="Jose Insausti - CIFP Txurdinaga LHII">
+      
+      
+        <link rel="canonical" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/4.autenticacion/">
+      
+      
+        <link rel="prev" href="../3.gestion-de-errores/">
+      
+      
+        <link rel="next" href="../5.autorizacion/">
+      
+      
+        
+          <link rel="alternate" href="../../../2.desarrollo-seguro/4.autenticacion/" hreflang="es">
+        
+          <link rel="alternate" href="./" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Autentifikazioa - DAW Desarrollo Web Seguro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autentifikazioa" class="md-skip">
+          Joan zuzenean edukira
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Atalburua">
+    <a href="../../" title="DAW Desarrollo Web Seguro" class="md-header__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW Desarrollo Web Seguro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Autentifikazioa
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Hautatu hizkuntza">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../2.desarrollo-seguro/4.autenticacion/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Bilatu" placeholder="Bilatu" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Bilatu">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Partekatu" aria-label="Partekatu" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Garbitu" aria-label="Garbitu" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Bilaketa hasieratzen
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Nabigazioa" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="DAW Desarrollo Web Seguro" class="md-nav__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    DAW Desarrollo Web Seguro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../0.proyecto/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erreferentziazko proiektua
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Erreferentziazko proiektua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0.proyecto/txurdigest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TxurdiGest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../1.fundamentos/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/1.introduccion-desarrollo-web-seguro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garapen web seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/2.arquitectura-aplicacion-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web aplikazio baten arkitektura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/3.protocolo-http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP protokoloa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/4.cookies-sesiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookieak, saioak eta egoeraren kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/5.https-certificados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS eta ziurtagiri digitalak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/6.herramientas-analisis-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web analisi tresnak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blokearen laburpena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. blokea. Web aplikazioen garapen segurua
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. blokea. Web aplikazioen garapen segurua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.introduccion-desarrollo-seguro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garapen seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.validacion-de-entradas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sarreren balidazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.gestion-de-errores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erroreen kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autentifikazioa
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autentifikazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sarrera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sarrera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helburuak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helburuak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-da-autentifikazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer da autentifikazioa?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zer da autentifikazioa?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adibidea-txurdigest-en" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibidea TxurdiGest-en
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autentifikazio-faktoreak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentifikazio-faktoreak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autentifikazio-faktoreak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#badakizun-zerbait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Badakizun zerbait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daukazun-zerbait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daukazun zerbait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zaren-zerbait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zaren zerbait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faktoreen-konbinazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faktoreen konbinazioa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erabiltzaile-izenaren-eta-pasahitzaren-bidezko-autentifikazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erabiltzaile-izenaren eta pasahitzaren bidezko autentifikazioa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erabiltzaile-izenaren eta pasahitzaren bidezko autentifikazioa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erabiltzaile-izena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erabiltzaile-izena
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasahitza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasahitza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasahitzak-ez-dira-inoiz-testu-lauan-gorde-behar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasahitzak ez dira inoiz testu lauan gorde behar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sarrera-saiakeren-aurkako-babesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sarrera saiakeren aurkako babesa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adibidea-txurdigest-en_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibidea TxurdiGest-en
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autentifikazio-multifaktorea-mfa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentifikazio multifaktorea (MFA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autentifikazio multifaktorea (MFA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nola-funtzionatzen-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola funtzionatzen du?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autentifikazio-multifaktorearen-abantailak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentifikazio multifaktorearen abantailak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noiz-komeni-da-mfa-erabiltzea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noiz komeni da MFA erabiltzea?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jardunbide-egokiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jardunbide egokiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ohiko-akatsak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ohiko akatsak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-aldatzen-da-garatzailearentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer aldatzen da garatzailearentzat?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#txurdigest-eko-autentifikazioaren-laburpena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TxurdiGest-eko autentifikazioaren laburpena
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gogoratzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gogoratzeko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideia-gakoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideia gakoak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintesi-eskema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintesi-eskema
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.autorizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baimen-kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.gestion-de-secretos-y-configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sekretuen eta konfigurazioaren kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blokearen laburpena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sarrera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sarrera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helburuak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helburuak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-da-autentifikazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer da autentifikazioa?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zer da autentifikazioa?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adibidea-txurdigest-en" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibidea TxurdiGest-en
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autentifikazio-faktoreak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentifikazio-faktoreak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autentifikazio-faktoreak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#badakizun-zerbait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Badakizun zerbait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#daukazun-zerbait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daukazun zerbait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zaren-zerbait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zaren zerbait
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faktoreen-konbinazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faktoreen konbinazioa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erabiltzaile-izenaren-eta-pasahitzaren-bidezko-autentifikazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erabiltzaile-izenaren eta pasahitzaren bidezko autentifikazioa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erabiltzaile-izenaren eta pasahitzaren bidezko autentifikazioa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erabiltzaile-izena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erabiltzaile-izena
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasahitza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasahitza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasahitzak-ez-dira-inoiz-testu-lauan-gorde-behar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasahitzak ez dira inoiz testu lauan gorde behar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sarrera-saiakeren-aurkako-babesa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sarrera saiakeren aurkako babesa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adibidea-txurdigest-en_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibidea TxurdiGest-en
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autentifikazio-multifaktorea-mfa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentifikazio multifaktorea (MFA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Autentifikazio multifaktorea (MFA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nola-funtzionatzen-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nola funtzionatzen du?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autentifikazio-multifaktorearen-abantailak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autentifikazio multifaktorearen abantailak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#noiz-komeni-da-mfa-erabiltzea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noiz komeni da MFA erabiltzea?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jardunbide-egokiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jardunbide egokiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ohiko-akatsak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ohiko akatsak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-aldatzen-da-garatzailearentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer aldatzen da garatzailearentzat?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#txurdigest-eko-autentifikazioaren-laburpena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TxurdiGest-eko autentifikazioaren laburpena
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gogoratzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gogoratzeko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideia-gakoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideia gakoak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintesi-eskema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintesi-eskema
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="autentifikazioa">Autentifikazioa<a class="headerlink" href="#autentifikazioa" title="Permanent link">&para;</a></h1>
+<h2 id="sarrera">Sarrera<a class="headerlink" href="#sarrera" title="Permanent link">&para;</a></h2>
+<p><strong>TxurdiGest</strong>-eko erabiltzaileek egunero sartzen dira aplikazioan beren erantzukizunei dagozkien zereginak egiteko.</p>
+<p>Hala ere, sarrera baimendu aurretik, aplikazioak oinarrizko galdera bati erantzun behar dio:</p>
+<blockquote>
+<p><strong>Benetan al da saioa hasteko saiatzen ari den pertsona dela dioena?</strong></p>
+</blockquote>
+<p>Galdera horri erantzutea da <strong>autentifikazioaren</strong> helburua.</p>
+<p>Autentifikazioa web aplikazio baten lehen segurtasun-hesia da. Erabiltzaile batek bere nortasuna frogatu ezin badu, sistemak ez lioke informaziora sartzen edo inolako eragiketarik egiten utzi behar.</p>
+<p>Kapitulu honetan autentifikazioa nola funtzionatzen duen, erabiltzaile baten identitatea egiaztatzeko zer faktore erabil daitezkeen eta web aplikazio baterako sarrera babesteko zer jardunbide egoki aplikatu behar diren aztertuko dugu.</p>
+<h2 id="helburuak">Helburuak<a class="headerlink" href="#helburuak" title="Permanent link">&para;</a></h2>
+<p>Kapitulu hau amaitzean gai izango zara:</p>
+<ul>
+<li>Autentifikazioa zer den eta zein helbururekin erabiltzen den ulertzeko.</li>
+<li>Autentifikazioa eta baimen-kudeaketa bereizteko.</li>
+<li>Autentifikazio-faktore nagusiak ezagutzeko.</li>
+<li>Erabiltzaile-izenaren eta pasahitzaren bidezko autentifikazioa nola funtzionatzen duen ulertzeko.</li>
+<li>Autentifikazio multifaktorearen abantailak identifikatzeko.</li>
+<li>Erabiltzaile-kontuak babesteko jardunbide egokiak aplikatzeko.</li>
+</ul>
+<h2 id="zer-da-autentifikazioa">Zer da autentifikazioa?<a class="headerlink" href="#zer-da-autentifikazioa" title="Permanent link">&para;</a></h2>
+<p><strong>Autentifikazioa</strong> aplikazio batek erabiltzaile baten identitatea egiaztatzeko egiten duen prozesua da, sistemara sartzen utzi aurretik.</p>
+<p>Beste hitz batzuekin esanda, autentifikazioak honako galdera honi erantzuten dio:</p>
+<blockquote>
+<p><strong>Nor zara?</strong></p>
+</blockquote>
+<p>Horri erantzuteko, erabiltzaileak bere nortasuna frogatzen duten froga bat edo gehiago eman behar ditu. Aplikazioak baliozkotzat jotzen baditu, sarbidea baimenduko du; bestela, ukatu egingo du.</p>
+<div class="admonition note">
+<p class="admonition-title">Autentifikazioa eta identifikazioa</p>
+<p>Identifikatzea nor den adieraztea da, adibidez erabiltzaile-izen bat sartuz. Autentifikatzea, berriz, identitate hori benetan zuzena dela frogatzea da.</p>
+</div>
+<h3 id="adibidea-txurdigest-en">Adibidea TxurdiGest-en<a class="headerlink" href="#adibidea-txurdigest-en" title="Permanent link">&para;</a></h3>
+<p>Irakasle bat <strong>TxurdiGest</strong>-era sartzen saiatzen da.</p>
+<p>Erabiltzaile-izena eta pasahitza sartzen ditu. Aplikazioak egiaztatzen du bi datuak baliozko kontu bati dagozkiola.</p>
+<p>Egiaztapena zuzena bada, sistemara sartu ahal izango da.</p>
+<p>Ez bada zuzena, sarrera ukatu egingo da eta berriro saiatu beharko du.</p>
+<p>Une horretan, aplikazioak erabiltzailearen identitatea soilik egiaztatu du. Oraindik ez du erabaki sistemaren barruan zer eragiketa egin ahal izango dituen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ideia gakoa</p>
+<p>Autentifikazioak <strong>erabiltzailea nor den</strong> egiaztatzen du. Egin ahal izango dituen ekintzak geroago erabakiko dira, baimen-kudeaketaren bidez.</p>
+</div>
+<h2 id="autentifikazio-faktoreak">Autentifikazio-faktoreak<a class="headerlink" href="#autentifikazio-faktoreak" title="Permanent link">&para;</a></h2>
+<p>Erabiltzaile baten identitatea frogatzeko, autentifikazio-sistemek <strong>autentifikazio-faktore</strong> izeneko froga bat edo gehiago erabiltzen dituzte.</p>
+<p>Hiru kategoria nagusi daude.</p>
+<h3 id="badakizun-zerbait">Badakizun zerbait<a class="headerlink" href="#badakizun-zerbait" title="Permanent link">&para;</a></h3>
+<p>Autentifikazio-modurik ohikoena da.</p>
+<p>Erabiltzaileak bere identitatea frogatzen du berak bakarrik jakin beharko lukeen informazioaren bidez.</p>
+<p>Adibideak:</p>
+<ul>
+<li>Pasahitz bat.</li>
+<li>PIN bat.</li>
+<li>Segurtasun-galdera baten erantzuna.</li>
+</ul>
+<h3 id="daukazun-zerbait">Daukazun zerbait<a class="headerlink" href="#daukazun-zerbait" title="Permanent link">&para;</a></h3>
+<p>Erabiltzaileak bere identitatea frogatzen du daukan objektu fisiko bat erabiliz.</p>
+<p>Adibideak:</p>
+<ul>
+<li>Sakelako telefono bat.</li>
+<li>Txartel adimendun bat.</li>
+<li>USB segurtasun-giltza bat.</li>
+<li>Aldi baterako kodeak sortzen dituen aplikazio bat.</li>
+</ul>
+<h3 id="zaren-zerbait">Zaren zerbait<a class="headerlink" href="#zaren-zerbait" title="Permanent link">&para;</a></h3>
+<p>Identitatea ezaugarri biometriko baten bidez egiaztatzen da.</p>
+<p>Adibideak:</p>
+<ul>
+<li>Hatz-marka.</li>
+<li>Aurpegi-ezagutza.</li>
+<li>Irisa ezagutzea.</li>
+<li>Ahots-ezagutza.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Biometria</p>
+<p>Sistema biometrikoek erabiltzailearentzat erosotasun handia eskaintzen dute, baina datuak babesteko araudia eta dagokion segurtasun-neurriak errespetatuz erabili behar dira.</p>
+</div>
+<h3 id="faktoreen-konbinazioa">Faktoreen konbinazioa<a class="headerlink" href="#faktoreen-konbinazioa" title="Permanent link">&para;</a></h3>
+<p>Zenbat eta faktore independente gehiago erabili, orduan eta handiagoa izango da sistemaren segurtasuna.</p>
+<p>Adibidez, <strong>TxurdiGest</strong>-era sartzeko, Mirenek bere pasahitza sar lezake eta, gainera, bere sakelako telefonoan jasotako kode baten bidez sarrera berretsi.</p>
+<p>Kasu horretan, aplikazioak bi faktore desberdin erabiliko lituzke:</p>
+<ul>
+<li><strong>Badakizun zerbait:</strong> pasahitza.</li>
+<li><strong>Daukazun zerbait:</strong> sakelako telefonoa.</li>
+</ul>
+<p>Autentifikazio mota horri <strong>autentifikazio multifaktore (MFA)</strong> deitzen zaio eta geroago xehetasun gehiagorekin aztertuko da.</p>
+<div class="admonition warning">
+<p class="admonition-title">Faktore guztiek ez dute babes bera eskaintzen</p>
+<p>Bi pasahitz desberdin erabiltzeak ez du esan nahi bi autentifikazio-faktore erabiltzen direnik, biak "badakizun zerbait" kategorian baitaude. Autentifikazio multifaktorea egon dadin, kategoria desberdinetako faktoreak konbinatu behar dira.</p>
+</div>
+<h2 id="erabiltzaile-izenaren-eta-pasahitzaren-bidezko-autentifikazioa">Erabiltzaile-izenaren eta pasahitzaren bidezko autentifikazioa<a class="headerlink" href="#erabiltzaile-izenaren-eta-pasahitzaren-bidezko-autentifikazioa" title="Permanent link">&para;</a></h2>
+<p><strong>Erabiltzaile-izenaren eta pasahitzaren</strong> bidezko autentifikazioa da web aplikazioetan gehien erabiltzen den mekanismoa.</p>
+<p>Bere funtzionamendua sinplea da:</p>
+<ol>
+<li>Erabiltzaileak bere erabiltzaile-izena sartzen du.</li>
+<li>Pasahitza sartzen du.</li>
+<li>Aplikazioak egiaztatzen du kredentzialak zuzenak direla.</li>
+<li>Egiaztapena arrakastatsua bada, sistemara sartzen uzten du.</li>
+</ol>
+<p>Prozesu hori sinplea dirudien arren, autentifikazio segurua ez da datu-base batean gordetako pasahitz batekin alderatze hutsa.</p>
+<h3 id="erabiltzaile-izena">Erabiltzaile-izena<a class="headerlink" href="#erabiltzaile-izena" title="Permanent link">&para;</a></h3>
+<p>Erabiltzaile-izenak aplikazioaren barruan pertsona bakoitza modu bakarrean identifikatzen du.</p>
+<p>Sistemaren arabera, honako hau izan daiteke:</p>
+<ul>
+<li>Erabiltzaile-izen bat.</li>
+<li>Helbide elektroniko bat.</li>
+<li>Barne-identifikatzaile bat.</li>
+<li>Langile-zenbaki bat.</li>
+</ul>
+<p><strong>TxurdiGest</strong>-en, langile bakoitzak identifikatzaile bakarra du aplikaziora sartzeko.</p>
+<h3 id="pasahitza">Pasahitza<a class="headerlink" href="#pasahitza" title="Permanent link">&para;</a></h3>
+<p>Pasahitza erabiltzaileak bakarrik ezagutzen duen sekretua da.</p>
+<p>Nahikoa sendoa izan behar du, eraso automatikoen bidez edo erabiltzaileari buruzko informazioa ezagutzen duten pertsonek asmatzea zailtzeko.</p>
+<p>Pasahitz seguru batek normalean ezaugarri hauek betetzen ditu:</p>
+<ul>
+<li>Luzera nahikoa du.</li>
+<li>Zaila da asmatzen.</li>
+<li>Ez du informazio pertsonalik.</li>
+<li>Ez da beste zerbitzu batzuetan berrerabiltzen.</li>
+<li>Aldatu egiten da arriskuan egon daitekeela susmatzen denean.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Adibidea</p>
+<p><strong>Irakaslea2026</strong> pasahitz ona dirudi, baina erraz ondoriozta daitekeen informazioa dauka. Pasahitz luze eta aurreikustea zaila batek babes askoz handiagoa eskaintzen du.</p>
+</div>
+<h3 id="pasahitzak-ez-dira-inoiz-testu-lauan-gorde-behar">Pasahitzak ez dira inoiz testu lauan gorde behar<a class="headerlink" href="#pasahitzak-ez-dira-inoiz-testu-lauan-gorde-behar" title="Permanent link">&para;</a></h3>
+<p>Garapen seguruaren oinarrizko arauetako bat da <strong>erabiltzaileak sartzen dituen bezala pasahitzak inoiz ez gordetzea</strong>.</p>
+<p>Erasotzaile batek datu-basera sartzea lortuko balu, berehala kredentzial guztiak eskuratuko lituzke.</p>
+<p>Horren ordez, aplikazioek pasahitzaren irudikapen kriptografiko bat gordetzen dute, <strong>hash</strong> deritzona.</p>
+<p>Erabiltzaileak saioa hasten duenean, aplikazioak berriro kalkulatzen du sartutako pasahitzaren hash-a eta gordetakoarekin alderatzen du.</p>
+<p>Biak bat badatoz, autentifikazioa zuzena da.</p>
+<div class="admonition note">
+<p class="admonition-title">Geroago</p>
+<p>Kriptografiari eskainitako kapituluan xehetasunez aztertuko dugu zer den hash bat eta zergatik diren egokiak <strong>bcrypt</strong> edo <strong>Argon2</strong> bezalako algoritmoak pasahitzak gordetzeko.</p>
+</div>
+<h3 id="sarrera-saiakeren-aurkako-babesa">Sarrera saiakeren aurkako babesa<a class="headerlink" href="#sarrera-saiakeren-aurkako-babesa" title="Permanent link">&para;</a></h3>
+<p>Aplikazio seguru batek erasotzaile bati milaka pasahitz automatikoki probatzen uztea eragotzi behar du.</p>
+<p>Ohiko neurri batzuk honako hauek dira:</p>
+<ul>
+<li>Ondoz ondoko saiakera kopurua mugatzea.</li>
+<li>Hainbat akatsen ondoren itxarote-denborak sartzea.</li>
+<li>Kontua aldi baterako blokeatzea portaera anomaloa detektatzen denean.</li>
+<li>Autentifikazio-saiakera huts guztiak erregistratzea.</li>
+</ul>
+<p>Neurri horiek nabarmen murrizten dute indar gordinaren eta pasahitzak asmatzeko erasoen arriskua.</p>
+<h3 id="adibidea-txurdigest-en_1">Adibidea TxurdiGest-en<a class="headerlink" href="#adibidea-txurdigest-en_1" title="Permanent link">&para;</a></h3>
+<p>Irakasle batek okerreko pasahitza hiru aldiz jarraian sartzen du.</p>
+<p>TxurdiGest-ek ez du kontua behin betiko blokeatzen, baina hurrengo saiakerak minutu batzuetan atzeratzen ditu eta gertakaria auditoriako sisteman erregistratzen du.</p>
+<p>Horrela, kontua saihesten da saiakera automatikoen aurrean, baina erabiltzaileak berriro sartu ahal izango du pasahitza ondo gogoratzen duenean.</p>
+<h2 id="autentifikazio-multifaktorea-mfa">Autentifikazio multifaktorea (MFA)<a class="headerlink" href="#autentifikazio-multifaktorea-mfa" title="Permanent link">&para;</a></h2>
+<p>Kasu askotan, pasahitz batek bakarrik ez du babes nahikorik eskaintzen.</p>
+<p>Asma daiteke, eraso baten bidez lapurtu edo arriskuan jarritako beste zerbitzu batetik berrerabili.</p>
+<p>Arrisku hori murrizteko, aplikazio askok <strong>autentifikazio multifaktorea</strong> erabiltzen dute, <strong>MFA</strong> siglez ere ezaguna (<em>Multi-Factor Authentication</em>).</p>
+<p>Autentifikazio multifaktoreak erabiltzaileari <strong>kategoria desberdinetako bi autentifikazio-faktore edo gehiago</strong> eskatzen dizkio sistemara sartzeko baimena eman aurretik.</p>
+<h3 id="nola-funtzionatzen-du">Nola funtzionatzen du?<a class="headerlink" href="#nola-funtzionatzen-du" title="Permanent link">&para;</a></h3>
+<p>Demagun administrazio-langile batek <strong>TxurdiGest</strong>-era sartu nahi duela ordenagailu berri batetik.</p>
+<p>Prozesua honakoa izan liteke:</p>
+<ol>
+<li>Erabiltzaile-izena eta pasahitza sartzen ditu.</li>
+<li>Aplikazioak egiaztatzen du kredentzialak zuzenak direla.</li>
+<li>Bigarren urrats gisa, bere sakelako telefonoan sortutako egiaztapen-kode bat eskatzen du.</li>
+<li>Erabiltzaileak kodea sartzen du.</li>
+<li>Bi egiaztapenak zuzenak badira, sarrera baimenduta geratzen da.</li>
+</ol>
+<p>Adibide honetan bi faktore konbinatzen dira:</p>
+<ul>
+<li><strong>Badakizun zerbait:</strong> pasahitza.</li>
+<li><strong>Daukazun zerbait:</strong> sakelako telefonoa.</li>
+</ul>
+<p>Erasotzaile batek bietako biak eskuratu beharko lituzke kontura sartzeko.</p>
+<h3 id="autentifikazio-multifaktorearen-abantailak">Autentifikazio multifaktorearen abantailak<a class="headerlink" href="#autentifikazio-multifaktorearen-abantailak" title="Permanent link">&para;</a></h3>
+<p>Autentifikazio multifaktoreak abantaila garrantzitsuak eskaintzen ditu:</p>
+<ul>
+<li>Baimenik gabeko sarbideen arriskua murrizten du.</li>
+<li>Pasahitza lapurtu bada ere babesten du.</li>
+<li>Eraso automatizatuak zailtzen ditu.</li>
+<li>Informazio sentikorra duten kontuen segurtasuna handitzen du.</li>
+</ul>
+<p>Horregatik, gero eta hedatuago dago banku-aplikazioetan, administrazio elektronikoaren plataformetan, hodeiko zerbitzuetan eta enpresa-aplikazioetan.</p>
+<h3 id="noiz-komeni-da-mfa-erabiltzea">Noiz komeni da MFA erabiltzea?<a class="headerlink" href="#noiz-komeni-da-mfa-erabiltzea" title="Permanent link">&para;</a></h3>
+<p>Edozein aplikaziotan erabil daitekeen arren, bereziki gomendagarria da honako kasuetan:</p>
+<ul>
+<li>Informazio konfidentziala erabiltzen denean.</li>
+<li>Eragiketa ekonomikoak egiten direnean.</li>
+<li>Datu pertsonalak edo osasun-datuak kudeatzen direnean.</li>
+<li>Erabiltzaileek Internetetik sartu ahal dutenean.</li>
+</ul>
+<p><strong>TxurdiGest</strong>-en, autentifikazio multifaktorea bereziki gomendagarria litzateke administrazio-funtzioak dituzten erabiltzaileentzat edo informazio akademiko eta pertsonal bereziki sentikorrerako sarbidea dutenentzat.</p>
+<div class="admonition warning">
+<p class="admonition-title">Autentifikazio multifaktoreak ez du pasahitz on baten beharra ordezten</p>
+<p>MFAk segurtasun-geruza gehigarri bat gehitzen du, baina ez du pasahitz sendoak erabiltzeko beharra ezabatzen. Bi mekanismoek elkar osatu behar dute.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Jardunbide egokia</p>
+<p>Ahal den guztietan, gaitu autentifikazio multifaktorea pribilegio handieneko kontuetan edo informazio bereziki sentikorra kudeatzen dutenetan.</p>
+</div>
+<h2 id="jardunbide-egokiak">Jardunbide egokiak<a class="headerlink" href="#jardunbide-egokiak" title="Permanent link">&para;</a></h2>
+<p>Autentifikazioa web aplikazio baten lehen defentsa-lerroa da. Diseinu egokiak baimenik gabeko sarbideen arriskua murrizten du eta sisteman gordetako informazioa babesten du.</p>
+<p>Autentifikazio-mekanismo bat garatzerakoan gomendio hauek jarraitzea komeni da:</p>
+<ul>
+<li>Erabiltzailea identifikatzeko beharrezkoa den informazioa soilik eskatzea.</li>
+<li>Pasahitzak hash algoritmo egokien bidez gordetzea, inoiz ez testu lauan.</li>
+<li>Ondoz ondoko saio-haste saiakerak mugatzea.</li>
+<li>Autentifikazio-hutsegiteak erregistratzea.</li>
+<li>Autentifikazio multifaktorea erabiltzea arrisku-mailak hala eskatzen duenean.</li>
+<li>Konexio seguruak HTTPS bidez erabiltzea derrigorrezkoa izatea.</li>
+<li>Erabiltzaile-kontuei buruzko informazioa agerian uzten duten errore-mezuak saihestea.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Jardunbide egokia</p>
+<p>Diseinatu sistema suposatuz, noizbait, pasahitz bat arriskuan egongo dela. Helburua egoera horren eragina minimizatzea da.</p>
+</div>
+<h2 id="ohiko-akatsak">Ohiko akatsak<a class="headerlink" href="#ohiko-akatsak" title="Permanent link">&para;</a></h2>
+<p>Autentifikazio-sistema bat inplementatzerakoan ohikoa da segurtasuna nabarmen murrizten duten akats batzuk egitea.</p>
+<p>Ohikoenak honako hauek dira:</p>
+<ul>
+<li>Pasahitzak testu lauan gordetzea.</li>
+<li>Saio-haste saiakera kopuru mugagabea uztea.</li>
+<li>Zaharkitutako hash algoritmoak erabiltzea.</li>
+<li>Erabiltzailea edo pasahitza okerrak direnean mezu desberdinak erakustea.</li>
+<li>Kredentzialak transmititzeko HTTPS ez erabiltzea.</li>
+<li>Autentifikazioa funtzionalitate gisa hartzea eta ez segurtasun-mekanismo gisa.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Gogoratu</p>
+<p>Autentifikazio-sistema bat bere puntu ahulena bezain segurua da. Inplementazio-errore txiki batek aplikazioaren kontu guztiak arriskuan jar ditzake.</p>
+</div>
+<h2 id="zer-aldatzen-da-garatzailearentzat">Zer aldatzen da garatzailearentzat?<a class="headerlink" href="#zer-aldatzen-da-garatzailearentzat" title="Permanent link">&para;</a></h2>
+<p>Autentifikazio-sistema bat inplementatzeak ez du soilik saio-haste formulario bat sortzea esan nahi.</p>
+<p>Garatzaileak bermatu behar du erabiltzailearen identitatea modu fidagarrian egiaztatzen dela eta kredentzialek tratamendu segurua jasotzen dutela beren bizi-ziklo osoan.</p>
+<p>Gainera, autentifikazioa eraso posibleak kontuan hartuta diseinatu behar da, hala nola pasahitzen lapurreta edo sarrera-saiakera masiboak.</p>
+<p>Ondo inplementatutako autentifikazioa aplikazioaren gainerako segurtasun-mekanismoak oinarritzen diren oinarria da.</p>
+<h2 id="txurdigest-eko-autentifikazioaren-laburpena">TxurdiGest-eko autentifikazioaren laburpena<a class="headerlink" href="#txurdigest-eko-autentifikazioaren-laburpena" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Alderdia</th>
+<th>TxurdiGest-en aplikazioa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identifikazioa</td>
+<td>Erabiltzaileak bere identitatea erabiltzaile-izen edo identifikatzaile baten bidez adierazten du.</td>
+</tr>
+<tr>
+<td>Autentifikazioa</td>
+<td>Aplikazioak egiaztatzen du kredentzialak baliozkoak direla.</td>
+</tr>
+<tr>
+<td>Faktoreak</td>
+<td>Autentifikazio-faktore bat edo gehiago erabil daitezke.</td>
+</tr>
+<tr>
+<td>Pasahitzak</td>
+<td>Inoiz ez dira testu lauan gordetzen.</td>
+</tr>
+<tr>
+<td>Babesa</td>
+<td>Sarrera-saiakerak mugatzen dira eta gorabeherak erregistratzen dira.</td>
+</tr>
+<tr>
+<td>Helburua</td>
+<td>Erabiltzaile legitimoek bakarrik aplikaziora sartzea bermatzea.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gogoratzeko">Gogoratzeko<a class="headerlink" href="#gogoratzeko" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Autentifikazioak erabiltzaile baten identitatea egiaztatzen du.</li>
+<li>Identifikatzea ez da autentifikatzea bera.</li>
+<li>Hiru kategoria nagusi daude autentifikazio-faktoreetan.</li>
+<li>Pasahitzak inoiz ez dira testu lauan gorde behar.</li>
+<li>Autentifikazio multifaktoreak segurtasuna nabarmen handitzen du.</li>
+<li>Autentifikazioa web aplikazio baten lehen babesa-mekanismoa da.</li>
+</ul>
+<h2 id="ideia-gakoak">Ideia gakoak<a class="headerlink" href="#ideia-gakoak" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Autentifikazioak <strong>«Nor zara?»</strong> galderari erantzuten dio.</li>
+<li>Pasahitz batek, bakarrik, kontu bat babesteko nahikoa ez izatea gerta daiteke.</li>
+<li>Faktore anitz erabiltzeak baimenik gabeko sarbideak zailtzen ditu.</li>
+<li>Autentifikazio-sistema seguru batek erabiltzaileak zein aplikazioaren informazioa babesten ditu.</li>
+</ul>
+<h2 id="sintesi-eskema">Sintesi-eskema<a class="headerlink" href="#sintesi-eskema" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+
+A[Erabiltzaileak sarrera eskatzen du]
+--&gt; B[Identifikazioa]
+
+B --&gt; C[Kredentzialen egiaztapena]
+
+C --&gt; D{Autentifikazioa zuzena al da?}
+
+D --&gt;|Bai| E[Erabiltzailea autentifikatuta]
+
+D --&gt;|Ez| F[Sarrera ukatua]
+
+E --&gt; G[Hurrengo urratsa: baimen-kudeaketa]</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Igo goraino
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Orri-oina" >
+        
+          
+          <a href="../3.gestion-de-errores/" class="md-footer__link md-footer__link--prev" aria-label="Aurrekoa: Erroreen kudeaketa">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Aurrekoa
+              </span>
+              <div class="md-ellipsis">
+                Erroreen kudeaketa
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../5.autorizacion/" class="md-footer__link md-footer__link--next" aria-label="Hurrengoa: Baimen-kudeaketa">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Hurrengoa
+              </span>
+              <div class="md-ellipsis">
+                Baimen-kudeaketa
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  <div class="md-copyright__highlight">
+    © 2026 Jose Insausti · CIFP Txurdinaga LHII
+  </div>
+
+  Material desarrollado para el módulo Desarrollo Web Seguro.
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Arbelean kopiatuta", "clipboard.copy": "Kopiatu arbelean", "search.result.more.one": "Bat gehiago orri honetan", "search.result.more.other": "# gehiago orri honetan", "search.result.none": "Bat datorren dokumenturik ez", "search.result.one": "Bat datorren dokumentu bat", "search.result.other": "Bat datozen # dokumentu", "search.result.placeholder": "Idatzi bilatzen hasteko", "search.result.term.missing": "Falta da", "select.version": "Hautatu bertsioa"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid.js"></script>
+      
+        <script src="../../../scripts/checkboxes.js"></script>
+      
+        <script src="../../../javascripts/sidebar.js"></script>
+      
+    
+  </body>
+</html>

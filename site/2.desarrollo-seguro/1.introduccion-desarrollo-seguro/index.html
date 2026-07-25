@@ -1,0 +1,1469 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desarrollo Web Seguro - CFGS Desarrollo de Aplicaciones Web">
+      
+      
+        <meta name="author" content="Jose Insausti - CIFP Txurdinaga LHII">
+      
+      
+        <link rel="canonical" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../2.validacion-de-entradas/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Introducción al desarrollo seguro - DAW Desarrollo Web Seguro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion-al-desarrollo-seguro" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DAW Desarrollo Web Seguro" class="md-header__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW Desarrollo Web Seguro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción al desarrollo seguro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DAW Desarrollo Web Seguro" class="md-nav__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    DAW Desarrollo Web Seguro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../0.proyecto/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto de referencia
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto de referencia
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../0.proyecto/txurdigest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TxurdiGest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../1.fundamentos/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 1. Fundamentos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloque 1. Fundamentos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/1.introduccion-desarrollo-web-seguro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al desarrollo web seguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/2.arquitectura-aplicacion-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura de una aplicación web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/3.protocolo-http/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocolo HTTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/4.cookies-sesiones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookies, sesiones y gestión del estado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/5.https-certificados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS y certificados digitales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/6.herramientas-analisis-web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herramientas de análisis web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.fundamentos/7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen del bloque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bloque 2. Desarrollo seguro
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bloque 2. Desarrollo seguro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al desarrollo seguro
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al desarrollo seguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-seguridad-comienza-mucho-antes-del-primer-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La seguridad comienza mucho antes del primer ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pequenas-decisiones-grandes-diferencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pequeñas decisiones, grandes diferencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anticipar-los-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anticipar los riesgos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-estudiaremos-en-este-bloque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué estudiaremos en este bloque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-cambia-para-el-desarrollador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué cambia para el desarrollador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para recordar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.validacion-de-entradas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validación de entradas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.gestion-de-errores/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de errores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.autenticacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autenticación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.autorizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autorización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.gestion-de-secretos-y-configuracion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestión de secretos y configuración
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7.resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen del bloque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-seguridad-comienza-mucho-antes-del-primer-ataque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La seguridad comienza mucho antes del primer ataque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pequenas-decisiones-grandes-diferencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pequeñas decisiones, grandes diferencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anticipar-los-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anticipar los riesgos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-estudiaremos-en-este-bloque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué estudiaremos en este bloque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-cambia-para-el-desarrollador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué cambia para el desarrollador
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-recordar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para recordar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideas clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccion-al-desarrollo-seguro">Introducción al desarrollo seguro<a class="headerlink" href="#introduccion-al-desarrollo-seguro" title="Permanent link">&para;</a></h1>
+<p>En el bloque anterior hemos estudiado cómo funciona una aplicación web y cómo se comunican el navegador y el servidor mediante HTTP y HTTPS.</p>
+<p>También hemos analizado el papel de las cookies, las sesiones y las herramientas que permiten observar el comportamiento de una aplicación durante su ejecución.</p>
+<p>Conocer estos mecanismos es imprescindible para cualquier desarrollador web, ya que constituye la base sobre la que se construyen las aplicaciones modernas.</p>
+<p>Sin embargo, comprender cómo funciona una aplicación no garantiza que sea segura.</p>
+<p>La seguridad depende, en gran medida, de las decisiones que se toman durante su análisis, diseño, implementación, despliegue y mantenimiento.</p>
+<p>En este bloque comenzaremos a estudiar esas decisiones y cómo influyen en la calidad, la robustez y la seguridad del software que desarrollamos.</p>
+<hr />
+<h2 id="la-seguridad-comienza-mucho-antes-del-primer-ataque">La seguridad comienza mucho antes del primer ataque<a class="headerlink" href="#la-seguridad-comienza-mucho-antes-del-primer-ataque" title="Permanent link">&para;</a></h2>
+<p>Cuando se habla de seguridad informática, es habitual pensar en ataques, vulnerabilidades o cibercriminales.</p>
+<p>Sin embargo, desde la perspectiva de un desarrollador, la seguridad comienza mucho antes.</p>
+<p>Empieza en el momento en que se diseña una aplicación y continúa durante todo su desarrollo.</p>
+<p>Cada decisión técnica puede contribuir a reducir riesgos o, por el contrario, introducir problemas que más adelante podrán convertirse en vulnerabilidades.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>¿Cómo se validarán los datos introducidos por el usuario?</li>
+<li>¿Quién podrá acceder a cada recurso de la aplicación?</li>
+<li>¿Dónde se almacenarán las credenciales y las claves de acceso?</li>
+<li>¿Qué información se mostrará cuando se produzca un error?</li>
+<li>¿Cómo se protegerán las comunicaciones con el servidor?</li>
+</ul>
+<p>Responder correctamente a estas preguntas forma parte del trabajo cotidiano de un desarrollador.</p>
+<p>Por este motivo, desarrollar de forma segura no consiste únicamente en corregir errores cuando aparecen, sino en tomar buenas decisiones desde el inicio del proyecto.</p>
+<pre class="mermaid"><code>flowchart LR
+
+A["Análisis"]
+--&gt; B["Diseño"]
+
+B --&gt; C["Implementación"]
+
+C --&gt; D["Pruebas"]
+
+D --&gt; E["Despliegue"]
+
+E --&gt; F["Mantenimiento"]
+
+A -. "Decisiones de seguridad" .-&gt; A
+B -. "Decisiones de seguridad" .-&gt; B
+C -. "Decisiones de seguridad" .-&gt; C
+D -. "Decisiones de seguridad" .-&gt; D
+E -. "Decisiones de seguridad" .-&gt; E
+F -. "Decisiones de seguridad" .-&gt; F</code></pre>
+<div class="admonition note">
+<p class="admonition-title">La seguridad acompaña todo el ciclo de vida</p>
+<p>La seguridad no es una fase independiente del desarrollo de software.</p>
+<p>Debe estar presente desde las primeras decisiones de diseño hasta el mantenimiento de la aplicación una vez puesta en producción.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Una aplicación puede funcionar correctamente y, sin embargo, contener decisiones de diseño que faciliten la aparición de vulnerabilidades.</p>
+<p>El objetivo del desarrollo seguro es reducir esos riesgos antes de que lleguen a convertirse en problemas.</p>
+</div>
+<h2 id="pequenas-decisiones-grandes-diferencias">Pequeñas decisiones, grandes diferencias<a class="headerlink" href="#pequenas-decisiones-grandes-diferencias" title="Permanent link">&para;</a></h2>
+<p>En el desarrollo de una aplicación web no suele existir una única decisión que determine si una aplicación es segura o insegura.</p>
+<p>Lo habitual es que la seguridad sea el resultado de muchas pequeñas decisiones tomadas durante el desarrollo.</p>
+<p>Cada una de ellas puede parecer poco importante de forma aislada, pero, en conjunto, determinan el nivel de protección de la aplicación.</p>
+<p>Por ejemplo:</p>
+<ul>
+<li>Validar correctamente la información introducida por el usuario.</li>
+<li>Utilizar contraseñas cifradas en lugar de almacenarlas en texto plano.</li>
+<li>Limitar el acceso a determinadas funcionalidades.</li>
+<li>Mostrar mensajes de error adecuados.</li>
+<li>Mantener actualizadas las dependencias del proyecto.</li>
+<li>Utilizar conexiones HTTPS.</li>
+<li>Proteger las claves y credenciales de la aplicación.</li>
+</ul>
+<p>Ninguna de estas medidas garantiza por sí sola la seguridad de una aplicación.</p>
+<p>Sin embargo, cuando todas ellas se aplican de forma conjunta, contribuyen a reducir considerablemente los riesgos.</p>
+<p>Este enfoque se conoce habitualmente como <strong>seguridad por capas</strong> (<em>Defense in Depth</em>), ya que combina diferentes mecanismos de protección para dificultar la explotación de posibles vulnerabilidades.</p>
+<pre class="mermaid"><code>flowchart TB
+
+A["Aplicación web"]
+
+B["Validación"]
+C["Autenticación"]
+D["Autorización"]
+E["HTTPS"]
+F["Gestión de errores"]
+G["Configuración segura"]
+
+B --&gt; A
+C --&gt; A
+D --&gt; A
+E --&gt; A
+F --&gt; A
+G --&gt; A</code></pre>
+<div class="admonition note">
+<p class="admonition-title">No existe la seguridad absoluta</p>
+<p>Ninguna aplicación puede considerarse completamente segura.</p>
+<p>El objetivo del desarrollo seguro consiste en reducir los riesgos mediante la aplicación de buenas prácticas durante todo el ciclo de vida del software.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Una aplicación no es más segura por incorporar una única medida de protección.</p>
+<p>Lo es porque combina múltiples mecanismos que trabajan conjuntamente para proteger la información y los recursos del sistema.</p>
+</div>
+<h2 id="anticipar-los-riesgos">Anticipar los riesgos<a class="headerlink" href="#anticipar-los-riesgos" title="Permanent link">&para;</a></h2>
+<p>Cuando un desarrollador implementa una nueva funcionalidad suele pensar en cómo la utilizará un usuario legítimo.</p>
+<p>Por ejemplo, al crear un formulario de inicio de sesión, es normal comprobar que el usuario puede introducir correctamente su nombre y su contraseña y acceder a la aplicación.</p>
+<p>Sin embargo, durante el desarrollo también conviene plantearse otras preguntas.</p>
+<p>¿Qué ocurrirá si el usuario deja un campo vacío?</p>
+<p>¿Y si introduce un texto mucho más largo de lo esperado?</p>
+<p>¿Y si intenta acceder a una página para la que no tiene permisos?</p>
+<p>¿Y si modifica manualmente una petición enviada al servidor?</p>
+<p>Este tipo de preguntas ayudan a identificar situaciones que podrían provocar errores o convertirse en problemas de seguridad.</p>
+<p>Por este motivo, un desarrollador no debe pensar únicamente en el uso correcto de una aplicación, sino también en los usos incorrectos, accidentales o incluso malintencionados.</p>
+<p>Anticipar estos escenarios permite diseñar aplicaciones más robustas y reducir la aparición de vulnerabilidades antes de que lleguen a producción.</p>
+<pre class="mermaid"><code>flowchart TD
+
+A["Nueva funcionalidad"]
+
+A --&gt; B["Uso previsto"]
+
+A --&gt; C["Uso incorrecto"]
+
+A --&gt; D["Uso malintencionado"]
+
+B --&gt; E["Aplicación robusta"]
+
+C --&gt; E
+
+D --&gt; E</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Pensar en escenarios</p>
+<p>Una parte importante del desarrollo seguro consiste en imaginar situaciones que probablemente nunca ocurrirán, pero que podrían provocar un problema si llegan a producirse.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Antes de dar por terminada una funcionalidad, resulta recomendable preguntarse:</p>
+<ul>
+<li>¿Qué podría salir mal?</li>
+<li>¿Qué ocurriría si el usuario hace algo inesperado?</li>
+<li>¿Estoy confiando demasiado en los datos recibidos?</li>
+</ul>
+</div>
+<h2 id="que-estudiaremos-en-este-bloque">Qué estudiaremos en este bloque<a class="headerlink" href="#que-estudiaremos-en-este-bloque" title="Permanent link">&para;</a></h2>
+<p>A lo largo de este bloque analizaremos algunas de las decisiones de desarrollo que tienen un mayor impacto sobre la seguridad de una aplicación web.</p>
+<p>Comenzaremos estudiando la validación de entradas, una práctica fundamental para garantizar que la información recibida cumple las condiciones esperadas antes de ser procesada.</p>
+<p>Después veremos cómo gestionar los errores sin revelar información sensible que pueda ayudar a un posible atacante.</p>
+<p>También analizaremos la diferencia entre autenticación y autorización, dos conceptos estrechamente relacionados, pero con objetivos claramente distintos.</p>
+<p>Finalmente, estudiaremos cómo proteger la configuración de una aplicación y gestionar de forma segura credenciales, claves y otros secretos utilizados durante el desarrollo y el despliegue.</p>
+<p>Todos estos aspectos constituyen buenas prácticas que cualquier desarrollador debería incorporar a su forma de trabajar, independientemente del lenguaje de programación o del framework utilizado.</p>
+<h2 id="que-cambia-para-el-desarrollador">Qué cambia para el desarrollador<a class="headerlink" href="#que-cambia-para-el-desarrollador" title="Permanent link">&para;</a></h2>
+<p>Desarrollar una aplicación segura implica mucho más que conocer vulnerabilidades o utilizar herramientas específicas.</p>
+<p>Supone adoptar una forma de trabajar en la que la seguridad forma parte de cada decisión tomada durante el desarrollo.</p>
+<p>Esto significa validar la información antes de procesarla, controlar el acceso a los recursos, proteger las credenciales, gestionar correctamente los errores y cuestionarse continuamente cómo puede comportarse una aplicación ante situaciones no previstas.</p>
+<p>En los siguientes capítulos aprenderemos cómo aplicar estas buenas prácticas y cómo incorporarlas al desarrollo de aplicaciones web reales.</p>
+<p>El objetivo no será memorizar una lista de recomendaciones, sino comprender el motivo por el que cada una de ellas contribuye a construir aplicaciones más seguras y robustas.</p>
+<div class="admonition note">
+<p class="admonition-title">La seguridad es una responsabilidad</p>
+<p>La seguridad no depende únicamente de herramientas o tecnologías.</p>
+<p>Depende, sobre todo, de las decisiones que toman las personas que diseñan, desarrollan y mantienen una aplicación.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Desde la perspectiva del desarrollador</p>
+<p>Antes de incorporar una nueva funcionalidad, conviene preguntarse:</p>
+<ul>
+<li>¿Qué riesgos puede introducir?</li>
+<li>¿Cómo puedo reducir esos riesgos desde el propio diseño?</li>
+</ul>
+</div>
+<hr />
+<h2 id="para-recordar">Para recordar<a class="headerlink" href="#para-recordar" title="Permanent link">&para;</a></h2>
+<p>El desarrollo seguro comienza mucho antes de que aparezcan las primeras vulnerabilidades.</p>
+<p>Las decisiones tomadas durante el análisis, el diseño y la implementación influyen directamente en la seguridad de una aplicación.</p>
+<p>La protección no depende de una única medida, sino de la combinación de diferentes mecanismos que actúan conjuntamente para reducir los riesgos.</p>
+<p>Anticipar situaciones inesperadas y cuestionar continuamente el comportamiento de una aplicación forma parte del trabajo habitual de un desarrollador.</p>
+<p>Los capítulos siguientes desarrollarán las principales prácticas que permiten incorporar la seguridad al proceso de desarrollo.</p>
+<hr />
+<h2 id="ideas-clave">Ideas clave<a class="headerlink" href="#ideas-clave" title="Permanent link">&para;</a></h2>
+<ul>
+<li>La seguridad debe estar presente durante todo el ciclo de vida del software.</li>
+<li>Las decisiones de desarrollo tienen un impacto directo sobre la seguridad de una aplicación.</li>
+<li>La seguridad por capas combina diferentes mecanismos de protección.</li>
+<li>Un desarrollador debe pensar tanto en el uso previsto como en los posibles usos incorrectos o malintencionados.</li>
+<li>Anticipar riesgos ayuda a prevenir vulnerabilidades antes de que lleguen a producción.</li>
+<li>Las buenas prácticas de desarrollo reducen la probabilidad de que aparezcan problemas de seguridad.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Presentación del bloque">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Presentación del bloque
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../2.validacion-de-entradas/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Validación de entradas">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Validación de entradas
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  <div class="md-copyright__highlight">
+    © 2026 Jose Insausti · CIFP Txurdinaga LHII
+  </div>
+
+  Material desarrollado para el módulo Desarrollo Web Seguro.
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="../../scripts/checkboxes.js"></script>
+      
+        <script src="../../javascripts/sidebar.js"></script>
+      
+    
+  </body>
+</html>

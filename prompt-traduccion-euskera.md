@@ -4,7 +4,7 @@ Requisitos:
 
 No modificar el orden de los apartados.
 Mantener exactamente los mismos títulos y niveles (#, ##, ###).
-Mantener los diagramas Mermaid sin alterar su estructura.
+Mantener los diagramas Mermaid sin alterar su estructura, pero traduciendo su contenido siempre que sea posible.
 Mantener las tablas, listas, admonitions (note, warning, example) y bloques de código.
 Mantener los bloques de código HTTP, Mermaid y cualquier otro bloque técnico sin modificar su estructura.
 Conservar los términos técnicos cuando sean de uso habitual (HTTP, HTTPS, TLS, Cookie, Session ID, Certificado Digital, Let's Encrypt, CA, CSRF, XSS, SameSite, HttpOnly, Secure, API REST, etc.).
