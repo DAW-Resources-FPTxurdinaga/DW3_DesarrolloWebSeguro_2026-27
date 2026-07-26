@@ -2,310 +2,436 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/arquitectura-general/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/arquitectura-general/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/arquitectura-general/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/glosario/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/glosario/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/glosario/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/modelo-de-datos/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/modelo-de-datos/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/modelo-de-datos/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/txurdigest/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/txurdigest/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/txurdigest/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/1.introduccion-desarrollo-web-seguro/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/1.introduccion-desarrollo-web-seguro/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/1.introduccion-desarrollo-web-seguro/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/2.arquitectura-aplicacion-web/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/2.arquitectura-aplicacion-web/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/2.arquitectura-aplicacion-web/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/3.protocolo-http/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/3.protocolo-http/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/3.protocolo-http/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/4.cookies-sesiones/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/4.cookies-sesiones/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/4.cookies-sesiones/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/5.https-certificados/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/5.https-certificados/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/5.https-certificados/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/6.herramientas-analisis-web/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/6.herramientas-analisis-web/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/6.herramientas-analisis-web/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/7.resumen/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/7.resumen/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/7.resumen/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/2.validacion-de-entradas/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/2.validacion-de-entradas/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/2.validacion-de-entradas/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/3.gestion-de-errores/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/3.gestion-de-errores/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/3.gestion-de-errores/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/4.autenticacion/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/4.autenticacion/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/4.autenticacion/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/5.autorizacion/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/5.autorizacion/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/5.autorizacion/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/7.resumen/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/7.resumen/"/>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/7.resumen/"/>
     </url>
     <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/1.introduccion-desarrollo-web-seguro/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/1.introduccion-desarrollo-web-seguro/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/1.introduccion-desarrollo-web-seguro/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/2.arquitectura-aplicacion-web/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/2.arquitectura-aplicacion-web/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/2.arquitectura-aplicacion-web/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/3.protocolo-http/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/3.protocolo-http/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/3.protocolo-http/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/4.cookies-sesiones/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/4.cookies-sesiones/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/4.cookies-sesiones/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/5.https-certificados/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/5.https-certificados/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/5.https-certificados/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/6.herramientas-analisis-web/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/6.herramientas-analisis-web/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/6.herramientas-analisis-web/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/7.resumen/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/7.resumen/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/7.resumen/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque2/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque2/"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque2/"/>
+    </url>
+    <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/arquitectura-general/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/arquitectura-general/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/arquitectura-general/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/glosario/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/glosario/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/glosario/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/modelo-de-datos/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/modelo-de-datos/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/modelo-de-datos/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/txurdigest/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/txurdigest/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/0.proyecto/txurdigest/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/1.introduccion-desarrollo-web-seguro/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/1.introduccion-desarrollo-web-seguro/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/1.introduccion-desarrollo-web-seguro/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/2.arquitectura-aplicacion-web/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/2.arquitectura-aplicacion-web/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/2.arquitectura-aplicacion-web/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/3.protocolo-http/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/3.protocolo-http/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/3.protocolo-http/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/4.cookies-sesiones/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/4.cookies-sesiones/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/4.cookies-sesiones/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/5.https-certificados/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/5.https-certificados/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/5.https-certificados/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/6.herramientas-analisis-web/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/6.herramientas-analisis-web/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/6.herramientas-analisis-web/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/7.resumen/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/7.resumen/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/1.fundamentos/7.resumen/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/1.introduccion-desarrollo-seguro/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/2.validacion-de-entradas/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/2.validacion-de-entradas/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/2.validacion-de-entradas/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/3.gestion-de-errores/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/3.gestion-de-errores/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/3.gestion-de-errores/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/4.autenticacion/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/4.autenticacion/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/4.autenticacion/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/5.autorizacion/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/5.autorizacion/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/5.autorizacion/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion/"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/7.resumen/</loc>
-        <lastmod>2026-07-25</lastmod>
+        <lastmod>2026-07-26</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/2.desarrollo-seguro/7.resumen/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/2.desarrollo-seguro/7.resumen/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/1.introduccion-desarrollo-web-seguro/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/1.introduccion-desarrollo-web-seguro/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/1.introduccion-desarrollo-web-seguro/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/2.arquitectura-aplicacion-web/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/2.arquitectura-aplicacion-web/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/2.arquitectura-aplicacion-web/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/3.protocolo-http/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/3.protocolo-http/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/3.protocolo-http/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/4.cookies-sesiones/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/4.cookies-sesiones/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/4.cookies-sesiones/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/5.https-certificados/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/5.https-certificados/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/5.https-certificados/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/6.herramientas-analisis-web/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/6.herramientas-analisis-web/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/6.herramientas-analisis-web/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/7.resumen/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque1/7.resumen/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque1/7.resumen/"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque2/</loc>
+        <lastmod>2026-07-26</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/actividades/bloque2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/actividades/bloque2/"/>
     </url>
 </urlset>

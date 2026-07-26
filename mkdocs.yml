@@ -15,8 +15,6 @@ theme:
 
   features:
     - navigation.tracking
-    - navigation.sections
-    - navigation.expand
     - navigation.indexes
     - navigation.top
     - navigation.footer
@@ -32,7 +30,6 @@ extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
   - scripts/checkboxes.js
-  - javascripts/sidebar.js
 
 plugins:
   - search
@@ -76,6 +73,19 @@ plugins:
               - Gestión de secretos y configuración: 2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion.md
               - Resumen del bloque: 2.desarrollo-seguro/7.resumen.md
 
+            - Actividades:
+              - Bloque 1:
+                - Actividades del bloque 1: actividades/bloque1/index.md
+                - Introducción al desarrollo web seguro: actividades/bloque1/1.introduccion-desarrollo-web-seguro.md
+                - Arquitectura de una aplicación web: actividades/bloque1/2.arquitectura-aplicacion-web.md
+                - Protocolo HTTP: actividades/bloque1/3.protocolo-http.md
+                - Cookies y sesiones: actividades/bloque1/4.cookies-sesiones.md
+                - HTTPS y certificados: actividades/bloque1/5.https-certificados.md
+                - Herramientas de análisis web: actividades/bloque1/6.herramientas-analisis-web.md
+                - Resumen del bloque: actividades/bloque1/7.resumen.md
+              - Bloque 2:
+                - Actividades del bloque 2: actividades/bloque2/index.md
+
         - locale: eu
           name: Euskara
 
@@ -105,6 +115,19 @@ plugins:
               - Baimen-kudeaketa: 2.desarrollo-seguro/5.autorizacion.md
               - Sekretuen eta konfigurazioaren kudeaketa: 2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion.md
               - Blokearen laburpena: 2.desarrollo-seguro/7.resumen.md
+
+            - Jarduerak:
+              - 1. blokea:
+                - 1. blokeko jarduerak: actividades/bloque1/index.md
+                - Web garapen seguruaren sarrera: actividades/bloque1/1.introduccion-desarrollo-web-seguro.md
+                - Web aplikazio baten arkitektura: actividades/bloque1/2.arquitectura-aplicacion-web.md
+                - HTTP protokoloa: actividades/bloque1/3.protocolo-http.md
+                - Cookieak eta saioak: actividades/bloque1/4.cookies-sesiones.md
+                - HTTPS eta ziurtagiriak: actividades/bloque1/5.https-certificados.md
+                - Web analisi-tresnak: actividades/bloque1/6.herramientas-analisis-web.md
+                - Blokearen laburpena: actividades/bloque1/7.resumen.md
+              - 2. blokea:
+                - 2. blokeko jarduerak: actividades/bloque2/index.md
 
 markdown_extensions:
 
