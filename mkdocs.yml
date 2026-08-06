@@ -62,6 +62,15 @@ plugins:
                 - HTTPS y certificados digitales: 1.fundamentos/5.https-certificados.md
                 - Herramientas de análisis web: 1.fundamentos/6.herramientas-analisis-web.md
                 - Resumen del bloque: 1.fundamentos/7.resumen.md
+                - Actividades:
+                  - Actividades del bloque 1: 1.fundamentos/actividades/index.md
+                  - Introducción al desarrollo web seguro: 1.fundamentos/actividades/1.introduccion-desarrollo-web-seguro.md
+                  - Arquitectura de una aplicación web: 1.fundamentos/actividades/2.arquitectura-aplicacion-web.md
+                  - Protocolo HTTP: 1.fundamentos/actividades/3.protocolo-http.md
+                  - Cookies y sesiones: 1.fundamentos/actividades/4.cookies-sesiones.md
+                  - HTTPS y certificados: 1.fundamentos/actividades/5.https-certificados.md
+                  - Herramientas de análisis web: 1.fundamentos/actividades/6.herramientas-analisis-web.md
+                  - Resumen del bloque: 1.fundamentos/actividades/7.resumen.md
 
             - Bloque 2. Desarrollo seguro:
               - Presentación del bloque: 2.desarrollo-seguro/index.md
@@ -72,19 +81,12 @@ plugins:
               - Autorización: 2.desarrollo-seguro/5.autorizacion.md
               - Gestión de secretos y configuración: 2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion.md
               - Resumen del bloque: 2.desarrollo-seguro/7.resumen.md
-
-            - Actividades:
-              - Bloque 1:
-                - Actividades del bloque 1: actividades/bloque1/index.md
-                - Introducción al desarrollo web seguro: actividades/bloque1/1.introduccion-desarrollo-web-seguro.md
-                - Arquitectura de una aplicación web: actividades/bloque1/2.arquitectura-aplicacion-web.md
-                - Protocolo HTTP: actividades/bloque1/3.protocolo-http.md
-                - Cookies y sesiones: actividades/bloque1/4.cookies-sesiones.md
-                - HTTPS y certificados: actividades/bloque1/5.https-certificados.md
-                - Herramientas de análisis web: actividades/bloque1/6.herramientas-analisis-web.md
-                - Resumen del bloque: actividades/bloque1/7.resumen.md
-              - Bloque 2:
-                - Actividades del bloque 2: actividades/bloque2/index.md
+              - Actividades:
+                - Actividades del bloque 2: 2.desarrollo-seguro/actividades/index.md
+                - Diseñar un formulario seguro: 2.desarrollo-seguro/actividades/01-disenar-formulario-seguro.md
+                - Diseñar el acceso a la aplicación: 2.desarrollo-seguro/actividades/02-disenar-acceso-aplicacion.md
+                - Diseñar una configuración segura: 2.desarrollo-seguro/actividades/03-disenar-configuracion-segura.md
+                - Revisar el diseño de seguridad del proyecto: 2.desarrollo-seguro/actividades/04-revision-diseno-seguridad.md
 
         - locale: eu
           name: Euskara
@@ -105,6 +107,15 @@ plugins:
                 - HTTPS eta ziurtagiri digitalak: 1.fundamentos/5.https-certificados.md
                 - Web analisi tresnak: 1.fundamentos/6.herramientas-analisis-web.md
                 - Blokearen laburpena: 1.fundamentos/7.resumen.md
+                - Jarduerak:
+                  - 1. blokeko jarduerak: 1.fundamentos/actividades/index.md
+                  - Web garapen seguruaren sarrera: 1.fundamentos/actividades/1.introduccion-desarrollo-web-seguro.md
+                  - Web aplikazio baten arkitektura: 1.fundamentos/actividades/2.arquitectura-aplicacion-web.md
+                  - HTTP protokoloa: 1.fundamentos/actividades/3.protocolo-http.md
+                  - Cookieak eta saioak: 1.fundamentos/actividades/4.cookies-sesiones.md
+                  - HTTPS eta ziurtagiriak: 1.fundamentos/actividades/5.https-certificados.md
+                  - Web analisi-tresnak: 1.fundamentos/actividades/6.herramientas-analisis-web.md
+                  - Blokearen laburpena: 1.fundamentos/actividades/7.resumen.md
 
             - 2. blokea. Web aplikazioen garapen segurua:
               - Blokearen aurkezpena: 2.desarrollo-seguro/index.md
@@ -115,19 +126,12 @@ plugins:
               - Baimen-kudeaketa: 2.desarrollo-seguro/5.autorizacion.md
               - Sekretuen eta konfigurazioaren kudeaketa: 2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion.md
               - Blokearen laburpena: 2.desarrollo-seguro/7.resumen.md
-
-            - Jarduerak:
-              - 1. blokea:
-                - 1. blokeko jarduerak: actividades/bloque1/index.md
-                - Web garapen seguruaren sarrera: actividades/bloque1/1.introduccion-desarrollo-web-seguro.md
-                - Web aplikazio baten arkitektura: actividades/bloque1/2.arquitectura-aplicacion-web.md
-                - HTTP protokoloa: actividades/bloque1/3.protocolo-http.md
-                - Cookieak eta saioak: actividades/bloque1/4.cookies-sesiones.md
-                - HTTPS eta ziurtagiriak: actividades/bloque1/5.https-certificados.md
-                - Web analisi-tresnak: actividades/bloque1/6.herramientas-analisis-web.md
-                - Blokearen laburpena: actividades/bloque1/7.resumen.md
-              - 2. blokea:
-                - 2. blokeko jarduerak: actividades/bloque2/index.md
+              - Jarduerak:
+                - 2. blokeko jarduerak: 2.desarrollo-seguro/actividades/index.md
+                - Inprimaki seguru bat diseinatzea: 2.desarrollo-seguro/actividades/01-disenar-formulario-seguro.md
+                - Aplikaziorako sarbidea diseinatzea: 2.desarrollo-seguro/actividades/02-disenar-acceso-aplicacion.md
+                - Konfigurazio seguru bat diseinatzea: 2.desarrollo-seguro/actividades/03-disenar-configuracion-segura.md
+                - Proiektuaren segurtasun-diseinua berrikustea: 2.desarrollo-seguro/actividades/04-revision-diseno-seguridad.md
 
 markdown_extensions:
 
