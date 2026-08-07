@@ -102,15 +102,10 @@ h3 {
     line-height: 1.5;
 }
 
-/* Estilo cuando el menú está expandido */
-.md-nav--primary .md-nav__item--nested > .md-nav[data-md-toggle="true"] > .md-nav__list {
+/* Estilo cuando el menú está expandido (toggle nativo de Material) */
+.md-nav--primary .md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav > .md-nav__list {
     max-height: 1000px !important;
     display: block !important;
-}
-
-.md-nav--primary .md-nav__item--nested > .md-nav[data-md-toggle="true"] > .md-nav__title::after {
-    transform: rotate(90deg);
-    color: #e95f15;
 }
 
 /* Efecto hover en los títulos */

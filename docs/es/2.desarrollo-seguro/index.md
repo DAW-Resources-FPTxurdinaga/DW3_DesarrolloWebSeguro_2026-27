@@ -1,10 +1,10 @@
 # Desarrollo seguro
 
-En este bloque se estudian los principios y las prácticas que permiten desarrollar aplicaciones web reduciendo riesgos desde las primeras fases del proyecto.
+En este bloque aprenderás a incorporar la seguridad durante el desarrollo de una aplicación web.
 
-El objetivo no es aprender a corregir vulnerabilidades una vez aparecen, sino comprender cómo las decisiones de diseño, implementación y configuración influyen en la seguridad del software.
+La mayoría de las vulnerabilidades no aparecen por utilizar una tecnología determinada, sino por decisiones incorrectas durante el diseño, la implementación o la configuración de la aplicación. Por ello, este bloque se centra en las prácticas que permiten desarrollar software más seguro desde el principio.
 
-## En este bloque
+## Contenidos
 
 ### [Introducción al desarrollo seguro](1.introduccion-desarrollo-seguro.md)
 
@@ -18,18 +18,18 @@ El objetivo no es aprender a corregir vulnerabilidades una vez aparecen, sino co
 
 ### [Gestión de secretos y configuración](6.gestion-de-secretos-y-configuracion.md)
 
-### [Resumen del bloque](7.resumen.md)
+### [Conclusiones](7.conclusiones.md)
 
 ## Qué aprenderás
 
-- Comprender la seguridad como una responsabilidad del desarrollo.
-- Validar correctamente la información recibida.
-- Gestionar errores sin exponer información sensible.
-- Diseñar mecanismos seguros de autenticación y autorización.
-- Proteger la configuración y los secretos de una aplicación.
+Al finalizar este bloque comprenderás cómo:
+
+- validar correctamente la información recibida;
+- gestionar errores sin exponer información sensible;
+- diseñar mecanismos de autenticación y autorización;
+- proteger la configuración y los secretos de una aplicación;
+- incorporar la seguridad como parte del desarrollo, y no como una tarea posterior.
 
 ## Relación con el resto del curso
 
-Este bloque constituye el puente entre los fundamentos estudiados anteriormente y el análisis de las vulnerabilidades que abordaremos en los siguientes bloques.
-
-Las decisiones de desarrollo que aprenderemos aquí servirán para comprender por qué aparecen muchos de los problemas de seguridad más habituales y cómo prevenirlos desde el diseño de la aplicación.
+Los conceptos estudiados en este bloque se aplicarán directamente durante el desarrollo del reto y servirán de base para los laboratorios y actividades prácticas de los siguientes bloques.

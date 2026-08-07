@@ -1,31 +1,14 @@
 # 2. jarduera. Aplikaziorako sarbidea diseinatzea
 
-## Helburuak
+## Egoera
 
-Jarduera hau amaitzean gai izango zara:
+**TxurdiGest** garapen-taldeak aplikaziorako sarbidea inplementatuko du.
 
-- Aplikazio bateko erabiltzaile mota desberdinak identifikatzeko.
-- Profil bakoitzerako sarbide-sistema egokia diseinatzeko.
-- Erabiltzaile bakoitzak zer eragiketa egin ahal izango dituen definitzeko.
-- Proiektuaren garapenean geroago inplementatuko dituzun erabakiak prestatzeko.
-
----
-
-## Testuingurua
-
-**TxurdiGest**-eko garapen-taldea aplikaziorako sarbidea inplementatzen hasiko da.
-
-Saio-hasiera programatu aurretik, beharrezkoa da nor sartu ahal izango den aplikaziora eta saioa hasi ondoren erabiltzaile bakoitzak zer egin ahal izango duen erabakitzea.
-
-Diseinu on batek segurtasun-arazoak saihestuko ditu eta ondorengo garapena erraztuko du.
-
----
+Programatzen hasi aurretik, beharrezkoa da erabakitzea nork sartu ahal izango duen sistemara eta erabiltzaile mota bakoitzak zer ekintza egin ahal izango dituen.
 
 ## Jarduera
 
-Lan egin 3 edo 4 laguneko taldeetan.
-
-Aztertu zuen aplikazioa eta erabaki:
+3 edo 4 laguneko taldeetan, aztertu zuen aplikazioa eta erabaki:
 
 - zer erabiltzaile mota egongo diren;
 - saioa hastean nola identifikatuko diren;
@@ -33,81 +16,31 @@ Aztertu zuen aplikazioa eta erabaki:
 - erabiltzaile mota bakoitzak zer eragiketa egin ahal izango dituen;
 - zer eragiketa egon beharko diren debekatuta.
 
-Ez da beharrezkoa oraindik pentsatzea nola programatu funtzionalitate horiek.
+Ez da beharrezkoa inplementazioa diseinatzea. Helburua da garapenean gida izango den autentifikazio eta baimen-kudeaketa eredua definitzea.
 
-Helburua da inplementazioan gidari izango den diseinu argi bat definitzea.
+!!! tip "Galdera erabilgarri bat"
 
----
+    Erabiltzaile batek bere funtzioa betetzeko ekintza jakin bat egin behar ez badu, ziurrenik ez luke hura egiteko baimenik izan behar.
 
-## Nola heldu diezaiokezue?
+## Erronkan aplikatzea
 
-Honelako prozesu bat jarrai dezakezue:
+Berrikusi zuen proiektua eta egiaztatu:
 
-1. Egin aplikazioa erabiliko duten erabiltzaile guztien zerrenda bat.
-2. Taldekatu antzeko ardurak dituztenak.
-3. Erabiltzaile mota bakoitzerako, erabaki bere lana egiteko zer ekintza behar dituen.
-4. Galdetu zeuen buruari ba ote dagoen egin behar ez lukeen ekintzaren bat.
-5. Berrikusi erabiltzaile batek benetan behar dituenak baino baimen gehiago ote dituen.
-
-Ez dago irtenbide zuzen bakar bat. Garrantzitsuena hartutako erabakiak justifikatzea da.
-
-!!! tip "Aholkua"
-
-    Erabiltzaile batek bere funtzioa betetzeko ekintza jakin bat egin behar ez badu, ziurrenik ez luke ekintza hori egiteko baimenik izan behar.
-
----
-
-## Erronkari aplikazioa
-
-Berrikusi zuen proiektua eta prestatu zerrenda bat honako hauekin:
-
-- aplikazioak izango dituen erabiltzaile-profilak;
-- bakoitzarentzat erabilgarri egongo diren funtzionalitateak;
-- autentifikazioa beharko duten eragiketak;
-- baimen-kudeaketa beharko duten eragiketak.
-
-Erabaki horiek gidari izango dira sarbide-sistema 3. blokean inplementatzen duzuenean.
-
----
+- aplikazioak zer erabiltzaile-profil izango dituen;
+- profil bakoitzarentzat zer funtzionalitate egongo diren erabilgarri;
+- zer eragiketek eskatuko duten autentifikazioa;
+- zeinek eskatuko duten, gainera, baimen-kudeaketa.
 
 ## Ohiko akatsak
 
-Ohikoa da akats hauetako batzuk egitea:
+- Erabiltzaile guztiei baimen berak ematea.
+- Garapena errazteko profil bakarra sortzea.
+- Botoi bat ezkutatzeak funtzionalitate bat babesten duela pentsatzea.
+- Zerbitzarian baimenak ez egiaztatzea.
 
-❌ Erabiltzaile guztiek baimen berak behar dituztela pentsatzea.
+## Laburpena
 
-❌ Garapena errazteko erabiltzaile-profil bakar bat sortzea.
-
-❌ Interfazean botoi bat ezkutatzea eta funtzionalitatea dagoeneko babestuta dagoela pentsatzea.
-
-❌ Zerbitzarian eragiketa bat egin aurretik baimenak ez egiaztatzea.
-
----
-
-## Sakontzeko
-
-Aukeratu zuen aplikazioko funtzionalitate garrantzitsu bat.
-
-Adibidez:
-
-- kalifikazio bat aldatzea;
-- erabiltzaile bat ezabatzea;
-- pasahitz bat aldatzea;
-- txosten bat deskargatzea.
-
-Galdetu:
-
-- Nork egin beharko luke ekintza hau?
-- Nork ez luke egin beharko?
-- Zer gertatuko da erabiltzaile bat baimenik gabe sartzen saiatzen bada?
-
-Partekatu zuen erantzunak taldeko gainerakoekin.
-
----
-
-## Gogoratu beharrekoa
-
-- Autentifikatzea erabiltzaile baten identitatea egiaztatzea da.
-- Baimentzea erabiltzaile horrek zer egin dezakeen egiaztatzea da.
-- Erabiltzaile bakoitzak behar dituen baimenak soilik izan behar ditu.
+- Autentifikatzea erabiltzailearen identitatea egiaztatzea da.
+- Baimen-kudeaketa erabiltzaileak zer egin dezakeen erabakitzea da.
+- Erabiltzaile bakoitzak beharrezko baimenak bakarrik izan behar ditu.
 - Baimenen behin betiko egiaztapena beti zerbitzarian egin behar da.

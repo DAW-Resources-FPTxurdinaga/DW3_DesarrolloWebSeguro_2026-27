@@ -1,10 +1,10 @@
 # Garapen segurua
 
-Bloke honetan web aplikazioak garatzeko arriskuak proiektuaren lehen faseetatik murriztea ahalbidetzen duten printzipioak eta praktikak aztertzen dira.
+Bloke honetan web aplikazio baten garapenean segurtasuna txertatzen ikasiko duzu.
 
-Helburua ez da ahultasunak agertzen direnean zuzentzen ikastea, baizik eta diseinu, inplementazio eta konfigurazio erabakiek softwarearen segurtasunean nola eragiten duten ulertzea.
+Ahultasun gehienak ez dira teknologia jakin bat erabiltzeagatik agertzen, baizik eta aplikazioaren diseinuan, inplementazioan edo konfigurazioan hartutako erabaki okerrengatik. Horregatik, bloke honek hasieratik software seguruagoa garatzeko aukera ematen duten praktiketan jartzen du arreta.
 
-## Bloke honetan
+## Edukiak
 
 ### [Garapen seguruaren sarrera](1.introduccion-desarrollo-seguro.md)
 
@@ -18,18 +18,18 @@ Helburua ez da ahultasunak agertzen direnean zuzentzen ikastea, baizik eta disei
 
 ### [Sekretuen eta konfigurazioaren kudeaketa](6.gestion-de-secretos-y-configuracion.md)
 
-### [Blokearen laburpena](7.resumen.md)
+### [Ondorioak](7.conclusiones.md)
 
 ## Zer ikasiko duzu
 
-- Segurtasuna garapenaren erantzukizun gisa ulertzea.
-- Jasotako informazioa zuzen balidatzea.
-- Informazio sentikorra agerian utzi gabe erroreak kudeatzea.
-- Autentifikazio eta baimen-kudeaketako mekanismo seguruak diseinatzea.
-- Aplikazio baten konfigurazioa eta sekretuak babestea.
+Bloke hau amaitzean honako hau ulertuko duzu:
+
+- jasotako informazioa behar bezala balidatzen;
+- erroreak informazio sentikorra agerian utzi gabe kudeatzen;
+- autentifikazio eta baimen-kudeaketako mekanismoak diseinatzen;
+- aplikazio baten konfigurazioa eta sekretuak babesten;
+- segurtasuna garapenaren parte gisa txertatzen, gerorako zeregin gisa ulertu ordez.
 
 ## Ikastaroaren gainerakoarekiko lotura
 
-Bloke hau aurretik aztertutako oinarrien eta hurrengo blokeetan landuko dugun ahultasunen analisiaren arteko zubia da.
-
-Hemen ikasiko ditugun garapen-erabakiek lagunduko dute segurtasun-arazo ohikoenetako asko zergatik agertzen diren ulertzen, eta aplikazioaren diseinutik bertatik nola prebenitu daitezkeen ikusten.
+Bloke honetan aztertutako kontzeptuak zuzenean aplikatuko dira erronkaren garapenean, eta oinarri izango dira hurrengo blokeetako laborategi eta jarduera praktikoetarako.

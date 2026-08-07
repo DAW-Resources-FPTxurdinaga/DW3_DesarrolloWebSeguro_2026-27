@@ -40,6 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
             arrow.innerHTML = '▶';
             arrow.style.cssText = 'float: right; margin-left: 0.5em; transition: transform 0.2s;';
             title.appendChild(arrow);
+
+            // Permitir desplegar también al hacer clic en el título (incluido el enlace)
+            title.style.cursor = 'pointer';
+            title.addEventListener('click', function(e) {
+                if (e.target.closest('.nav-arrow')) {
+                    return;
+                }
+                e.preventDefault();
+                e.stopPropagation();
+                toggleMenu(title);
+            });
             
             // Manejador para el clic en la flecha
             arrow.addEventListener('click', function(e) {

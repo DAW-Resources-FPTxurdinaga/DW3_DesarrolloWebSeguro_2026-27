@@ -29,7 +29,7 @@ Blokea honako orrialde hauetan antolatuta dago:
 4. [Cookieak, saioak eta egoeraren kudeaketa](4.cookies-sesiones.md)
 5. [HTTPS eta ziurtagiri digitalak](5.https-certificados.md)
 6. [Web analisi tresnak](6.herramientas-analisis-web.md)
-7. [Blokearen laburpena](7.resumen.md)
+7. [Ondorioak](7.conclusiones.md)
 
 Orrialde bakoitzak funtsezko kontzeptu bat garatzen du, eta kontzeptu horiek berriro erabiliko dira laborategietan, erronketan eta aplikazioen hedapenean.
 

@@ -1,110 +1,43 @@
 # 4. jarduera. Proiektuaren segurtasun-diseinua berrikustea
 
-## Helburuak
+## Egoera
 
-Jarduera hau amaitzean gai izango zara:
+Zuen aplikazioaren diseinua amaitu duzue eta inplementazioa hastera zoazte.
 
-- Aplikazio baten diseinuan zehar hartutako segurtasun-erabaki nagusiak berrikusteko.
-- Oraindik definitu behar diren alderdiak detektatzeko.
-- Proiektua inplementazio-fasea hasteko prestatzeko.
-
----
-
-## Testuingurua
-
-Zuen aplikazioaren diseinua amaitu duzue eta programatzen hasteko zorian zaudete.
-
-Segurtasunarekin lotutako erabaki nagusiak hartuta dauden egiaztatzeko unea da.
-
-Diseinuan zehar arazo bat zuzentzea beti izango da errazagoa, aplikazioa dagoeneko garatuta dagoenean egitea baino.
-
----
+Programatu aurretik, komeni da segurtasunarekin lotutako erabaki nagusiak dagoeneko hartuta daudela egiaztatzea.
 
 ## Jarduera
 
-Lan egin 3 edo 4 laguneko taldeetan.
+3 edo 4 laguneko taldeetan, berrikusi zuen proiektua eta egiaztatu honako hauek definituta dituzuen:
 
-Berrikusi zuen proiektua eta egiaztatu honako alderdi hauek definitu dituzuen:
-
-- zuen aplikazioak zer datu jasoko dituen;
-- datu horiek nola balidatuko dituzuen;
-- errore bat gertatzen denean aplikazioak nola informatuko duen;
+- aplikazioak zer datu jasoko dituen;
+- datu horiek nola balidatuko diren;
+- erroreak nola kudeatuko diren;
 - nork hasi ahal izango duen saioa;
 - zer erabiltzaile mota egongo diren;
-- horietako bakoitzak zer egin ahal izango duen;
+- bakoitzak zer baimen izango dituen;
 - aplikazioak zer informazio sentikor erabiliko duen;
-- nola bereiziko dituzuen kodea eta konfigurazioa.
+- kodea eta konfigurazioa nola bereiziko diren.
 
-Ez da beharrezkoa erabaki guztiak behin betikoak izatea.
+Ez da beharrezkoa erabaki guztiak behin betikoak izatea. Helburua programatzen hasi aurretik berrikusi beharreko alderdiak identifikatzea da.
 
-Helburua da programatzen hasi aurretik oraindik berrikusi behar diren alderdiak detektatzea.
+!!! tip "Gomendio bat"
 
----
+    Hasi funtzionalitate garrantzitsuenak berrikusten. Erabaki pendienteak antzematen badituzue, gehitu backlog-era inplementazioa hasi aurretik.
 
-## Nola heldu diezaiokezue?
+## Erronkan aplikatzea
 
-Ordena hau jarrai dezakezue:
-
-1. Berrikusi aplikazioaren inprimaki nagusiak.
-2. Aztertu erabiltzaile mota desberdinak nola sartuko diren.
-3. Egiaztatu babestu beharreko funtzionalitaterik badagoen.
-4. Identifikatu aplikazioak erabiliko duen informazio sentikorra.
-5. Prestatu zerrenda txiki bat, oraindik egiteke dauden erabakiekin.
-
-!!! tip "Aholkua"
-
-    Ez saiatu aplikazio osoa xehetasun-maila berean berrikusten.
-
-    Hasi funtzionalitate garrantzitsuenetatik, eta utzi kritiko gutxien direnak geroagoko berrikuspen baterako.
-
----
-
-## Erronkari aplikazioa
-
-Hurrengo sprint-a edo garapen-fasea hasi aurretik, egiaztatu taldeak argi dituela segurtasunarekin lotutako erabaki nagusiak.
-
-Definitu gabeko alderdiren bat antzematen baduzue, gehitu ataza bat backlog-era inplementazioa hasi aurretik.
-
-Orain egindako ahalegin txiki batek aldaketa asko saihestu ditzake garapenean zehar.
-
----
+Hurrengo sprint-aren aurretik, egiaztatu talde osoak segurtasun-erabaki berak partekatzen dituela eta idatzi oraindik ebatzi beharreko zereginak.
 
 ## Ohiko akatsak
 
-Ohikoa da akats hauetako batzuk egitea:
+- Programatzen hastea segurtasun-neurriak definitu gabe.
+- Segurtasun-erabakiak proiektuaren amaierarako uztea.
+- Inplementazioan zehar rolak, baimenak edo balidazioak falta direla aurkitzea.
+- Garatzen hasi aurretik diseinua ez berrikustea.
 
-❌ Aplikazioa nola babestu erabaki gabe programatzen hastea.
+## Laburpena
 
-❌ Segurtasun-erabakiak proiektuaren amaierarako utz daitezkeela pentsatzea.
-
-❌ Garapenean zehar deskubritzea rol, baimen edo balidazio garrantzitsuak falta direla.
-
-❌ Inplementazioa hasi aurretik diseinua ez berrikustea.
-
----
-
-## Sakontzeko
-
-Aukeratu zuen aplikazioko funtzionalitate garrantzitsu bat.
-
-Adibidez:
-
-- erabiltzaileen kudeaketa;
-- edukien argitalpena;
-- erreserben kudeaketa;
-- produktuen administrazioa.
-
-Saiatu galdera honi erantzuten:
-
-> **Zer gerta liteke funtzionalitate hau segurtasun-neurririk aplikatu gabe garatuko bagenu?**
-
-Partekatu zuen erantzunak taldeko gainerakoekin.
-
----
-
-## Gogoratu beharrekoa
-
-- Segurtasuna kodea idatzi baino askoz lehenago hasten da.
-- Diseinu on batek akatsak murrizten ditu eta garapena errazten du.
-- Programatu aurretik proiektua berrikusteak arazoak detektatzen laguntzen du, oraindik zuzentzeko errazak direnean.
-- Bloke honetan hartutako erabakiak 3. blokeko inplementazioaren oinarria izango dira.
+- Segurtasuna diseinu-fasean hasten da.
+- Programatu aurretik proiektua berrikusteak ondorengo aldaketak murrizten ditu.
+- Bloke honetan hartutako erabakiak hurrengo inplementaziorako oinarri izango dira.

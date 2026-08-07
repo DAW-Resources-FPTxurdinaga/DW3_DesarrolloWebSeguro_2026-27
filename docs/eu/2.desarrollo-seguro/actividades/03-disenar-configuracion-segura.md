@@ -1,108 +1,45 @@
 # 3. jarduera. Konfigurazio seguru bat diseinatzea
 
-## Helburuak
+## Egoera
 
-Jarduera hau amaitzean gai izango zara:
+**TxurdiGest** garapen-taldea aplikazioaren garapena hastera doa.
 
-- Web aplikazio baten informazio sentikorra identifikatzeko.
-- Iturburu-kodea eta konfigurazioa bereizteko.
-- Zer informazio babestuta mantendu behar den erabakitzeko.
-- Lan-ingurune desberdinetarako konfigurazio egokia prestatzeko.
-
----
-
-## Testuingurua
-
-**TxurdiGest**-eko garapen-taldea aplikazioaren garapena hastear dago.
-
-Kodea idatzi aurretik, aplikazioaren parte izango den informazioa eta iturburu-kodetik kanpo mantendu beharko dena erabaki nahi ditu.
-
-Erabaki horiek hasieratik hartzeak segurtasun-arazoak saihestuko ditu eta aplikazioaren hedapena erraztuko du.
-
----
+Kodea idatzi aurretik, erabaki behar du zer informazio izango den aplikazioaren parte eta zer informazio mantendu beharko den iturburu-kodetik kanpo.
 
 ## Jarduera
 
-Lan egin 3 edo 4 laguneko taldeetan.
+3 edo 4 laguneko taldeetan, aztertu zuen aplikazioa eta erabaki:
 
-Aztertu zuen aplikazioa eta erabaki:
+- funtzionatzeko zer informazio behar duen;
+- zer datu diren sentikorrak;
+- zer informazio sar daitekeen iturburu-kodean;
+- zer informazio mantendu behar den kodetik kanpo;
+- zer balio aldatuko diren garapen, proba eta produkzio inguruneen artean.
 
-- aplikazioak funtzionatzeko zer informazio erabiliko duen;
-- zer informazio den sentikorra;
-- zer datu izan daitezkeen iturburu-kodearen parte;
-- zer datu mantendu behar diren kodetik kanpo;
-- zer informazio aldatuko den garapen- eta produkzio-inguruneen artean.
+Ez da beharrezkoa inplementazioa definitzea. Helburua babestu beharreko informazioa behar bezala identifikatzea da.
 
-Ez da beharrezkoa oraindik erabakitzea konfigurazio hori nola inplementatu.
+!!! tip "Galdera erabilgarri bat"
 
-Helburua da babestu beharreko informazioa behar bezala identifikatzea.
+    Zer gertatuko litzateke biltegi hau minutu batzuez publikoa izango balitz?
 
----
+## Erronkan aplikatzea
 
-## Nola heldu diezaiokezue?
-
-Honelako prozesu bat jarrai dezakezue:
-
-1. Egin zuen aplikazioak erabiliko duen informazio guztiaren zerrenda bat.
-2. Markatu zer informaziok arriskuan jar lezakeen segurtasuna publiko bihurtuko balitz.
-3. Pentsatu zer datu aldatuko diren aplikazioa garapenetik produkziora pasatzen denean.
-4. Erabaki zer informazio ez litzatekeen inoiz zuzenean kodean gorde behar.
-
-!!! tip "Aholkua"
-
-    Galde iezaiozue beti zuen buruari:
-
-    **Zer gertatuko litzateke biltegi hau minutu batzuetan publikoa izango balitz?**
-
-    Erantzuna bada norbaitek zuen datu-basera sarbidea lor lezakeela, API bat zuen izenean erabil lezakeela edo aplikazioa konprometitu lezakeela, informazio hori ez litzateke zuzenean kodean idatzita egon behar.
-
----
-
-## Erronkari aplikazioa
-
-Berrikusi zuen proiektua eta prestatu zerrenda txiki bat, zuen aplikazioak erabiliko duen informazio sentikorrarekin.
-
-Egiaztatu taldeak argi daukala:
+Egiaztatu taldeak argi duela:
 
 - zer datu babestu beharko diren;
-- zer datu alda daitezkeen ingurunearen arabera;
+- zer datu aldatuko diren ingurunearen arabera;
 - zer informazio ez litzatekeen inoiz biltegira igo behar.
-
-Erabaki horiek gidari izango dira aplikazioa 4. blokean konfiguratzen duzuenean.
-
----
 
 ## Ohiko akatsak
 
-Ohikoa da akats hauetako batzuk egitea:
+- Pasahitzak edo gakoak zuzenean kodean idaztea.
+- Sekretuak Git biltegi batean gordetzea.
+- Ingurune guztietarako konfigurazio bera erabiltzea.
+- Biltegi pribatu bat izateak sekretuak babesteko beharra ezabatzen duela pentsatzea.
 
-❌ Datu-baseko pasahitza zuzenean kodean idaztea.
+## Laburpena
 
-❌ API gakoak Git biltegi batean gordetzea.
-
-❌ Garapenerako eta produkziorako konfigurazio bera erabiltzea.
-
-❌ Biltegi pribatu batek sekretuak babesteko beharra ezabatzen duela pentsatzea.
-
----
-
-## Sakontzeko
-
-Bilatu PHP edo Laravel erabiliz garatutako proiektu bat.
-
-Kodea aztertzera sartu gabe, saiatu identifikatzen:
-
-- non gordetzen duen konfigurazioa;
-- nola bereizten dituen kodea eta konfigurazio-datuak;
-- zer informazio aldatzen den ingurune desberdinen artean.
-
-Partekatu taldearekin antolaketa honek zer abantaila ekartzen dituen.
-
----
-
-## Gogoratu beharrekoa
-
-- Kodeak eta konfigurazioak funtzio desberdinak betetzen dituzte.
-- Informazio sentikorrak ez du inoiz iturburu-kodearen parte izan behar.
+- Kodea eta konfigurazioa bereizita mantendu behar dira.
+- Informazio sentikorra ez da inoiz iturburu-kodearen parte izan behar.
 - Ingurune bakoitzak konfigurazio desberdina behar dezake.
-- Konfigurazioaren kudeaketa on batek mantentzea errazten du eta aplikazioaren segurtasuna hobetzen du.
+- Konfigurazioaren kudeaketa onak segurtasuna hobetzen du eta hedapena errazten du.
