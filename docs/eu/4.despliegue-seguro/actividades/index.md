@@ -1,285 +1,285 @@
-# Actividad: Auditoría de despliegue seguro
+# Jarduera: hedapen seguruaren auditoria
 
-## Contexto
+## Testuingurua
 
-La aplicación desarrollada durante el reto debe pasar de un entorno de desarrollo a un entorno preparado para usuarios reales.
+Erronkan garatutako aplikazioak garapen-ingurune batetik benetako erabiltzaileentzat prestatutako ingurune batera igaro behar du.
 
-El objetivo de esta actividad es revisar que el despliegue mantiene las decisiones de seguridad trabajadas durante el módulo.
+Jarduera honen helburua da hedapenak moduluan landutako segurtasun-erabakiak mantentzen dituela berrikustea.
 
-No se trata únicamente de comprobar que la aplicación funciona, sino de verificar que está configurada de forma segura.
+Ez da aplikazioak funtzionatzen duela egiaztatzea bakarrik; modu seguruan konfiguratuta dagoela egiaztatzea ere bada.
 
-## Objetivo
+## Helburua
 
-Realizar una revisión del despliegue de la aplicación aplicando una lista de comprobación de seguridad.
+Aplikazioaren hedapenaren berrikuspena egitea, segurtasun-egiaztapen zerrenda bat aplikatuz.
 
-El equipo debe identificar:
+Taldeak honako hauek identifikatu behar ditu:
 
-- configuraciones correctas;
-- posibles riesgos;
-- decisiones tomadas;
-- evidencias que demuestren la revisión realizada.
+- konfigurazio zuzenak;
+- arrisku posibleak;
+- hartutako erabakiak;
+- egindako berrikuspena frogatzen duten ebidentziak.
 
-## Fases de la actividad
+## Jardueraren faseak
 
 ```text
-Revisar configuración
+Konfigurazioa berrikusi
 
         ↓
 
-Comprobar despliegue
+Hedapena egiaztatu
 
         ↓
 
-Identificar riesgos
+Arriskuak identifikatu
 
         ↓
 
-Aplicar correcciones
+Zuzenketak aplikatu
 
         ↓
 
-Documentar evidencias
+Ebidentziak dokumentatu
 ```
 
-# Checklist de revisión
+# Berrikuspen-checklist-a
 
-## 1. Configuración del entorno
+## 1. Ingurunearen konfigurazioa
 
-Comprobar:
+Egiaztatu:
 
 ```text
-[ ] Existe separación entre desarrollo y producción
+[ ] Garapenaren eta produkzioaren arteko bereizketa dago
 
-[ ] La configuración no está mezclada con el código
+[ ] Konfigurazioa ez dago kodearekin nahastuta
 
-[ ] Los secretos están fuera del repositorio
+[ ] Sekretuak biltegitik kanpo daude
 
-[ ] DEBUG está desactivado en producción
+[ ] DEBUG desaktibatuta dago produkzioan
 
-[ ] Las variables de entorno están configuradas correctamente
+[ ] Ingurune-aldagaiak behar bezala konfiguratuta daude
 ```
 
-Evidencias posibles:
+Balizko ebidentziak:
 
-- captura de configuración sin mostrar secretos;
-- explicación de variables utilizadas;
-- estructura del proyecto.
+- konfigurazioaren pantaila-argazkia sekretuak erakutsi gabe;
+- erabilitako aldagaien azalpena;
+- proiektuaren egitura.
 
 ---
 
-## 2. HTTPS y comunicaciones
+## 2. HTTPS eta komunikazioak
 
-Comprobar:
+Egiaztatu:
 
 ```text
-[ ] La aplicación funciona mediante HTTPS
+[ ] Aplikazioak HTTPS bidez funtzionatzen du
 
-[ ] El certificado es válido
+[ ] Ziurtagiria baliozkoa da
 
-[ ] HTTP redirige a HTTPS
+[ ] HTTPk HTTPSra birbideratzen du
 
-[ ] No existen recursos cargados mediante HTTP
+[ ] Ez dago HTTP bidez kargatutako baliabiderik
 
-[ ] Las cookies sensibles utilizan configuración adecuada
+[ ] Cookie sentikorrek konfigurazio egokia erabiltzen dute
 ```
 
-Evidencias posibles:
+Balizko ebidentziak:
 
-- captura del navegador mostrando HTTPS;
-- revisión de certificado;
-- comprobación mediante DevTools.
+- HTTPS erakusten duen nabigatzailearen pantaila-argazkia;
+- ziurtagiriaren berrikuspena;
+- DevTools bidezko egiaztapena.
 
 ---
 
-## 3. Servidor y exposición
+## 3. Zerbitzaria eta esposizioa
 
-Comprobar:
+Egiaztatu:
 
 ```text
-[ ] Solo están accesibles los servicios necesarios
+[ ] Beharrezko zerbitzuak bakarrik daude eskuragarri
 
-[ ] La aplicación no expone archivos internos
+[ ] Aplikazioak ez ditu barne-fitxategiak agerian uzten
 
-[ ] El directorio público es correcto
+[ ] Direktorio publikoa zuzena da
 
-[ ] No existen herramientas de desarrollo publicadas
+[ ] Ez dago argitaratutako garapen-tresnarik
 
-[ ] La arquitectura separa componentes públicos e internos
+[ ] Arkitekturak osagai publikoak eta barnekoak bereizten ditu
 ```
 
-Evidencias posibles:
+Balizko ebidentziak:
 
-- diagrama de arquitectura;
-- configuración del servidor;
-- revisión de accesos.
+- arkitektura-diagrama;
+- zerbitzariaren konfigurazioa;
+- sarbideen berrikuspena.
 
 ---
 
-## 4. Base de datos
+## 4. Datu-basea
 
-Comprobar:
+Egiaztatu:
 
 ```text
-[ ] La base de datos no está expuesta directamente a Internet
+[ ] Datu-basea ez dago Internetera zuzenean agerian
 
-[ ] La aplicación utiliza un usuario específico
+[ ] Aplikazioak erabiltzaile espezifiko bat erabiltzen du
 
-[ ] Los permisos del usuario son mínimos
+[ ] Erabiltzailearen baimenak minimoak dira
 
-[ ] Las credenciales no están en el código
+[ ] Kredentzialak ez daude kodean
 
-[ ] Existen copias de seguridad o procedimiento definido
+[ ] Babes-kopiak edo zehaztutako prozedura bat daude
 ```
 
-Evidencias posibles:
+Balizko ebidentziak:
 
-- configuración de conexión sin secretos;
-- diagrama de acceso;
-- explicación de permisos.
+- konexio-konfigurazioa sekreturik gabe;
+- sarbide-diagrama;
+- baimenen azalpena.
 
 ---
 
-## 5. Permisos de archivos
+## 5. Fitxategien baimenak
 
-Comprobar:
+Egiaztatu:
 
 ```text
-[ ] No existen permisos excesivos
+[ ] Ez dago gehiegizko baimenik
 
-[ ] No se utiliza chmod 777 como solución
+[ ] Ez da chmod 777 erabiltzen irtenbide gisa
 
-[ ] Las carpetas escribibles están identificadas
+[ ] Idazteko moduko karpetak identifikatuta daude
 
-[ ] Los archivos sensibles están protegidos
+[ ] Fitxategi sentikorrak babestuta daude
 
-[ ] Los archivos subidos no pueden ejecutarse
+[ ] Igotako fitxategiak ezin dira exekutatu
 ```
 
-Evidencias posibles:
+Balizko ebidentziak:
 
-- estructura de directorios;
-- permisos relevantes;
-- explicación de decisiones.
+- direktorioen egitura;
+- baimen garrantzitsuak;
+- erabakien azalpena.
 
 ---
 
-## 6. Errores y logs
+## 6. Erroreak eta logak
 
-Comprobar:
+Egiaztatu:
 
 ```text
-[ ] Los errores técnicos no aparecen al usuario
+[ ] Errore teknikoak ez zaizkio erabiltzaileari agertzen
 
-[ ] Los logs están configurados
+[ ] Logak konfiguratuta daude
 
-[ ] Los logs no contienen secretos
+[ ] Logek ez dute sekreturik
 
-[ ] Los archivos de log no son accesibles públicamente
+[ ] Log-fitxategiak ez dira publikoki eskuragarriak
 
-[ ] Existe información suficiente para investigar problemas
+[ ] Arazoak ikertzeko informazio nahikoa dago
 ```
 
-Evidencias posibles:
+Balizko ebidentziak:
 
-- captura de gestión de errores;
-- ejemplo de log anonimizado.
+- erroreen kudeaketaren pantaila-argazkia;
+- anonimizatutako log-adibidea.
 
 ---
 
-## 7. Cabeceras de seguridad
+## 7. Segurtasun-goiburuak
 
-Comprobar:
+Egiaztatu:
 
 ```text
-[ ] Las cabeceras están configuradas
+[ ] Goiburuak konfiguratuta daude
 
-[ ] La configuración se ha revisado
+[ ] Konfigurazioa berrikusi da
 
-[ ] CSP no rompe funcionalidades
+[ ] CSPk ez ditu funtzionalitateak hausten
 
-[ ] El navegador recibe las políticas esperadas
+[ ] Nabigatzaileak espero diren politikak jasotzen ditu
 ```
 
-Evidencias posibles:
+Balizko ebidentziak:
 
-- captura de DevTools Network;
-- listado de cabeceras HTTP.
+- DevTools Network-en pantaila-argazkia;
+- HTTP segurtasun-goiburuen zerrenda.
 
 ---
 
-# Entregable
+# Entregagaia
 
-El equipo debe entregar:
+Taldeak honakoa entregatu behar du:
 
-## 1. Checklist completado
+## 1. Osatutako checklist-a
 
-Indicando:
+Honakoa adieraziz:
 
-- elementos revisados;
-- estado;
-- posibles mejoras.
+- berrikusitako elementuak;
+- egoera;
+- hobekuntza posibleak.
 
-## 2. Diagrama de despliegue
+## 2. Hedapen-diagrama
 
-Debe mostrar:
+Hau erakutsi behar du:
 
 ```text
-Usuario
+Erabiltzailea
 
     ↓ HTTPS
 
-Servidor web
+Web zerbitzaria
 
     ↓
 
-Aplicación
+Aplikazioa
 
     ↓
 
-Base de datos
+Datu-basea
 ```
 
-Incluyendo los elementos de seguridad aplicados.
+Aplikatutako segurtasun-elementuak barne.
 
-## 3. Evidencias
+## 3. Ebidentziak
 
-Capturas o explicaciones de:
+Honakoen pantaila-argazkiak edo azalpenak:
 
 - HTTPS;
-- configuración;
-- arquitectura;
-- controles aplicados.
+- konfigurazioa;
+- arkitektura;
+- aplikatutako kontrolak.
 
-## 4. Reflexión final
+## 4. Amaierako hausnarketa
 
-Responder:
+Erantzun:
 
-- ¿Qué decisiones de seguridad se han aplicado?
-- ¿Qué riesgos se han reducido?
-- ¿Qué mejoras quedarían pendientes?
+- Zein segurtasun-erabaki aplikatu dira?
+- Zein arrisku murriztu dira?
+- Zein hobekuntza geratuko lirateke egiteko?
 
-# Relación con el módulo
+# Moduluarekiko lotura
 
-Esta actividad integra los contenidos trabajados:
+Jarduera honek landutako edukiak integratzen ditu:
 
 ```text
-Diseño seguro
+Diseinu segurua
 
         ↓
 
-Implementación segura
+Inplementazio segurua
 
         ↓
 
-Despliegue seguro
+Hedapen segurua
 
         ↓
 
-Aplicación en el reto
+Erronkako aplikazioa
 ```
 
-El objetivo es que la seguridad forme parte del desarrollo completo de la aplicación.
+Helburua da segurtasuna aplikazioaren garapen osoaren parte izatea.
 
-# Idea clave
+# Gako-ideia
 
-> Una aplicación profesional no solo debe funcionar: debe poder desplegarse y mantenerse de forma segura.
+> Aplikazio profesional batek ez du funtzionatu bakarrik behar: modu seguruan hedatu eta mantendu ahal izan behar da.
