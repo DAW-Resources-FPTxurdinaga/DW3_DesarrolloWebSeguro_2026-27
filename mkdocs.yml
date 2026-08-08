@@ -148,6 +148,21 @@ plugins:
 
             - Bloque 5. Verificación de la seguridad:
               - Presentación del bloque: 5.verificacion-seguridad/index.md
+              - Introducción a la verificación de seguridad: 5.verificacion-seguridad/1.introduccion-verificacion-seguridad.md
+              - Revisión de código:
+                - Introducción: 5.verificacion-seguridad/2.revision-codigo/index.md
+                - Práctica: 5.verificacion-seguridad/2.revision-codigo/practica.md
+              - Pruebas de seguridad:
+                - Introducción: 5.verificacion-seguridad/3.pruebas-seguridad/index.md
+                - Práctica: 5.verificacion-seguridad/3.pruebas-seguridad/practica.md
+              - Herramientas de verificación:
+                - Introducción: 5.verificacion-seguridad/4.herramientas-verificacion/index.md
+                - Práctica: 5.verificacion-seguridad/4.herramientas-verificacion/practica.md
+              - Revisión del despliegue: 5.verificacion-seguridad/5.revision-despliegue/index.md
+              - Checklist de seguridad: 5.verificacion-seguridad/6.checklist-seguridad/index.md
+              - Evidencias de seguridad: 5.verificacion-seguridad/7.evidencias-seguridad/index.md
+              - Conclusiones: 5.verificacion-seguridad/8.conclusiones.md
+              - Actividades: 5.verificacion-seguridad/actividades/index.md
 
         - locale: eu
           name: Euskara
@@ -254,6 +269,21 @@ plugins:
 
             - 5. blokea. Segurtasunaren egiaztapena:
               - Blokearen aurkezpena: 5.verificacion-seguridad/index.md
+              - Segurtasun-egiaztapenaren sarrera: 5.verificacion-seguridad/1.introduccion-verificacion-seguridad.md
+              - Kode-berrikuspena:
+                - Sarrera: 5.verificacion-seguridad/2.revision-codigo/index.md
+                - Praktika: 5.verificacion-seguridad/2.revision-codigo/practica.md
+              - Segurtasun-probak:
+                - Sarrera: 5.verificacion-seguridad/3.pruebas-seguridad/index.md
+                - Praktika: 5.verificacion-seguridad/3.pruebas-seguridad/practica.md
+              - Egiaztapen-tresnak:
+                - Sarrera: 5.verificacion-seguridad/4.herramientas-verificacion/index.md
+                - Praktika: 5.verificacion-seguridad/4.herramientas-verificacion/practica.md
+              - Hedapenaren berrikuspena: 5.verificacion-seguridad/5.revision-despliegue/index.md
+              - Segurtasun-checklist-a: 5.verificacion-seguridad/6.checklist-seguridad/index.md
+              - Segurtasun-ebidentziak: 5.verificacion-seguridad/7.evidencias-seguridad/index.md
+              - Ondorioak: 5.verificacion-seguridad/8.conclusiones.md
+              - Jarduerak: 5.verificacion-seguridad/actividades/index.md
 
 markdown_extensions:
 

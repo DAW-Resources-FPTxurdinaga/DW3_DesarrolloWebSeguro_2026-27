@@ -311,7 +311,7 @@ Adibideak:
 Goiburuak:
 
 ```text
-Servidor: Apache/2.x
+Zerbitzaria: Apache/2.x
 PHP: 8.x
 ```
 

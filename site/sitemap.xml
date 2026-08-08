@@ -505,6 +505,90 @@
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/index.html"/>
     </url>
     <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/1.introduccion-verificacion-seguridad.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/1.introduccion-verificacion-seguridad.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/1.introduccion-verificacion-seguridad.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/8.conclusiones.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/8.conclusiones.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/8.conclusiones.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/2.revision-codigo/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/2.revision-codigo/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/2.revision-codigo/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/2.revision-codigo/practica.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/2.revision-codigo/practica.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/2.revision-codigo/practica.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/3.pruebas-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/3.pruebas-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/3.pruebas-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/3.pruebas-seguridad/practica.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/3.pruebas-seguridad/practica.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/3.pruebas-seguridad/practica.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/4.herramientas-verificacion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/4.herramientas-verificacion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/4.herramientas-verificacion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/4.herramientas-verificacion/practica.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/4.herramientas-verificacion/practica.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/4.herramientas-verificacion/practica.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/5.revision-despliegue/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/5.revision-despliegue/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/5.revision-despliegue/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/6.checklist-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/6.checklist-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/6.checklist-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/7.evidencias-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/7.evidencias-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/7.evidencias-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/actividades/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/actividades/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/actividades/index.html"/>
+    </url>
+    <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/index.html</loc>
         <lastmod>2026-08-08</lastmod>
         <changefreq>daily</changefreq>
@@ -1007,6 +1091,90 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/index.html"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/1.introduccion-verificacion-seguridad.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/1.introduccion-verificacion-seguridad.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/1.introduccion-verificacion-seguridad.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/8.conclusiones.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/8.conclusiones.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/8.conclusiones.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/2.revision-codigo/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/2.revision-codigo/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/2.revision-codigo/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/2.revision-codigo/practica.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/2.revision-codigo/practica.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/2.revision-codigo/practica.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/3.pruebas-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/3.pruebas-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/3.pruebas-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/3.pruebas-seguridad/practica.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/3.pruebas-seguridad/practica.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/3.pruebas-seguridad/practica.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/4.herramientas-verificacion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/4.herramientas-verificacion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/4.herramientas-verificacion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/4.herramientas-verificacion/practica.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/4.herramientas-verificacion/practica.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/4.herramientas-verificacion/practica.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/5.revision-despliegue/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/5.revision-despliegue/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/5.revision-despliegue/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/6.checklist-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/6.checklist-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/6.checklist-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/7.evidencias-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/7.evidencias-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/7.evidencias-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/actividades/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/actividades/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/actividades/index.html"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/0.proyecto/arquitectura-general.html</loc>

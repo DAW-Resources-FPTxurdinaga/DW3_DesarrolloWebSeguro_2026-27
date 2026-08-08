@@ -11,7 +11,7 @@ Aplikazio batek ez lituzke bere fitxategi guztiak direktorio publikoaren barruan
 Adibidea:
 
 ```text
-Aplicacion
+Aplikazioa
 
 ├── app/
 ├── config/
