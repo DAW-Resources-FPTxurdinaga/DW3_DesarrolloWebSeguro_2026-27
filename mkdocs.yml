@@ -151,18 +151,14 @@ plugins:
               - Introducción a la verificación de seguridad: 5.verificacion-seguridad/1.introduccion-verificacion-seguridad.md
               - Revisión de código:
                 - Introducción: 5.verificacion-seguridad/2.revision-codigo/index.md
-                - Práctica: 5.verificacion-seguridad/2.revision-codigo/practica.md
               - Pruebas de seguridad:
                 - Introducción: 5.verificacion-seguridad/3.pruebas-seguridad/index.md
-                - Práctica: 5.verificacion-seguridad/3.pruebas-seguridad/practica.md
               - Herramientas de verificación:
                 - Introducción: 5.verificacion-seguridad/4.herramientas-verificacion/index.md
-                - Práctica: 5.verificacion-seguridad/4.herramientas-verificacion/practica.md
               - Revisión del despliegue: 5.verificacion-seguridad/5.revision-despliegue/index.md
               - Checklist de seguridad: 5.verificacion-seguridad/6.checklist-seguridad/index.md
               - Evidencias de seguridad: 5.verificacion-seguridad/7.evidencias-seguridad/index.md
               - Conclusiones: 5.verificacion-seguridad/8.conclusiones.md
-              - Actividades: 5.verificacion-seguridad/actividades/index.md
 
         - locale: eu
           name: Euskara

@@ -1,8 +1,8 @@
 # Verificación de la seguridad
 
-Una aplicación no puede considerarse segura únicamente porque se hayan aplicado medidas de seguridad durante el diseño, la implementación o el despliegue.
+Una medida de seguridad no debe darse por válida únicamente porque haya sido diseñada o implementada.
 
-Es necesario comprobar que esas medidas funcionan realmente.
+Debe comprobarse que funciona realmente.
 
 ```text
 Diseñar
@@ -20,35 +20,35 @@ Desplegar
 Verificar
 ```
 
-La verificación permite detectar errores antes de que lleguen a los usuarios y comprobar que las decisiones tomadas durante el desarrollo se mantienen en el producto final.
+La verificación permite comparar lo que esperamos que haga la aplicación con su comportamiento real.
 
 ## Verificar no es atacar
 
-En este módulo la verificación de seguridad se aborda desde el punto de vista del desarrollo.
+En este módulo la verificación se aborda desde el punto de vista del desarrollo seguro.
 
 El objetivo no es realizar pentesting profesional ni intentar comprometer sistemas ajenos.
 
-El objetivo es comprobar preguntas como:
+Se trata de responder preguntas concretas:
 
 ```text
-¿La entrada se valida realmente?
+¿Los datos se validan realmente en el servidor?
 
-¿Un usuario puede acceder únicamente a sus recursos?
+¿Un usuario solo puede acceder a los recursos permitidos?
 
 ¿Las consultas a la base de datos están protegidas?
 
 ¿Los secretos están fuera del código?
 
-¿La aplicación funciona únicamente mediante HTTPS?
+¿La configuración de producción es adecuada?
 
-¿Los errores muestran información sensible?
+¿Los errores evitan mostrar información sensible?
 ```
 
-Verificar significa comprobar que los controles definidos funcionan en situaciones reales.
+La comprobación se realiza únicamente sobre aplicaciones propias, entornos educativos o sistemas expresamente autorizados.
 
-## Qué debemos verificar
+## Qué verificamos
 
-La revisión de una aplicación puede realizarse en diferentes niveles.
+La revisión puede realizarse en tres niveles.
 
 ### Código
 
@@ -56,178 +56,162 @@ Comprobar decisiones de implementación:
 
 - validación de entradas;
 - salida segura;
-- consultas preparadas;
+- acceso a datos;
 - autenticación;
 - autorización;
-- gestión de sesiones;
-- subida de archivos;
+- sesiones;
+- archivos;
+- APIs;
+- secretos;
 - gestión de errores.
 
 ### Comportamiento
 
-Comprobar qué ocurre cuando el usuario realiza acciones inesperadas.
+Comprobar qué ocurre ante casos válidos y ante situaciones que deben rechazarse.
 
 Por ejemplo:
 
 ```text
-Enviar un dato inválido
+Entrada inválida
 
-Intentar acceder sin autenticación
+Acceso sin autenticación
 
-Modificar un identificador
+Identificador manipulado
 
-Solicitar un recurso de otro usuario
+Recurso de otro usuario
 
-Enviar un archivo no permitido
+Archivo no permitido
 ```
-
-Una aplicación segura debe responder de forma controlada.
 
 ### Despliegue
 
-Comprobar que la configuración de producción mantiene las medidas de seguridad:
+Comprobar que las decisiones de seguridad se mantienen en producción:
 
 - HTTPS;
-- secretos fuera del código;
-- depuración desactivada;
-- permisos adecuados;
-- base de datos protegida;
-- cabeceras de seguridad;
-- logs configurados.
+- configuración de producción;
+- secretos;
+- superficie de exposición;
+- permisos;
+- base de datos;
+- cabeceras;
+- errores y logs.
 
-## Pruebas positivas y negativas
+## Método de verificación
 
-Las pruebas funcionales habituales comprueban que una operación funciona correctamente.
-
-Ejemplo:
+Una comprobación útil sigue un proceso sencillo:
 
 ```text
-Usuario válido
+Control esperado
 
         ↓
 
-Inicio de sesión correcto
+Prueba
+
+        ↓
+
+Resultado obtenido
+
+        ↓
+
+Comparación
+
+        ↓
+
+Evidencia
 ```
 
-La verificación de seguridad también debe comprobar situaciones que deberían ser rechazadas.
+Si el resultado no coincide con lo esperado:
 
 ```text
-Usuario no autenticado
+Detectar
 
-        ↓
-
-Acceso a recurso protegido
-
-        ↓
-
-Acceso denegado
-```
-
-Estas pruebas permiten comprobar el comportamiento de la aplicación ante entradas o acciones no previstas.
-
-## Herramientas de apoyo
-
-Durante el módulo ya se han utilizado herramientas que permiten observar y verificar el comportamiento de una aplicación.
-
-Entre ellas:
-
-- Chrome DevTools;
-- Burp Suite;
-- DVWA;
-- herramientas del navegador;
-- logs de la aplicación y del servidor.
-
-En este bloque no se pretende aprender muchas herramientas nuevas.
-
-El objetivo es utilizar las herramientas conocidas para comprobar decisiones concretas de seguridad.
-
-## Revisión de código
-
-Muchas vulnerabilidades pueden detectarse revisando el código antes de desplegarlo.
-
-Una revisión puede comprobar, por ejemplo:
-
-```text
-¿Se confía directamente en datos recibidos?
-
-¿Se construyen consultas SQL concatenando valores?
-
-¿Se comprueba la autorización antes de acceder a un recurso?
-
-¿Existen secretos escritos en el código?
-
-¿Se muestran excepciones directamente al usuario?
-```
-
-La revisión puede realizarla:
-
-- el propio desarrollador;
-- otro miembro del equipo;
-- otro equipo.
-
-La revisión entre iguales ayuda a detectar problemas que el autor del código puede no haber visto.
-
-## Evidencias
-
-En un proyecto profesional no basta con afirmar:
-
-> La aplicación es segura.
-
-Debe poder demostrarse qué se ha comprobado.
-
-Una evidencia puede ser:
-
-- una captura de DevTools;
-- una petición y su respuesta;
-- un fragmento de configuración;
-- un resultado de prueba;
-- un checklist completado;
-- una explicación breve de una corrección realizada.
-
-La evidencia debe ser suficiente para justificar la decisión, pero no necesita convertirse en un informe extenso.
-
-## Integración con los retos ETHAZI
-
-La verificación debe formar parte del desarrollo del reto.
-
-No debería realizarse únicamente al final.
-
-```text
-Implementar funcionalidad
-
-        ↓
-
-Revisar
-
-        ↓
-
-Probar
-
-        ↓
+    ↓
 
 Corregir
 
-        ↓
+    ↓
 
-Continuar desarrollando
+Repetir la prueba
 ```
 
-De esta forma, la seguridad se incorpora al ciclo normal de trabajo del equipo.
+La verificación forma parte del desarrollo, no únicamente de la entrega final.
+
+## Aplicación en los retos
+
+Este bloque proporciona el método de revisión.
+
+Las comprobaciones se aplicarán sobre los proyectos desarrollados en los dos retos del curso.
+
+### Reto 1 — PHP, JavaScript y CSS3
+
+La verificación permitirá comprobar, entre otros aspectos:
+
+- validación JavaScript como apoyo a la experiencia de usuario;
+- validación real en PHP;
+- salida segura;
+- acceso seguro a la base de datos;
+- autenticación y sesiones;
+- autorización;
+- gestión de errores;
+- secretos y configuración;
+- despliegue mediante HTTPS.
+
+### Reto 2 — Laravel, Vue 3 y Tailwind
+
+La verificación se aplicará a aspectos como:
+
+- validación en Vue como apoyo a la interfaz;
+- validación en Laravel como control del servidor;
+- autenticación y autorización;
+- protección de recursos;
+- APIs y respuestas HTTP;
+- CORS cuando corresponda;
+- variables de entorno y secretos;
+- configuración y despliegue de producción.
+
+No se realizará una actividad final independiente del bloque.
+
+La revisión, las pruebas y las evidencias se integrarán en los propios retos.
+
+## Herramientas
+
+Se utilizarán principalmente herramientas ya conocidas:
+
+- Chrome DevTools;
+- Burp Suite;
+- DVWA como laboratorio de referencia;
+- logs;
+- `curl` cuando resulte útil.
+
+La herramienta se elige según la pregunta que queremos responder.
+
+## Evidencias
+
+Una evidencia permite demostrar el resultado de una comprobación.
+
+Puede ser:
+
+- una petición y su respuesta;
+- una captura de DevTools;
+- una cabecera HTTP;
+- un fragmento de configuración sin secretos;
+- un resultado de prueba;
+- un fragmento de log anonimizado;
+- una checklist.
+
+Las evidencias deben ser breves, relevantes y seguras.
 
 ## Contenidos del bloque
 
-En este bloque se trabajará:
-
-1. revisión de código;
-2. pruebas de seguridad;
-3. herramientas de verificación;
-4. revisión del despliegue;
-5. checklist de seguridad;
-6. evidencias de seguridad;
-7. revisión final del proyecto.
-
-El objetivo final es que el alumnado sea capaz de revisar una aplicación web y justificar que las principales decisiones de seguridad han sido comprobadas.
+1. introducción a la verificación de la seguridad;
+2. revisión de código;
+3. pruebas de seguridad;
+4. herramientas de verificación;
+5. revisión del despliegue;
+6. checklist de seguridad;
+7. evidencias de seguridad;
+8. conclusiones.
 
 ## Idea clave
 
-> La seguridad no debe suponerse. Debe verificarse mediante revisiones, pruebas y evidencias.
+> La seguridad no debe suponerse. Debe comprobarse mediante revisiones, pruebas y evidencias.

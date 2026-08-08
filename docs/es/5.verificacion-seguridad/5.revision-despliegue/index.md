@@ -1,69 +1,99 @@
 # Revisión del despliegue
 
-La verificación de seguridad no termina en el código.
+En el Bloque 4 se trabajaron las decisiones necesarias para desplegar una aplicación de forma segura.
 
-Una aplicación puede estar correctamente implementada y, sin embargo, quedar expuesta por una configuración de producción incorrecta.
+En este bloque no se vuelven a explicar esas configuraciones.
 
-Por eso, después del despliegue deben comprobarse también las decisiones tomadas en el entorno.
+El objetivo cambia:
+
+> comprobar que las decisiones previstas están realmente aplicadas en producción.
 
 ```text
-Aplicación segura
+Control previsto
 
-        +
+        ↓
 
-Configuración segura
+Configuración aplicada
 
-        +
+        ↓
 
-Infraestructura adecuada
+Comprobación
+
+        ↓
+
+Resultado
+
+        ↓
+
+Evidencia
 ```
 
-La revisión del despliegue comprueba que la aplicación mantiene en producción las medidas trabajadas en los bloques anteriores.
+Una configuración escrita en la documentación no equivale a una configuración verificada.
 
-## Qué debe revisarse
+## Qué revisar
 
-La revisión puede centrarse en:
+La revisión del despliegue puede centrarse en:
 
 - HTTPS;
 - configuración de producción;
 - secretos;
 - superficie de exposición;
+- directorio público;
 - permisos;
 - base de datos;
 - cabeceras de seguridad;
 - errores y logs.
 
-No se trata de repetir el Bloque 4.
+La pregunta no es únicamente:
 
-Aquí el objetivo es verificar que la configuración definida está realmente aplicada.
+> ¿Cómo debería estar configurado?
+
+Ahora preguntamos:
+
+> ¿Cómo puedo comprobar que realmente está configurado así?
+
+## Mapa de comprobaciones
+
+| Control | Cómo comprobarlo | Evidencia posible |
+|---|---|---|
+| HTTPS | Navegador, DevTools o `curl` | Certificado, redirección, respuesta HTTPS |
+| Configuración de producción | Revisar configuración y provocar un error controlado | `DEBUG` desactivado, mensaje controlado |
+| Secretos | Revisar código/repositorio y exposición web | Configuración sin valores sensibles |
+| Superficie de exposición | Revisar servicios y reglas del entorno | Security Groups, diagrama o configuración |
+| Directorio público | Comprobar qué rutas y archivos son accesibles | Respuesta 403/404 |
+| Permisos | Revisar permisos efectivos | Configuración o listado sin datos sensibles |
+| Base de datos | Revisar arquitectura y permisos de conexión | Diagrama, SG o configuración |
+| Cabeceras | DevTools o `curl` | Response Headers |
+| Errores | Provocar una situación controlada | Respuesta sin detalle interno |
+| Logs | Revisar el registro generado | Fragmento anonimizado |
 
 ## HTTPS
 
-Comprobar:
+Comprobar desde el entorno desplegado:
 
 ```text
-[ ] La aplicación funciona mediante HTTPS
+[ ] La aplicación utiliza HTTPS
 
 [ ] El certificado es válido
 
 [ ] HTTP redirige a HTTPS
 
-[ ] No existen recursos cargados mediante HTTP
+[ ] No existe contenido mixto
 
-[ ] HSTS solo se utiliza si HTTPS está correctamente configurado
+[ ] HSTS se utiliza únicamente cuando la configuración HTTPS es correcta
 ```
 
-La comprobación puede realizarse mediante:
+Evidencias posibles:
 
 - navegador;
-- DevTools;
-- `curl`.
+- pestaña Network;
+- salida de `curl -I`.
 
 ## Configuración de producción
 
-Comprobar que el entorno de producción no utiliza configuraciones propias del desarrollo.
+Revisar que la aplicación utiliza la configuración correspondiente al entorno real.
 
-Ejemplos:
+En Laravel, por ejemplo:
 
 ```text
 APP_ENV=production
@@ -71,41 +101,54 @@ APP_ENV=production
 APP_DEBUG=false
 ```
 
-También debe comprobarse:
+Una comprobación útil consiste en provocar un error controlado.
+
+Resultado esperado:
 
 ```text
-[ ] No se muestran errores detallados
+Usuario
 
-[ ] Las dependencias de desarrollo no se instalan innecesariamente
+→ mensaje controlado
 
-[ ] La configuración corresponde al entorno real
+
+Servidor
+
+→ detalle disponible en el log
 ```
+
+Si aparece una traza completa en el navegador, la configuración debe revisarse.
 
 ## Secretos
 
-Los secretos deben estar fuera del código y del repositorio.
+Comprobar dos aspectos diferentes.
 
-Comprobar:
+### Código y repositorio
 
 ```text
-[ ] No hay credenciales en el código
-
-[ ] .env no está publicado
+[ ] No existen credenciales escritas en el código
 
 [ ] .env no está versionado
 
-[ ] Los secretos de producción son diferentes de los de desarrollo
-
-[ ] Los permisos del archivo de configuración son adecuados
+[ ] No existen claves API o tokens publicados
 ```
 
-Si un secreto ha sido publicado, eliminarlo del repositorio no es suficiente.
+### Exposición
 
-Debe revocarse o rotarse.
+```text
+[ ] .env no puede descargarse desde la web
+
+[ ] Los archivos de configuración sensibles no son públicos
+
+[ ] Los logs no son accesibles desde el navegador
+```
+
+Si un secreto ha sido publicado, eliminar el archivo no es suficiente.
+
+El secreto debe revocarse o rotarse.
 
 ## Superficie de exposición
 
-Revisar qué componentes son accesibles desde el exterior.
+Comparar la arquitectura prevista con la configuración real.
 
 Ejemplo:
 
@@ -114,7 +157,7 @@ Internet
 
     ↓
 
-443
+HTTPS / 443
 
     ↓
 
@@ -132,40 +175,30 @@ Base de datos interna
 Comprobar:
 
 ```text
-[ ] Solo están abiertos los puertos necesarios
+[ ] Solo están expuestos los servicios necesarios
 
-[ ] SSH está restringido
+[ ] SSH está restringido cuando existe
 
-[ ] La base de datos no está expuesta directamente
+[ ] La base de datos no está publicada directamente
 
 [ ] No existen paneles de desarrollo accesibles
-
-[ ] No pueden descargarse archivos internos
 ```
+
+En AWS esta comprobación puede apoyarse en la revisión de VPC y Security Groups.
+
+No es necesario convertir esta revisión en una práctica de administración de sistemas.
 
 ## Directorio público
 
-El servidor web debe publicar únicamente los archivos necesarios.
+Comprobar qué parte del proyecto publica realmente el servidor web.
 
-Ejemplo:
-
-```text
-Aplicación
-
-├── app/
-├── config/
-├── storage/
-├── vendor/
-└── public/
-```
-
-El `DocumentRoot` debe apuntar a:
+En Laravel, el punto público debe ser:
 
 ```text
 public/
 ```
 
-Comprobar que no sean accesibles:
+No deberían ser accesibles desde la web:
 
 - `.env`;
 - `.git`;
@@ -174,25 +207,25 @@ Comprobar que no sean accesibles:
 - archivos de configuración;
 - código interno.
 
+La evidencia puede ser una respuesta 403 o 404 al solicitar un recurso que no debería ser público.
+
 ## Permisos
 
-La revisión debe comprobar que los permisos no son excesivos.
+No es necesario volver a estudiar la administración de permisos.
 
-Ejemplos:
+La revisión debe responder a preguntas concretas:
 
 ```text
-[ ] El código no necesita escritura general
+¿Solo las carpetas necesarias permiten escritura?
 
-[ ] Solo las carpetas necesarias son escribibles
+¿Los archivos sensibles están protegidos?
 
-[ ] No se utiliza chmod 777 como solución
+¿Se ha evitado utilizar chmod 777 como solución general?
 
-[ ] Los archivos sensibles están protegidos
-
-[ ] Los directorios de subida no permiten ejecución
+¿Los directorios de subida impiden la ejecución?
 ```
 
-En Laravel deben revisarse especialmente:
+En Laravel deben revisarse especialmente las necesidades de escritura de:
 
 ```text
 storage/
@@ -202,43 +235,25 @@ bootstrap/cache/
 
 ## Base de datos
 
-La aplicación debe utilizar una cuenta específica.
-
-Comprobar:
+La revisión debe comprobar que la arquitectura desplegada coincide con las decisiones de seguridad.
 
 ```text
-[ ] La aplicación no utiliza root
+[ ] La aplicación no utiliza root o un administrador
 
-[ ] El usuario tiene únicamente los permisos necesarios
+[ ] El usuario dispone únicamente de los permisos necesarios
 
 [ ] Las credenciales están fuera del código
 
-[ ] La base de datos no es pública
+[ ] La base de datos no está expuesta directamente a Internet
 
-[ ] Existen copias de seguridad
-
-[ ] Se ha considerado la restauración
+[ ] Las copias de seguridad están contempladas
 ```
 
-En AWS, una arquitectura habitual puede ser:
-
-```text
-EC2
-
-    ↓
-
-Security Group
-
-    ↓
-
-RDS privada
-```
-
-La base de datos debe aceptar conexiones únicamente desde los componentes autorizados.
+En un entorno AWS puede comprobarse que la base de datos solo acepta conexiones desde los componentes autorizados.
 
 ## Cabeceras de seguridad
 
-Comprobar con DevTools o `curl` las cabeceras definidas para la aplicación.
+Utilizar DevTools o `curl` para comprobar las cabeceras definidas en el proyecto.
 
 Por ejemplo:
 
@@ -254,19 +269,21 @@ Referrer-Policy
 Permissions-Policy
 ```
 
-No se trata de copiar una lista estándar.
+La revisión debe comprobar:
 
-Debe verificarse que las cabeceras elegidas:
+```text
+[ ] La cabecera está presente
 
-- están presentes;
-- tienen valores correctos;
-- no rompen funcionalidades legítimas.
+[ ] El valor coincide con la configuración prevista
 
-## Errores
+[ ] No rompe funcionalidades legítimas
+```
 
-Provocar una situación controlada.
+No se trata de añadir cabeceras simplemente para completar una lista.
 
-Por ejemplo:
+## Errores y logs
+
+Provocar una situación controlada:
 
 ```text
 Recurso inexistente
@@ -276,119 +293,110 @@ Dato inválido
 Operación no permitida
 ```
 
-Comprobar que el usuario no recibe:
-
-- rutas internas;
-- consultas SQL;
-- trazas;
-- secretos;
-- información de depuración.
-
-## Logs
-
-Después de provocar un error, comprobar:
+Comprobar la respuesta pública:
 
 ```text
-[ ] Existe registro interno
+[ ] No muestra rutas internas
 
-[ ] El registro permite investigar
+[ ] No muestra SQL
+
+[ ] No muestra trazas completas
+
+[ ] No muestra secretos
+```
+
+Después revisar el registro interno:
+
+```text
+[ ] El error queda registrado
+
+[ ] El log permite investigar
 
 [ ] No contiene secretos
 
-[ ] No es accesible desde la web
-
-[ ] La rotación está contemplada
+[ ] No es accesible públicamente
 ```
 
-## Revisión desde el exterior
+## Aplicación al Reto 1
 
-Una comprobación útil consiste en observar la aplicación como la vería un usuario externo.
+En el proyecto con PHP, JavaScript y CSS3 la revisión puede centrarse especialmente en:
 
-Preguntas:
+- HTTPS;
+- configuración de errores de producción;
+- secretos fuera del código;
+- acceso de la aplicación a la base de datos;
+- permisos necesarios;
+- exposición de archivos internos;
+- respuesta ante errores.
 
-```text
-¿Qué servicios son visibles?
+## Aplicación al Reto 2
 
-¿Qué información devuelve el servidor?
+En Laravel, Vue 3 y Tailwind deben comprobarse además de los controles anteriores:
 
-¿Qué ocurre si accedo a una ruta interna?
+- `APP_ENV`;
+- `APP_DEBUG`;
+- protección de `.env`;
+- publicación correcta de `public/`;
+- permisos de `storage/` y `bootstrap/cache/`;
+- respuestas de la API;
+- cabeceras y CORS cuando correspondan;
+- logs de producción.
 
-¿Puedo descargar archivos que no deberían ser públicos?
+## Evidencias mínimas
 
-¿Qué código de estado obtengo?
-```
+No es necesario documentar cada comprobación con una captura.
 
-La revisión debe realizarse únicamente sobre sistemas propios o expresamente autorizados.
+Conviene seleccionar las evidencias que demuestren los controles más importantes.
 
-## Evidencias
+Por ejemplo:
 
-Una revisión del despliegue puede justificarse mediante:
-
-- captura de HTTPS;
-- certificado;
-- cabeceras;
-- configuración sin secretos;
-- diagrama de arquitectura;
-- permisos;
-- respuesta ante un error;
-- fragmento de log anonimizado.
-
-La evidencia debe demostrar el control sin revelar información sensible.
+| Control | Evidencia |
+|---|---|
+| HTTPS | Certificado o respuesta HTTPS |
+| DEBUG desactivado | Error controlado |
+| Secretos | Configuración sin valores sensibles |
+| Base de datos interna | Arquitectura o regla de acceso |
+| Cabeceras | Response Headers |
+| Logs | Fragmento anonimizado |
 
 ## Aplicación a TxurdiGest
 
-Una revisión final podría comprobar:
+Una revisión de despliegue podría seleccionar:
 
 ```text
-[ ] HTTPS activo
+HTTPS
 
-[ ] HTTP redirige a HTTPS
+APP_DEBUG=false
 
-[ ] APP_DEBUG=false
+.env no accesible
 
-[ ] Secretos fuera del código
+Base de datos interna
 
-[ ] .env no accesible
+Cabeceras
 
-[ ] Solo puertos necesarios
+Errores controlados
 
-[ ] Base de datos interna
-
-[ ] Permisos adecuados
-
-[ ] Cabeceras verificadas
-
-[ ] Errores controlados
-
-[ ] Logs protegidos
+Logs protegidos
 ```
 
-## Relación con el Bloque 4
-
-En el Bloque 4 se decidió cómo desplegar de forma segura.
-
-En este bloque se comprueba:
+Para cada punto:
 
 ```text
-Decisión
+Control
 
     ↓
 
-Configuración aplicada
+Comprobación
 
     ↓
 
-Prueba
+Resultado
 
     ↓
 
 Evidencia
 ```
 
-La diferencia es importante.
-
-Una configuración prevista no equivale a una configuración verificada.
-
 ## Idea clave
 
-> El despliegue seguro no se da por supuesto: debe revisarse desde producción y demostrarse mediante comprobaciones observables.
+> Revisar el despliegue significa comprobar desde el entorno real que las decisiones de seguridad previstas se han aplicado y siguen funcionando.

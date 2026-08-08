@@ -24,9 +24,14 @@ Evidenciar
 
 La lista debe adaptarse al proyecto, pero puede utilizarse como base común para los retos DAW.
 
+!!! important "Checklist maestra"
+    Esta página es una referencia general del módulo. No debe interpretarse como una actividad en la que haya que marcar todas las casillas. En cada reto se seleccionarán únicamente los controles aplicables y relevantes para la aplicación desarrollada.
+
 ## Cómo utilizar la checklist
 
-Cada elemento puede marcarse como:
+Primero se seleccionan los apartados que realmente corresponden al proyecto.
+
+Después, cada elemento seleccionado puede marcarse como:
 
 ```text
 [ ] Pendiente
@@ -313,6 +318,46 @@ Comprobar únicamente las que correspondan al proyecto.
 
 [ ] Las capturas muestran únicamente lo necesario
 ```
+
+## Selección orientativa por reto
+
+La checklist es común, pero el conjunto de controles puede variar según la tecnología y las funcionalidades desarrolladas.
+
+### Reto 1 — PHP, JavaScript y CSS3
+
+Conviene prestar especial atención a:
+
+- validación en servidor;
+- relación entre validación JavaScript y PHP;
+- salida segura;
+- consultas parametrizadas;
+- autenticación y sesiones;
+- autorización;
+- subida de archivos cuando exista;
+- secretos;
+- configuración de producción;
+- HTTPS;
+- base de datos;
+- errores y logs.
+
+### Reto 2 — Laravel, Vue 3 y Tailwind
+
+Además de los controles anteriores que correspondan, suelen ser especialmente relevantes:
+
+- validación en Laravel;
+- autenticación y autorización;
+- protección de rutas y recursos;
+- APIs;
+- códigos HTTP;
+- CORS cuando proceda;
+- variables de entorno;
+- `APP_DEBUG`;
+- directorio público;
+- permisos necesarios;
+- cabeceras;
+- logs de producción.
+
+La selección definitiva dependerá de las funcionalidades reales del reto.
 
 ## Priorizar
 

@@ -1,13 +1,17 @@
 # Revisión de código
 
-La revisión de código permite detectar problemas de seguridad antes de que lleguen a producción.
+La revisión de código permite detectar decisiones inseguras antes de que lleguen a producción.
 
-No se trata de leer todo el proyecto línea por línea sin un criterio.
+No consiste en leer todo el proyecto línea por línea sin un criterio.
 
-Una revisión útil se centra en decisiones concretas:
+Una revisión útil sigue el flujo de una funcionalidad.
 
 ```text
 Entrada
+
+    ↓
+
+Validación
 
     ↓
 
@@ -19,35 +23,34 @@ Acceso a datos
 
     ↓
 
-Autenticación y autorización
+Autenticación / autorización
 
     ↓
 
 Respuesta
 ```
 
-El objetivo es identificar puntos donde una decisión incorrecta puede introducir un riesgo.
+La pregunta principal es:
 
-## Qué revisar
+> ¿Dónde se aplican realmente los controles que deberían proteger este flujo?
 
-La revisión debe apoyarse en los contenidos trabajados durante el módulo.
+## Revisar controles, no volver a implementarlos
 
-Entre los aspectos principales:
+En los bloques anteriores se ha trabajado cómo aplicar distintos mecanismos de seguridad.
 
-- validación de entradas;
-- salida segura;
-- acceso a datos;
-- autenticación;
-- autorización;
-- sesiones;
-- subida de archivos;
-- APIs;
-- secretos;
-- gestión de errores.
+En este bloque no se pretende volver a explicarlos.
 
-## Revisar la entrada de datos
+La revisión debe aprender a localizar:
 
-Una aplicación recibe información desde múltiples orígenes:
+- controles ausentes;
+- controles aplicados en un lugar incorrecto;
+- controles que dependen únicamente del cliente;
+- cambios que han debilitado una implementación segura;
+- diferencias entre lo previsto y lo implementado.
+
+## Entrada de datos
+
+Una aplicación puede recibir información desde:
 
 - formularios;
 - parámetros de URL;
@@ -57,35 +60,33 @@ Una aplicación recibe información desde múltiples orígenes:
 - archivos;
 - APIs.
 
-La pregunta principal es:
+Durante la revisión debemos localizar dónde se valida cada dato.
 
-> ¿Dónde se valida realmente la información?
-
-La validación en JavaScript mejora la experiencia del usuario, pero no sustituye la validación en el servidor.
-
-Ejemplo de revisión:
+Ejemplo:
 
 ```php
 $edad = $_POST['edad'];
 ```
 
-La pregunta no es únicamente si la variable existe.
-
-También debemos comprobar:
+Preguntas de revisión:
 
 ```text
-¿Se valida?
+¿Se valida después de recibirlo?
 
 ¿Se comprueba el tipo?
 
 ¿Se comprueba el rango?
 
 ¿Se rechazan valores inesperados?
+
+¿La comprobación existe también en el servidor?
 ```
 
-## Revisar la salida
+La validación JavaScript puede mejorar la experiencia de usuario, pero no debe ser el único control.
 
-Los datos mostrados en una página deben tratarse de forma segura.
+## Salida
+
+Cuando la aplicación muestra datos debemos identificar si proceden de una fuente no confiable.
 
 Ejemplo:
 
@@ -93,37 +94,29 @@ Ejemplo:
 echo $comentario;
 ```
 
-Durante una revisión debemos preguntarnos:
+Preguntas:
 
 ```text
-¿Este dato procede del usuario?
+¿El dato procede del usuario?
 
-¿Se escapa antes de mostrarlo?
+¿Se trata antes de incorporarlo a HTML?
 
-¿Puede interpretarse como HTML o JavaScript?
+¿Podría interpretarse como código?
 ```
 
-Una alternativa habitual en PHP:
+La revisión debe reconocer si se utiliza un mecanismo de salida segura adecuado al contexto.
 
-```php
-echo htmlspecialchars(
-    $comentario,
-    ENT_QUOTES,
-    'UTF-8'
-);
-```
+## Acceso a datos
 
-## Revisar el acceso a datos
+La revisión debe buscar especialmente consultas construidas concatenando datos recibidos.
 
-Una revisión debe identificar consultas construidas mediante concatenación.
-
-Ejemplo problemático:
+Patrón que requiere revisión:
 
 ```php
 $sql = "SELECT * FROM usuarios WHERE email = '" . $email . "'";
 ```
 
-Debe comprobarse si se utilizan consultas preparadas.
+Frente a mecanismos parametrizados, por ejemplo:
 
 ```php
 $stmt = $pdo->prepare(
@@ -133,40 +126,31 @@ $stmt = $pdo->prepare(
 $stmt->execute([$email]);
 ```
 
-La revisión no consiste en memorizar una sintaxis concreta.
+La finalidad no es memorizar una sintaxis.
 
-Consiste en reconocer decisiones que reducen el riesgo de inyección.
+Es comprobar que los datos del usuario no modifican la estructura de la consulta.
 
-## Revisar autenticación
+## Autenticación
 
-La autenticación responde a:
+La revisión debe localizar dónde se comprueba la identidad del usuario y cómo se mantiene la sesión.
 
-> ¿Quién es el usuario?
+Comprobar:
 
-Durante la revisión pueden comprobarse aspectos como:
+```text
+[ ] Las contraseñas se almacenan mediante mecanismos adecuados
 
-- contraseñas almacenadas mediante hash;
-- comparación segura de contraseñas;
-- sesiones correctamente iniciadas;
-- cierre de sesión;
-- regeneración del identificador de sesión cuando proceda.
+[ ] La comprobación de credenciales se realiza en el servidor
 
-Ejemplo en PHP:
+[ ] La sesión se inicia correctamente
 
-```php
-password_verify(
-    $password,
-    $hash
-);
+[ ] El cierre de sesión invalida el acceso
+
+[ ] No se confía en datos controlados por el cliente para identificar al usuario
 ```
 
-## Revisar autorización
+## Autorización
 
-La autorización responde a:
-
-> ¿Qué puede hacer este usuario?
-
-Un error frecuente es comprobar únicamente que el usuario está autenticado.
+La autorización debe revisarse sobre cada recurso protegido.
 
 Ejemplo:
 
@@ -178,37 +162,35 @@ Usuario autenticado
 /reservas/25/editar
 ```
 
-La revisión debe comprobar además:
+No basta con comprobar que existe una sesión.
+
+También debemos localizar:
 
 ```text
-¿La reserva 25 pertenece al usuario?
+¿La reserva pertenece al usuario?
 
-¿Tiene el rol necesario?
+¿Tiene el rol o permiso necesario?
 
-¿Existe una comprobación antes de ejecutar la acción?
+¿La comprobación se ejecuta antes de realizar la operación?
 ```
 
-## Revisar identificadores
+## Identificadores
 
-Los identificadores incluidos en una URL o petición no deben considerarse fiables.
-
-Ejemplo:
+Los identificadores recibidos desde el cliente pueden modificarse.
 
 ```text
 /reservas/25
+
+        ↓
+
+/reservas/26
 ```
 
-Debe asumirse que el usuario puede cambiar:
+La revisión debe comprobar que el servidor vuelve a autorizar el acceso al recurso solicitado.
 
-```text
-25 → 26
-```
+## Secretos
 
-Por tanto, la aplicación debe verificar que el usuario tiene permiso sobre el recurso solicitado.
-
-## Revisar secretos
-
-Una revisión de código debe buscar:
+Buscar en el código y en el repositorio:
 
 - contraseñas;
 - claves API;
@@ -223,64 +205,58 @@ Ejemplo incorrecto:
 $password = "mi-password-produccion";
 ```
 
-La configuración sensible debe estar fuera del código y del repositorio.
+El objetivo de la revisión es confirmar que la configuración sensible está fuera del código y del repositorio.
 
-## Revisar subida de archivos
+## Subida de archivos
 
-Una funcionalidad de subida de archivos requiere varias comprobaciones.
-
-La revisión puede preguntar:
+Cuando exista esta funcionalidad, comprobar:
 
 ```text
-¿Se limita el tamaño?
+[ ] Se limita el tamaño
 
-¿Se valida el tipo?
+[ ] Se valida el tipo
 
-¿Se genera un nombre seguro?
+[ ] Se controla el nombre
 
-¿El archivo se guarda fuera de zonas ejecutables?
+[ ] El almacenamiento se realiza en una ubicación adecuada
 
-¿Puede un usuario sobrescribir archivos?
+[ ] Los archivos subidos no pueden ejecutarse
+
+[ ] No pueden sobrescribirse archivos arbitrarios
 ```
 
-No debe confiarse únicamente en el nombre o extensión enviados por el navegador.
+## APIs
 
-## Revisar APIs
+Una API debe revisarse con los mismos criterios que cualquier otra entrada a la aplicación.
 
-En una API deben revisarse las mismas decisiones de seguridad.
+Comprobar:
 
-Por ejemplo:
-
-- validación de JSON recibido;
+- validación de JSON;
 - autenticación;
-- autorización;
-- códigos de estado;
+- autorización por recurso;
+- códigos HTTP;
 - información devuelta;
 - CORS cuando corresponda.
 
-Una API no debe considerarse segura simplemente porque no tenga interfaz gráfica.
+## Errores
 
-## Revisar errores
+Buscar puntos en los que una excepción o detalle técnico pueda enviarse directamente al usuario.
 
-Durante la revisión debe comprobarse si el código muestra detalles internos.
-
-Ejemplo problemático:
+Ejemplo que debe revisarse:
 
 ```php
 catch (Exception $e) {
-
     echo $e->getMessage();
-
 }
 ```
 
-En producción es preferible registrar el detalle y mostrar un mensaje controlado.
+En producción, el detalle técnico debe quedar en el registro interno y el usuario debe recibir una respuesta controlada.
 
-## Revisar cambios, no solo aplicaciones completas
+## Revisar cambios concretos
 
-En un entorno profesional no siempre se revisa todo el proyecto.
+No siempre es necesario revisar la aplicación completa.
 
-Es habitual revisar:
+Una estrategia útil es:
 
 ```text
 Cambio realizado
@@ -291,18 +267,18 @@ Código afectado
 
         ↓
 
-Riesgo introducido
+Controles relacionados
 
         ↓
 
 Comprobación
 ```
 
-Esto permite integrar la revisión en el trabajo diario.
+Esto permite integrar la seguridad en el trabajo habitual del equipo.
 
 ## Revisión entre iguales
 
-La revisión entre compañeros puede seguir un procedimiento sencillo.
+La revisión entre compañeros puede organizarse de forma sencilla.
 
 ### Autor
 
@@ -310,18 +286,19 @@ Explica:
 
 - qué funcionalidad ha desarrollado;
 - qué datos recibe;
-- qué decisiones de seguridad ha aplicado.
+- qué controles deberían aplicarse.
 
 ### Revisor
 
-Comprueba:
+Localiza:
 
-- entradas;
+- validación;
 - acceso a datos;
 - autenticación;
 - autorización;
 - salida;
-- configuración relacionada.
+- secretos;
+- errores.
 
 ### Equipo
 
@@ -335,51 +312,81 @@ o
 Necesita corrección
 ```
 
-La revisión debe centrarse en el código y en las decisiones técnicas, no en la persona que lo ha desarrollado.
+La revisión se centra en el código y en las decisiones técnicas, no en la persona que lo ha desarrollado.
 
-## Preguntas de revisión
+## Aplicación al Reto 1
 
-Una lista breve puede servir como guía:
+En el proyecto con PHP, JavaScript y CSS3 debe distinguirse claramente entre:
+
+```text
+JavaScript
+
+→ apoyo a la interfaz y experiencia de usuario
+
+
+PHP
+
+→ controles efectivos en el servidor
+```
+
+La revisión debe comprobar especialmente que la seguridad no dependa únicamente de JavaScript.
+
+## Aplicación al Reto 2
+
+En Laravel, Vue 3 y Tailwind se aplica el mismo criterio:
+
+```text
+Vue
+
+→ interfaz y experiencia de usuario
+
+
+Laravel
+
+→ validación, autenticación, autorización y acceso a datos
+```
+
+También deben revisarse las rutas y recursos protegidos, las respuestas de la API y la configuración que afecta al servidor.
+
+## Guía breve de revisión
 
 ```text
 [ ] ¿Los datos recibidos se validan en el servidor?
 
-[ ] ¿La salida generada es segura?
+[ ] ¿La salida se genera de forma segura?
 
-[ ] ¿Las consultas utilizan parámetros?
+[ ] ¿El acceso a datos utiliza mecanismos parametrizados?
 
-[ ] ¿La autenticación está correctamente implementada?
+[ ] ¿La autenticación se comprueba en el servidor?
 
-[ ] ¿La autorización se comprueba en cada recurso protegido?
+[ ] ¿La autorización se aplica a cada recurso protegido?
 
 [ ] ¿Los secretos están fuera del código?
 
-[ ] ¿Las subidas de archivos están controladas?
+[ ] ¿Las subidas de archivos están controladas cuando existen?
+
+[ ] ¿Las APIs aplican los mismos controles?
 
 [ ] ¿Los errores se gestionan de forma segura?
 ```
 
 ## Aplicación a TxurdiGest
 
-Una revisión de TxurdiGest podría seleccionar una funcionalidad concreta.
-
-Por ejemplo:
+Puede seleccionarse una funcionalidad concreta:
 
 ```text
 Editar reserva
 ```
 
-El equipo revisaría:
+y seguir su flujo:
 
 1. cómo recibe el identificador;
 2. cómo valida los datos;
 3. cómo obtiene la reserva;
 4. cómo comprueba el propietario;
 5. cómo actualiza la base de datos;
-6. qué respuesta devuelve ante un error.
-
-Esta revisión sigue el flujo real de la funcionalidad.
+6. qué respuesta devuelve.
 
 ## Idea clave
 
-> Revisar código de forma segura no significa buscar errores al azar. Significa comprobar sistemáticamente las decisiones que protegen cada flujo de la aplicación.
+> Revisar código de forma segura significa localizar los controles que deberían proteger un flujo y comprobar que están realmente presentes en el lugar adecuado.
