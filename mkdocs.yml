@@ -52,9 +52,7 @@ plugins:
             - Proyecto de referencia:
               - Presentación del proyecto: 0.proyecto/index.md
               - TxurdiGest: 0.proyecto/txurdigest.md
-              - Arquitectura general: 0.proyecto/arquitectura-general.md
               - Glosario: 0.proyecto/glosario.md
-              - Modelo de datos: 0.proyecto/modelo-de-datos.md
 
             - Bloque 1. Fundamentos:
                 - 1.fundamentos/index.md
@@ -87,58 +85,36 @@ plugins:
                 - Revisar el diseño de seguridad del proyecto: 2.desarrollo-seguro/actividades/04-revision-diseno-seguridad.md
 
             - Bloque 3. Implementación segura:
-              - Presentación del bloque: 3.implementacion-segura/index.md
+              - Inicio: 3.implementacion-segura/index.md
               - Introducción a la implementación segura: 3.implementacion-segura/1.introduccion-implementacion-segura.md
               - Validación de entradas:
                 - Introducción: 3.implementacion-segura/2.validacion-entradas/index.md
-                - Buenas prácticas: 3.implementacion-segura/2.validacion-entradas/buenas-practicas.md
-                - Conceptos: 3.implementacion-segura/2.validacion-entradas/conceptos.md
                 - JavaScript: 3.implementacion-segura/2.validacion-entradas/javascript.md
-                - Laboratorio de análisis: 3.implementacion-segura/2.validacion-entradas/laboratorio-analisis.md
                 - PHP: 3.implementacion-segura/2.validacion-entradas/php.md
-              - Salida segura frente a XSS:
+                - Laboratorio: 3.implementacion-segura/2.validacion-entradas/laboratorio.md
+              - Salida segura y XSS:
                 - Introducción: 3.implementacion-segura/3.salida-segura-xss/index.md
-                - Buenas prácticas: 3.implementacion-segura/3.salida-segura-xss/buenas-practicas.md
-                - Conceptos: 3.implementacion-segura/3.salida-segura-xss/conceptos.md
-                - JavaScript: 3.implementacion-segura/3.salida-segura-xss/javascript.md
-                - Laboratorio de análisis: 3.implementacion-segura/3.salida-segura-xss/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/3.salida-segura-xss/php.md
-              - Acceso a datos y SQL Injection:
+                - Implementación: 3.implementacion-segura/3.salida-segura-xss/implementacion.md
+                - Laboratorio DVWA: 3.implementacion-segura/3.salida-segura-xss/laboratorio-dvwa.md
+              - Acceso seguro a datos y SQL Injection:
                 - Introducción: 3.implementacion-segura/4.acceso-datos-sql-injection/index.md
-                - Buenas prácticas: 3.implementacion-segura/4.acceso-datos-sql-injection/buenas-practicas.md
-                - Conceptos: 3.implementacion-segura/4.acceso-datos-sql-injection/conceptos.md
-                - JavaScript: 3.implementacion-segura/4.acceso-datos-sql-injection/javascript.md
-                - Laboratorio de análisis: 3.implementacion-segura/4.acceso-datos-sql-injection/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/4.acceso-datos-sql-injection/php.md
+                - PHP y consultas preparadas: 3.implementacion-segura/4.acceso-datos-sql-injection/php-consultas-preparadas.md
+                - Laboratorio DVWA: 3.implementacion-segura/4.acceso-datos-sql-injection/laboratorio-dvwa.md
               - Autenticación y sesiones:
                 - Introducción: 3.implementacion-segura/5.autenticacion-sesiones/index.md
-                - Buenas prácticas: 3.implementacion-segura/5.autenticacion-sesiones/buenas-practicas.md
-                - Conceptos: 3.implementacion-segura/5.autenticacion-sesiones/conceptos.md
-                - JavaScript: 3.implementacion-segura/5.autenticacion-sesiones/javascript.md
-                - Laboratorio de análisis: 3.implementacion-segura/5.autenticacion-sesiones/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/5.autenticacion-sesiones/php.md
+                - Implementación: 3.implementacion-segura/5.autenticacion-sesiones/implementacion.md
               - Autorización:
                 - Introducción: 3.implementacion-segura/6.autorizacion/index.md
-                - Buenas prácticas: 3.implementacion-segura/6.autorizacion/buenas-practicas.md
-                - Conceptos: 3.implementacion-segura/6.autorizacion/conceptos.md
-                - JavaScript: 3.implementacion-segura/6.autorizacion/javascript.md
-                - Laboratorio de análisis: 3.implementacion-segura/6.autorizacion/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/6.autorizacion/php.md
+                - Implementación: 3.implementacion-segura/6.autorizacion/implementacion.md
               - Subida segura de archivos:
                 - Introducción: 3.implementacion-segura/7.subida-segura-archivos/index.md
-                - Buenas prácticas: 3.implementacion-segura/7.subida-segura-archivos/buenas-practicas.md
-                - Conceptos: 3.implementacion-segura/7.subida-segura-archivos/conceptos.md
-                - JavaScript: 3.implementacion-segura/7.subida-segura-archivos/javascript.md
-                - Laboratorio de análisis: 3.implementacion-segura/7.subida-segura-archivos/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/7.subida-segura-archivos/php.md
+                - Implementación: 3.implementacion-segura/7.subida-segura-archivos/implementacion.md
+                - Laboratorio DVWA: 3.implementacion-segura/7.subida-segura-archivos/laboratorio-dvwa.md
               - APIs web y CORS:
                 - Introducción: 3.implementacion-segura/8.apis-web-cors/index.md
-                - Buenas prácticas: 3.implementacion-segura/8.apis-web-cors/buenas-practicas.md
-                - Conceptos: 3.implementacion-segura/8.apis-web-cors/conceptos.md
-                - JavaScript: 3.implementacion-segura/8.apis-web-cors/javascript.md
-                - Laboratorio de análisis: 3.implementacion-segura/8.apis-web-cors/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/8.apis-web-cors/php.md
-              - Resumen del bloque: 3.implementacion-segura/9.resumen.md
+                - Implementación: 3.implementacion-segura/8.apis-web-cors/implementacion.md
+              - Conclusiones: 3.implementacion-segura/9.conclusiones.md
+              - Actividades: 3.implementacion-segura/actividades/index.md
 
             - Bloque 4. Despliegue seguro:
               - Presentación del bloque: 4.despliegue-seguro/index.md
@@ -155,9 +131,7 @@ plugins:
             - Erreferentziazko proiektua:
                 - Proiektuaren aurkezpena: 0.proyecto/index.md
                 - TxurdiGest: 0.proyecto/txurdigest.md
-                - Arkitektura orokorra: 0.proyecto/arquitectura-general.md
                 - Glosarioa: 0.proyecto/glosario.md
-                - Datu-eredua: 0.proyecto/modelo-de-datos.md
 
             - 1. blokea. Web garapen seguruaren oinarriak:
                 - 1.fundamentos/index.md
@@ -194,54 +168,32 @@ plugins:
               - Inplementazio seguruaren sarrera: 3.implementacion-segura/1.introduccion-implementacion-segura.md
               - Sarreren balidazioa:
                 - Sarrera: 3.implementacion-segura/2.validacion-entradas/index.md
-                - Praktika onak: 3.implementacion-segura/2.validacion-entradas/buenas-practicas.md
-                - Kontzeptuak: 3.implementacion-segura/2.validacion-entradas/conceptos.md
                 - JavaScript: 3.implementacion-segura/2.validacion-entradas/javascript.md
-                - Analisi-laborategia: 3.implementacion-segura/2.validacion-entradas/laboratorio-analisis.md
                 - PHP: 3.implementacion-segura/2.validacion-entradas/php.md
-              - XSS-en aurkako irteera segurua:
+                - Laborategia: 3.implementacion-segura/2.validacion-entradas/laboratorio.md
+              - Irteera segurua eta XSS:
                 - Sarrera: 3.implementacion-segura/3.salida-segura-xss/index.md
-                - Praktika onak: 3.implementacion-segura/3.salida-segura-xss/buenas-practicas.md
-                - Kontzeptuak: 3.implementacion-segura/3.salida-segura-xss/conceptos.md
-                - JavaScript: 3.implementacion-segura/3.salida-segura-xss/javascript.md
-                - Analisi-laborategia: 3.implementacion-segura/3.salida-segura-xss/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/3.salida-segura-xss/php.md
+                - Inplementazioa: 3.implementacion-segura/3.salida-segura-xss/implementacion.md
+                - DVWA laborategia: 3.implementacion-segura/3.salida-segura-xss/laboratorio-dvwa.md
               - Datuetara sartzea eta SQL Injection:
                 - Sarrera: 3.implementacion-segura/4.acceso-datos-sql-injection/index.md
-                - Praktika onak: 3.implementacion-segura/4.acceso-datos-sql-injection/buenas-practicas.md
-                - Kontzeptuak: 3.implementacion-segura/4.acceso-datos-sql-injection/conceptos.md
-                - JavaScript: 3.implementacion-segura/4.acceso-datos-sql-injection/javascript.md
-                - Analisi-laborategia: 3.implementacion-segura/4.acceso-datos-sql-injection/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/4.acceso-datos-sql-injection/php.md
+                - PHP eta prestatutako kontsultak: 3.implementacion-segura/4.acceso-datos-sql-injection/php-consultas-preparadas.md
+                - DVWA laborategia: 3.implementacion-segura/4.acceso-datos-sql-injection/laboratorio-dvwa.md
               - Autentifikazioa eta saioak:
                 - Sarrera: 3.implementacion-segura/5.autenticacion-sesiones/index.md
-                - Praktika onak: 3.implementacion-segura/5.autenticacion-sesiones/buenas-practicas.md
-                - Kontzeptuak: 3.implementacion-segura/5.autenticacion-sesiones/conceptos.md
-                - JavaScript: 3.implementacion-segura/5.autenticacion-sesiones/javascript.md
-                - Analisi-laborategia: 3.implementacion-segura/5.autenticacion-sesiones/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/5.autenticacion-sesiones/php.md
+                - Inplementazioa: 3.implementacion-segura/5.autenticacion-sesiones/implementacion.md
               - Baimen-kudeaketa:
                 - Sarrera: 3.implementacion-segura/6.autorizacion/index.md
-                - Praktika onak: 3.implementacion-segura/6.autorizacion/buenas-practicas.md
-                - Kontzeptuak: 3.implementacion-segura/6.autorizacion/conceptos.md
-                - JavaScript: 3.implementacion-segura/6.autorizacion/javascript.md
-                - Analisi-laborategia: 3.implementacion-segura/6.autorizacion/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/6.autorizacion/php.md
+                - Inplementazioa: 3.implementacion-segura/6.autorizacion/implementacion.md
               - Fitxategi seguruen igoera:
                 - Sarrera: 3.implementacion-segura/7.subida-segura-archivos/index.md
-                - Praktika onak: 3.implementacion-segura/7.subida-segura-archivos/buenas-practicas.md
-                - Kontzeptuak: 3.implementacion-segura/7.subida-segura-archivos/conceptos.md
-                - JavaScript: 3.implementacion-segura/7.subida-segura-archivos/javascript.md
-                - Analisi-laborategia: 3.implementacion-segura/7.subida-segura-archivos/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/7.subida-segura-archivos/php.md
+                - Inplementazioa: 3.implementacion-segura/7.subida-segura-archivos/implementacion.md
+                - DVWA laborategia: 3.implementacion-segura/7.subida-segura-archivos/laboratorio-dvwa.md
               - Web APIak eta CORS:
                 - Sarrera: 3.implementacion-segura/8.apis-web-cors/index.md
-                - Praktika onak: 3.implementacion-segura/8.apis-web-cors/buenas-practicas.md
-                - Kontzeptuak: 3.implementacion-segura/8.apis-web-cors/conceptos.md
-                - JavaScript: 3.implementacion-segura/8.apis-web-cors/javascript.md
-                - Analisi-laborategia: 3.implementacion-segura/8.apis-web-cors/laboratorio-analisis.md
-                - PHP: 3.implementacion-segura/8.apis-web-cors/php.md
-              - Blokearen laburpena: 3.implementacion-segura/9.resumen.md
+                - Inplementazioa: 3.implementacion-segura/8.apis-web-cors/implementacion.md
+              - Ondorioak: 3.implementacion-segura/9.conclusiones.md
+              - Jarduerak: 3.implementacion-segura/actividades/index.md
 
             - 4. blokea. Deskargatze segurua:
               - Blokearen aurkezpena: 4.despliegue-seguro/index.md

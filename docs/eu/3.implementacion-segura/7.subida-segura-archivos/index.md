@@ -1,0 +1,1 @@
+# Fitxategi seguruen igoera
