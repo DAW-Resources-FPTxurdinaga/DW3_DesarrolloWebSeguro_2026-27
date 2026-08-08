@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#zerbitzaria-eta-esposizio-azalera" class="md-skip">
+        <a href="#servidor-y-superficie-de-exposicion" class="md-skip">
           Joan zuzenean edukira
         </a>
       
@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
     
@@ -2369,7 +2369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
           </label>
@@ -2391,7 +2391,7 @@
   <span class="md-ellipsis">
     
   
-    Deskargatze seguruaren sarrera
+    Despliegatze seguruaren sarrera
   
 
     
@@ -3361,10 +3361,164 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#funtsezko-kontzeptuak" class="md-nav__link">
+  <a href="#que-es-la-superficie-de-exposicion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funtsezko kontzeptuak
+        Qué es la superficie de exposición
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-basica-de-una-aplicacion-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura básica de una aplicación web
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposicion-correcta-de-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exposición correcta de servicios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puertos-y-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puertos y servicios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principio-de-minimo-acceso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principio de mínimo acceso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con AWS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directorio-publico-del-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directorio público del servidor web
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-que-no-deberian-ser-publicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos que no deberían ser públicos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paneles-y-herramientas-auxiliares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paneles y herramientas auxiliares
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reducir-informacion-expuesta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reducir información expuesta
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-el-desarrollo-seguro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con el desarrollo seguro
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
       
     </span>
   </a>
@@ -3388,15 +3542,307 @@
 
 
 
-<h1 id="zerbitzaria-eta-esposizio-azalera">Zerbitzaria eta esposizio-azalera<a class="headerlink" href="#zerbitzaria-eta-esposizio-azalera" title="Permanent link">&para;</a></h1>
-<p>Web zerbitzaria eta esposizio-azalerak zehazten dute aplikazioaren zein zatia dagoen kanpoalderako eskuragarri. Espozizioa handiagoa izatean, eraso-azalera ere handiagoa da.</p>
-<p>Horregatik, hedapen seguruan gomendatzen da aktibatutako zerbitzuak mugatzea, beharrezkoak ez diren atariak itxiera eta soilik beharrezko baliabideak ikusgai uztea.</p>
-<h2 id="funtsezko-kontzeptuak">Funtsezko kontzeptuak<a class="headerlink" href="#funtsezko-kontzeptuak" title="Permanent link">&para;</a></h2>
+<h1 id="servidor-y-superficie-de-exposicion">Servidor y superficie de exposición<a class="headerlink" href="#servidor-y-superficie-de-exposicion" title="Permanent link">&para;</a></h1>
+<p>Cuando una aplicación se publica en Internet deja de estar únicamente bajo el control del equipo de desarrollo.</p>
+<p>El servidor, los servicios activos, los puertos abiertos y la configuración de red determinan qué partes de la aplicación están disponibles para usuarios externos.</p>
+<p>El objetivo del despliegue seguro es reducir la superficie de exposición:</p>
+<blockquote>
+<p>Solo debe estar accesible aquello que la aplicación necesita.</p>
+</blockquote>
+<h2 id="que-es-la-superficie-de-exposicion">Qué es la superficie de exposición<a class="headerlink" href="#que-es-la-superficie-de-exposicion" title="Permanent link">&para;</a></h2>
+<p>La superficie de exposición representa todos los elementos que pueden recibir interacciones externas.</p>
+<p>Puede incluir:</p>
 <ul>
-<li>Esporatutako zerbitzu kopurua murriztea.</li>
-<li>Beharrezkoak ez diren atariak eta baliabideak itxita mantentzea.</li>
-<li>Sarbide-puntuak aldian-aldian berrikustea.</li>
+<li>páginas web;</li>
+<li>APIs;</li>
+<li>puertos abiertos;</li>
+<li>servicios del sistema;</li>
+<li>bases de datos;</li>
+<li>paneles de administración;</li>
+<li>archivos accesibles;</li>
+<li>herramientas auxiliares.</li>
 </ul>
+<p>Cuantos más elementos estén expuestos, mayor es la posibilidad de errores o configuraciones incorrectas.</p>
+<p>Conceptualmente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Más servicios expuestos
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        ↓
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Mayor superficie de exposición
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        ↓
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Mayor necesidad de protección
+</span></code></pre></div>
+<h2 id="arquitectura-basica-de-una-aplicacion-web">Arquitectura básica de una aplicación web<a class="headerlink" href="#arquitectura-basica-de-una-aplicacion-web" title="Permanent link">&para;</a></h2>
+<p>Una arquitectura habitual:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Usuario
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   ↓ HTTPS
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Servidor web
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   ↓
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Aplicación
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>   ↓
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Base de datos
+</span></code></pre></div>
+<p>Cada componente tiene una responsabilidad diferente.</p>
+<p>El usuario no debería acceder directamente a todos los elementos internos.</p>
+<h2 id="exposicion-correcta-de-servicios">Exposición correcta de servicios<a class="headerlink" href="#exposicion-correcta-de-servicios" title="Permanent link">&para;</a></h2>
+<p>Una configuración segura intenta limitar los accesos:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Internet
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    ↓
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Puerto HTTPS
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    ↓
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Servidor web
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    ↓
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>Aplicación
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    ↓
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Base de datos privada
+</span></code></pre></div>
+<p>La base de datos no debería estar publicada directamente en Internet.</p>
+<p>Modelo incorrecto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Internet
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    ↓
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Base de datos
+</span></code></pre></div>
+<p>La aplicación debe actuar como intermediaria.</p>
+<h2 id="puertos-y-servicios">Puertos y servicios<a class="headerlink" href="#puertos-y-servicios" title="Permanent link">&para;</a></h2>
+<p>Cada servicio disponible utiliza normalmente un puerto de comunicación.</p>
+<p>Ejemplos:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>HTTP
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>80
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>HTTPS
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>443
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>SSH
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>22
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>MySQL
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>3306
+</span></code></pre></div>
+<p>No significa que todos deban estar accesibles desde Internet.</p>
+<p>Una regla básica:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Servicio necesario
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        ↓
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Permitir acceso
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>Servicio innecesario
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        ↓
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>No exponer
+</span></code></pre></div>
+<h2 id="principio-de-minimo-acceso">Principio de mínimo acceso<a class="headerlink" href="#principio-de-minimo-acceso" title="Permanent link">&para;</a></h2>
+<p>La configuración del servidor debe aplicar el principio de mínimo privilegio.</p>
+<p>Ejemplos:</p>
+<p>Un servidor web necesita:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Aceptar peticiones HTTPS
+</span></code></pre></div>
+<p>pero no necesita necesariamente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Aceptar conexiones directas a la base de datos desde Internet
+</span></code></pre></div>
+<p>La configuración debe limitar quién puede comunicarse con cada servicio.</p>
+<h2 id="relacion-con-aws">Relación con AWS<a class="headerlink" href="#relacion-con-aws" title="Permanent link">&para;</a></h2>
+<p>En AWS este control puede aplicarse mediante elementos como:</p>
+<ul>
+<li>Security Groups;</li>
+<li>subredes;</li>
+<li>separación entre servicios públicos y privados.</li>
+</ul>
+<p>Una arquitectura habitual:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Internet
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    ↓
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Servidor web público
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    ↓
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Red interna
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    ↓
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>Base de datos privada
+</span></code></pre></div>
+<p>La base de datos puede comunicarse con la aplicación, pero no estar accesible directamente desde Internet.</p>
+<h2 id="security-groups">Security Groups<a class="headerlink" href="#security-groups" title="Permanent link">&para;</a></h2>
+<p>Un Security Group funciona como un control de acceso de red.</p>
+<p>Permite definir:</p>
+<ul>
+<li>qué puertos están abiertos;</li>
+<li>desde qué orígenes;</li>
+<li>hacia qué recursos.</li>
+</ul>
+<p>Ejemplo:</p>
+<p>Servidor web:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Permitir:
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>443 HTTPS
+</span></code></pre></div>
+<p>Base de datos:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Permitir:
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>3306
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>solo desde servidor web
+</span></code></pre></div>
+<p>La decisión importante es que el acceso debe ser específico.</p>
+<h2 id="directorio-publico-del-servidor-web">Directorio público del servidor web<a class="headerlink" href="#directorio-publico-del-servidor-web" title="Permanent link">&para;</a></h2>
+<p>El servidor web debe publicar únicamente los archivos necesarios.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Aplicación
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>/app
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    config/
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    storage/
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    vendor/
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    public/
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>        index.php
+</span></code></pre></div>
+<p>El servidor web debería apuntar a:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>public/
+</span></code></pre></div>
+<p>y no a toda la aplicación.</p>
+<p>Así se evita exponer:</p>
+<ul>
+<li>archivos de configuración;</li>
+<li>dependencias;</li>
+<li>información interna.</li>
+</ul>
+<h2 id="archivos-que-no-deberian-ser-publicos">Archivos que no deberían ser públicos<a class="headerlink" href="#archivos-que-no-deberian-ser-publicos" title="Permanent link">&para;</a></h2>
+<p>Algunos archivos nunca deberían estar accesibles mediante URL:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>.env
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>.git/
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>composer.json
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>logs/
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>copias de seguridad
+</span></code></pre></div>
+<p>Una petición como:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>https://ejemplo.com/.env
+</span></code></pre></div>
+<p>no debería devolver información.</p>
+<h2 id="paneles-y-herramientas-auxiliares">Paneles y herramientas auxiliares<a class="headerlink" href="#paneles-y-herramientas-auxiliares" title="Permanent link">&para;</a></h2>
+<p>Durante el desarrollo pueden existir herramientas como:</p>
+<ul>
+<li>paneles de administración;</li>
+<li>páginas de prueba;</li>
+<li>herramientas de depuración.</li>
+</ul>
+<p>Antes de producción deben revisarse.</p>
+<p>Preguntas necesarias:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>¿Es necesario?
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>¿Quién debe acceder?
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>¿Está protegido?
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>¿Puede eliminarse?
+</span></code></pre></div>
+<h2 id="reducir-informacion-expuesta">Reducir información expuesta<a class="headerlink" href="#reducir-informacion-expuesta" title="Permanent link">&para;</a></h2>
+<p>El servidor no debería revelar información innecesaria.</p>
+<p>Ejemplos:</p>
+<p>Cabeceras:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Servidor: Apache/2.x
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>PHP: 8.x
+</span></code></pre></div>
+<p>Mensajes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>rutas internas
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>versiones exactas
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>errores técnicos
+</span></code></pre></div>
+<p>La información del entorno debe limitarse.</p>
+<h2 id="relacion-con-el-desarrollo-seguro">Relación con el desarrollo seguro<a class="headerlink" href="#relacion-con-el-desarrollo-seguro" title="Permanent link">&para;</a></h2>
+<p>La configuración del servidor complementa al código.</p>
+<p>Por ejemplo:</p>
+<p>La aplicación evita:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>SQL Injection
+</span></code></pre></div>
+<p>El servidor evita:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>exposición directa de la base de datos
+</span></code></pre></div>
+<p>Son capas diferentes de protección.</p>
+<h2 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h2>
+<p>Una arquitectura adecuada:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Usuario
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>   ↓ HTTPS
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Servidor web público
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>   ↓
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>Aplicación Laravel/PHP
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>   ↓
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>Base de datos privada
+</span></code></pre></div>
+<p>No sería recomendable:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Usuario
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>   ↓
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>Base de datos
+</span></code></pre></div>
+<p>ni:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Usuario
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>   ↓
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>Carpeta interna de la aplicación
+</span></code></pre></div>
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<p>Antes de publicar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>[ ] Solo están abiertos los puertos necesarios
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>[ ] La base de datos no es pública
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>[ ] El servidor web apunta al directorio correcto
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>[ ] Archivos sensibles no son accesibles
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>[ ] Herramientas de desarrollo eliminadas o protegidas
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>[ ] Servicios innecesarios desactivados
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>[ ] Security Groups revisados
+</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>
+</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>[ ] Arquitectura de red revisada
+</span></code></pre></div>
+<h2 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Un despliegue seguro no consiste en abrir todos los servicios para que funcionen, sino en exponer únicamente los servicios necesarios para que la aplicación pueda funcionar.</p>
+</blockquote>
 
 
 

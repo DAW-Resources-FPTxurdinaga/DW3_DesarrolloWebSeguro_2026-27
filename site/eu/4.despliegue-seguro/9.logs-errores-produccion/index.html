@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#log-ak-eta-erroreak-produkzioan" class="md-skip">
+        <a href="#logs-y-errores-en-produccion" class="md-skip">
           Joan zuzenean edukira
         </a>
       
@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
     
@@ -2369,7 +2369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
           </label>
@@ -2391,7 +2391,7 @@
   <span class="md-ellipsis">
     
   
-    Deskargatze seguruaren sarrera
+    Despliegatze seguruaren sarrera
   
 
     
@@ -3361,10 +3361,192 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#funtsezko-puntuak" class="md-nav__link">
+  <a href="#errores-visibles-frente-a-errores-internos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Funtsezko puntuak
+        Errores visibles frente a errores internos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Errores visibles frente a errores internos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usuario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equipo-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equipo técnico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-mostrar-informacion-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No mostrar información interna
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registrar-errores-internamente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registrar errores internamente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacion-que-no-debe-aparecer-en-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Información que no debe aparecer en logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nivel-de-detalle-segun-el-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nivel de detalle según el entorno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excepciones-en-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Excepciones en PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#errores-en-laravel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores en Laravel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs del servidor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proteccion-de-archivos-de-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de archivos de log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitorizacion-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitorización básica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-ocultar-todos-los-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No ocultar todos los errores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con seguridad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
       
     </span>
   </a>
@@ -3388,14 +3570,242 @@
 
 
 
-<h1 id="log-ak-eta-erroreak-produkzioan">Log-ak eta erroreak produkzioan<a class="headerlink" href="#log-ak-eta-erroreak-produkzioan" title="Permanent link">&para;</a></h1>
-<p>Log-ak aplikazioaren portaera produkzioan ulertzeko tresna garrantzitsua dira. Gainera, incidentziak detektatzeko, susmozko sarbideak berrikusteko eta erroreak modu antolatuan aztertzeko laguntzen dute.</p>
-<h2 id="funtsezko-puntuak">Funtsezko puntuak<a class="headerlink" href="#funtsezko-puntuak" title="Permanent link">&para;</a></h2>
+<h1 id="logs-y-errores-en-produccion">Logs y errores en producción<a class="headerlink" href="#logs-y-errores-en-produccion" title="Permanent link">&para;</a></h1>
+<p>Una aplicación segura no solo debe evitar errores, sino gestionarlos correctamente cuando ocurren.</p>
+<p>Durante el desarrollo, los errores ayudan a encontrar problemas.</p>
+<p>En producción, la gestión debe cambiar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Desarrollo
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>mostrar información para depurar
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Producción
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>proteger información + registrar lo necesario
+</span></code></pre></div>
+<p>El objetivo es que la aplicación falle de forma controlada.</p>
+<h2 id="errores-visibles-frente-a-errores-internos">Errores visibles frente a errores internos<a class="headerlink" href="#errores-visibles-frente-a-errores-internos" title="Permanent link">&para;</a></h2>
+<p>Cuando ocurre un problema, existen dos necesidades diferentes:</p>
+<h3 id="usuario">Usuario<a class="headerlink" href="#usuario" title="Permanent link">&para;</a></h3>
+<p>Necesita recibir información clara:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>No se ha podido completar la operación.
+</span></code></pre></div>
+<h3 id="equipo-tecnico">Equipo técnico<a class="headerlink" href="#equipo-tecnico" title="Permanent link">&para;</a></h3>
+<p>Necesita información suficiente para investigar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Fecha
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Usuario afectado
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Operación realizada
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Error técnico
+</span></code></pre></div>
+<p>Estas dos necesidades no deben mezclarse.</p>
+<h2 id="no-mostrar-informacion-interna">No mostrar información interna<a class="headerlink" href="#no-mostrar-informacion-interna" title="Permanent link">&para;</a></h2>
+<p>Una respuesta insegura puede mostrar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Error SQL completo
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Ruta del servidor
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Versión del framework
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Archivo interno
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>Línea de código
+</span></code></pre></div>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Fatal error:
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>PDOException in /var/www/app/database.php line 45
+</span></code></pre></div>
+<p>Esta información puede ayudar a un atacante a conocer detalles de la aplicación.</p>
+<p>En producción debe sustituirse por un mensaje controlado.</p>
+<h2 id="registrar-errores-internamente">Registrar errores internamente<a class="headerlink" href="#registrar-errores-internamente" title="Permanent link">&para;</a></h2>
+<p>Aunque el usuario no vea el error completo, la aplicación debe registrarlo.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Usuario:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>No se ha podido guardar el registro.
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Log interno:
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>2026-08-08
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>Error conexión BD
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>usuario afectado
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>identificador operación
+</span></code></pre></div>
+<p>El registro permite:</p>
 <ul>
-<li>Gertaera garrantzitsuak erregistratu datu sentikorrik agerian utzi gabe.</li>
-<li>Mantendu mezuetan egitura argia.</li>
-<li>Bereizi negozio-erroreak arazo teknikoetatik.</li>
+<li>diagnosticar problemas;</li>
+<li>investigar incidentes;</li>
+<li>detectar fallos repetidos.</li>
 </ul>
+<h2 id="informacion-que-no-debe-aparecer-en-logs">Información que no debe aparecer en logs<a class="headerlink" href="#informacion-que-no-debe-aparecer-en-logs" title="Permanent link">&para;</a></h2>
+<p>Los logs también pueden convertirse en un riesgo si almacenan demasiada información.</p>
+<p>No deberían guardar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Contraseñas
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Tokens completos
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Claves API
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Datos personales innecesarios
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Información sensible
+</span></code></pre></div>
+<p>Ejemplo incorrecto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Login usuario:
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ana
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Password:
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>secreto123
+</span></code></pre></div>
+<p>El registro debe contener únicamente la información necesaria.</p>
+<h2 id="nivel-de-detalle-segun-el-entorno">Nivel de detalle según el entorno<a class="headerlink" href="#nivel-de-detalle-segun-el-entorno" title="Permanent link">&para;</a></h2>
+<p>Una aplicación puede utilizar diferentes niveles de registro.</p>
+<p>Desarrollo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Más información
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Más detalle técnico
+</span></code></pre></div>
+<p>Producción:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Información útil
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Sin datos sensibles
+</span></code></pre></div>
+<p>La configuración debe adaptarse al entorno.</p>
+<h2 id="excepciones-en-php">Excepciones en PHP<a class="headerlink" href="#excepciones-en-php" title="Permanent link">&para;</a></h2>
+<p>PHP permite gestionar errores mediante mecanismos de excepciones.</p>
+<p>Ejemplo:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">try {</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">    guardarDatos();</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">} catch (Exception $e) {</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="x">    error_log(</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="x">        $e-&gt;getMessage()</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="x">    );</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="x">    mostrarErrorUsuario();</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="x">}</span>
+</span></code></pre></div>
+<p>La aplicación registra el problema, pero no muestra detalles internos.</p>
+<h2 id="errores-en-laravel">Errores en Laravel<a class="headerlink" href="#errores-en-laravel" title="Permanent link">&para;</a></h2>
+<p>Laravel dispone de mecanismos propios para:</p>
+<ul>
+<li>gestión de excepciones;</li>
+<li>generación de logs;</li>
+<li>configuración del entorno.</li>
+</ul>
+<p>Un elemento importante:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>APP_DEBUG=false
+</span></code></pre></div>
+<p>en producción.</p>
+<p>Con esta configuración se evita mostrar información detallada de errores al usuario.</p>
+<h2 id="logs-del-servidor">Logs del servidor<a class="headerlink" href="#logs-del-servidor" title="Permanent link">&para;</a></h2>
+<p>Además de los logs de la aplicación pueden existir registros del servidor:</p>
+<ul>
+<li>accesos HTTP;</li>
+<li>errores del servidor web;</li>
+<li>eventos del sistema.</li>
+</ul>
+<p>Estos registros ayudan a analizar:</p>
+<ul>
+<li>peticiones recibidas;</li>
+<li>errores repetidos;</li>
+<li>problemas de configuración.</li>
+</ul>
+<h2 id="proteccion-de-archivos-de-log">Protección de archivos de log<a class="headerlink" href="#proteccion-de-archivos-de-log" title="Permanent link">&para;</a></h2>
+<p>Los logs pueden contener información sensible.</p>
+<p>Por tanto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Logs
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        ↓
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>deben estar protegidos
+</span></code></pre></div>
+<p>No deberían estar dentro de una carpeta accesible públicamente.</p>
+<p>Ejemplo incorrecto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>https://ejemplo.com/logs/error.log
+</span></code></pre></div>
+<p>Un usuario externo no debería poder descargar registros internos.</p>
+<h2 id="monitorizacion-basica">Monitorización básica<a class="headerlink" href="#monitorizacion-basica" title="Permanent link">&para;</a></h2>
+<p>Un despliegue profesional revisa:</p>
+<ul>
+<li>errores frecuentes;</li>
+<li>caídas del servicio;</li>
+<li>consumo de recursos;</li>
+<li>intentos anómalos;</li>
+<li>problemas repetidos.</li>
+</ul>
+<p>El objetivo es detectar problemas antes de que afecten a los usuarios.</p>
+<h2 id="no-ocultar-todos-los-errores">No ocultar todos los errores<a class="headerlink" href="#no-ocultar-todos-los-errores" title="Permanent link">&para;</a></h2>
+<p>Gestionar errores correctamente no significa ignorarlos.</p>
+<p>Una mala práctica:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>capturar excepción
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>        ↓
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>no hacer nada
+</span></code></pre></div>
+<p>La aplicación debe:</p>
+<ul>
+<li>informar correctamente;</li>
+<li>registrar cuando sea necesario;</li>
+<li>permitir investigar.</li>
+</ul>
+<h2 id="relacion-con-seguridad">Relación con seguridad<a class="headerlink" href="#relacion-con-seguridad" title="Permanent link">&para;</a></h2>
+<p>Los errores forman parte de la superficie de información de una aplicación.</p>
+<p>Una aplicación puede estar bien programada, pero si revela:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>estructura interna
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>versiones
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>rutas
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>consultas
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>credenciales
+</span></code></pre></div>
+<p>a través de errores, pierde parte de su seguridad.</p>
+<h2 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h2>
+<p>Situación:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Error al guardar una reserva
+</span></code></pre></div>
+<p>Usuario:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>No se ha podido completar la operación.
+</span></code></pre></div>
+<p>Equipo técnico:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Log:
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>fecha
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>usuario
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>operación
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>error técnico
+</span></code></pre></div>
+<p>El usuario no recibe información interna.</p>
+<p>El equipo puede investigar el problema.</p>
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>[ ] DEBUG desactivado en producción
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>[ ] Errores técnicos ocultos al usuario
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>[ ] Logs configurados
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>[ ] Logs protegidos
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>[ ] No se registran secretos
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>[ ] Existe información suficiente para investigar
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>[ ] Errores probados en entorno de producción
+</span></code></pre></div>
+<h2 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Una aplicación segura no evita todos los errores; consigue que los errores no expongan información y puedan ser analizados de forma controlada.</p>
+</blockquote>
 
 
 

@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#https-eta-ziurtagiriak" class="md-skip">
+        <a href="#https-y-certificados" class="md-skip">
           Joan zuzenean edukira
         </a>
       
@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
     
@@ -2369,7 +2369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
           </label>
@@ -2391,7 +2391,7 @@
   <span class="md-ellipsis">
     
   
-    Deskargatze seguruaren sarrera
+    Despliegatze seguruaren sarrera
   
 
     
@@ -3361,10 +3361,153 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#garrantzitsuak-diren-alderdiak" class="md-nav__link">
+  <a href="#de-http-a-https" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Garrantzitsuak diren alderdiak
+        De HTTP a HTTPS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https-en-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS en producción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#certificados-digitales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificados digitales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtener-un-certificado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtener un certificado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-del-servidor-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración del servidor web
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redireccion-http-a-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redirección HTTP a HTTPS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-conceptual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo conceptual
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renovacion-de-certificados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Renovación de certificados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https-y-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS y cookies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https-y-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTPS y APIs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-confiar-unicamente-en-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No confiar únicamente en HTTPS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobaciones-antes-de-publicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comprobaciones antes de publicar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
       
     </span>
   </a>
@@ -3388,15 +3531,236 @@
 
 
 
-<h1 id="https-eta-ziurtagiriak">HTTPS eta ziurtagiriak<a class="headerlink" href="#https-eta-ziurtagiriak" title="Permanent link">&para;</a></h1>
-<p>HTTPS webeko segurtasunaren oinarrietako bat da. Nabigatzailearen eta zerbitzariaren arteko komunikazioa babesten du eta datu sentikorrak, hala nola saioak edo kredentzialak, testu lauan bidai ez daitezen laguntzen du.</p>
-<p>Produkzioan, HTTPS ez da aukera osagarria izan behar, baizik konfiantza eta segurtasunerako oinarrizko baldintza.</p>
-<h2 id="garrantzitsuak-diren-alderdiak">Garrantzitsuak diren alderdiak<a class="headerlink" href="#garrantzitsuak-diren-alderdiak" title="Permanent link">&para;</a></h2>
+<h1 id="https-y-certificados">HTTPS y certificados<a class="headerlink" href="#https-y-certificados" title="Permanent link">&para;</a></h1>
+<p>HTTPS es el mecanismo que permite proteger la comunicación entre el navegador y el servidor mediante cifrado y autenticación.</p>
+<p>En el Bloque 1 se estudió el funcionamiento conceptual de HTTPS y la cadena de confianza de certificados.</p>
+<p>En este capítulo nos centramos en su aplicación durante el despliegue:</p>
 <ul>
-<li>HTTPS produkzioan beti aktibatu behar da.</li>
-<li>Ziurtagiriak segurtasunez eta garaiz berritu behar dira.</li>
-<li>HTTP-tik HTTPS-era birbideratzea eta HSTS bezalako mekanismoak erabiltzea babesa indartzen laguntzen du.</li>
+<li>activar HTTPS en producción;</li>
+<li>configurar correctamente el servidor;</li>
+<li>utilizar certificados válidos;</li>
+<li>redirigir tráfico inseguro;</li>
+<li>comprobar que la aplicación funciona correctamente sobre HTTPS.</li>
 </ul>
+<h2 id="de-http-a-https">De HTTP a HTTPS<a class="headerlink" href="#de-http-a-https" title="Permanent link">&para;</a></h2>
+<p>Una aplicación publicada mediante HTTP transmite las comunicaciones sin protección criptográfica.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Cliente
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   | HTTP
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Servidor
+</span></code></pre></div>
+<p>Esto puede permitir que la información sea observada o modificada durante la comunicación.</p>
+<p>HTTPS añade una capa de protección:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Cliente
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   |
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   | HTTPS
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   |
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Servidor
+</span></code></pre></div>
+<p>La comunicación queda protegida mediante TLS.</p>
+<h2 id="https-en-produccion">HTTPS en producción<a class="headerlink" href="#https-en-produccion" title="Permanent link">&para;</a></h2>
+<p>Durante el desarrollo es habitual utilizar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>http://localhost
+</span></code></pre></div>
+<p>o certificados de prueba.</p>
+<p>Sin embargo, una aplicación accesible por usuarios reales debe utilizar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://dominio-ejemplo.com
+</span></code></pre></div>
+<p>El despliegue debe incluir:</p>
+<ul>
+<li>certificado válido;</li>
+<li>configuración del servidor web;</li>
+<li>renovación del certificado;</li>
+<li>redirección del tráfico HTTP.</li>
+</ul>
+<h2 id="certificados-digitales">Certificados digitales<a class="headerlink" href="#certificados-digitales" title="Permanent link">&para;</a></h2>
+<p>Un certificado permite asociar una identidad digital con un servidor.</p>
+<p>Conceptualmente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Servidor
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    ↓
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Certificado digital
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    ↓
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Autoridad de Certificación
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    ↓
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Confianza del navegador
+</span></code></pre></div>
+<p>El navegador comprueba que:</p>
+<ul>
+<li>el certificado es válido;</li>
+<li>pertenece al dominio solicitado;</li>
+<li>está firmado por una autoridad reconocida;</li>
+<li>no ha caducado.</li>
+</ul>
+<h2 id="obtener-un-certificado">Obtener un certificado<a class="headerlink" href="#obtener-un-certificado" title="Permanent link">&para;</a></h2>
+<p>En un entorno real, los certificados suelen obtenerse mediante una Autoridad de Certificación.</p>
+<p>Una opción habitual es utilizar certificados emitidos por:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Let&#39;s Encrypt
+</span></code></pre></div>
+<p>Estos certificados son reconocidos por los navegadores modernos y permiten automatizar la renovación.</p>
+<p>El proceso general:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Solicitud del certificado
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        ↓
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Validación del dominio
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        ↓
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Instalación en el servidor
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        ↓
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>Configuración HTTPS
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>        ↓
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>Renovación periódica
+</span></code></pre></div>
+<h2 id="configuracion-del-servidor-web">Configuración del servidor web<a class="headerlink" href="#configuracion-del-servidor-web" title="Permanent link">&para;</a></h2>
+<p>El servidor debe conocer:</p>
+<ul>
+<li>certificado público;</li>
+<li>clave privada asociada;</li>
+<li>configuración del sitio HTTPS.</li>
+</ul>
+<p>La clave privada debe mantenerse protegida.</p>
+<p>Nunca debe:</p>
+<ul>
+<li>subirse a Git;</li>
+<li>enviarse a terceros;</li>
+<li>incluirse en el código de la aplicación.</li>
+</ul>
+<h2 id="redireccion-http-a-https">Redirección HTTP a HTTPS<a class="headerlink" href="#redireccion-http-a-https" title="Permanent link">&para;</a></h2>
+<p>Una práctica habitual es evitar que existan dos versiones accesibles:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>http://ejemplo.com
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>https://ejemplo.com
+</span></code></pre></div>
+<p>La configuración recomendada:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>HTTP
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  ↓
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>redirección permanente
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  ↓
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>HTTPS
+</span></code></pre></div>
+<p>Así se fuerza a los usuarios a utilizar la comunicación protegida.</p>
+<h2 id="ejemplo-conceptual">Ejemplo conceptual<a class="headerlink" href="#ejemplo-conceptual" title="Permanent link">&para;</a></h2>
+<p>Petición inicial:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Usuario
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>http://txurdigest.ejemplo
+</span></code></pre></div>
+<p>Servidor:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>301 Redirect
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>https://txurdigest.ejemplo
+</span></code></pre></div>
+<p>Nueva petición:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Usuario
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>https://txurdigest.ejemplo
+</span></code></pre></div>
+<p>La comunicación continúa utilizando HTTPS.</p>
+<h2 id="renovacion-de-certificados">Renovación de certificados<a class="headerlink" href="#renovacion-de-certificados" title="Permanent link">&para;</a></h2>
+<p>Los certificados tienen una fecha de caducidad.</p>
+<p>Por tanto, el despliegue debe contemplar:</p>
+<ul>
+<li>revisión periódica;</li>
+<li>renovación automática cuando sea posible;</li>
+<li>comprobación posterior.</li>
+</ul>
+<p>Un certificado caducado provoca avisos de seguridad en los navegadores.</p>
+<h2 id="https-y-cookies">HTTPS y cookies<a class="headerlink" href="#https-y-cookies" title="Permanent link">&para;</a></h2>
+<p>Cuando una aplicación utiliza sesiones mediante cookies, HTTPS permite utilizar atributos de seguridad adicionales.</p>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Secure
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>HttpOnly
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>SameSite
+</span></code></pre></div>
+<p>El atributo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Secure
+</span></code></pre></div>
+<p>indica que la cookie solo debe enviarse mediante HTTPS.</p>
+<p>Ejemplo conceptual:</p>
+<div class="language-http highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="err">Set-Cookie:</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="err">session=abc123;</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="err">Secure;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="err">HttpOnly;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="err">SameSite=Lax</span>
+</span></code></pre></div>
+<h2 id="https-y-apis">HTTPS y APIs<a class="headerlink" href="#https-y-apis" title="Permanent link">&para;</a></h2>
+<p>En arquitecturas con frontend y backend separados, ambos componentes deben utilizar HTTPS.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Frontend Vue
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>https://txurdigest.ejemplo
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>        ↓
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>API PHP
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>https://api.txurdigest.ejemplo
+</span></code></pre></div>
+<p>Mezclar HTTPS y HTTP puede provocar:</p>
+<ul>
+<li>advertencias del navegador;</li>
+<li>problemas con cookies;</li>
+<li>exposición de información;</li>
+<li>bloqueos por políticas del navegador.</li>
+</ul>
+<h2 id="no-confiar-unicamente-en-https">No confiar únicamente en HTTPS<a class="headerlink" href="#no-confiar-unicamente-en-https" title="Permanent link">&para;</a></h2>
+<p>HTTPS protege la comunicación, pero no sustituye otros controles.</p>
+<p>Una aplicación sigue necesitando:</p>
+<ul>
+<li>autenticación;</li>
+<li>autorización;</li>
+<li>validación;</li>
+<li>protección de datos;</li>
+<li>configuración segura.</li>
+</ul>
+<p>HTTPS protege el canal.</p>
+<p>No decide quién puede utilizar la aplicación.</p>
+<h2 id="comprobaciones-antes-de-publicar">Comprobaciones antes de publicar<a class="headerlink" href="#comprobaciones-antes-de-publicar" title="Permanent link">&para;</a></h2>
+<p>Antes del despliegue:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>[ ] Certificado válido instalado
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>[ ] Dominio correcto
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>[ ] HTTP redirige a HTTPS
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>[ ] Clave privada protegida
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>[ ] Cookies sensibles utilizan Secure
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>[ ] No existen recursos HTTP mezclados
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>[ ] Renovación configurada
+</span></code></pre></div>
+<h2 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h2>
+<p>Un despliegue correcto sería:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Usuario
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>https://txurdigest.ejemplo
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>        ↓
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>Servidor web
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>        ↓
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>Aplicación PHP/Laravel
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>        ↓
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>Base de datos interna
+</span></code></pre></div>
+<p>La aplicación no debería estar disponible mediante HTTP.</p>
+<p>La sesión del usuario debe transmitirse únicamente mediante una conexión protegida.</p>
+<h2 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>HTTPS no es una mejora opcional en producción: es una condición necesaria para proteger la comunicación entre usuarios y aplicación.</p>
+</blockquote>
 
 
 

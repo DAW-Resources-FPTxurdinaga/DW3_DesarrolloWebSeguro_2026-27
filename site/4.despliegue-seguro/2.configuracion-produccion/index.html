@@ -3361,10 +3361,192 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#puntos-clave" class="md-nav__link">
+  <a href="#codigo-y-configuracion-separados" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Puntos clave
+        Código y configuración separados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-de-desarrollo-frente-a-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de desarrollo frente a producción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modo-depuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo depuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-mediante-variables-de-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración mediante variables de entorno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-de-separar-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventajas de separar configuración
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ventajas de separar configuración">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilizar-varios-entornos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilizar varios entornos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteger-informacion-sensible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proteger información sensible
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#facilitar-el-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Facilitar el despliegue
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos de configuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-archivo-env-y-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El archivo .env y Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencias-y-modo-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencias y modo producción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#laravel-y-configuracion-de-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laravel y configuración de producción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php-y-configuracion-de-produccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PHP y configuración de producción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-modificar-codigo-para-cada-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No modificar código para cada entorno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-antes-de-publicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist antes de publicar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
       
     </span>
   </a>
@@ -3389,15 +3571,263 @@
 
 
 <h1 id="configuracion-de-produccion">Configuración de producción<a class="headerlink" href="#configuracion-de-produccion" title="Permanent link">&para;</a></h1>
-<p>La configuración de producción no es igual que la configuración de desarrollo. En desarrollo es habitual tener más información de depuración, más trazas y mayor flexibilidad; en producción, las decisiones deben ser más estrictas y más controladas.</p>
-<p>Esta configuración afecta a parámetros del sistema, modo de ejecución, variables de entorno y políticas de seguridad. El objetivo no es solo que la aplicación funcione, sino que lo haga con el mínimo riesgo posible.</p>
-<h2 id="puntos-clave">Puntos clave<a class="headerlink" href="#puntos-clave" title="Permanent link">&para;</a></h2>
+<p>La configuración de una aplicación debe adaptarse al entorno donde se ejecuta.</p>
+<p>El mismo código puede utilizarse en desarrollo, pruebas y producción, pero algunos valores deben cambiar:</p>
 <ul>
-<li>Separar claramente la configuración de desarrollo y la de producción.</li>
-<li>Evitar que los modos de depuración estén activados en producción.</li>
-<li>Mantener valores de configuración consistentes con las decisiones de seguridad.</li>
-<li>Documentar la configuración, sin exponer datos sensibles en lugares inseguros.</li>
+<li>modo de ejecución;</li>
+<li>credenciales;</li>
+<li>rutas;</li>
+<li>servicios utilizados;</li>
+<li>nivel de información mostrada;</li>
+<li>opciones de depuración.</li>
 </ul>
+<p>La configuración no debe mezclarse con el código fuente.</p>
+<h2 id="codigo-y-configuracion-separados">Código y configuración separados<a class="headerlink" href="#codigo-y-configuracion-separados" title="Permanent link">&para;</a></h2>
+<p>Una aplicación debería mantener una separación clara:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Código fuente
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>      +
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Configuración del entorno
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      ↓
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Aplicación ejecutándose
+</span></code></pre></div>
+<p>El código define el comportamiento de la aplicación.</p>
+<p>La configuración define cómo se ejecuta en un entorno concreto.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Desarrollo
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Base de datos:
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>localhost
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Producción
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>Base de datos:
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>servidor interno
+</span></code></pre></div>
+<p>La aplicación es la misma, pero la configuración cambia.</p>
+<h2 id="configuracion-de-desarrollo-frente-a-produccion">Configuración de desarrollo frente a producción<a class="headerlink" href="#configuracion-de-desarrollo-frente-a-produccion" title="Permanent link">&para;</a></h2>
+<p>Durante el desarrollo pueden activarse opciones que facilitan la programación:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>DEBUG = true
+</span></code></pre></div>
+<p>Esto puede mostrar:</p>
+<ul>
+<li>errores completos;</li>
+<li>trazas de ejecución;</li>
+<li>información del framework;</li>
+<li>detalles internos.</li>
+</ul>
+<p>En producción estas opciones deben desactivarse.</p>
+<p>Ejemplo conceptual:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Desarrollo
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Errores detallados
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Depuración activa
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Información técnica visible
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>Producción
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Errores controlados
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Registro interno
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>Información mínima al usuario
+</span></code></pre></div>
+<h2 id="modo-depuracion">Modo depuración<a class="headerlink" href="#modo-depuracion" title="Permanent link">&para;</a></h2>
+<p>Los mensajes de error son útiles durante el desarrollo.</p>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Error SQL:
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>tabla usuarios no encontrada
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>archivo:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>/var/www/app/modelo.php
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>línea 35
+</span></code></pre></div>
+<p>Esta información ayuda al programador.</p>
+<p>Pero en producción puede revelar:</p>
+<ul>
+<li>estructura interna;</li>
+<li>rutas del servidor;</li>
+<li>nombres de tablas;</li>
+<li>componentes utilizados.</li>
+</ul>
+<p>La aplicación debe mostrar un mensaje genérico:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>No se ha podido completar la operación.
+</span></code></pre></div>
+<p>y registrar internamente el detalle técnico.</p>
+<h2 id="configuracion-mediante-variables-de-entorno">Configuración mediante variables de entorno<a class="headerlink" href="#configuracion-mediante-variables-de-entorno" title="Permanent link">&para;</a></h2>
+<p>Una práctica habitual es utilizar variables de entorno.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>DB_HOST=servidor-bd
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>DB_NAME=txurdigest
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>DB_USER=usuario_app
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>DB_PASSWORD=secreto
+</span></code></pre></div>
+<p>El código consulta esos valores:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">$dbHost = getenv(&#39;DB_HOST&#39;);</span>
+</span></code></pre></div>
+<p>La aplicación no necesita conocer los valores concretos de cada instalación.</p>
+<h2 id="ventajas-de-separar-configuracion">Ventajas de separar configuración<a class="headerlink" href="#ventajas-de-separar-configuracion" title="Permanent link">&para;</a></h2>
+<p>Esta separación permite:</p>
+<h3 id="utilizar-varios-entornos">Utilizar varios entornos<a class="headerlink" href="#utilizar-varios-entornos" title="Permanent link">&para;</a></h3>
+<p>La misma aplicación puede ejecutarse como:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Desarrollo
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    ↓
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Base de datos local
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Pruebas
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    ↓
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Base de datos de pruebas
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Producción
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    ↓
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>Base de datos real
+</span></code></pre></div>
+<p>sin modificar el código.</p>
+<h3 id="proteger-informacion-sensible">Proteger información sensible<a class="headerlink" href="#proteger-informacion-sensible" title="Permanent link">&para;</a></h3>
+<p>Los datos como:</p>
+<ul>
+<li>contraseñas;</li>
+<li>claves API;</li>
+<li>tokens;</li>
+<li>credenciales de servicios;</li>
+</ul>
+<p>no deben almacenarse en archivos del proyecto que puedan acabar publicados.</p>
+<h3 id="facilitar-el-despliegue">Facilitar el despliegue<a class="headerlink" href="#facilitar-el-despliegue" title="Permanent link">&para;</a></h3>
+<p>Un nuevo servidor puede configurarse proporcionando sus variables necesarias sin modificar la aplicación.</p>
+<h2 id="archivos-de-configuracion">Archivos de configuración<a class="headerlink" href="#archivos-de-configuracion" title="Permanent link">&para;</a></h2>
+<p>Algunos frameworks utilizan archivos como:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>.env
+</span></code></pre></div>
+<p>para almacenar configuración local.</p>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>APP_ENV=production
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>APP_DEBUG=false
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>DB_HOST=localhost
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>DB_DATABASE=txurdigest
+</span></code></pre></div>
+<p>Estos archivos deben gestionarse correctamente.</p>
+<p>No deben incluirse en repositorios públicos.</p>
+<h2 id="el-archivo-env-y-git">El archivo <code>.env</code> y Git<a class="headerlink" href="#el-archivo-env-y-git" title="Permanent link">&para;</a></h2>
+<p>Un error habitual es subir:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>.env
+</span></code></pre></div>
+<p>al repositorio.</p>
+<p>Esto puede exponer:</p>
+<ul>
+<li>contraseñas;</li>
+<li>claves privadas;</li>
+<li>tokens;</li>
+<li>datos de conexión.</li>
+</ul>
+<p>La práctica habitual es incluirlo en:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>.gitignore
+</span></code></pre></div>
+<p>y proporcionar un archivo de ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>.env.example
+</span></code></pre></div>
+<p>con la estructura necesaria pero sin secretos reales.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>DB_HOST=
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>DB_DATABASE=
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>DB_USERNAME=
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>DB_PASSWORD=
+</span></code></pre></div>
+<h2 id="dependencias-y-modo-produccion">Dependencias y modo producción<a class="headerlink" href="#dependencias-y-modo-produccion" title="Permanent link">&para;</a></h2>
+<p>Las aplicaciones suelen utilizar librerías externas.</p>
+<p>Durante el desarrollo pueden instalarse herramientas adicionales:</p>
+<ul>
+<li>depuración;</li>
+<li>pruebas;</li>
+<li>análisis;</li>
+<li>generación de documentación.</li>
+</ul>
+<p>En producción deben instalarse únicamente las dependencias necesarias.</p>
+<p>Reducir componentes innecesarios disminuye la superficie de exposición.</p>
+<h2 id="laravel-y-configuracion-de-produccion">Laravel y configuración de producción<a class="headerlink" href="#laravel-y-configuracion-de-produccion" title="Permanent link">&para;</a></h2>
+<p>En aplicaciones Laravel es habitual revisar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>APP_ENV
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>APP_DEBUG
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>APP_KEY
+</span></code></pre></div>
+<p>Un entorno de producción debería utilizar:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>APP_ENV=production
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>APP_DEBUG=false
+</span></code></pre></div>
+<p>La clave:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>APP_KEY
+</span></code></pre></div>
+<p>debe existir y mantenerse como secreto.</p>
+<p>Después de cambiar configuración puede ser necesario limpiar o regenerar cachés de configuración.</p>
+<h2 id="php-y-configuracion-de-produccion">PHP y configuración de producción<a class="headerlink" href="#php-y-configuracion-de-produccion" title="Permanent link">&para;</a></h2>
+<p>En PHP también existen opciones relevantes.</p>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>display_errors
+</span></code></pre></div>
+<p>En desarrollo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>display_errors = On
+</span></code></pre></div>
+<p>puede facilitar la programación.</p>
+<p>En producción:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>display_errors = Off
+</span></code></pre></div>
+<p>evita mostrar detalles técnicos al usuario.</p>
+<p>Los errores deben registrarse mediante mecanismos internos.</p>
+<h2 id="no-modificar-codigo-para-cada-entorno">No modificar código para cada entorno<a class="headerlink" href="#no-modificar-codigo-para-cada-entorno" title="Permanent link">&para;</a></h2>
+<p>Una mala práctica sería:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="x">if ($entorno === &#39;produccion&#39;) {</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="x">    $conexion = &quot;...&quot;;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="x">}</span>
+</span></code></pre></div>
+<p>con valores escritos directamente en el código.</p>
+<p>Esto mezcla lógica de aplicación y configuración.</p>
+<p>Es preferible:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="x">$conexion = getenv(&#39;DB_CONNECTION&#39;);</span>
+</span></code></pre></div>
+<p>La aplicación utiliza la configuración proporcionada por el entorno.</p>
+<h2 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h2>
+<p>Durante desarrollo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Servidor:
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>localhost
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>Base de datos:
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>txurdigest_dev
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>Debug:
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>activo
+</span></code></pre></div>
+<p>Durante producción:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Servidor:
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>servidor interno
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Base de datos:
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>txurdigest_prod
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>Debug:
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>desactivado
+</span></code></pre></div>
+<p>El código de TxurdiGest no cambia.</p>
+<p>Cambia únicamente la configuración del entorno.</p>
+<h2 id="checklist-antes-de-publicar">Checklist antes de publicar<a class="headerlink" href="#checklist-antes-de-publicar" title="Permanent link">&para;</a></h2>
+<p>Antes del despliegue debería comprobarse:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>[ ] DEBUG desactivado
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>[ ] Errores técnicos ocultos
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>[ ] Secretos fuera del código
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>[ ] Variables de entorno configuradas
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>[ ] Archivo .env protegido
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>[ ] Dependencias necesarias instaladas
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>[ ] Configuración revisada para producción
+</span><span id="__span-25-14"><a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>
+</span><span id="__span-25-15"><a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>[ ] Datos de prueba eliminados
+</span></code></pre></div>
+<h2 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>La configuración forma parte de la seguridad. El mismo código puede ser seguro o inseguro dependiendo de cómo se configure el entorno donde se ejecuta.</p>
+</blockquote>
 
 
 

@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
     
@@ -2369,7 +2369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
           </label>
@@ -2391,7 +2391,7 @@
   <span class="md-ellipsis">
     
   
-    Deskargatze seguruaren sarrera
+    Despliegatze seguruaren sarrera
   
 
     
@@ -3359,10 +3359,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bloke-honen-helburua" class="md-nav__link">
+  <a href="#segurtasuna-bizitzako-ziklo-osoan" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bloke honen helburua
+        Segurtasuna bizitzako ziklo osoan
       
     </span>
   </a>
@@ -3370,10 +3370,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bloke-honetako-gaiak" class="md-nav__link">
+  <a href="#garapena-eta-produkzioa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bloke honetako gaiak
+        Garapena eta produkzioa
       
     </span>
   </a>
@@ -3381,10 +3381,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#daw-eta-txurdigest-ekin-erlazioa" class="md-nav__link">
+  <a href="#garatzaile-webaren-papera" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DAW eta TxurdiGest-ekin erlazioa
+        Garatzaile webaren papera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daw-erronken-erlazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAW erronken erlazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sinf-en-erlazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SINF-en erlazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bloke-honen-ikuspegia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloke honen ikuspegia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#giltzarri-ideia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Giltzarri ideia
       
     </span>
   </a>
@@ -3409,29 +3453,113 @@
 
 
 <h1 id="4-blokea-hedapen-segurua">4. blokea. Hedapen segurua<a class="headerlink" href="#4-blokea-hedapen-segurua" title="Permanent link">&para;</a></h1>
-<p>Hedapen segurua aplikazioa bezeroarentzat erabilgarri jartzeko azken etapa da, baina puntu kritiko bat da segurtasunaren ikuspegitik ere. Ez da nahikoa aplikazioa funtzionatzea; kontrolatuta funtzionatu behar du, garapenean aurreikusitako babes-erabakiekin.</p>
-<p>Bloke honetan web garapenean aritzen diren pertsonentzat garrantzitsuak diren alderdi nagusiak landuko dira, aplikazioa produkzio-ingurune baterako prestatzeko unean segurtasuna galdu gabe.</p>
-<h2 id="bloke-honen-helburua">Bloke honen helburua<a class="headerlink" href="#bloke-honen-helburua" title="Permanent link">&para;</a></h2>
+<p>Aplikazio web bat ez da segurua bihurtzen garapena amaitzen denean.</p>
+<p>Produkziora pasatzeak segurtasunari zuzenean eragin diezaiokeen erabaki berriak sorrarazten ditu:</p>
 <ul>
-<li>Produkzio-ingurunean aplikazioa modu seguruan konfiguratzeko ulermena garatzea.</li>
-<li>Hedapenaren funtsezko puntuak ezagutzea: HTTPS, sekretuak, baimenak, esposizio-azalera, datu-basea eta logak.</li>
-<li>Garapen-webaren ikuspegia mantentzea, eduki hau sistema-administraziorako testuinguruan bihurtu gabe.</li>
+<li>ingurunearen konfigurazioa;</li>
+<li>sekretuen kudeaketa;</li>
+<li>zerbitzuen esposizioa;</li>
+<li>ziurtagiriak eta komunikazioak;</li>
+<li>sistemaren baimenak;</li>
+<li>datu-baseetara sartzea;</li>
+<li>jardueren erregistroa;</li>
+<li>zerbitzariaren konfigurazioa.</li>
 </ul>
-<h2 id="bloke-honetako-gaiak">Bloke honetako gaiak<a class="headerlink" href="#bloke-honetako-gaiak" title="Permanent link">&para;</a></h2>
+<p>Programazioan ondo programatutako aplikazio bat arriskuan egon daiteke exekutatzen den ingurunea behar bezala konfiguratu ez badago.</p>
+<h2 id="segurtasuna-bizitzako-ziklo-osoan">Segurtasuna bizitzako ziklo osoan<a class="headerlink" href="#segurtasuna-bizitzako-ziklo-osoan" title="Permanent link">&para;</a></h2>
+<p>Segurtasuna ez da inplementazioan amaitzen.</p>
+<p>Hedapena aplikazio baten bizitzako zikloaren parte da:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Analisiak
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   ↓
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Diseinu segurua
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   ↓
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Inplementazio segurua
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   ↓
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Probak
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   ↓
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Hedapen segurua
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   ↓
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Mantentze-lana
+</span></code></pre></div>
+<p>Fase bakoitzak arriskua gutxitzen edo handitzen duen erabakiak sorrarazten ditu.</p>
+<h2 id="garapena-eta-produkzioa">Garapena eta produkzioa<a class="headerlink" href="#garapena-eta-produkzioa" title="Permanent link">&para;</a></h2>
+<p>Garapenean normalean aplikazioa sortu eta probatzeko errazten duten konfigurazioak erabiltzen dira:</p>
 <ul>
-<li><a href="1.introduccion-despliegue-seguro.html">Deskargatze seguruaren sarrera</a></li>
-<li><a href="2.configuracion-produccion/index.html">Produkzio-konfigurazioa</a></li>
-<li><a href="3.https-certificados/index.html">HTTPS eta ziurtagiriak</a></li>
-<li><a href="4.secretos-variables-entorno/index.html">Sekretuak eta ingurune-aldagaiak</a></li>
-<li><a href="5.servidor-superficie-exposicion/index.html">Zerbitzaria eta esposizio-azalera</a></li>
-<li><a href="6.permisos-archivos-directorios/index.html">Fitxategien eta direktorioen baimenak</a></li>
-<li><a href="7.base-datos/index.html">Datu-basea</a></li>
-<li><a href="8.cabeceras-seguridad/index.html">Segurtasun-buruzagiak</a></li>
-<li><a href="9.logs-errores-produccion/index.html">Log-ak eta erroreak produkzioan</a></li>
-<li><a href="10.conclusiones.html">Ondorioak</a></li>
+<li>erroreen mezu xeheak;</li>
+<li>arazketa-erreminta;</li>
+<li>probako datuak;</li>
+<li>tokiko zerbitzuak;</li>
+<li>aldi baterako konfigurazioak.</li>
 </ul>
-<h2 id="daw-eta-txurdigest-ekin-erlazioa">DAW eta TxurdiGest-ekin erlazioa<a class="headerlink" href="#daw-eta-txurdigest-ekin-erlazioa" title="Permanent link">&para;</a></h2>
-<p>Hedapen segurua DAW ikastaroan funtsezko trebetasuna da, batez ere benetako proiektuetan. TxurdiGest bezalako aplikazioetan, garapenean hartutako erabakiak produkzioan ere mantendu behar dira.</p>
+<p>Aukera hauek ez dira zuzenean produkzio-ingurura eraman behar.</p>
+<p>Inguru errealak lehentasuna eman behar dio:</p>
+<ul>
+<li>eskuragarritasunari;</li>
+<li>konfidentzialtasunari;</li>
+<li>osotasunari;</li>
+<li>sarbide-kontrolari;</li>
+<li>trazabilitateari.</li>
+</ul>
+<h2 id="garatzaile-webaren-papera">Garatzaile webaren papera<a class="headerlink" href="#garatzaile-webaren-papera" title="Permanent link">&para;</a></h2>
+<p>Hedapen segurua ez da soilik sistema-administratoreren ardura.</p>
+<p>Garatzaileak jakin behar du bere erabakiek ingurunean nola eragiten duten:</p>
+<ul>
+<li>non gordetzen diren sekretuak;</li>
+<li>zein zerbitzu behar dituen aplikazioak;</li>
+<li>zein baimen behar dituen;</li>
+<li>zein informazio erakusten zaion erabiltzaileari;</li>
+<li>nola erregistratzen diren erroreak;</li>
+<li>nola komunikatzen den aplikazioa beste zerbitzu batzuekin.</li>
+</ul>
+<p>Helburua ez da azpiegitura osoa administratzea, baizik modu seguruan zabaltzeko gai diren aplikazioak garatzea.</p>
+<h2 id="daw-erronken-erlazioa">DAW erronken erlazioa<a class="headerlink" href="#daw-erronken-erlazioa" title="Permanent link">&para;</a></h2>
+<p>Ikastaroan garatutako proiektuak ingurune erreal batean aplikatu behar dute erabaki hauek.</p>
+<p>Adibidez:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Garatutako aplikazioa
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        ↓
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Produkzio-konfigurazioa
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        ↓
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Web zerbitzaria
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        ↓
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Datu-basea
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        ↓
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Erabiltzaile finalak
+</span></code></pre></div>
+<p>Hedapenean berrikusi egingo da:</p>
+<ul>
+<li>aplikazioak HTTPS erabiltzen duela;</li>
+<li>sekretuak ez daudela kodean barne;</li>
+<li>datu-basea ez dagoela beharrezkoa ez den moduan erakutsita;</li>
+<li>baimenak egokiak direla;</li>
+<li>erroreek ez dutela barne-informazioa ezagutarazten;</li>
+<li>zerbitzariak beharrezkoa dena baino ez duela erakusten.</li>
+</ul>
+<h2 id="sinf-en-erlazioa">SINF-en erlazioa<a class="headerlink" href="#sinf-en-erlazioa" title="Permanent link">&para;</a></h2>
+<p>Hedapen segurua garapenaren eta azpiegituraren arteko lankidetza eskatzen du.</p>
+<p>Modulu honetan garapen web-aren ikuspegitik lan egingo da:</p>
+<ul>
+<li>zer behar duen aplikazioak;</li>
+<li>zer konfigurazio espero duen;</li>
+<li>zein arrisku agertzen diren gaizki zabaltzen bada.</li>
+</ul>
+<p>Sistema eragilearen, sareen edo zerbitzuen administrazio aurreratuaren alderdiak beste moduluetan lantzen dira.</p>
+<h2 id="bloke-honen-ikuspegia">Bloke honen ikuspegia<a class="headerlink" href="#bloke-honen-ikuspegia" title="Permanent link">&para;</a></h2>
+<p>Bloke honetan landuko dira:</p>
+<ul>
+<li>inguruneen arteko konfigurazio desberdina;</li>
+<li>HTTPS eta ziurtagiriak;</li>
+<li>sekretuen kudeaketa segurua;</li>
+<li>zerbitzariaren esposizio-azalera;</li>
+<li>fitxategien baimenak;</li>
+<li>datu-basearen babesa;</li>
+<li>segurtasun-buruzagiak;</li>
+<li>erroreen eta erregistroen kudeaketa.</li>
+</ul>
+<p>Helburua da ulertzea aplikazio segurua ingurune segurua ere behar duela.</p>
+<h2 id="giltzarri-ideia">Giltzarri ideia<a class="headerlink" href="#giltzarri-ideia" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Aplikazio segurua ez da soilik bere kodearen araberakoa. Konfiguratzen, argitaratzen eta mantentzen den moduan ere erabakitzen da.</p>
+</blockquote>
 
 
 
@@ -3484,13 +3612,13 @@
         
         
           
-          <a href="1.introduccion-despliegue-seguro.html" class="md-footer__link md-footer__link--next" aria-label="Hurrengoa: Deskargatze seguruaren sarrera">
+          <a href="1.introduccion-despliegue-seguro.html" class="md-footer__link md-footer__link--next" aria-label="Hurrengoa: Despliegatze seguruaren sarrera">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Hurrengoa
               </span>
               <div class="md-ellipsis">
-                Deskargatze seguruaren sarrera
+                Despliegatze seguruaren sarrera
               </div>
             </div>
             <div class="md-footer__button md-icon">

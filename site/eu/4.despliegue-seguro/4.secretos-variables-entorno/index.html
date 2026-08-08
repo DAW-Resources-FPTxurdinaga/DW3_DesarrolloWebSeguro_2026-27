@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sekretuak-eta-ingurune-aldagaiak" class="md-skip">
+        <a href="#secretos-y-variables-de-entorno" class="md-skip">
           Joan zuzenean edukira
         </a>
       
@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
     
@@ -2369,7 +2369,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    4. blokea. Deskargatze segurua
+    4. blokea. Despliegatze segurua
   
 
           </label>
@@ -2391,7 +2391,7 @@
   <span class="md-ellipsis">
     
   
-    Deskargatze seguruaren sarrera
+    Despliegatze seguruaren sarrera
   
 
     
@@ -3361,10 +3361,203 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#oinarrizko-printzipioak" class="md-nav__link">
+  <a href="#codigo-frente-a-secretos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Oinarrizko printzipioak
+        Código frente a secretos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separacion-entre-codigo-y-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separación entre código y configuración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables de entorno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-informacion-sensible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de información sensible
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de información sensible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credenciales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claves-criptograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves criptográficas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#claves-de-servicios-externos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Claves de servicios externos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-archivo-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El archivo .env
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repositorios Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-basta-con-borrar-un-secreto-publicado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No basta con borrar un secreto publicado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principio-de-minimo-privilegio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principio de mínimo privilegio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotacion-de-secretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotación de secretos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secretos-en-diferentes-entornos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secretos en diferentes entornos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-de-entorno-en-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables de entorno en despliegue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-bloque-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con Bloque 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
       
     </span>
   </a>
@@ -3388,15 +3581,274 @@
 
 
 
-<h1 id="sekretuak-eta-ingurune-aldagaiak">Sekretuak eta ingurune-aldagaiak<a class="headerlink" href="#sekretuak-eta-ingurune-aldagaiak" title="Permanent link">&para;</a></h1>
-<p>Sekretuak eta ingurune-aldagaiak aplikazioaren konfigurazioa balio sentikorrengandik bereizteko funtsezkoak dira. Ingurune-aldagaiek parametro orokorrak zehazten dituzte normalean; sekretuek, aldiz, gakoa, pasahitza edo tokenak bezalako balioak izan ditzakete eta babestu egin behar dira.</p>
-<p>Hedapen seguruan, sekretuen kudeaketa ez da ahaztu behar. Ez dira zuzenean kodean txertatu behar, ezta beharrezkoa ez denean partekatu ere.</p>
-<h2 id="oinarrizko-printzipioak">Oinarrizko printzipioak<a class="headerlink" href="#oinarrizko-printzipioak" title="Permanent link">&para;</a></h2>
+<h1 id="secretos-y-variables-de-entorno">Secretos y variables de entorno<a class="headerlink" href="#secretos-y-variables-de-entorno" title="Permanent link">&para;</a></h1>
+<p>Las aplicaciones necesitan información de configuración para conectarse con otros servicios.</p>
+<p>Algunos ejemplos:</p>
 <ul>
-<li>Ez gorde sekreturik zuzenean kodean.</li>
-<li>Mantendu sekretuak biltegitik kanpo.</li>
-<li>Erabili mekanismo seguruekin produkzio-inguruneetan kargatzea.</li>
+<li>credenciales de base de datos;</li>
+<li>claves API;</li>
+<li>tokens;</li>
+<li>claves de cifrado;</li>
+<li>contraseñas de servicios externos.</li>
 </ul>
+<p>Estos datos son necesarios para que la aplicación funcione, pero no forman parte de la lógica de negocio.</p>
+<p>Por este motivo deben gestionarse como configuración externa.</p>
+<h2 id="codigo-frente-a-secretos">Código frente a secretos<a class="headerlink" href="#codigo-frente-a-secretos" title="Permanent link">&para;</a></h2>
+<p>Una práctica insegura consiste en incluir secretos directamente en el código.</p>
+<p>Ejemplo:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$usuario = &quot;admin&quot;;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">$password = &quot;clave123&quot;;</span>
+</span></code></pre></div>
+<p>o:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">apiKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;abc123&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Este enfoque genera varios problemas:</p>
+<ul>
+<li>el secreto queda almacenado junto al código;</li>
+<li>puede aparecer en un repositorio;</li>
+<li>puede copiarse a otros entornos;</li>
+<li>dificulta cambiar credenciales.</li>
+</ul>
+<p>La aplicación debe conocer cómo obtener el secreto, pero no debe contenerlo directamente.</p>
+<h2 id="separacion-entre-codigo-y-configuracion">Separación entre código y configuración<a class="headerlink" href="#separacion-entre-codigo-y-configuracion" title="Permanent link">&para;</a></h2>
+<p>El modelo recomendado:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Código fuente
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        +
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Configuración del entorno
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        ↓
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Aplicación ejecutándose
+</span></code></pre></div>
+<p>El mismo código puede utilizar diferentes configuraciones:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Desarrollo
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Base de datos de pruebas
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Producción
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>Base de datos real
+</span></code></pre></div>
+<p>Sin modificar la aplicación.</p>
+<h2 id="variables-de-entorno">Variables de entorno<a class="headerlink" href="#variables-de-entorno" title="Permanent link">&para;</a></h2>
+<p>Las variables de entorno permiten proporcionar información al proceso cuando se inicia.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>DB_HOST=servidor-interno
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>DB_DATABASE=txurdigest
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>DB_USERNAME=usuario_app
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>DB_PASSWORD=secreto
+</span></code></pre></div>
+<p>La aplicación consulta estos valores:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">$password = getenv(&#39;DB_PASSWORD&#39;);</span>
+</span></code></pre></div>
+<p>El código no conoce el valor real.</p>
+<h2 id="tipos-de-informacion-sensible">Tipos de información sensible<a class="headerlink" href="#tipos-de-informacion-sensible" title="Permanent link">&para;</a></h2>
+<p>No todos los datos tienen la misma importancia.</p>
+<p>Algunos ejemplos:</p>
+<h3 id="credenciales">Credenciales<a class="headerlink" href="#credenciales" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Usuario
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Contraseña
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Tokens de acceso
+</span></code></pre></div>
+<p>Permiten autenticarse frente a un servicio.</p>
+<h3 id="claves-criptograficas">Claves criptográficas<a class="headerlink" href="#claves-criptograficas" title="Permanent link">&para;</a></h3>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>APP_KEY
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>SECRET_KEY
+</span></code></pre></div>
+<p>Se utilizan para operaciones como:</p>
+<ul>
+<li>cifrado;</li>
+<li>firma de datos;</li>
+<li>generación de tokens.</li>
+</ul>
+<h3 id="claves-de-servicios-externos">Claves de servicios externos<a class="headerlink" href="#claves-de-servicios-externos" title="Permanent link">&para;</a></h3>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>API_KEY
+</span></code></pre></div>
+<p>para comunicarse con servicios externos.</p>
+<p>Todas ellas deben protegerse como secretos.</p>
+<h2 id="el-archivo-env">El archivo <code>.env</code><a class="headerlink" href="#el-archivo-env" title="Permanent link">&para;</a></h2>
+<p>Muchos entornos utilizan un archivo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>.env
+</span></code></pre></div>
+<p>para almacenar configuración local.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>APP_ENV=production
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>APP_DEBUG=false
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>DB_HOST=db-interno
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>DB_PASSWORD=secreto
+</span></code></pre></div>
+<p>Este archivo resulta cómodo durante el desarrollo, pero contiene información sensible.</p>
+<p>Por tanto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>.env
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>NO debe publicarse
+</span></code></pre></div>
+<h2 id="repositorios-git">Repositorios Git<a class="headerlink" href="#repositorios-git" title="Permanent link">&para;</a></h2>
+<p>Uno de los errores más frecuentes es subir accidentalmente secretos al repositorio.</p>
+<p>Ejemplo:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>commit
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>git<span class="w"> </span>push
+</span></code></pre></div>
+<p>Si <code>.env</code> está incluido, las credenciales pueden quedar almacenadas en el historial del proyecto.</p>
+<p>La prevención habitual:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>.gitignore
+</span></code></pre></div>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>.env
+</span></code></pre></div>
+<h2 id="no-basta-con-borrar-un-secreto-publicado">No basta con borrar un secreto publicado<a class="headerlink" href="#no-basta-con-borrar-un-secreto-publicado" title="Permanent link">&para;</a></h2>
+<p>Si una contraseña se sube accidentalmente a Git, eliminar el archivo en un commit posterior no siempre elimina el problema.</p>
+<p>El secreto puede permanecer en:</p>
+<ul>
+<li>historial;</li>
+<li>copias;</li>
+<li>clones;</li>
+<li>sistemas externos.</li>
+</ul>
+<p>La actuación correcta es:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Detectar exposición
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        ↓
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Revocar o cambiar secreto
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>        ↓
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>Eliminar rastros si procede
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        ↓
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>Actualizar configuración
+</span></code></pre></div>
+<p>La prioridad es invalidar el secreto comprometido.</p>
+<h2 id="principio-de-minimo-privilegio">Principio de mínimo privilegio<a class="headerlink" href="#principio-de-minimo-privilegio" title="Permanent link">&para;</a></h2>
+<p>Un secreto no debe proporcionar más permisos de los necesarios.</p>
+<p>Ejemplo incorrecto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Aplicación web
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        ↓
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>Usuario administrador de base de datos
+</span></code></pre></div>
+<p>Si la aplicación solo necesita consultar y modificar determinadas tablas, no debería utilizar una cuenta con permisos totales.</p>
+<p>Modelo recomendado:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Aplicación
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>        ↓
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Usuario específico
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        ↓
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Permisos necesarios
+</span></code></pre></div>
+<h2 id="rotacion-de-secretos">Rotación de secretos<a class="headerlink" href="#rotacion-de-secretos" title="Permanent link">&para;</a></h2>
+<p>Los secretos no deberían mantenerse indefinidamente.</p>
+<p>Una gestión adecuada contempla:</p>
+<ul>
+<li>creación;</li>
+<li>almacenamiento seguro;</li>
+<li>uso;</li>
+<li>renovación;</li>
+<li>retirada.</li>
+</ul>
+<p>Este proceso se conoce como rotación de secretos.</p>
+<h2 id="secretos-en-diferentes-entornos">Secretos en diferentes entornos<a class="headerlink" href="#secretos-en-diferentes-entornos" title="Permanent link">&para;</a></h2>
+<p>Cada entorno debe tener sus propios valores.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Desarrollo
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>DB_PASSWORD=dev_password
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>Pruebas
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>DB_PASSWORD=test_password
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>Producción
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>DB_PASSWORD=prod_password
+</span></code></pre></div>
+<p>Nunca debería utilizarse la misma credencial para todos los entornos.</p>
+<h2 id="variables-de-entorno-en-despliegue">Variables de entorno en despliegue<a class="headerlink" href="#variables-de-entorno-en-despliegue" title="Permanent link">&para;</a></h2>
+<p>Durante el despliegue, el servidor debe proporcionar la configuración necesaria.</p>
+<p>Conceptualmente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Servidor
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>        ↓
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>Variables de entorno
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>        ↓
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>Aplicación
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>        ↓
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>Servicios externos
+</span></code></pre></div>
+<p>La aplicación recibe los valores al ejecutarse.</p>
+<h2 id="relacion-con-bloque-3">Relación con Bloque 3<a class="headerlink" href="#relacion-con-bloque-3" title="Permanent link">&para;</a></h2>
+<p>En el Bloque 3 se trabajó:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>No guardar secretos en el código
+</span></code></pre></div>
+<p>En este bloque trabajamos:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Cómo proporcionar esos secretos durante el despliegue
+</span></code></pre></div>
+<p>Son dos momentos diferentes del mismo principio.</p>
+<h2 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h2>
+<p>Una configuración incorrecta:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="x">$conexion = new PDO(</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="x">    &quot;mysql:host=db&quot;,</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="x">    &quot;usuario&quot;,</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="x">    &quot;password&quot;</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="x">);</span>
+</span></code></pre></div>
+<p>Una configuración adecuada:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="x">$conexion = new PDO(</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="x">    getenv(&#39;DB_DSN&#39;),</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="x">    getenv(&#39;DB_USER&#39;),</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="x">    getenv(&#39;DB_PASSWORD&#39;)</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="x">);</span>
+</span></code></pre></div>
+<p>En producción:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Servidor
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>DB_PASSWORD=valor_real
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>        ↓
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>TxurdiGest
+</span></code></pre></div>
+<p>El repositorio nunca contiene la contraseña.</p>
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<p>Antes del despliegue:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>[ ] No existen secretos en el código
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>[ ] .env no está publicado
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>[ ] Git ignora archivos sensibles
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>[ ] Cada entorno utiliza sus propios secretos
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>[ ] Las cuentas tienen permisos mínimos
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>[ ] Existe un procedimiento de renovación
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>
+</span><span id="__span-25-13"><a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>[ ] Los secretos están configurados en el servidor
+</span></code></pre></div>
+<h2 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Los secretos deben existir en el entorno donde se ejecuta la aplicación, no dentro del código fuente.</p>
+</blockquote>
 
 
 

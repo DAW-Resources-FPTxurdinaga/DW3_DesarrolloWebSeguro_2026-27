@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#base-de-datos" class="md-skip">
+        <a href="#base-de-datos-en-un-despliegue-seguro" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3361,10 +3361,164 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aspectos-importantes" class="md-nav__link">
+  <a href="#la-base-de-datos-no-debe-estar-expuesta-directamente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Aspectos importantes
+        La base de datos no debe estar expuesta directamente
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#separacion-entre-aplicacion-y-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Separación entre aplicación y base de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usuario-especifico-para-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usuario específico para la aplicación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principio-de-minimo-privilegio-en-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principio de mínimo privilegio en la base de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credenciales-de-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credenciales de base de datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conexion-desde-la-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexión desde la aplicación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cifrado-de-comunicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cifrado de comunicaciones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#copias-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Copias de seguridad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-almacenar-contrasenas-en-texto-plano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No almacenar contraseñas en texto plano
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migraciones-y-datos-iniciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Migraciones y datos iniciales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exposicion-de-herramientas-de-administracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exposición de herramientas de administración
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-de-datos-y-aws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Base de datos y AWS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
       
     </span>
   </a>
@@ -3388,14 +3542,259 @@
 
 
 
-<h1 id="base-de-datos">Base de datos<a class="headerlink" href="#base-de-datos" title="Permanent link">&para;</a></h1>
-<p>La base de datos es un componente clave de la aplicación y debe tratarse con especial cuidado en producción. Los accesos, las credenciales y las conexiones deben ser mucho más controlados que en entornos de desarrollo.</p>
-<h2 id="aspectos-importantes">Aspectos importantes<a class="headerlink" href="#aspectos-importantes" title="Permanent link">&para;</a></h2>
+<h1 id="base-de-datos-en-un-despliegue-seguro">Base de datos en un despliegue seguro<a class="headerlink" href="#base-de-datos-en-un-despliegue-seguro" title="Permanent link">&para;</a></h1>
+<p>La base de datos es uno de los componentes más importantes de una aplicación web.</p>
+<p>Contiene información que puede ser crítica:</p>
 <ul>
-<li>Mantener credenciales separadas por aplicación.</li>
-<li>Reducir el acceso a los entornos de producción.</li>
-<li>Proteger las conexiones y revisar copias de seguridad.</li>
+<li>usuarios;</li>
+<li>contraseñas cifradas;</li>
+<li>datos personales;</li>
+<li>información de negocio;</li>
+<li>registros de actividad.</li>
 </ul>
+<p>Por este motivo, su configuración durante el despliegue debe aplicar medidas de protección específicas.</p>
+<h2 id="la-base-de-datos-no-debe-estar-expuesta-directamente">La base de datos no debe estar expuesta directamente<a class="headerlink" href="#la-base-de-datos-no-debe-estar-expuesta-directamente" title="Permanent link">&para;</a></h2>
+<p>Una arquitectura segura separa los componentes:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Usuario
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ↓ HTTPS
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Servidor web
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    ↓
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Aplicación
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    ↓
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Base de datos
+</span></code></pre></div>
+<p>El usuario nunca debería conectarse directamente a la base de datos.</p>
+<p>Arquitectura incorrecta:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Internet
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    ↓
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Base de datos
+</span></code></pre></div>
+<p>La aplicación debe controlar qué operaciones pueden realizarse.</p>
+<h2 id="separacion-entre-aplicacion-y-base-de-datos">Separación entre aplicación y base de datos<a class="headerlink" href="#separacion-entre-aplicacion-y-base-de-datos" title="Permanent link">&para;</a></h2>
+<p>La base de datos debe considerarse un servicio interno.</p>
+<p>Ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Servidor web
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>IP pública
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Base de datos
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>IP privada
+</span></code></pre></div>
+<p>La aplicación puede comunicarse con la base de datos, pero los usuarios externos no deberían tener acceso directo.</p>
+<h2 id="usuario-especifico-para-la-aplicacion">Usuario específico para la aplicación<a class="headerlink" href="#usuario-especifico-para-la-aplicacion" title="Permanent link">&para;</a></h2>
+<p>Un error frecuente es utilizar cuentas con privilegios excesivos.</p>
+<p>Ejemplo incorrecto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Aplicación
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    ↓
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Usuario administrador de BD
+</span></code></pre></div>
+<p>Si la aplicación utiliza una cuenta con todos los permisos, un problema en la aplicación puede tener consecuencias mayores.</p>
+<p>Modelo recomendado:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Aplicación
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    ↓
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>Usuario específico
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    ↓
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>Permisos necesarios
+</span></code></pre></div>
+<h2 id="principio-de-minimo-privilegio-en-la-base-de-datos">Principio de mínimo privilegio en la base de datos<a class="headerlink" href="#principio-de-minimo-privilegio-en-la-base-de-datos" title="Permanent link">&para;</a></h2>
+<p>La cuenta utilizada por la aplicación debería tener únicamente los permisos necesarios.</p>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Puede:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>SELECT
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>INSERT
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>UPDATE
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>No puede:
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>crear usuarios
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>eliminar bases de datos
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>modificar configuración del servidor
+</span></code></pre></div>
+<p>La aplicación no debería utilizar una cuenta administrativa.</p>
+<h2 id="credenciales-de-base-de-datos">Credenciales de base de datos<a class="headerlink" href="#credenciales-de-base-de-datos" title="Permanent link">&para;</a></h2>
+<p>Las credenciales de conexión forman parte de los secretos de la aplicación.</p>
+<p>Nunca deberían aparecer:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$usuario = &quot;root&quot;;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">$password = &quot;123456&quot;;</span>
+</span></code></pre></div>
+<p>Deben proporcionarse mediante configuración externa:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>DB_HOST=db-interno
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>DB_DATABASE=txurdigest
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>DB_USERNAME=usuario_app
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>DB_PASSWORD=secreto
+</span></code></pre></div>
+<p>La aplicación utiliza los valores del entorno.</p>
+<h2 id="conexion-desde-la-aplicacion">Conexión desde la aplicación<a class="headerlink" href="#conexion-desde-la-aplicacion" title="Permanent link">&para;</a></h2>
+<p>La conexión debe utilizar los datos proporcionados por configuración.</p>
+<p>Ejemplo:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">$pdo = new PDO(</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">    getenv(&#39;DB_DSN&#39;),</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">    getenv(&#39;DB_USERNAME&#39;),</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">    getenv(&#39;DB_PASSWORD&#39;)</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">);</span>
+</span></code></pre></div>
+<p>La aplicación no necesita conocer cómo se almacenan esos valores.</p>
+<h2 id="cifrado-de-comunicaciones">Cifrado de comunicaciones<a class="headerlink" href="#cifrado-de-comunicaciones" title="Permanent link">&para;</a></h2>
+<p>Cuando la aplicación y la base de datos se encuentran separadas, la comunicación entre ambas puede requerir protección.</p>
+<p>Ejemplos:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Servidor web
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>       ↓ conexión segura
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Base de datos
+</span></code></pre></div>
+<p>La necesidad concreta depende de:</p>
+<ul>
+<li>arquitectura;</li>
+<li>red utilizada;</li>
+<li>sensibilidad de los datos;</li>
+<li>requisitos del entorno.</li>
+</ul>
+<h2 id="copias-de-seguridad">Copias de seguridad<a class="headerlink" href="#copias-de-seguridad" title="Permanent link">&para;</a></h2>
+<p>Una base de datos segura necesita una estrategia de copias de seguridad.</p>
+<p>Debe definirse:</p>
+<ul>
+<li>frecuencia;</li>
+<li>ubicación;</li>
+<li>protección;</li>
+<li>tiempo de conservación;</li>
+<li>procedimiento de recuperación.</li>
+</ul>
+<p>Una copia contiene información sensible.</p>
+<p>Por tanto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Backup
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>también es un dato que debe protegerse
+</span></code></pre></div>
+<h2 id="no-almacenar-contrasenas-en-texto-plano">No almacenar contraseñas en texto plano<a class="headerlink" href="#no-almacenar-contrasenas-en-texto-plano" title="Permanent link">&para;</a></h2>
+<p>La base de datos nunca debe almacenar contraseñas directamente.</p>
+<p>Incorrecto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>usuario
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>password123
+</span></code></pre></div>
+<p>Correcto:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>usuario
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>hash de contraseña
+</span></code></pre></div>
+<p>La generación del hash debe realizarse utilizando mecanismos adecuados de la aplicación.</p>
+<p>Ejemplo PHP:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">password_hash()</span>
+</span></code></pre></div>
+<h2 id="migraciones-y-datos-iniciales">Migraciones y datos iniciales<a class="headerlink" href="#migraciones-y-datos-iniciales" title="Permanent link">&para;</a></h2>
+<p>Durante el despliegue pueden ejecutarse procesos como:</p>
+<ul>
+<li>creación de tablas;</li>
+<li>actualización de estructura;</li>
+<li>carga de datos iniciales.</li>
+</ul>
+<p>Estos procesos deben realizarse de forma controlada.</p>
+<p>No deberían ejecutarse automáticamente operaciones destructivas sin revisión.</p>
+<h2 id="exposicion-de-herramientas-de-administracion">Exposición de herramientas de administración<a class="headerlink" href="#exposicion-de-herramientas-de-administracion" title="Permanent link">&para;</a></h2>
+<p>Herramientas como:</p>
+<ul>
+<li>phpMyAdmin;</li>
+<li>paneles de administración;</li>
+<li>interfaces gráficas de BD;</li>
+</ul>
+<p>deben revisarse antes de producción.</p>
+<p>Preguntas necesarias:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>¿Es necesaria?
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>¿Quién puede acceder?
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>¿Está protegida?
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>¿Puede eliminarse?
+</span></code></pre></div>
+<p>Una herramienta auxiliar publicada sin protección aumenta la superficie de exposición.</p>
+<h2 id="base-de-datos-y-aws">Base de datos y AWS<a class="headerlink" href="#base-de-datos-y-aws" title="Permanent link">&para;</a></h2>
+<p>Una arquitectura habitual:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Internet
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    ↓
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>EC2 servidor aplicación
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    ↓
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>RDS / servidor BD privado
+</span></code></pre></div>
+<p>El acceso a la base de datos puede limitarse:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Permitir:
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>servidor aplicación
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>Bloquear:
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>Internet
+</span></code></pre></div>
+<p>El objetivo es que solo los componentes necesarios puedan comunicarse.</p>
+<h2 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h2>
+<p>Arquitectura:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Usuario
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    ↓ HTTPS
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Servidor Laravel/PHP
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    ↓
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Base de datos interna
+</span></code></pre></div>
+<p>Configuración:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>DB_HOST=db-interno
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>DB_DATABASE=txurdigest
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>DB_USERNAME=txurdigest_app
+</span></code></pre></div>
+<p>La aplicación no utiliza:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>root
+</span></code></pre></div>
+<p>ni expone la base de datos públicamente.</p>
+<h2 id="checklist">Checklist<a class="headerlink" href="#checklist" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>[ ] La BD no está accesible desde Internet
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>[ ] Existe un usuario específico para la aplicación
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>[ ] Los permisos son mínimos
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>[ ] Las credenciales están fuera del código
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>[ ] Las contraseñas están almacenadas mediante hash
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>[ ] Las copias de seguridad están protegidas
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>[ ] Herramientas administrativas revisadas
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>[ ] Comunicación revisada según arquitectura
+</span></code></pre></div>
+<h2 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Una base de datos segura no depende únicamente del código que la utiliza: también depende de dónde está situada, quién puede acceder y con qué permisos.</p>
+</blockquote>
 
 
 

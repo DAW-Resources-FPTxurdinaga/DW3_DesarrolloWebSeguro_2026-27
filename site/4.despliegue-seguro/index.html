@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bloque-4-despliegue-seguro" class="md-skip">
+        <a href="#despliegue-seguro" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -3359,10 +3359,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo-del-bloque" class="md-nav__link">
+  <a href="#seguridad-durante-todo-el-ciclo-de-vida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Objetivo del bloque
+        Seguridad durante todo el ciclo de vida
       
     </span>
   </a>
@@ -3370,10 +3370,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#temas-del-bloque" class="md-nav__link">
+  <a href="#desarrollo-frente-a-produccion" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Temas del bloque
+        Desarrollo frente a producción
       
     </span>
   </a>
@@ -3381,10 +3381,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#relacion-con-daw-y-txurdigest" class="md-nav__link">
+  <a href="#el-papel-del-desarrollador-web" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Relación con DAW y TxurdiGest
+        El papel del desarrollador web
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-los-retos-daw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con los retos DAW
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-sinf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con SINF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enfoque-del-bloque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enfoque del bloque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idea-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea clave
       
     </span>
   </a>
@@ -3408,30 +3452,114 @@
 
 
 
-<h1 id="bloque-4-despliegue-seguro">Bloque 4. Despliegue seguro<a class="headerlink" href="#bloque-4-despliegue-seguro" title="Permanent link">&para;</a></h1>
-<p>El despliegue seguro es la etapa final en la que una aplicación pasa a estar disponible para los usuarios, pero también es un momento crítico desde el punto de vista de la seguridad. No basta con que la aplicación funcione; también debe hacerlo de forma controlada, con las decisiones de protección previstas durante el desarrollo.</p>
-<p>En este bloque se abordarán los aspectos más relevantes para un desarrollador web que debe preparar una aplicación para un entorno de producción sin perder de vista la seguridad.</p>
-<h2 id="objetivo-del-bloque">Objetivo del bloque<a class="headerlink" href="#objetivo-del-bloque" title="Permanent link">&para;</a></h2>
+<h1 id="despliegue-seguro">Despliegue seguro<a class="headerlink" href="#despliegue-seguro" title="Permanent link">&para;</a></h1>
+<p>Una aplicación web no deja de ser segura cuando termina su desarrollo.</p>
+<p>El paso a producción introduce nuevas decisiones que pueden afectar directamente a la seguridad:</p>
 <ul>
-<li>Comprender cómo configurar una aplicación para producción de forma segura.</li>
-<li>Conocer los puntos clave del despliegue: HTTPS, secretos, permisos, superficie de exposición, base de datos y logs.</li>
-<li>Mantener el enfoque de desarrollo web, sin convertir el contenido en administración de sistemas.</li>
+<li>configuración del entorno;</li>
+<li>gestión de secretos;</li>
+<li>exposición de servicios;</li>
+<li>certificados y comunicaciones;</li>
+<li>permisos del sistema;</li>
+<li>acceso a bases de datos;</li>
+<li>registro de actividad;</li>
+<li>configuración del servidor.</li>
 </ul>
-<h2 id="temas-del-bloque">Temas del bloque<a class="headerlink" href="#temas-del-bloque" title="Permanent link">&para;</a></h2>
+<p>Una aplicación correctamente programada puede quedar expuesta si el entorno donde se ejecuta no está configurado adecuadamente.</p>
+<h2 id="seguridad-durante-todo-el-ciclo-de-vida">Seguridad durante todo el ciclo de vida<a class="headerlink" href="#seguridad-durante-todo-el-ciclo-de-vida" title="Permanent link">&para;</a></h2>
+<p>La seguridad no termina en la implementación.</p>
+<p>El despliegue forma parte del ciclo de vida de una aplicación:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Análisis
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   ↓
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Diseño seguro
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   ↓
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Implementación segura
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   ↓
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Pruebas
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   ↓
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Despliegue seguro
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   ↓
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Mantenimiento
+</span></code></pre></div>
+<p>Cada fase introduce decisiones que pueden reducir o aumentar el riesgo.</p>
+<h2 id="desarrollo-frente-a-produccion">Desarrollo frente a producción<a class="headerlink" href="#desarrollo-frente-a-produccion" title="Permanent link">&para;</a></h2>
+<p>Durante el desarrollo es habitual utilizar configuraciones pensadas para facilitar el trabajo:</p>
 <ul>
-<li><a href="1.introduccion-despliegue-seguro.html">Introducción al despliegue seguro</a></li>
-<li><a href="2.configuracion-produccion/index.html">Configuración de producción</a></li>
-<li><a href="3.https-certificados/index.html">HTTPS y certificados</a></li>
-<li><a href="4.secretos-variables-entorno/index.html">Secretos y variables de entorno</a></li>
-<li><a href="5.servidor-superficie-exposicion/index.html">Servidor y superficie de exposición</a></li>
-<li><a href="6.permisos-archivos-directorios/index.html">Permisos de archivos y directorios</a></li>
-<li><a href="7.base-datos/index.html">Base de datos</a></li>
-<li><a href="8.cabeceras-seguridad/index.html">Cabeceras de seguridad</a></li>
-<li><a href="9.logs-errores-produccion/index.html">Logs y errores en producción</a></li>
-<li><a href="10.conclusiones.html">Conclusiones</a></li>
+<li>mensajes de error detallados;</li>
+<li>herramientas de depuración;</li>
+<li>credenciales locales;</li>
+<li>servicios auxiliares;</li>
+<li>configuraciones temporales.</li>
 </ul>
-<h2 id="relacion-con-daw-y-txurdigest">Relación con DAW y TxurdiGest<a class="headerlink" href="#relacion-con-daw-y-txurdigest" title="Permanent link">&para;</a></h2>
-<p>El despliegue seguro es una competencia esencial en DAW, especialmente en proyectos reales. En aplicaciones como TxurdiGest, las decisiones tomadas durante el desarrollo deben mantenerse también en producción.</p>
+<p>Estas opciones no deben trasladarse directamente al entorno de producción.</p>
+<p>El entorno real debe priorizar:</p>
+<ul>
+<li>disponibilidad;</li>
+<li>confidencialidad;</li>
+<li>integridad;</li>
+<li>control de acceso;</li>
+<li>trazabilidad.</li>
+</ul>
+<h2 id="el-papel-del-desarrollador-web">El papel del desarrollador web<a class="headerlink" href="#el-papel-del-desarrollador-web" title="Permanent link">&para;</a></h2>
+<p>El despliegue seguro no corresponde únicamente al administrador de sistemas.</p>
+<p>El desarrollador debe conocer cómo sus decisiones afectan al entorno:</p>
+<ul>
+<li>dónde se almacenan los secretos;</li>
+<li>qué servicios necesita la aplicación;</li>
+<li>qué permisos requiere;</li>
+<li>qué información se muestra al usuario;</li>
+<li>cómo se registran los errores;</li>
+<li>cómo se comunica la aplicación con otros servicios.</li>
+</ul>
+<p>El objetivo no es administrar toda la infraestructura, sino desarrollar aplicaciones que puedan desplegarse de forma segura.</p>
+<h2 id="relacion-con-los-retos-daw">Relación con los retos DAW<a class="headerlink" href="#relacion-con-los-retos-daw" title="Permanent link">&para;</a></h2>
+<p>Los proyectos desarrollados durante el curso deben aplicar estas decisiones en un entorno real.</p>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Aplicación desarrollada
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        ↓
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Configuración de producción
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        ↓
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Servidor web
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        ↓
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Base de datos
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        ↓
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Usuarios finales
+</span></code></pre></div>
+<p>Durante el despliegue se revisará que:</p>
+<ul>
+<li>la aplicación utilice HTTPS;</li>
+<li>los secretos no estén incluidos en el código;</li>
+<li>la base de datos no esté expuesta innecesariamente;</li>
+<li>los permisos sean adecuados;</li>
+<li>los errores no revelen información interna;</li>
+<li>el servidor exponga únicamente lo necesario.</li>
+</ul>
+<h2 id="relacion-con-sinf">Relación con SINF<a class="headerlink" href="#relacion-con-sinf" title="Permanent link">&para;</a></h2>
+<p>El despliegue seguro requiere colaboración entre desarrollo e infraestructura.</p>
+<p>En este módulo se trabajará desde la perspectiva del desarrollo web:</p>
+<ul>
+<li>qué necesita una aplicación;</li>
+<li>qué configuración espera;</li>
+<li>qué riesgos aparecen si se despliega incorrectamente.</li>
+</ul>
+<p>Los aspectos relacionados con administración avanzada del sistema operativo, redes o servicios se trabajan en otros módulos.</p>
+<h2 id="enfoque-del-bloque">Enfoque del bloque<a class="headerlink" href="#enfoque-del-bloque" title="Permanent link">&para;</a></h2>
+<p>Durante este bloque se trabajarán:</p>
+<ul>
+<li>configuración diferenciada entre entornos;</li>
+<li>HTTPS y certificados;</li>
+<li>gestión segura de secretos;</li>
+<li>superficie de exposición del servidor;</li>
+<li>permisos de archivos;</li>
+<li>protección de la base de datos;</li>
+<li>cabeceras de seguridad;</li>
+<li>gestión de errores y registros.</li>
+</ul>
+<p>El objetivo es comprender que una aplicación segura necesita también un entorno seguro.</p>
+<h2 id="idea-clave">Idea clave<a class="headerlink" href="#idea-clave" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Una aplicación segura no depende únicamente de su código. También depende de cómo se configura, se publica y se mantiene.</p>
+</blockquote>
 
 
 

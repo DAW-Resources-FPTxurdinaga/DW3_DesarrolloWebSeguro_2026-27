@@ -222,9 +222,9 @@ plugins:
               - Ondorioak: 3.implementacion-segura/9.conclusiones.md
               - Jarduerak: 3.implementacion-segura/actividades/index.md
 
-            - 4. blokea. Deskargatze segurua:
+            - 4. blokea. Despliegatze segurua:
               - Hasiera: 4.despliegue-seguro/index.md
-              - Deskargatze seguruaren sarrera: 4.despliegue-seguro/1.introduccion-despliegue-seguro.md
+              - Despliegatze seguruaren sarrera: 4.despliegue-seguro/1.introduccion-despliegue-seguro.md
               - Produkzio-konfigurazioa:
                 - Sarrera: 4.despliegue-seguro/2.configuracion-produccion/index.md
                 - Inplementazioa: 4.despliegue-seguro/2.configuracion-produccion/implementacion.md
