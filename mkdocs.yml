@@ -117,7 +117,34 @@ plugins:
               - Actividades: 3.implementacion-segura/actividades/index.md
 
             - Bloque 4. Despliegue seguro:
-              - Presentación del bloque: 4.despliegue-seguro/index.md
+              - Inicio: 4.despliegue-seguro/index.md
+              - Introducción al despliegue seguro: 4.despliegue-seguro/1.introduccion-despliegue-seguro.md
+              - Configuración de producción:
+                - Introducción: 4.despliegue-seguro/2.configuracion-produccion/index.md
+                - Implementación: 4.despliegue-seguro/2.configuracion-produccion/implementacion.md
+              - HTTPS y certificados:
+                - Introducción: 4.despliegue-seguro/3.https-certificados/index.md
+                - Implementación: 4.despliegue-seguro/3.https-certificados/implementacion.md
+              - Secretos y variables de entorno:
+                - Introducción: 4.despliegue-seguro/4.secretos-variables-entorno/index.md
+                - Implementación: 4.despliegue-seguro/4.secretos-variables-entorno/implementacion.md
+              - Servidor y superficie de exposición:
+                - Introducción: 4.despliegue-seguro/5.servidor-superficie-exposicion/index.md
+                - Implementación: 4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.md
+              - Permisos de archivos y directorios:
+                - Introducción: 4.despliegue-seguro/6.permisos-archivos-directorios/index.md
+                - Implementación: 4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.md
+              - Base de datos:
+                - Introducción: 4.despliegue-seguro/7.base-datos/index.md
+                - Implementación: 4.despliegue-seguro/7.base-datos/implementacion.md
+              - Cabeceras de seguridad:
+                - Introducción: 4.despliegue-seguro/8.cabeceras-seguridad/index.md
+                - Implementación: 4.despliegue-seguro/8.cabeceras-seguridad/implementacion.md
+              - Logs y errores en producción:
+                - Introducción: 4.despliegue-seguro/9.logs-errores-produccion/index.md
+                - Implementación: 4.despliegue-seguro/9.logs-errores-produccion/implementacion.md
+              - Conclusiones: 4.despliegue-seguro/10.conclusiones.md
+              - Actividades: 4.despliegue-seguro/actividades/index.md
 
             - Bloque 5. Verificación de la seguridad:
               - Presentación del bloque: 5.verificacion-seguridad/index.md
@@ -196,7 +223,34 @@ plugins:
               - Jarduerak: 3.implementacion-segura/actividades/index.md
 
             - 4. blokea. Deskargatze segurua:
-              - Blokearen aurkezpena: 4.despliegue-seguro/index.md
+              - Hasiera: 4.despliegue-seguro/index.md
+              - Deskargatze seguruaren sarrera: 4.despliegue-seguro/1.introduccion-despliegue-seguro.md
+              - Produkzio-konfigurazioa:
+                - Sarrera: 4.despliegue-seguro/2.configuracion-produccion/index.md
+                - Inplementazioa: 4.despliegue-seguro/2.configuracion-produccion/implementacion.md
+              - HTTPS eta ziurtagiriak:
+                - Sarrera: 4.despliegue-seguro/3.https-certificados/index.md
+                - Inplementazioa: 4.despliegue-seguro/3.https-certificados/implementacion.md
+              - Sekretuak eta ingurune-aldagaiak:
+                - Sarrera: 4.despliegue-seguro/4.secretos-variables-entorno/index.md
+                - Inplementazioa: 4.despliegue-seguro/4.secretos-variables-entorno/implementacion.md
+              - Zerbitzaria eta esposizio-azalera:
+                - Sarrera: 4.despliegue-seguro/5.servidor-superficie-exposicion/index.md
+                - Inplementazioa: 4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.md
+              - Fitxategien eta direktorioen baimenak:
+                - Sarrera: 4.despliegue-seguro/6.permisos-archivos-directorios/index.md
+                - Inplementazioa: 4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.md
+              - Datu-basea:
+                - Sarrera: 4.despliegue-seguro/7.base-datos/index.md
+                - Inplementazioa: 4.despliegue-seguro/7.base-datos/implementacion.md
+              - Segurtasun-buruzagiak:
+                - Sarrera: 4.despliegue-seguro/8.cabeceras-seguridad/index.md
+                - Inplementazioa: 4.despliegue-seguro/8.cabeceras-seguridad/implementacion.md
+              - Log-ak eta erroreak produkzioan:
+                - Sarrera: 4.despliegue-seguro/9.logs-errores-produccion/index.md
+                - Inplementazioa: 4.despliegue-seguro/9.logs-errores-produccion/implementacion.md
+              - Ondorioak: 4.despliegue-seguro/10.conclusiones.md
+              - Jarduerak: 4.despliegue-seguro/actividades/index.md
 
             - 5. blokea. Segurtasunaren egiaztapena:
               - Blokearen aurkezpena: 5.verificacion-seguridad/index.md

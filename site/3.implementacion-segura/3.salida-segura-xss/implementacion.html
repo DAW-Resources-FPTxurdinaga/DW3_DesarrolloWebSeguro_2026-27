@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementacion" class="md-skip">
+        <a href="#implementacion-de-una-salida-segura" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -1624,6 +1624,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="implementacion.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1640,6 +1658,257 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#salida-segura-en-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salida segura en PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escapar-html-con-htmlspecialchars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escapar HTML con htmlspecialchars()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escapar-en-el-momento-de-generar-la-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escapar en el momento de generar la salida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-plantillas-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con plantillas PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-utilizar-strip_tags-como-proteccion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No utilizar strip_tags() como protección general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contextos-diferentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contextos diferentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-y-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JavaScript y el DOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript y el DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        innerHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textcontent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        textContent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-elementos-de-forma-segura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear elementos de forma segura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-datos-recibidos-desde-una-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con datos recibidos desde una API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-puede-utilizarse-innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cuándo puede utilizarse innerHTML?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-confiar-en-datos-almacenados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No confiar en datos almacenados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xss-reflejado-y-almacenado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XSS reflejado y almacenado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XSS reflejado y almacenado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xss-reflejado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XSS reflejado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xss-almacenado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XSS almacenado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2318,6 +2587,28 @@
           
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2347,6 +2638,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
@@ -2360,6 +2656,890 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/1.introduccion-despliegue-seguro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introducción al despliegue seguro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/2.configuracion-produccion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuración de producción
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuración de producción
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/2.configuracion-produccion/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/3.https-certificados/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS y certificados
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HTTPS y certificados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/3.https-certificados/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/4.secretos-variables-entorno/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secretos y variables de entorno
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Secretos y variables de entorno
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/5.servidor-superficie-exposicion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Servidor y superficie de exposición
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Servidor y superficie de exposición
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/6.permisos-archivos-directorios/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permisos de archivos y directorios
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Permisos de archivos y directorios
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/7.base-datos/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Base de datos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Base de datos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/7.base-datos/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/8.cabeceras-seguridad/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cabeceras de seguridad
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cabeceras de seguridad
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../4.despliegue-seguro/9.logs-errores-produccion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logs y errores en producción
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Logs y errores en producción
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/9.logs-errores-produccion/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/10.conclusiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusiones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.despliegue-seguro/actividades/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -2453,6 +3633,246 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#salida-segura-en-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salida segura en PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escapar-html-con-htmlspecialchars" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escapar HTML con htmlspecialchars()
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escapar-en-el-momento-de-generar-la-salida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escapar en el momento de generar la salida
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-plantillas-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con plantillas PHP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-utilizar-strip_tags-como-proteccion-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No utilizar strip_tags() como protección general
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contextos-diferentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contextos diferentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-y-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JavaScript y el DOM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript y el DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        innerHTML
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textcontent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        textContent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crear-elementos-de-forma-segura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear elementos de forma segura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-con-datos-recibidos-desde-una-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con datos recibidos desde una API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-en-txurdigest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo en TxurdiGest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuando-puede-utilizarse-innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cuándo puede utilizarse innerHTML?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-confiar-en-datos-almacenados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No confiar en datos almacenados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xss-reflejado-y-almacenado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XSS reflejado y almacenado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XSS reflejado y almacenado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xss-reflejado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XSS reflejado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xss-almacenado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XSS almacenado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2468,7 +3888,276 @@
 
 
 
-<h1 id="implementacion">Implementación<a class="headerlink" href="#implementacion" title="Permanent link">&para;</a></h1>
+<h1 id="implementacion-de-una-salida-segura">Implementación de una salida segura<a class="headerlink" href="#implementacion-de-una-salida-segura" title="Permanent link">&para;</a></h1>
+<p>La protección frente a XSS consiste en evitar que los datos no confiables se interpreten como código cuando llegan al navegador.</p>
+<p>La regla general es sencilla:</p>
+<blockquote>
+<p><strong>Los datos deben tratarse como datos, no como fragmentos de HTML o JavaScript.</strong></p>
+</blockquote>
+<h2 id="salida-segura-en-php">Salida segura en PHP<a class="headerlink" href="#salida-segura-en-php" title="Permanent link">&para;</a></h2>
+<p>Una implementación insegura puede imprimir directamente un valor recibido:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$comentario = $_POST[&#39;comentario&#39;] ?? &#39;&#39;;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">echo $comentario;</span>
+</span></code></pre></div>
+<p>Si <code>$comentario</code> contiene HTML, el navegador puede interpretarlo.</p>
+<p>Por ejemplo:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;XSS&#39;</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>podría convertirse en código ejecutable dentro de la página.</p>
+<h2 id="escapar-html-con-htmlspecialchars">Escapar HTML con <code>htmlspecialchars()</code><a class="headerlink" href="#escapar-html-con-htmlspecialchars" title="Permanent link">&para;</a></h2>
+<p>Cuando un dato debe mostrarse como texto dentro de HTML, PHP ofrece <code>htmlspecialchars()</code>.</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">$comentario = $_POST[&#39;comentario&#39;] ?? &#39;&#39;;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">echo htmlspecialchars(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">    $comentario,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    ENT_QUOTES,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &#39;UTF-8&#39;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">);</span>
+</span></code></pre></div>
+<p>Esta función transforma caracteres especiales para que el navegador los trate como texto.</p>
+<p>Por ejemplo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;script&gt;alert(&#39;XSS&#39;)&lt;/script&gt;
+</span></code></pre></div>
+<p>se representa internamente utilizando entidades HTML en lugar de interpretarse como una etiqueta <code>&lt;script&gt;</code>.</p>
+<p>El usuario verá el contenido, pero el navegador no lo ejecutará.</p>
+<h2 id="escapar-en-el-momento-de-generar-la-salida">Escapar en el momento de generar la salida<a class="headerlink" href="#escapar-en-el-momento-de-generar-la-salida" title="Permanent link">&para;</a></h2>
+<p>Una práctica recomendable es mantener el dato original y aplicar el escape cuando se incorpora al HTML.</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$nombre = $usuario[&#39;nombre&#39;];</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">echo &#39;&lt;p&gt;&#39; .</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">    htmlspecialchars($nombre, ENT_QUOTES, &#39;UTF-8&#39;) .</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    &#39;&lt;/p&gt;&#39;;</span>
+</span></code></pre></div>
+<p>Esto permite conservar la información original en la base de datos y adaptar posteriormente su representación al contexto donde vaya a utilizarse.</p>
+<div class="admonition tip">
+<p class="admonition-title">Escapar al generar la salida</p>
+<p>No es necesario modificar permanentemente el dato para proteger una página. La protección debe aplicarse cuando el valor se incorpora al contexto correspondiente.</p>
+</div>
+<h2 id="ejemplo-con-plantillas-php">Ejemplo con plantillas PHP<a class="headerlink" href="#ejemplo-con-plantillas-php" title="Permanent link">&para;</a></h2>
+<p>También puede utilizarse directamente dentro del HTML:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">&lt;p&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="nv">$usuario</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">],</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="nx">ENT_QUOTES</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="s1">&#39;UTF-8&#39;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="p">)</span> <span class="cp">?&gt;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">&lt;/p&gt;</span>
+</span></code></pre></div>
+<p>Este patrón debería utilizarse siempre que se muestre texto procedente de:</p>
+<ul>
+<li>usuarios;</li>
+<li>formularios;</li>
+<li>bases de datos;</li>
+<li>APIs;</li>
+<li>parámetros de petición.</li>
+</ul>
+<h2 id="no-utilizar-strip_tags-como-proteccion-general">No utilizar <code>strip_tags()</code> como protección general<a class="headerlink" href="#no-utilizar-strip_tags-como-proteccion-general" title="Permanent link">&para;</a></h2>
+<p>Puede resultar tentador eliminar etiquetas HTML:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$comentario = strip_tags($_POST[&#39;comentario&#39;]);</span>
+</span></code></pre></div>
+<p>Pero <code>strip_tags()</code> no sustituye al escape contextual.</p>
+<p>Además, eliminar contenido puede modificar datos que la aplicación debería conservar.</p>
+<p>La pregunta correcta no es:</p>
+<blockquote>
+<p>¿Cómo elimino caracteres peligrosos?</p>
+</blockquote>
+<p>sino:</p>
+<blockquote>
+<p>¿Cómo hago que este dato se interprete correctamente en el contexto donde voy a mostrarlo?</p>
+</blockquote>
+<h2 id="contextos-diferentes">Contextos diferentes<a class="headerlink" href="#contextos-diferentes" title="Permanent link">&para;</a></h2>
+<p>No todos los lugares de una página se protegen exactamente igual.</p>
+<p>Un dato puede utilizarse dentro de:</p>
+<ul>
+<li>contenido HTML;</li>
+<li>un atributo;</li>
+<li>una URL;</li>
+<li>JavaScript;</li>
+<li>CSS.</li>
+</ul>
+<p>Por ejemplo:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Aquí aparece un dato<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>no es el mismo contexto que:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;AQUI_APARECE_UN_DATO&quot;</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>o:</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;AQUI_APARECE_UN_DATO&quot;</span><span class="p">;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>En este módulo trabajaremos principalmente con salida de texto en HTML y manipulación segura del DOM.</p>
+<h2 id="javascript-y-el-dom">JavaScript y el DOM<a class="headerlink" href="#javascript-y-el-dom" title="Permanent link">&para;</a></h2>
+<p>JavaScript puede introducir datos en una página de diferentes formas.</p>
+<p>Una de las diferencias más importantes es la existente entre <code>innerHTML</code> y <code>textContent</code>.</p>
+<h3 id="innerhtml"><code>innerHTML</code><a class="headerlink" href="#innerhtml" title="Permanent link">&para;</a></h3>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">comentario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;strong&gt;Hola&lt;/strong&gt;&#39;</span><span class="p">;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nx">elemento</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comentario</span><span class="p">;</span>
+</span></code></pre></div>
+<p>El navegador interpreta el contenido como HTML.</p>
+<p>El resultado será texto en negrita.</p>
+<p>Esto puede ser correcto si el HTML utilizado ha sido generado y controlado completamente por la aplicación.</p>
+<p>El problema aparece cuando el valor procede de una fuente no confiable.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">elemento</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datoUsuario</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Si <code>datoUsuario</code> contiene HTML manipulable, el navegador puede interpretarlo.</p>
+<h2 id="textcontent"><code>textContent</code><a class="headerlink" href="#textcontent" title="Permanent link">&para;</a></h2>
+<p>Cuando el objetivo es mostrar texto, debe preferirse:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nx">elemento</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datoUsuario</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Si el dato contiene:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;strong&gt;Hola&lt;/strong&gt;
+</span></code></pre></div>
+<p>el navegador mostrará literalmente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&lt;strong&gt;Hola&lt;/strong&gt;
+</span></code></pre></div>
+<p>No lo convertirá en una etiqueta HTML.</p>
+<h2 id="comparacion">Comparación<a class="headerlink" href="#comparacion" title="Permanent link">&para;</a></h2>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">dato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;em&gt;Prueba&lt;/em&gt;&#39;</span><span class="p">;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nx">elemento1</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dato</span><span class="p">;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nx">elemento2</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dato</span><span class="p">;</span>
+</span></code></pre></div>
+<p>El resultado conceptual es:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>innerHTML
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    ↓
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>interpreta HTML
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    ↓
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>Prueba aparece en cursiva
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>textContent
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    ↓
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>interpreta texto
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    ↓
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>&lt;em&gt;Prueba&lt;/em&gt;
+</span></code></pre></div>
+<p>Por tanto:</p>
+<blockquote>
+<p><strong>Si quieres mostrar texto, utiliza <code>textContent</code>.</strong></p>
+</blockquote>
+<h2 id="crear-elementos-de-forma-segura">Crear elementos de forma segura<a class="headerlink" href="#crear-elementos-de-forma-segura" title="Permanent link">&para;</a></h2>
+<p>En lugar de construir fragmentos HTML mediante cadenas:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">lista</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="sb">`</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="sb">    &lt;li&gt;</span><span class="si">${</span><span class="nx">nombreUsuario</span><span class="si">}</span><span class="sb">&lt;/li&gt;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="sb">`</span><span class="p">;</span>
+</span></code></pre></div>
+<p>pueden crearse los elementos mediante el DOM:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">li</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">);</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nx">li</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombreUsuario</span><span class="p">;</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="nx">lista</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">li</span><span class="p">);</span>
+</span></code></pre></div>
+<p>De esta forma, <code>nombreUsuario</code> se trata como texto.</p>
+<h2 id="ejemplo-con-datos-recibidos-desde-una-api">Ejemplo con datos recibidos desde una API<a class="headerlink" href="#ejemplo-con-datos-recibidos-desde-una-api" title="Permanent link">&para;</a></h2>
+<p>Supongamos que una aplicación recibe:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ane&quot;</span><span class="p">,</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nt">&quot;observacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Necesita reforzar JavaScript&quot;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Una implementación segura puede ser:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#nombre&#39;</span><span class="p">);</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">observacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#observacion&#39;</span><span class="p">);</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="nx">nombre</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">nombre</span><span class="p">;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nx">observacion</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">observacion</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Aunque los datos procedan de nuestra propia API, deben tratarse como información no confiable si originalmente pueden haber sido introducidos por usuarios.</p>
+<h2 id="ejemplo-en-txurdigest">Ejemplo en TxurdiGest<a class="headerlink" href="#ejemplo-en-txurdigest" title="Permanent link">&para;</a></h2>
+<p>Supongamos que un profesor guarda una observación:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Buen progreso en &lt;JavaScript&gt;.
+</span></code></pre></div>
+<p>La aplicación debe poder almacenar ese texto y mostrarlo correctamente.</p>
+<p>En PHP:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="x">&lt;p&gt;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>        <span class="nv">$observacion</span><span class="p">,</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>        <span class="nx">ENT_QUOTES</span><span class="p">,</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>        <span class="s1">&#39;UTF-8&#39;</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>    <span class="p">)</span> <span class="cp">?&gt;</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="x">&lt;/p&gt;</span>
+</span></code></pre></div>
+<p>En JavaScript:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nx">observacionElemento</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">observacion</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Ambos mecanismos persiguen el mismo objetivo:</p>
+<blockquote>
+<p><strong>evitar que el contenido del usuario cambie la estructura o el comportamiento de la página.</strong></p>
+</blockquote>
+<h2 id="cuando-puede-utilizarse-innerhtml">¿Cuándo puede utilizarse <code>innerHTML</code>?<a class="headerlink" href="#cuando-puede-utilizarse-innerhtml" title="Permanent link">&para;</a></h2>
+<p><code>innerHTML</code> no es inseguro por sí mismo.</p>
+<p>Puede utilizarse cuando el contenido HTML está completamente controlado por la aplicación.</p>
+<p>Por ejemplo:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;strong&gt;Operación completada&lt;/strong&gt;&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Aquí no intervienen datos externos.</p>
+<p>El problema aparece cuando se mezclan cadenas HTML con información no confiable:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="s1">&#39;&lt;strong&gt;Usuario:&lt;/strong&gt; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombreUsuario</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Si <code>nombreUsuario</code> puede ser manipulado, la construcción deja de ser segura.</p>
+<p>Una alternativa es:</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">etiqueta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;strong&#39;</span><span class="p">);</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nx">etiqueta</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Usuario: &#39;</span><span class="p">;</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">etiqueta</span><span class="p">);</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">nombreUsuario</span><span class="p">)</span>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="p">);</span>
+</span></code></pre></div>
+<h2 id="no-confiar-en-datos-almacenados">No confiar en datos almacenados<a class="headerlink" href="#no-confiar-en-datos-almacenados" title="Permanent link">&para;</a></h2>
+<p>Un error habitual consiste en pensar que un dato es seguro porque procede de la base de datos.</p>
+<p>Por ejemplo:</p>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="x">$comentario = obtenerComentario($id);</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="x">echo $comentario;</span>
+</span></code></pre></div>
+<p>La base de datos no convierte automáticamente un dato en confiable.</p>
+<p>Si el valor fue introducido originalmente por un usuario, puede seguir conteniendo contenido peligroso.</p>
+<p>Este escenario da lugar a lo que habitualmente se denomina <strong>XSS almacenado</strong>.</p>
+<h2 id="xss-reflejado-y-almacenado">XSS reflejado y almacenado<a class="headerlink" href="#xss-reflejado-y-almacenado" title="Permanent link">&para;</a></h2>
+<p>De forma simplificada pueden distinguirse dos situaciones frecuentes.</p>
+<h3 id="xss-reflejado">XSS reflejado<a class="headerlink" href="#xss-reflejado" title="Permanent link">&para;</a></h3>
+<p>El dato llega en una petición y se devuelve inmediatamente en la respuesta.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Petición
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>   ↓
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>dato manipulable
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>   ↓
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>respuesta HTML
+</span></code></pre></div>
+<h3 id="xss-almacenado">XSS almacenado<a class="headerlink" href="#xss-almacenado" title="Permanent link">&para;</a></h3>
+<p>El dato se guarda primero y se muestra posteriormente.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Usuario A
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>   ↓
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>dato manipulable
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>   ↓
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>base de datos
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>   ↓
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>Usuario B visualiza el dato
+</span></code></pre></div>
+<p>En ambos casos, la protección principal sigue siendo generar una salida segura.</p>
+<h2 id="buenas-practicas">Buenas prácticas<a class="headerlink" href="#buenas-practicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Escapa los datos cuando se incorporan al HTML.</li>
+<li>Utiliza <code>htmlspecialchars()</code> para mostrar texto en PHP.</li>
+<li>Especifica <code>ENT_QUOTES</code> y <code>UTF-8</code>.</li>
+<li>Prefiere <code>textContent</code> cuando JavaScript debe mostrar texto.</li>
+<li>Evita construir HTML concatenando datos no confiables.</li>
+<li>Utiliza <code>createElement()</code> y <code>createTextNode()</code> cuando sea apropiado.</li>
+<li>No consideres segura una información simplemente porque provenga de la base de datos.</li>
+<li>Adapta la protección al contexto donde se utilice el dato.</li>
+</ul>
+<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
+<ul>
+<li>XSS aparece cuando un dato acaba interpretándose como código en el navegador.</li>
+<li>En PHP, <code>htmlspecialchars()</code> permite generar salida de texto segura en HTML.</li>
+<li>En JavaScript, <code>textContent</code> evita interpretar el contenido como HTML.</li>
+<li><code>innerHTML</code> debe utilizarse con especial cuidado cuando intervienen datos externos.</li>
+<li>La seguridad debe aplicarse al contexto de salida, no mediante la eliminación indiscriminada de caracteres.</li>
+</ul>
 
 
 

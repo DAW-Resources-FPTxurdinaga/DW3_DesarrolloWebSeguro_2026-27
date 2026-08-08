@@ -365,6 +365,139 @@
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/index.html"/>
     </url>
     <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/1.introduccion-despliegue-seguro.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/1.introduccion-despliegue-seguro.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/1.introduccion-despliegue-seguro.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/10.conclusiones.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/10.conclusiones.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/10.conclusiones.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/2.configuracion-produccion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/2.configuracion-produccion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/2.configuracion-produccion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/2.configuracion-produccion/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/2.configuracion-produccion/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/2.configuracion-produccion/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/3.https-certificados/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/3.https-certificados/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/3.https-certificados/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/3.https-certificados/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/3.https-certificados/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/3.https-certificados/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/4.secretos-variables-entorno/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/4.secretos-variables-entorno/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/4.secretos-variables-entorno/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/5.servidor-superficie-exposicion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/5.servidor-superficie-exposicion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/5.servidor-superficie-exposicion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/6.permisos-archivos-directorios/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/6.permisos-archivos-directorios/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/6.permisos-archivos-directorios/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/7.base-datos/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/7.base-datos/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/7.base-datos/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/7.base-datos/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/7.base-datos/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/7.base-datos/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/8.cabeceras-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/8.cabeceras-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/8.cabeceras-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/9.logs-errores-produccion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/9.logs-errores-produccion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/9.logs-errores-produccion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/9.logs-errores-produccion/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/9.logs-errores-produccion/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/9.logs-errores-produccion/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/actividades/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/actividades/index.html"/>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/actividades/index.html"/>
+    </url>
+    <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/5.verificacion-seguridad/index.html</loc>
         <lastmod>2026-08-08</lastmod>
         <changefreq>daily</changefreq>
@@ -734,6 +867,139 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/index.html"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/1.introduccion-despliegue-seguro.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/1.introduccion-despliegue-seguro.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/1.introduccion-despliegue-seguro.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/10.conclusiones.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/10.conclusiones.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/10.conclusiones.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/2.configuracion-produccion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/2.configuracion-produccion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/2.configuracion-produccion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/2.configuracion-produccion/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/2.configuracion-produccion/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/2.configuracion-produccion/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/3.https-certificados/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/3.https-certificados/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/3.https-certificados/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/3.https-certificados/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/3.https-certificados/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/3.https-certificados/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/4.secretos-variables-entorno/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/4.secretos-variables-entorno/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/4.secretos-variables-entorno/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/5.servidor-superficie-exposicion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/5.servidor-superficie-exposicion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/5.servidor-superficie-exposicion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/6.permisos-archivos-directorios/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/6.permisos-archivos-directorios/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/6.permisos-archivos-directorios/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/7.base-datos/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/7.base-datos/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/7.base-datos/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/7.base-datos/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/7.base-datos/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/7.base-datos/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/8.cabeceras-seguridad/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/8.cabeceras-seguridad/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/8.cabeceras-seguridad/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/9.logs-errores-produccion/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/9.logs-errores-produccion/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/9.logs-errores-produccion/index.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/9.logs-errores-produccion/implementacion.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/9.logs-errores-produccion/implementacion.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/9.logs-errores-produccion/implementacion.html"/>
+    </url>
+    <url>
+        <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/actividades/index.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="eu" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/4.despliegue-seguro/actividades/index.html"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/4.despliegue-seguro/actividades/index.html"/>
     </url>
     <url>
         <loc>https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/5.verificacion-seguridad/index.html</loc>
