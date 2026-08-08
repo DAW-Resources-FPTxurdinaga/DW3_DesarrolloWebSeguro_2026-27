@@ -1,13 +1,17 @@
 # Kodearen berrikuspena
 
-Kodearen berrikuspenak segurtasun-arazoak produkziora iritsi aurretik hautematea ahalbidetzen du.
+Kodearen berrikuspenak erabaki ez-seguruak produkziora iritsi aurretik hautematea ahalbidetzen du.
 
 Ez da proiektu osoa irizpiderik gabe lerroz lerro irakurtzea.
 
-Berrikuspen erabilgarri batek erabaki zehatzetan jartzen du arreta:
+Berrikuspen erabilgarri batek funtzionalitate baten fluxuari jarraitzen dio.
 
 ```text
 Sarrera
+
+    ↓
+
+Baliozkotzea
 
     ↓
 
@@ -19,35 +23,34 @@ Datuetarako sarbidea
 
     ↓
 
-Autentifikazioa eta baimena
+Autentifikazioa / baimena
 
     ↓
 
 Erantzuna
 ```
 
-Helburua da erabaki oker batek arriskua sor dezakeen puntuak identifikatzea.
+Galdera nagusia hau da:
 
-## Zer berrikusi
+> Non aplikatzen dira benetan fluxu hau babestu beharko luketen kontrolak?
 
-Berrikuspenak moduluan landutako edukietan oinarritu behar du.
+## Kontrolak berrikusi, ez berriro inplementatu
 
-Alderdi nagusien artean:
+Aurreko blokeetan segurtasun-mekanismo desberdinak nola aplikatu landu da.
 
-- sarrerako datuen baliozkotzea;
-- irteera segurua;
-- datuetarako sarbidea;
-- autentifikazioa;
-- baimena;
-- saioak;
-- fitxategien igoera;
-- APIak;
-- sekretuak;
-- erroreen kudeaketa.
+Bloke honetan ez dira mekanismo horiek berriro azaltzen.
 
-## Datu-sarrera berrikustea
+Berrikuspenean honako hauek aurkitzen ikasi behar da:
 
-Aplikazio batek hainbat jatorritatik jasotzen du informazioa:
+- falta diren kontrolak;
+- leku desegokian aplikatutako kontrolak;
+- bezeroaren mende bakarrik dauden kontrolak;
+- inplementazio segurua ahuldu duten aldaketak;
+- aurreikusitakoaren eta inplementatutakoaren arteko aldeak.
+
+## Sarrerako datuak
+
+Aplikazio batek informazioa hainbat iturritatik jaso dezake:
 
 - formularioak;
 - URL parametroak;
@@ -57,35 +60,33 @@ Aplikazio batek hainbat jatorritatik jasotzen du informazioa:
 - fitxategiak;
 - APIak.
 
-Galdera nagusia hau da:
+Berrikuspenean datu bakoitza non baliozkotzen den aurkitu behar dugu.
 
-> Non baliozkotzen da benetan informazioa?
-
-JavaScript bidezko baliozkotzeak erabiltzailearen esperientzia hobetzen du, baina ez du zerbitzariko baliozkotzea ordezkatzen.
-
-Berrikuspen-adibidea:
+Adibidez:
 
 ```php
 $edad = $_POST['edad'];
 ```
 
-Galdera ez da soilik aldagaia existitzen den.
-
-Hau ere egiaztatu behar dugu:
+Berrikuspen-galderak:
 
 ```text
-Baliozkotzen al da?
+Jaso ondoren baliozkotzen da?
 
-Mota egiaztatzen al da?
+Datu mota egiaztatzen da?
 
-Tartea egiaztatzen al da?
+Tartea egiaztatzen da?
 
-Espero ez diren balioak baztertzen al dira?
+Espero ez diren balioak baztertzen dira?
+
+Egiaztapena zerbitzarian ere badago?
 ```
 
-## Irteera berrikustea
+JavaScript bidezko baliozkotzeak erabiltzaile-esperientzia hobetu dezake, baina ez du kontrol bakarra izan behar.
 
-Orri batean erakusten diren datuak modu seguruan tratatu behar dira.
+## Irteera
+
+Aplikazioak datuak erakusten dituenean, fidagarria ez den iturri batetik datozen identifikatu behar dugu.
 
 Adibidez:
 
@@ -93,37 +94,29 @@ Adibidez:
 echo $comentario;
 ```
 
-Berrikuspenean honako hau galdetu behar dugu:
+Galderak:
 
 ```text
-Datu hau erabiltzailearengandik dator?
+Datua erabiltzailearengandik dator?
 
-Erakutsi aurretik ihes egiten al da?
+HTMLn sartu aurretik tratatzen da?
 
-HTML edo JavaScript gisa interpreta daiteke?
+Kode gisa interpreta liteke?
 ```
 
-PHPn ohiko aukera bat:
+Berrikuspenak testuingururako egokia den irteera seguruko mekanismo bat erabiltzen den identifikatu behar du.
 
-```php
-echo htmlspecialchars(
-    $comentario,
-    ENT_QUOTES,
-    'UTF-8'
-);
-```
+## Datuetarako sarbidea
 
-## Datuetarako sarbidea berrikustea
+Berrikuspenean bereziki bilatu behar dira jasotako datuak kateatuz eraikitako kontsultak.
 
-Berrikuspen batek kateatze bidez eraikitako kontsultak identifikatu behar ditu.
-
-Adibide problematikoa:
+Berrikusi beharreko eredua:
 
 ```php
 $sql = "SELECT * FROM usuarios WHERE email = '" . $email . "'";
 ```
 
-Prestatutako kontsultak erabiltzen diren egiaztatu behar da.
+Mekanismo parametrizatu baten aurrean, adibidez:
 
 ```php
 $stmt = $pdo->prepare(
@@ -133,40 +126,31 @@ $stmt = $pdo->prepare(
 $stmt->execute([$email]);
 ```
 
-Berrikuspena ez da sintaxi zehatz bat buruz ikastea.
+Helburua ez da sintaxi bat buruz ikastea.
 
-Injekzio-arriskua murrizten duten erabakiak ezagutzea da.
+Erabiltzailearen datuek kontsultaren egitura aldatzen ez dutela egiaztatzea da.
 
-## Autentifikazioa berrikustea
+## Autentifikazioa
 
-Autentifikazioak honako galderari erantzuten dio:
+Berrikuspenak erabiltzailearen identitatea non egiaztatzen den eta saioa nola mantentzen den aurkitu behar du.
 
-> Nor da erabiltzailea?
+Egiaztatu:
 
-Berrikuspenean, besteak beste, honako hauek egiazta daitezke:
+```text
+[ ] Pasahitzak mekanismo egokien bidez gordetzen dira
 
-- pasahitzak hash bidez gordetzen direla;
-- pasahitzak modu seguruan alderatzen direla;
-- saioak behar bezala hasten direla;
-- saioa ixteko mekanismoa dagoela;
-- behar denean saio-identifikatzailea birsortzen dela.
+[ ] Kredentzialak zerbitzarian egiaztatzen dira
 
-PHPko adibidea:
+[ ] Saioa behar bezala hasten da
 
-```php
-password_verify(
-    $password,
-    $hash
-);
+[ ] Saioa ixteak sarbidea baliogabetzen du
+
+[ ] Erabiltzailea identifikatzeko ez da bezeroak kontrolatutako datuetan fidatzen
 ```
 
-## Baimena berrikustea
+## Baimena
 
-Baimenak honako galderari erantzuten dio:
-
-> Zer egin dezake erabiltzaile honek?
-
-Ohiko errore bat erabiltzailea autentifikatuta dagoela bakarrik egiaztatzea da.
+Baimena babestutako baliabide bakoitzaren gainean berrikusi behar da.
 
 Adibidez:
 
@@ -178,37 +162,35 @@ Autentifikatutako erabiltzailea
 /reservas/25/editar
 ```
 
-Berrikuspenak hau ere egiaztatu behar du:
+Ez da nahikoa saio bat dagoela egiaztatzea.
+
+Hau ere aurkitu behar dugu:
 
 ```text
-25. erreserba erabiltzailearena da?
+Erreserba erabiltzailearena da?
 
-Beharrezko rola du?
+Beharrezko rola edo baimena du?
 
-Ekintza exekutatu aurretik baimena egiaztatzen da?
+Egiaztapena eragiketa egin aurretik exekutatzen da?
 ```
 
-## Identifikatzaileak berrikustea
+## Identifikatzaileak
 
-URL edo eskaera batean jasotako identifikatzaileak ez dira fidagarritzat hartu behar.
-
-Adibidez:
+Bezeroarengandik jasotako identifikatzaileak alda daitezke.
 
 ```text
 /reservas/25
+
+        ↓
+
+/reservas/26
 ```
 
-Erabiltzaileak hau alda dezakeela suposatu behar da:
+Berrikuspenak egiaztatu behar du zerbitzariak eskatutako baliabiderako baimena berriro egiaztatzen duela.
 
-```text
-25 → 26
-```
+## Sekretuak
 
-Beraz, aplikazioak eskatutako baliabidearen gaineko baimena egiaztatu behar du.
-
-## Sekretuak berrikustea
-
-Kodearen berrikuspenak honako hauek bilatu behar ditu:
+Kodean eta biltegian bilatu:
 
 - pasahitzak;
 - API gakoak;
@@ -223,64 +205,58 @@ Adibide okerra:
 $password = "mi-password-produccion";
 ```
 
-Konfigurazio sentikorra kodetik eta biltegitik kanpo egon behar da.
+Berrikuspenaren helburua da konfigurazio sentikorra kodetik eta biltegitik kanpo dagoela egiaztatzea.
 
-## Fitxategien igoera berrikustea
+## Fitxategien igoera
 
-Fitxategiak igotzeko funtzionalitate batek hainbat egiaztapen behar ditu.
-
-Berrikuspenak honako galderak egin ditzake:
+Funtzionalitate hau dagoenean, egiaztatu:
 
 ```text
-Tamaina mugatzen al da?
+[ ] Tamaina mugatzen da
 
-Mota baliozkotzen al da?
+[ ] Fitxategi mota baliozkotzen da
 
-Izen segurua sortzen al da?
+[ ] Izena kontrolatzen da
 
-Fitxategia exekutagarriak ez diren eremuetan gordetzen al da?
+[ ] Biltegiratzea kokapen egokian egiten da
 
-Erabiltzaile batek fitxategiak gainidatz ditzake?
+[ ] Igotako fitxategiak ezin dira exekutatu
+
+[ ] Ezin dira fitxategiak arbitrarioki gainidatzi
 ```
 
-Ez da nabigatzaileak bidalitako izenean edo luzapenean bakarrik fidatu behar.
+## APIak
 
-## APIak berrikustea
+API bat aplikazioaren beste edozein sarrera bezala berrikusi behar da.
 
-API batean segurtasun-erabaki berak berrikusi behar dira.
+Egiaztatu:
 
-Adibidez:
-
-- jasotako JSONaren baliozkotzea;
+- JSON datuen baliozkotzea;
 - autentifikazioa;
-- baimena;
-- egoera-kodeak;
+- baliabide bakoitzeko baimena;
+- HTTP egoera-kodeak;
 - itzulitako informazioa;
 - CORS, dagokionean.
 
-API bat ez da segurua interfaze grafikorik ez duelako soilik.
+## Erroreak
 
-## Erroreak berrikustea
+Salbuespen edo xehetasun tekniko bat erabiltzaileari zuzenean bidal dakiokeen puntuak bilatu.
 
-Berrikuspenean kodeak barne-xehetasunak erakusten dituen egiaztatu behar da.
-
-Adibide problematikoa:
+Berrikusi beharreko adibidea:
 
 ```php
 catch (Exception $e) {
-
     echo $e->getMessage();
-
 }
 ```
 
-Produkzioan hobe da xehetasuna logetan erregistratzea eta mezu kontrolatu bat erakustea.
+Produkzioan, xehetasun teknikoa barne-erregistroan geratu behar da eta erabiltzaileak erantzun kontrolatu bat jaso behar du.
 
-## Aldaketak berrikustea, ez soilik aplikazio osoak
+## Aldaketa zehatzak berrikustea
 
-Ingurune profesional batean ez da beti proiektu osoa berrikusten.
+Ez da beti beharrezkoa aplikazio osoa berrikustea.
 
-Ohikoa da honako hau berrikustea:
+Estrategia erabilgarri bat:
 
 ```text
 Egindako aldaketa
@@ -291,18 +267,18 @@ Eragindako kodea
 
         ↓
 
-Sartutako arriskua
+Lotutako kontrolak
 
         ↓
 
 Egiaztapena
 ```
 
-Horrek berrikuspena eguneroko lanean integratzea ahalbidetzen du.
+Horri esker, segurtasuna taldearen ohiko lanean integra daiteke.
 
 ## Berdinen arteko berrikuspena
 
-Ikaskideen arteko berrikuspenak prozedura sinple bat jarrai dezake.
+Ikaskideen arteko berrikuspena modu sinplean antola daiteke.
 
 ### Egilea
 
@@ -310,18 +286,19 @@ Azaltzen du:
 
 - zer funtzionalitate garatu duen;
 - zer datu jasotzen dituen;
-- zer segurtasun-erabaki aplikatu dituen.
+- zer kontrol aplikatu beharko liratekeen.
 
 ### Berrikuslea
 
-Egiaztatzen du:
+Honako hauek aurkitzen ditu:
 
-- sarrerak;
+- baliozkotzea;
 - datuetarako sarbidea;
 - autentifikazioa;
 - baimena;
 - irteera;
-- lotutako konfigurazioa.
+- sekretuak;
+- erroreak.
 
 ### Taldea
 
@@ -335,51 +312,81 @@ edo
 Zuzendu behar da
 ```
 
-Berrikuspenak kodean eta erabaki teknikoetan jarri behar du arreta, ez garatu duen pertsonan.
+Berrikuspena kodean eta erabaki teknikoetan zentratzen da, ez kodea garatu duen pertsonan.
 
-## Berrikuspen-galderak
+## 1. erronkan aplikatzea
 
-Zerrenda labur batek gida gisa balio dezake:
+PHP, JavaScript eta CSS3 proiektuan argi bereizi behar da:
+
+```text
+JavaScript
+
+→ interfazearen eta erabiltzaile-esperientziaren laguntza
+
+
+PHP
+
+→ zerbitzariko benetako kontrolak
+```
+
+Berrikuspenak bereziki egiaztatu behar du segurtasuna ez dagoela JavaScript-en mende bakarrik.
+
+## 2. erronkan aplikatzea
+
+Laravel, Vue 3 eta Tailwind erabilita irizpide bera aplikatzen da:
+
+```text
+Vue
+
+→ interfazea eta erabiltzaile-esperientzia
+
+
+Laravel
+
+→ baliozkotzea, autentifikazioa, baimena eta datuetarako sarbidea
+```
+
+Babestutako ibilbide eta baliabideak, APIaren erantzunak eta zerbitzariari eragiten dion konfigurazioa ere berrikusi behar dira.
+
+## Berrikuspenerako gida laburra
 
 ```text
 [ ] Jasotako datuak zerbitzarian baliozkotzen dira?
 
-[ ] Sortutako irteera segurua da?
+[ ] Irteera modu seguruan sortzen da?
 
-[ ] Kontsultek parametroak erabiltzen dituzte?
+[ ] Datuetarako sarbideak mekanismo parametrizatuak erabiltzen ditu?
 
-[ ] Autentifikazioa behar bezala inplementatuta dago?
+[ ] Autentifikazioa zerbitzarian egiaztatzen da?
 
-[ ] Babestutako baliabide bakoitzean baimena egiaztatzen da?
+[ ] Baimena babestutako baliabide bakoitzean aplikatzen da?
 
 [ ] Sekretuak kodetik kanpo daude?
 
-[ ] Fitxategien igoerak kontrolatuta daude?
+[ ] Fitxategien igoerak kontrolatuta daude, halakorik badago?
+
+[ ] APIek kontrol berak aplikatzen dituzte?
 
 [ ] Erroreak modu seguruan kudeatzen dira?
 ```
 
 ## TxurdiGest-en aplikatzea
 
-TxurdiGest-en berrikuspen batek funtzionalitate zehatz bat hauta dezake.
-
-Adibidez:
+Funtzionalitate zehatz bat hauta daiteke:
 
 ```text
 Erreserba editatu
 ```
 
-Taldeak honako hauek berrikusiko lituzke:
+eta haren fluxuari jarraitu:
 
 1. identifikatzailea nola jasotzen duen;
 2. datuak nola baliozkotzen dituen;
 3. erreserba nola lortzen duen;
-4. jabetza nola egiaztatzen duen;
+4. jabea nola egiaztatzen duen;
 5. datu-basea nola eguneratzen duen;
-6. errore baten aurrean zer erantzun ematen duen.
-
-Berrikuspen honek funtzionalitatearen benetako fluxua jarraitzen du.
+6. zer erantzun itzultzen duen.
 
 ## Ideia nagusia
 
-> Kodea segurtasunaren ikuspegitik berrikustea ez da erroreak ausaz bilatzea. Aplikazioaren fluxu bakoitza babesten duten erabakiak sistematikoki egiaztatzea da.
+> Kodea segurtasunaren ikuspegitik berrikustea fluxu bat babestu beharko luketen kontrolak aurkitzea eta dagokien lekuan benetan daudela egiaztatzea da.

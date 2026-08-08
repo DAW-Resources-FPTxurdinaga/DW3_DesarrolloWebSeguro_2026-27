@@ -1,69 +1,99 @@
 # Hedapenaren berrikuspena
 
-Segurtasunaren egiaztapena ez da kodean amaitzen.
+4. blokean aplikazio bat modu seguruan hedatzeko behar diren erabakiak landu ziren.
 
-Aplikazio bat behar bezala inplementatuta egon daiteke eta, hala ere, produkzioko konfigurazio oker baten ondorioz arriskuan gera daiteke.
+Bloke honetan konfigurazio horiek ez dira berriro azaltzen.
 
-Horregatik, hedapenaren ondoren ingurunean hartutako erabakiak ere egiaztatu behar dira.
+Helburua aldatu egiten da:
+
+> aurreikusitako erabakiak produkzioan benetan aplikatuta daudela egiaztatzea.
 
 ```text
-Aplikazio segurua
+Aurreikusitako kontrola
 
-        +
+        ↓
 
-Konfigurazio segurua
+Aplikatutako konfigurazioa
 
-        +
+        ↓
 
-Azpiegitura egokia
+Egiaztapena
+
+        ↓
+
+Emaitza
+
+        ↓
+
+Ebidentzia
 ```
 
-Hedapenaren berrikuspenak egiaztatzen du aplikazioak aurreko blokeetan landutako neurriak produkzioan mantentzen dituela.
+Dokumentazioan idatzitako konfigurazio bat ez da egiaztatutako konfigurazio baten baliokidea.
 
-## Zer berrikusi behar da
+## Zer berrikusi
 
-Berrikuspenak honako hauek izan ditzake ardatz:
+Hedapenaren berrikuspenak honako hauek izan ditzake ardatz:
 
 - HTTPS;
 - produkzioko konfigurazioa;
 - sekretuak;
 - esposizio-azalera;
+- direktorio publikoa;
 - baimenak;
 - datu-basea;
 - segurtasun-goiburuak;
 - erroreak eta logak.
 
-Ez da 4. blokea errepikatzea.
+Galdera ez da soilik:
 
-Hemen helburua da definitutako konfigurazioa benetan aplikatuta dagoela egiaztatzea.
+> Nola egon beharko luke konfiguratuta?
+
+Orain hau galdetzen dugu:
+
+> Nola egiazta dezaket benetan horrela konfiguratuta dagoela?
+
+## Egiaztapenen mapa
+
+| Kontrola | Nola egiaztatu | Ebidentzia posiblea |
+|---|---|---|
+| HTTPS | Nabigatzailea, DevTools edo `curl` | Ziurtagiria, birbideratzea, HTTPS erantzuna |
+| Produkzioko konfigurazioa | Konfigurazioa berrikusi eta errore kontrolatu bat eragin | `DEBUG` desgaituta, mezu kontrolatua |
+| Sekretuak | Kodea/biltegia eta web-esposizioa berrikusi | Balio sentikorrik gabeko konfigurazioa |
+| Esposizio-azalera | Zerbitzuak eta inguruneko arauak berrikusi | Security Groups, diagrama edo konfigurazioa |
+| Direktorio publikoa | Zer ibilbide eta fitxategi dauden eskuragarri egiaztatu | 403/404 erantzuna |
+| Baimenak | Benetako baimenak berrikusi | Datu sentikorrik gabeko konfigurazioa edo zerrenda |
+| Datu-basea | Arkitektura eta konexio-baimenak berrikusi | Diagrama, SG edo konfigurazioa |
+| Goiburuak | DevTools edo `curl` | Response Headers |
+| Erroreak | Egoera kontrolatu bat eragin | Barne-xehetasunik gabeko erantzuna |
+| Logak | Sortutako erregistroa berrikusi | Anonimizatutako log-zatia |
 
 ## HTTPS
 
-Egiaztatu:
+Hedatutako ingurunetik egiaztatu:
 
 ```text
-[ ] Aplikazioak HTTPS bidez funtzionatzen du
+[ ] Aplikazioak HTTPS erabiltzen du
 
 [ ] Ziurtagiria balioduna da
 
 [ ] HTTP HTTPSra birbideratzen da
 
-[ ] Ez dago HTTP bidez kargatutako baliabiderik
+[ ] Ez dago mixed content-ik
 
-[ ] HSTS HTTPS behar bezala konfiguratuta badago soilik erabiltzen da
+[ ] HSTS HTTPS konfigurazioa zuzena denean bakarrik erabiltzen da
 ```
 
-Egiaztapena honako hauekin egin daiteke:
+Ebidentzia posibleak:
 
 - nabigatzailea;
-- DevTools;
-- `curl`.
+- Network fitxa;
+- `curl -I` komandoaren irteera.
 
 ## Produkzioko konfigurazioa
 
-Egiaztatu produkzioko inguruneak ez dituela garapeneko konfigurazioak erabiltzen.
+Egiaztatu aplikazioak benetako inguruneari dagokion konfigurazioa erabiltzen duela.
 
-Adibideak:
+Laravel-en, adibidez:
 
 ```text
 APP_ENV=production
@@ -71,41 +101,54 @@ APP_ENV=production
 APP_DEBUG=false
 ```
 
-Hau ere egiaztatu behar da:
+Egiaztapen erabilgarri bat errore kontrolatu bat eragitea da.
+
+Espero den emaitza:
 
 ```text
-[ ] Ez dira errore xeheak erakusten
+Erabiltzailea
 
-[ ] Garapeneko mendekotasunak ez dira alferrik instalatzen
+→ mezu kontrolatua
 
-[ ] Konfigurazioa benetako inguruneari dagokio
+
+Zerbitzaria
+
+→ xehetasuna logean eskuragarri
 ```
+
+Nabigatzailean traza oso bat agertzen bada, konfigurazioa berrikusi behar da.
 
 ## Sekretuak
 
-Sekretuak kodetik eta biltegitik kanpo egon behar dira.
+Bi alderdi desberdin egiaztatu.
 
-Egiaztatu:
+### Kodea eta biltegia
 
 ```text
-[ ] Ez dago kredentzialik kodean
-
-[ ] .env ez dago argitaratuta
+[ ] Ez dago kredentzialik kodean idatzita
 
 [ ] .env ez dago bertsio-kontrolean
 
-[ ] Produkzioko sekretuak garapenekoetatik desberdinak dira
-
-[ ] Konfigurazio-fitxategiaren baimenak egokiak dira
+[ ] Ez dago argitaratutako API gako edo tokenik
 ```
 
-Sekretu bat argitaratu bada, biltegitik ezabatzea ez da nahikoa.
+### Esposizioa
 
-Baliogabetu edo biratu egin behar da.
+```text
+[ ] .env ezin da webetik deskargatu
+
+[ ] Konfigurazio-fitxategi sentikorrak ez dira publikoak
+
+[ ] Logak ez daude nabigatzailetik eskuragarri
+```
+
+Sekretu bat argitaratu bada, fitxategia ezabatzea ez da nahikoa.
+
+Sekretua baliogabetu edo biratu egin behar da.
 
 ## Esposizio-azalera
 
-Berrikusi zer osagai dauden kanpotik eskuragarri.
+Aurreikusitako arkitektura benetako konfigurazioarekin alderatu.
 
 Adibidez:
 
@@ -114,7 +157,7 @@ Internet
 
     ↓
 
-443
+HTTPS / 443
 
     ↓
 
@@ -132,40 +175,30 @@ Barneko datu-basea
 Egiaztatu:
 
 ```text
-[ ] Behar diren atakak bakarrik daude irekita
+[ ] Behar diren zerbitzuak bakarrik daude agerian
 
-[ ] SSH mugatuta dago
+[ ] SSH mugatuta dago, erabiltzen bada
 
-[ ] Datu-basea ez dago zuzenean agerian
+[ ] Datu-basea ez dago zuzenean argitaratuta
 
 [ ] Ez dago garapen-panel eskuragarririk
-
-[ ] Ezin dira barne-fitxategiak deskargatu
 ```
+
+AWS ingurune batean egiaztapen hau VPC eta Security Groups berrikusiz lagundu daiteke.
+
+Ez da beharrezkoa berrikuspen hau sistema-administrazioko praktika bihurtzea.
 
 ## Direktorio publikoa
 
-Web zerbitzariak behar diren fitxategiak bakarrik argitaratu behar ditu.
+Egiaztatu proiektuaren zer zatitan argitaratzen duen benetan web zerbitzariak.
 
-Adibidez:
-
-```text
-Aplikazioa
-
-├── app/
-├── config/
-├── storage/
-├── vendor/
-└── public/
-```
-
-`DocumentRoot`-ek hona apuntatu behar du:
+Laravel-en puntu publikoa honakoa izan behar da:
 
 ```text
 public/
 ```
 
-Egiaztatu honako hauek ez direla eskuragarri:
+Webetik ez lukete eskuragarri egon behar:
 
 - `.env`;
 - `.git`;
@@ -174,25 +207,25 @@ Egiaztatu honako hauek ez direla eskuragarri:
 - konfigurazio-fitxategiak;
 - barneko kodea.
 
+Ebidentzia izan daiteke publikoa izan behar ez duen baliabide bat eskatzean jasotako 403 edo 404 erantzuna.
+
 ## Baimenak
 
-Berrikuspenak egiaztatu behar du baimenak ez direla gehiegizkoak.
+Ez da beharrezkoa baimenen administrazioa berriro ikastea.
 
-Adibideak:
+Berrikuspenak galdera zehatzei erantzun behar die:
 
 ```text
-[ ] Kodeak ez du idazketa-baimen orokorrik behar
+Behar diren karpetek bakarrik dute idazketa-baimena?
 
-[ ] Behar diren karpetek bakarrik dute idazketa-baimena
+Fitxategi sentikorrak babestuta daude?
 
-[ ] Ez da chmod 777 erabiltzen irtenbide gisa
+Saihestu da chmod 777 irtenbide orokor gisa erabiltzea?
 
-[ ] Fitxategi sentikorrak babestuta daude
-
-[ ] Igoera-direktorioek ez dute exekuzioa baimentzen
+Igoera-direktorioek exekuzioa eragozten dute?
 ```
 
-Laravel-en bereziki berrikusi behar dira:
+Laravel-en bereziki berrikusi behar dira honako hauen idazketa-beharrak:
 
 ```text
 storage/
@@ -202,43 +235,25 @@ bootstrap/cache/
 
 ## Datu-basea
 
-Aplikazioak kontu espezifiko bat erabili behar du.
-
-Egiaztatu:
+Berrikuspenak egiaztatu behar du hedatutako arkitektura segurtasun-erabakiekin bat datorrela.
 
 ```text
-[ ] Aplikazioak ez du root erabiltzen
+[ ] Aplikazioak ez du root edo administratzaile bat erabiltzen
 
-[ ] Erabiltzaileak behar diren baimenak bakarrik ditu
+[ ] Erabiltzaileak behar dituen baimenak bakarrik ditu
 
 [ ] Kredentzialak kodetik kanpo daude
 
-[ ] Datu-basea ez da publikoa
+[ ] Datu-basea ez dago zuzenean Internetera irekita
 
-[ ] Segurtasun-kopiak daude
-
-[ ] Leheneratzea kontuan hartu da
+[ ] Segurtasun-kopiak aurreikusita daude
 ```
 
-AWSn ohiko arkitektura bat izan daiteke:
-
-```text
-EC2
-
-    ↓
-
-Security Group
-
-    ↓
-
-RDS pribatua
-```
-
-Datu-baseak baimendutako osagaietatik datozen konexioak bakarrik onartu behar ditu.
+AWS ingurune batean egiazta daiteke datu-baseak baimendutako osagaietatik datozen konexioak bakarrik onartzen dituela.
 
 ## Segurtasun-goiburuak
 
-Egiaztatu DevTools edo `curl` erabiliz aplikaziorako definitutako goiburuak.
+DevTools edo `curl` erabili proiektuan definitutako goiburuak egiaztatzeko.
 
 Adibidez:
 
@@ -254,19 +269,21 @@ Referrer-Policy
 Permissions-Policy
 ```
 
-Ez da zerrenda estandar bat kopiatzea.
+Berrikuspenak honako hauek egiaztatu behar ditu:
 
-Egiaztatu behar da hautatutako goiburuak:
+```text
+[ ] Goiburua presente dago
 
-- agertzen direla;
-- balio zuzenak dituztela;
-- ez dutela funtzionalitate legitimoa hausten.
+[ ] Balioa aurreikusitako konfigurazioarekin bat dator
 
-## Erroreak
+[ ] Ez ditu funtzionalitate legitimoak hausten
+```
 
-Egoera kontrolatu bat eragin.
+Ez da goiburuak zerrenda bat osatzeko soilik gehitzea.
 
-Adibidez:
+## Erroreak eta logak
+
+Egoera kontrolatu bat eragin:
 
 ```text
 Existitzen ez den baliabidea
@@ -276,119 +293,110 @@ Datu baliogabea
 Baimendu gabeko eragiketa
 ```
 
-Egiaztatu erabiltzaileak ez duela honakorik jasotzen:
-
-- barneko ibilbideak;
-- SQL kontsultak;
-- trazak;
-- sekretuak;
-- arazketa-informazioa.
-
-## Logak
-
-Errore bat eragin ondoren, egiaztatu:
+Egiaztatu erantzun publikoak:
 
 ```text
-[ ] Barne-erregistroa dago
+[ ] Ez ditu barneko ibilbideak erakusten
 
-[ ] Erregistroak ikertzea ahalbidetzen du
+[ ] Ez du SQL erakusten
+
+[ ] Ez ditu traza osoak erakusten
+
+[ ] Ez ditu sekretuak erakusten
+```
+
+Ondoren, berrikusi barne-erregistroa:
+
+```text
+[ ] Errorea erregistratuta geratzen da
+
+[ ] Logak ikertzea ahalbidetzen du
 
 [ ] Ez du sekreturik
 
-[ ] Ez dago webetik eskuragarri
-
-[ ] Errotazioa aurreikusita dago
+[ ] Ez dago publikoki eskuragarri
 ```
 
-## Kanpotik berrikustea
+## 1. erronkan aplikatzea
 
-Egiaztapen erabilgarri bat da aplikazioa kanpoko erabiltzaile batek ikusiko lukeen moduan behatzea.
+PHP, JavaScript eta CSS3 proiektuan berrikuspenak bereziki honako hauek azter ditzake:
 
-Galderak:
+- HTTPS;
+- produkzioko erroreen konfigurazioa;
+- sekretuak kodetik kanpo;
+- aplikazioaren datu-baserako sarbidea;
+- behar diren baimenak;
+- barne-fitxategien esposizioa;
+- erroreen aurreko erantzuna.
 
-```text
-Zer zerbitzu dira ikusgai?
+## 2. erronkan aplikatzea
 
-Zer informazio itzultzen du zerbitzariak?
+Laravel, Vue 3 eta Tailwind erabilita, aurreko kontrol aplikagarriez gain honako hauek egiaztatu behar dira:
 
-Zer gertatzen da barne-ibilbide batera sartzen banaiz?
+- `APP_ENV`;
+- `APP_DEBUG`;
+- `.env`-ren babesa;
+- `public/` direktorioaren argitalpen zuzena;
+- `storage/` eta `bootstrap/cache/` direktorioen baimenak;
+- APIaren erantzunak;
+- goiburuak eta CORS, dagokionean;
+- produkzioko logak.
 
-Publikoak izan behar ez duten fitxategiak deskarga ditzaket?
+## Gutxieneko ebidentziak
 
-Zer egoera-kode jasotzen dut?
-```
+Ez da beharrezkoa egiaztapen bakoitza pantaila-argazki batekin dokumentatzea.
 
-Berrikuspena norberaren sistemetan edo berariaz baimendutako sistemetan bakarrik egin behar da.
+Kontrol garrantzitsuenak frogatzen dituzten ebidentziak hautatzea komeni da.
 
-## Ebidentziak
+Adibidez:
 
-Hedapenaren berrikuspena honako hauen bidez justifika daiteke:
-
-- HTTPSren pantaila-argazkia;
-- ziurtagiria;
-- goiburuak;
-- sekreturik gabeko konfigurazioa;
-- arkitektura-diagrama;
-- baimenak;
-- errore baten aurreko erantzuna;
-- anonimizatutako log-zatia.
-
-Ebidentziak kontrola frogatu behar du informazio sentikorra agerian utzi gabe.
+| Kontrola | Ebidentzia |
+|---|---|
+| HTTPS | Ziurtagiria edo HTTPS erantzuna |
+| DEBUG desgaituta | Errore kontrolatua |
+| Sekretuak | Balio sentikorrik gabeko konfigurazioa |
+| Barneko datu-basea | Arkitektura edo sarbide-araua |
+| Goiburuak | Response Headers |
+| Logak | Anonimizatutako log-zatia |
 
 ## TxurdiGest-en aplikatzea
 
-Azken berrikuspen batek honako hauek egiazta ditzake:
+Hedapenaren berrikuspen batek honako hauek hauta ditzake:
 
 ```text
-[ ] HTTPS aktibo
+HTTPS
 
-[ ] HTTP HTTPSra birbideratzen da
+APP_DEBUG=false
 
-[ ] APP_DEBUG=false
+.env ez dago eskuragarri
 
-[ ] Sekretuak kodetik kanpo
+Barneko datu-basea
 
-[ ] .env ez dago eskuragarri
+Goiburuak
 
-[ ] Behar diren atakak bakarrik
+Errore kontrolatuak
 
-[ ] Barneko datu-basea
-
-[ ] Baimen egokiak
-
-[ ] Goiburuak egiaztatuta
-
-[ ] Errore kontrolatuak
-
-[ ] Logak babestuta
+Log babestuak
 ```
 
-## 4. blokearekin lotura
-
-4. blokean modu seguruan nola hedatu erabaki zen.
-
-Bloke honetan hau egiaztatzen da:
+Puntu bakoitzerako:
 
 ```text
-Erabakia
+Kontrola
 
     ↓
 
-Aplikatutako konfigurazioa
+Egiaztapena
 
     ↓
 
-Proba
+Emaitza
 
     ↓
 
 Ebidentzia
 ```
 
-Aldea garrantzitsua da.
-
-Aurreikusitako konfigurazio bat ez da egiaztatutako konfigurazio baten baliokidea.
-
 ## Ideia nagusia
 
-> Hedapen segurua ez da suposatzen: produkziotik berrikusi eta egiaztapen behagarrien bidez frogatu behar da.
+> Hedapena berrikustea benetako ingurunetik aurreikusitako segurtasun-erabakiak aplikatu direla eta funtzionatzen jarraitzen dutela egiaztatzea da.

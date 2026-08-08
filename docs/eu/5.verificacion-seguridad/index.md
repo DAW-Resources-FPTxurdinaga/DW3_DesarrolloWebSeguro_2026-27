@@ -1,8 +1,8 @@
 # Segurtasunaren egiaztapena
 
-Aplikazio bat ezin da segurutzat jo diseinuan, inplementazioan edo hedapenean segurtasun-neurriak aplikatu direlako soilik.
+Segurtasun-neurri bat ezin da baliozkotzat jo diseinatu edo inplementatu delako soilik.
 
-Neurri horiek benetan funtzionatzen dutela egiaztatu behar da.
+Benetan funtzionatzen duela egiaztatu behar da.
 
 ```text
 Diseinatu
@@ -20,214 +20,198 @@ Hedatu
 Egiaztatu
 ```
 
-Egiaztapenari esker, erroreak erabiltzaileengana iritsi aurretik hauteman daitezke, eta garapenean hartutako erabakiak azken produktuan mantentzen direla egiaztatu.
+Egiaztapenak aplikazioak egitea espero duguna eta benetan egiten duena alderatzeko aukera ematen du.
 
 ## Egiaztatzea ez da erasotzea
 
-Modulu honetan, segurtasunaren egiaztapena garapenaren ikuspegitik lantzen da.
+Modulu honetan egiaztapena garapen seguruaren ikuspegitik lantzen da.
 
-Helburua ez da pentesting profesionala egitea, ezta besteen sistemak arriskuan jartzen saiatzea ere.
+Helburua ez da pentesting profesionala egitea edo besteen sistemak arriskuan jartzen saiatzea.
 
-Helburua honelako galderak egiaztatzea da:
+Galdera zehatzei erantzutea da helburua:
 
 ```text
-Sarrerako datuak benetan baliozkotzen al dira?
+Datuak benetan zerbitzarian baliozkotzen dira?
 
-Erabiltzaile batek bere baliabideetara soilik sar al dezake?
+Erabiltzaile batek baimendutako baliabideetara bakarrik sar daiteke?
 
-Datu-baseko kontsultak babestuta al daude?
+Datu-baseko kontsultak babestuta daude?
 
-Sekretuak kodetik kanpo al daude?
+Sekretuak kodetik kanpo daude?
 
-Aplikazioak HTTPS bidez soilik funtzionatzen al du?
+Produkzioko konfigurazioa egokia da?
 
-Erroreek informazio sentikorra erakusten al dute?
+Erroreek informazio sentikorra erakustea saihesten dute?
 ```
 
-Egiaztatzea definitutako kontrolek egoera errealetan behar bezala funtzionatzen dutela frogatzea da.
+Egiaztapenak norberaren aplikazioetan, hezkuntza-inguruneetan edo berariaz baimendutako sistemetan bakarrik egingo dira.
 
-## Zer egiaztatu behar dugu?
+## Zer egiaztatzen dugu
 
-Aplikazio baten berrikuspena hainbat mailatan egin daiteke.
+Berrikuspena hiru mailatan egin daiteke.
 
 ### Kodea
 
-Inplementazioko erabakiak egiaztatu:
+Inplementazio-erabakiak egiaztatzea:
 
 - sarrerako datuen baliozkotzea;
 - irteera segurua;
-- prestatutako kontsultak;
+- datuetarako sarbidea;
 - autentifikazioa;
 - baimena;
-- saioen kudeaketa;
-- fitxategien igoera;
+- saioak;
+- fitxategiak;
+- APIak;
+- sekretuak;
 - erroreen kudeaketa.
 
 ### Portaera
 
-Erabiltzaileak espero ez diren ekintzak egiten dituenean zer gertatzen den egiaztatu.
+Kasu baliodunen aurrean eta baztertu beharreko egoeren aurrean zer gertatzen den egiaztatzea.
 
 Adibidez:
 
 ```text
-Datu baliogabe bat bidali
+Sarrera baliogabea
 
-Autentifikatu gabe sartzen saiatu
+Autentifikaziorik gabeko sarbidea
 
-Identifikatzaile bat aldatu
+Manipulatutako identifikatzailea
 
-Beste erabiltzaile baten baliabidea eskatu
+Beste erabiltzaile baten baliabidea
 
-Baimendu gabeko fitxategi bat bidali
+Baimendu gabeko fitxategia
 ```
-
-Aplikazio seguru batek modu kontrolatuan erantzun behar du.
 
 ### Hedapena
 
-Produkzioko konfigurazioak segurtasun-neurriak mantentzen dituela egiaztatu:
+Segurtasun-erabakiak produkzioan mantentzen direla egiaztatzea:
 
 - HTTPS;
-- sekretuak kodetik kanpo;
-- arazketa desgaituta;
-- baimen egokiak;
-- datu-base babestua;
-- segurtasun-goiburuak;
-- logak konfiguratuta.
+- produkzioko konfigurazioa;
+- sekretuak;
+- esposizio-azalera;
+- baimenak;
+- datu-basea;
+- goiburuak;
+- erroreak eta logak.
 
-## Proba positiboak eta negatiboak
+## Egiaztapen-metodoa
 
-Ohiko proba funtzionalek eragiketa batek behar bezala funtzionatzen duela egiaztatzen dute.
-
-Adibidez:
+Egiaztapen erabilgarri batek prozesu sinple bati jarraitzen dio:
 
 ```text
-Erabiltzaile balioduna
+Espero den kontrola
 
         ↓
 
-Saio-hasiera zuzena
+Proba
+
+        ↓
+
+Lortutako emaitza
+
+        ↓
+
+Alderaketa
+
+        ↓
+
+Ebidentzia
 ```
 
-Segurtasunaren egiaztapenak baztertu beharko liratekeen egoerak ere probatu behar ditu.
+Emaitza ez badator bat espero zenarekin:
 
 ```text
-Autentifikatu gabeko erabiltzailea
+Hauteman
 
-        ↓
-
-Babestutako baliabiderako sarbidea
-
-        ↓
-
-Sarbidea ukatuta
-```
-
-Proba horiei esker, aplikazioak aurreikusi gabeko sarrera edo ekintzen aurrean duen portaera egiazta daiteke.
-
-## Laguntza-tresnak
-
-Moduluan zehar aplikazio baten portaera behatu eta egiaztatzeko tresnak erabili dira.
-
-Besteak beste:
-
-- Chrome DevTools;
-- Burp Suite;
-- DVWA;
-- nabigatzailearen tresnak;
-- aplikazioaren eta zerbitzariaren logak.
-
-Bloke honetan ez da tresna berri asko ikastea bilatzen.
-
-Helburua ezagutzen diren tresnak erabiltzea da segurtasun-erabaki zehatzak egiaztatzeko.
-
-## Kodearen berrikuspena
-
-Ahultasun asko kodea hedatu aurretik berrikusiz hauteman daitezke.
-
-Berrikuspen batean, adibidez, honako hauek egiazta daitezke:
-
-```text
-Jasotako datuetan zuzenean konfiantza jartzen al da?
-
-SQL kontsultak balioak kateatuz eraikitzen al dira?
-
-Baliabide batera sartu aurretik baimena egiaztatzen al da?
-
-Sekretuak kodean idatzita al daude?
-
-Salbuespenak zuzenean erakusten al zaizkio erabiltzaileari?
-```
-
-Berrikuspena honako hauek egin dezakete:
-
-- garatzaileak berak;
-- taldeko beste kide batek;
-- beste talde batek.
-
-Berdinen arteko berrikuspenak kodearen egileak ikusi ez dituen arazoak hautematen laguntzen du.
-
-## Ebidentziak
-
-Proiektu profesional batean ez da nahikoa honako hau esatea:
-
-> Aplikazioa segurua da.
-
-Egiaztatu dena frogatu ahal izan behar da.
-
-Ebidentzia bat izan daiteke:
-
-- DevTools-eko pantaila-argazki bat;
-- eskaera bat eta haren erantzuna;
-- konfigurazio-zati bat;
-- proba baten emaitza;
-- betetako checklist bat;
-- egindako zuzenketa baten azalpen laburra.
-
-Ebidentziak erabakia justifikatzeko nahikoa izan behar du, baina ez du txosten luze bihurtu behar.
-
-## ETHAZI erronketan integratzea
-
-Egiaztapenak erronkaren garapenaren parte izan behar du.
-
-Ez litzateke amaieran bakarrik egin behar.
-
-```text
-Funtzionalitatea inplementatu
-
-        ↓
-
-Berrikusi
-
-        ↓
-
-Probatu
-
-        ↓
+    ↓
 
 Zuzendu
 
-        ↓
+    ↓
 
-Garapenarekin jarraitu
+Proba errepikatu
 ```
 
-Horrela, segurtasuna taldearen ohiko lan-zikloan txertatzen da.
+Egiaztapena garapenaren parte da, ez soilik azken entregaren parte.
+
+## Erronketan aplikatzea
+
+Bloke honek berrikusteko metodoa eskaintzen du.
+
+Egiaztapenak ikasturteko bi erronketan garatutako proiektuen gainean aplikatuko dira.
+
+### 1. erronka — PHP, JavaScript eta CSS3
+
+Egiaztapenak, besteak beste, honako hauek aztertzea ahalbidetuko du:
+
+- JavaScript bidezko baliozkotzea erabiltzaile-esperientziaren laguntza gisa;
+- benetako baliozkotzea PHPn;
+- irteera segurua;
+- datu-baserako sarbide segurua;
+- autentifikazioa eta saioak;
+- baimena;
+- erroreen kudeaketa;
+- sekretuak eta konfigurazioa;
+- HTTPS bidezko hedapena.
+
+### 2. erronka — Laravel, Vue 3 eta Tailwind
+
+Egiaztapena honako alderdi hauetara egokituko da:
+
+- Vue-ko baliozkotzea interfazearen laguntza gisa;
+- Laravel-eko baliozkotzea zerbitzariko kontrol gisa;
+- autentifikazioa eta baimena;
+- baliabideen babesa;
+- APIak eta HTTP erantzunak;
+- CORS, dagokionean;
+- ingurune-aldagaiak eta sekretuak;
+- produkzioko konfigurazioa eta hedapena.
+
+Ez da blokearen amaierako jarduera independente bat egingo.
+
+Berrikuspena, probak eta ebidentziak erronketan bertan integratuko dira.
+
+## Tresnak
+
+Batez ere dagoeneko ezagutzen diren tresnak erabiliko dira:
+
+- Chrome DevTools;
+- Burp Suite;
+- DVWA, laborategiko erreferentzia gisa;
+- logak;
+- `curl`, erabilgarria denean.
+
+Tresna erantzun nahi dugun galderaren arabera aukeratzen da.
+
+## Ebidentziak
+
+Ebidentzia batek egiaztapen baten emaitza frogatzeko aukera ematen du.
+
+Honako hau izan daiteke:
+
+- eskaera bat eta haren erantzuna;
+- DevTools-eko pantaila-argazki bat;
+- HTTP goiburu bat;
+- sekreturik gabeko konfigurazio-zati bat;
+- proba baten emaitza;
+- anonimizatutako log-zati bat;
+- checklist bat.
+
+Ebidentziak laburrak, garrantzitsuak eta seguruak izan behar dira.
 
 ## Blokearen edukiak
 
-Bloke honetan honako hauek landuko dira:
-
-1. kodearen berrikuspena;
-2. segurtasun-probak;
-3. egiaztapen-tresnak;
-4. hedapenaren berrikuspena;
-5. segurtasun-checklista;
-6. segurtasun-ebidentziak;
-7. proiektuaren azken berrikuspena.
-
-Azken helburua da ikasleak gai izatea web-aplikazio bat berrikusteko eta segurtasun-erabaki nagusiak egiaztatu direla justifikatzeko.
+1. segurtasun-egiaztapenaren sarrera;
+2. kodearen berrikuspena;
+3. segurtasun-probak;
+4. egiaztapen-tresnak;
+5. hedapenaren berrikuspena;
+6. segurtasun-checklista;
+7. segurtasun-ebidentziak;
+8. ondorioak.
 
 ## Ideia nagusia
 
-> Segurtasuna ez da suposatu behar. Berrikuspenen, proben eta ebidentzien bidez egiaztatu behar da.
+> Segurtasuna ez da suposatu behar. Berrikuspen, proba eta ebidentzien bidez egiaztatu behar da.

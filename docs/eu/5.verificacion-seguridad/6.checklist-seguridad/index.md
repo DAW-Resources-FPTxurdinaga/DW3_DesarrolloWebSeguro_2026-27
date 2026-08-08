@@ -24,9 +24,14 @@ Ebidentziatu
 
 Zerrenda proiektura egokitu behar da, baina DAW erronketarako oinarri komun gisa erabil daiteke.
 
+!!! important "Checklist nagusia"
+    Orrialde hau modulu osorako erreferentzia orokorra da. Ez da lauki guztiak markatu behar diren jarduera gisa ulertu behar. Erronka bakoitzean garatutako aplikazioari dagozkion eta garrantzitsuak diren kontrolak bakarrik hautatuko dira.
+
 ## Checklista nola erabili
 
-Elementu bakoitza honela marka daiteke:
+Lehenik, proiektuari benetan dagozkion atalak hautatzen dira.
+
+Ondoren, hautatutako elementu bakoitza honela marka daiteke:
 
 ```text
 [ ] Egiteke
@@ -157,7 +162,7 @@ Ez da nahikoa laukiak markatzea benetako egiaztapenik egin gabe.
 ## 9. Sekretuak eta konfigurazioa
 
 ```text
-[ ] Ez dago pasahitzik edo API gakok kodearen barruan
+[ ] Ez dago pasahitzik edo API gakorik kodean
 
 [ ] Sekretuak biltegitik kanpo daude
 
@@ -314,6 +319,46 @@ Proiektuari dagozkionak bakarrik egiaztatu.
 [ ] Pantaila-argazkiek beharrezkoa dena bakarrik erakusten dute
 ```
 
+## Erronkaren araberako orientaziozko hautaketa
+
+Checklista bera da bi erronketarako, baina kontrolen multzoa teknologiaren eta garatutako funtzionalitateen arabera alda daiteke.
+
+### 1. erronka — PHP, JavaScript eta CSS3
+
+Bereziki honako hauei erreparatzea komeni da:
+
+- zerbitzariko baliozkotzea;
+- JavaScript eta PHP baliozkotzearen arteko erlazioa;
+- irteera segurua;
+- kontsulta parametrizatuak;
+- autentifikazioa eta saioak;
+- baimena;
+- fitxategien igoera, halakorik badago;
+- sekretuak;
+- produkzioko konfigurazioa;
+- HTTPS;
+- datu-basea;
+- erroreak eta logak.
+
+### 2. erronka — Laravel, Vue 3 eta Tailwind
+
+Dagokien aurreko kontrolez gain, normalean bereziki garrantzitsuak dira:
+
+- Laravel-eko baliozkotzea;
+- autentifikazioa eta baimena;
+- ibilbide eta baliabideen babesa;
+- APIak;
+- HTTP egoera-kodeak;
+- CORS, dagokionean;
+- ingurune-aldagaiak;
+- `APP_DEBUG`;
+- direktorio publikoa;
+- beharrezko baimenak;
+- goiburuak;
+- produkzioko logak.
+
+Azken hautaketa erronkan benetan garatutako funtzionalitateen araberakoa izango da.
+
 ## Lehentasunak ezarri
 
 Elementu guztiek ez dute garrantzi bera proiektu guztietan.
@@ -413,4 +458,4 @@ Aplikazioaren benetako egoera islatu behar du.
 
 ## Ideia nagusia
 
-> Segurtasun-checklist bat erabilgarria da kontrol zehatzak egiaztatzera behartzen duenean eta aplikazio bat argitaratu aurretik zer geratzen den pendiente hautematea errazten duenean.
+> Segurtasun-checklist bat erabilgarria da kontrol zehatzak egiaztatzera behartzen duenean eta aplikazio bat argitaratu aurretik zer geratzen den egiteke hautematea errazten duenean.
