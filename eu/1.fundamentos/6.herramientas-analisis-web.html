@@ -1,0 +1,4913 @@
+
+<!doctype html>
+<html lang="eu" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Desarrollo Web Seguro - CFGS Desarrollo de Aplicaciones Web">
+      
+      
+        <meta name="author" content="Jose Insausti - CIFP Txurdinaga LHII">
+      
+      
+        <link rel="canonical" href="https://jminsausti.github.io/Plantilla_mkdocs_es-eu/eu/1.fundamentos/6.herramientas-analisis-web.html">
+      
+      
+        <link rel="prev" href="5.https-certificados.html">
+      
+      
+        <link rel="next" href="7.conclusiones.html">
+      
+      
+        
+          <link rel="alternate" href="../../1.fundamentos/6.herramientas-analisis-web.html" hreflang="es">
+        
+          <link rel="alternate" href="6.herramientas-analisis-web.html" hreflang="eu">
+        
+      
+      
+      <link rel="icon" href="http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Web analisi tresnak - DAW Desarrollo Web Seguro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-analisi-tresnak" class="md-skip">
+          Joan zuzenean edukira
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Atalburua">
+    <a href="../index.html" title="DAW Desarrollo Web Seguro" class="md-header__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DAW Desarrollo Web Seguro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web analisi tresnak
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Hautatu hizkuntza">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../1.fundamentos/6.herramientas-analisis-web.html" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="6.herramientas-analisis-web.html" hreflang="eu" class="md-select__link">
+              Euskara
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Bilatu" placeholder="Bilatu" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Bilatu">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Partekatu" aria-label="Partekatu" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Garbitu" aria-label="Garbitu" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Bilaketa hasieratzen
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Nabigazioa" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="DAW Desarrollo Web Seguro" class="md-nav__button md-logo" aria-label="DAW Desarrollo Web Seguro" data-md-component="logo">
+      
+  <img src="../../images/Icono_TX.png" alt="logo">
+
+    </a>
+    DAW Desarrollo Web Seguro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../0.proyecto/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erreferentziazko proiektua
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Erreferentziazko proiektua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0.proyecto/txurdigest.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TxurdiGest
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0.proyecto/glosario.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glosarioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. blokea. Web garapen seguruaren oinarriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1.introduccion-desarrollo-web-seguro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2.arquitectura-aplicacion-web.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web aplikazio baten arkitektura
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3.protocolo-http.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP protokoloa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4.cookies-sesiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cookieak eta saioak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="5.https-certificados.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS eta ziurtagiri digitalak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web analisi tresnak
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="6.herramientas-analisis-web.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web analisi tresnak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zergatik-aztertu-web-aplikazio-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zergatik aztertu web aplikazio bat?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zergatik aztertu web aplikazio bat?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aztertzea-garapenaren-parte-da" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aztertzea garapenaren parte da
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nabigatzailearen-garapen-tresnak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nabigatzailearen garapen-tresnak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nabigatzailearen garapen-tresnak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gehien-erabiltzen-diren-fitxak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gehien erabiltzen diren fitxak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devtools-ikaskuntza-tresna-gisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevTools ikaskuntza-tresna gisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-eskaera-bat-aztertzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP eskaera bat aztertzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP eskaera bat aztertzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zer-informazio-ematen-du-eskaera-batek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer informazio ematen du eskaera batek
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adibide-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibide bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eskaera-bat-pausoz-pauso-aztertzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eskaera bat pausoz pauso aztertzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teoria-eta-praktika-lotzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teoria eta praktika lotzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookieak-eta-saioak-behatzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookieak eta saioak behatzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cookieak eta saioak behatzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookieak-ikuskatzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookieak ikuskatzeko
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookieak-saioekin-lotzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookieak saioekin lotzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segurtasun-atributuak-egiaztatzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segurtasun-atributuak egiaztatzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplikazioa-hobeto-ulertzeko-tresna-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplikazioa hobeto ulertzeko tresna bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sare-trafikoa-aztertzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sare-trafikoa aztertzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sare-trafikoa aztertzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zer-beha-daiteke-wiresharkekin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer beha daiteke Wiresharkekin?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-eta-httpsen-arteko-aldea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP eta HTTPSen arteko aldea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wireshark-ikaskuntza-tresna-gisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wireshark ikaskuntza-tresna gisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beste-analisi-tresna-batzuk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beste analisi-tresna batzuk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beste analisi-tresna batzuk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zertarako-erabil-dezake-garatzaile-batek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zertarako erabil dezake garatzaile batek?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lehen-kontaktu-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lehen kontaktu bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zein-tresna-erabili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zein tresna erabili?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-aldatzen-da-garatzailearentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer aldatzen da garatzailearentzat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gogoratzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gogoratzeko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideia-nagusiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideia nagusiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="7.conclusiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ondorioak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="actividades/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jarduerak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Jarduerak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="actividades/1.observar-aplicacion-devtools.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web aplikazio bat DevTools-ekin behatzea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="actividades/2.aplicacion-reto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplikazio azkarra erronkara
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../2.desarrollo-seguro/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. blokea. Web aplikazioen garapen segurua
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. blokea. Web aplikazioen garapen segurua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/1.introduccion-desarrollo-seguro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garapen seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/2.validacion-de-entradas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sarreren balidazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/3.gestion-de-errores.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Erroreen kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/4.autenticacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autentifikazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/5.autorizacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baimen-kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/6.gestion-de-secretos-y-configuracion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sekretuen eta konfigurazioaren kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/7.conclusiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ondorioak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../2.desarrollo-seguro/actividades/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jarduerak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Jarduerak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/actividades/01-disenar-formulario-seguro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inprimaki seguru bat diseinatzea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/actividades/02-disenar-acceso-aplicacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aplikaziorako sarbidea diseinatzea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/actividades/03-disenar-configuracion-segura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurazio seguru bat diseinatzea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.desarrollo-seguro/actividades/04-revision-diseno-seguridad.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proiektuaren segurtasun-diseinua berrikustea
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. blokea. Inplementazio segurua
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. blokea. Inplementazio segurua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/1.introduccion-implementacion-segura.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazio seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/2.validacion-entradas/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sarreren balidazioa
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sarreren balidazioa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/2.validacion-entradas/javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/2.validacion-entradas/php.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PHP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/2.validacion-entradas/laboratorio.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laborategia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/3.salida-segura-xss/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Irteera segurua eta XSS
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Irteera segurua eta XSS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/3.salida-segura-xss/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/3.salida-segura-xss/laboratorio-dvwa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DVWA laborategia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/4.acceso-datos-sql-injection/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datuetara sartzea eta SQL Injection
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datuetara sartzea eta SQL Injection
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/4.acceso-datos-sql-injection/php-consultas-preparadas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PHP eta prestatutako kontsultak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/4.acceso-datos-sql-injection/laboratorio-dvwa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DVWA laborategia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/5.autenticacion-sesiones/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autentifikazioa eta saioak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Autentifikazioa eta saioak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/5.autenticacion-sesiones/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/6.autorizacion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baimen-kudeaketa
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Baimen-kudeaketa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/6.autorizacion/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/7.subida-segura-archivos/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fitxategi seguruen igoera
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fitxategi seguruen igoera
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/7.subida-segura-archivos/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/7.subida-segura-archivos/laboratorio-dvwa.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DVWA laborategia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../3.implementacion-segura/8.apis-web-cors/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web APIak eta CORS
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_9" id="__nav_5_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Web APIak eta CORS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/8.apis-web-cors/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/9.conclusiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ondorioak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3.implementacion-segura/actividades/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jarduerak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. blokea. Despliegatze segurua
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. blokea. Despliegatze segurua
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/1.introduccion-despliegue-seguro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Despliegatze seguruaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/2.configuracion-produccion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Produkzio-konfigurazioa
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Produkzio-konfigurazioa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/2.configuracion-produccion/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/3.https-certificados/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTPS eta ziurtagiriak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HTTPS eta ziurtagiriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/3.https-certificados/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/4.secretos-variables-entorno/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sekretuak eta ingurune-aldagaiak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sekretuak eta ingurune-aldagaiak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/4.secretos-variables-entorno/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/5.servidor-superficie-exposicion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zerbitzaria eta esposizio-azalera
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zerbitzaria eta esposizio-azalera
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/5.servidor-superficie-exposicion/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/6.permisos-archivos-directorios/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fitxategien eta direktorioen baimenak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_7" id="__nav_6_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fitxategien eta direktorioen baimenak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/6.permisos-archivos-directorios/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/7.base-datos/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datu-basea
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_8" id="__nav_6_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Datu-basea
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/7.base-datos/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/8.cabeceras-seguridad/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurtasun-buruzagiak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_9" id="__nav_6_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Segurtasun-buruzagiak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/8.cabeceras-seguridad/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../4.despliegue-seguro/9.logs-errores-produccion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Log-ak eta erroreak produkzioan
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_10" id="__nav_6_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Log-ak eta erroreak produkzioan
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/9.logs-errores-produccion/implementacion.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inplementazioa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/10.conclusiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ondorioak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.despliegue-seguro/actividades/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jarduerak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../5.verificacion-seguridad/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. blokea. Segurtasunaren egiaztapena
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. blokea. Segurtasunaren egiaztapena
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.verificacion-seguridad/1.introduccion-verificacion-seguridad.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurtasun-egiaztapenaren sarrera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../5.verificacion-seguridad/2.revision-codigo/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kode-berrikuspena
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kode-berrikuspena
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../5.verificacion-seguridad/3.pruebas-seguridad/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurtasun-probak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Segurtasun-probak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../5.verificacion-seguridad/4.herramientas-verificacion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Egiaztapen-tresnak
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Egiaztapen-tresnak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.verificacion-seguridad/5.revision-despliegue/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hedapenaren berrikuspena
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.verificacion-seguridad/6.checklist-seguridad/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurtasun-checklist-a
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.verificacion-seguridad/7.evidencias-seguridad/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segurtasun-ebidentziak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.verificacion-seguridad/8.conclusiones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ondorioak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Edukiak">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Edukiak
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#zergatik-aztertu-web-aplikazio-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zergatik aztertu web aplikazio bat?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zergatik aztertu web aplikazio bat?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aztertzea-garapenaren-parte-da" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aztertzea garapenaren parte da
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nabigatzailearen-garapen-tresnak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nabigatzailearen garapen-tresnak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Nabigatzailearen garapen-tresnak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gehien-erabiltzen-diren-fitxak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gehien erabiltzen diren fitxak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devtools-ikaskuntza-tresna-gisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevTools ikaskuntza-tresna gisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-eskaera-bat-aztertzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP eskaera bat aztertzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP eskaera bat aztertzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zer-informazio-ematen-du-eskaera-batek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer informazio ematen du eskaera batek
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adibide-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adibide bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eskaera-bat-pausoz-pauso-aztertzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eskaera bat pausoz pauso aztertzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teoria-eta-praktika-lotzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teoria eta praktika lotzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookieak-eta-saioak-behatzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookieak eta saioak behatzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cookieak eta saioak behatzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookieak-ikuskatzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookieak ikuskatzeko
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cookieak-saioekin-lotzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cookieak saioekin lotzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segurtasun-atributuak-egiaztatzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segurtasun-atributuak egiaztatzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplikazioa-hobeto-ulertzeko-tresna-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplikazioa hobeto ulertzeko tresna bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sare-trafikoa-aztertzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sare-trafikoa aztertzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sare-trafikoa aztertzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zer-beha-daiteke-wiresharkekin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer beha daiteke Wiresharkekin?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-eta-httpsen-arteko-aldea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP eta HTTPSen arteko aldea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wireshark-ikaskuntza-tresna-gisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wireshark ikaskuntza-tresna gisa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beste-analisi-tresna-batzuk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beste analisi-tresna batzuk
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beste analisi-tresna batzuk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zertarako-erabil-dezake-garatzaile-batek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zertarako erabil dezake garatzaile batek?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lehen-kontaktu-bat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lehen kontaktu bat
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zein-tresna-erabili" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zein tresna erabili?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zer-aldatzen-da-garatzailearentzat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zer aldatzen da garatzailearentzat
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gogoratzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gogoratzeko
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ideia-nagusiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ideia nagusiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="web-analisi-tresnak">Web analisi-tresnak<a class="headerlink" href="#web-analisi-tresnak" title="Permanent link">&para;</a></h1>
+<p>Aurreko kapituluetan aztertu dugu nola komunikatzen diren nabigatzailea eta zerbitzaria, nola mantentzen den egoera cookieen eta saioen bidez, eta nola babesten duen HTTPSk informazioa komunikazioan zehar.</p>
+<p>Hala ere, garatzaile batek ezin du mekanismo horiek ikuspegi teorikotik bakarrik ezagutzera mugatu. Era berean, egiaztatu behar du bere aplikazioak espero duen bezala jokatzen duela, eta eskaera batean benetan zer gertatzen den interpretatzeko gai izan behar du.</p>
+<p>Horretarako, analisi-tresna desberdinak daude; bezeroaren eta zerbitzariaren arteko komunikazioa behatzeko, cookieak ikuskatzeko, HTTP erantzunak aztertzeko eta garapenean zehar ager daitezkeen arazoak detektatzeko aukera ematen dute.</p>
+<p>Kapitulu honetan web garatzaile batek gehien erabiltzen dituen tresnak ezagutuko ditugu, eta ikasiko dugu nola erabili garapen- eta arazketa-prozesuaren ohiko zati gisa.</p>
+<hr />
+<h2 id="zergatik-aztertu-web-aplikazio-bat">Zergatik aztertu web aplikazio bat?<a class="headerlink" href="#zergatik-aztertu-web-aplikazio-bat" title="Permanent link">&para;</a></h2>
+<p>Aplikazio bat garatzen dugunean, normalean idazten dugun kodean pentsatzen dugu.</p>
+<p>Hala ere, lanaren zati garrantzitsu bat da kode horrek espero den portaera zehatza sortzen duela egiaztatzea.</p>
+<p>Adibidez, garatzaile batek honelako galderei erantzun behar izan diezaieke:</p>
+<ul>
+<li>Zer HTTP eskaera bidali du oraintxe nabigatzaileak?</li>
+<li>Zer erantzun itzuli du zerbitzariak?</li>
+<li>Saio-cookiea ondo bidali al da?</li>
+<li>Zer HTTP egoera-kode jaso da?</li>
+<li>Zenbat denbora behar izan du erantzunak?</li>
+<li>Zergatik itzultzen du eskaera batek 403 edo 500 errorea?</li>
+</ul>
+<p>Galdera horiei kodea bakarrik irakurriz erantzutea zaila izaten da.</p>
+<p>Analisi-tresnek nabigatzailearen eta zerbitzariaren arteko komunikazioa zuzenean behatzeko aukera ematen dute; horri esker, errazagoa da erroreak aurkitzea eta aplikazio baten barne-funtzionamendua ulertzea.</p>
+<h3 id="aztertzea-garapenaren-parte-da">Aztertzea garapenaren parte da<a class="headerlink" href="#aztertzea-garapenaren-parte-da" title="Permanent link">&para;</a></h3>
+<p>Analisiak ez dira segurtasuneko adituentzat edo sistemetako administratzaileentzat bakarrik gordetako jarduera gisa ulertu behar.</p>
+<p>Edozein garatzaileren eguneroko lanaren parte da.</p>
+<p>Garapenean zehar ohikoa da eskaerak ikuskatzea, HTTP goiburuak berrikustea, cookieak egiaztatzea edo erantzunak aztertzea aplikazioak behar bezala funtzionatzen duela baieztatzeko.</p>
+<p>Arazo bat zenbat eta lehenago detektatu, orduan eta errazago zuzentzen da.</p>
+<div class="admonition note">
+<p class="admonition-title">Behatu, aldatu aurretik</p>
+<p>Gorabehera asko konpon daitezke, besterik gabe, nabigatzaileak eta zerbitzariak benetan zer informazio trukatzen duten behatuz.</p>
+<p>Kodea aldatu aurretik, komeni da komunikazioan zer gertatzen ari den egiaztatzea.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Analisi-tresnek aplikazio baten benetako portaera ulertzeko aukera ematen dute, eta ebidentzietan oinarritutako erabakiak hartzen laguntzen dute, ez suposizioetan.</p>
+</div>
+<h2 id="nabigatzailearen-garapen-tresnak">Nabigatzailearen garapen-tresnak<a class="headerlink" href="#nabigatzailearen-garapen-tresnak" title="Permanent link">&para;</a></h2>
+<p>Nabigatzaile modernoek web orri baten barne-funtzionamendua ikuskatzeko aukera ematen duten garapen-tresnen multzoa txertatzen dute.</p>
+<p>Tresna horiek, normalean <strong>DevTools</strong> (<em>Developer Tools</em>) izenez ezagutzen direnak, edozein web garatzaileren eguneroko lanaren parte dira.</p>
+<p>Funtzionalitate ugari eskaintzen dituzten arren, modulu honetan batez ere nabigatzailearen eta zerbitzariaren arteko komunikazioarekin lotutakoak erabiliko ditugu.</p>
+<p>Nabigatzaile gehienetan <strong>F12</strong> tekla sakatuta edo testuinguru-menuko <strong>Inspeccionar</strong> aukeraren bidez ireki daitezke.</p>
+<p><img alt="Análisis de peticiones HTTP con DevTools Network" src="../../assets/bloque1/devtools-network.png" width="900" /></p>
+<h3 id="gehien-erabiltzen-diren-fitxak">Gehien erabiltzen diren fitxak<a class="headerlink" href="#gehien-erabiltzen-diren-fitxak" title="Permanent link">&para;</a></h3>
+<p>DevTools-ek fitxa asko dituzte, baina gutxi batzuek biltzen dute garapen-lanaren zatirik handiena.</p>
+<table>
+<thead>
+<tr>
+<th>Pestaña</th>
+<th>Utilidad principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Elements</strong></td>
+<td>HTML egitura eta CSS estiloak ikuskatu eta aldatzea.</td>
+</tr>
+<tr>
+<td><strong>Console</strong></td>
+<td>Mezuak eta erroreak erakutsi, eta JavaScript aginduak exekutatzea.</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>HTTP eskaerak eta erantzunak aztertzea.</td>
+</tr>
+<tr>
+<td><strong>Application</strong> (Chrome) / <strong>Storage</strong> (Firefox)</td>
+<td>Cookieak, biltegiratze lokala eta nabigatzaileko bestelako datuak ikuskatu.</td>
+</tr>
+</tbody>
+</table>
+<p>Modulu honetan batez ere <strong>Network</strong> eta <strong>Application</strong> fitxak erabiliko ditugu; izan ere, aurreko kapituluetan aztertutako mekanismo asko zuzenean behatzeko aukera ematen dute.</p>
+<h3 id="devtools-ikaskuntza-tresna-gisa">DevTools ikaskuntza-tresna gisa<a class="headerlink" href="#devtools-ikaskuntza-tresna-gisa" title="Permanent link">&para;</a></h3>
+<p>Garapen-tresnek ez dute erroreak aurkitzeko bakarrik balio.</p>
+<p>Aplikazio web batek exekuzioan dagoen bitartean nola funtzionatzen duen ulertzeko ere balio dute.</p>
+<p>Adibidez, haiekin honako hauek behatu ahal izango ditugu:</p>
+<ul>
+<li>Zer baliabide eskatzen dituen nabigatzaileak.</li>
+<li>Zer HTTP goiburu trukatzen diren.</li>
+<li>Zer egoera-kode itzultzen duen zerbitzariak.</li>
+<li>Zer cookie sortzen diren saioa hastean.</li>
+<li>Zenbat denbora behar duen eskaera bakoitzak.</li>
+<li>API batek zer informazio itzultzen duen.</li>
+</ul>
+<p>Behaketa-gaitasun hori bereziki erabilgarria da ikaskuntzan, kontzeptu teorikoak aplikazio baten benetako portaerarekin lotzeko aukera ematen baitu.</p>
+<div class="admonition note">
+<p class="admonition-title">Ezinbesteko tresna bat</p>
+<p>DevTools tresnak edozein web garatzaileren ohiko lan-ingurunearen parte dira.</p>
+<p>Horiek ondo erabiltzen ikastea programazio-lengoaia edo erabilitako frameworka ezagutzea bezain garrantzitsua da.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Modulu honetan DevTools etengabe erabiliko ditugu erronketan garatutako aplikazioen funtzionamendua egiaztatzeko eta nabigatzailearen eta zerbitzariaren arteko komunikazioa espero dugun bezala gertatzen dela baieztatzeko.</p>
+</div>
+<h2 id="http-eskaera-bat-aztertzen">HTTP eskaera bat aztertzen<a class="headerlink" href="#http-eskaera-bat-aztertzen" title="Permanent link">&para;</a></h2>
+<p>Garapen-tresnetako <strong>Network</strong> fitxak nabigatzaileak web aplikazio batekin elkarreraginean egiten dituen eskaera guztiak behatzeko aukera ematen du.</p>
+<p>Orri bat kargatzen den bakoitzean, formulario bat bidaltzen denean edo API bat kontsultatzen denean, sarrera berri bat agertzen da komunikazio horri buruzko informazio xehatuarekin.</p>
+<p>Tresna hau bereziki erabilgarria da aplikazio bat espero dugun bezala dabilen egiaztatzeko edo arazo baten jatorria aurkitzeko.</p>
+<h3 id="zer-informazio-ematen-du-eskaera-batek">Zer informazio ematen du eskaera batek<a class="headerlink" href="#zer-informazio-ematen-du-eskaera-batek" title="Permanent link">&para;</a></h3>
+<p><strong>Network</strong> fitxan eskaera bat hautatzean, honelako informazioa kontsulta dezakegu:</p>
+<ul>
+<li>Eskatutako URLa.</li>
+<li>Erabilitako HTTP metodoa.</li>
+<li>Zerbitzariak itzulitako egoera-kodea.</li>
+<li>Eskaeraren eta erantzunaren HTTP goiburuak.</li>
+<li>Zerbitzarira bidalitako edukia.</li>
+<li>Erantzun gisa jasotako edukia.</li>
+<li>Komunikazioa osatzeko behar izan den denbora.</li>
+</ul>
+<p>Informazio horrek guztiz zehaztasunez ulertzeko aukera ematen du nabigatzailearen eta zerbitzariaren artean zer gertatzen den.</p>
+<h3 id="adibide-bat">Adibide bat<a class="headerlink" href="#adibide-bat" title="Permanent link">&para;</a></h3>
+<p>Demagun erabiltzaile bat aplikazio baten orri nagusira sartzen dela.</p>
+<p><strong>Network</strong> fitxak honelako eskaera bat erakuts lezake:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Nombre        Método   Estado   Tipo
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>------------------------------------------
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>index.html    GET      200      document
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>styles.css    GET      200      stylesheet
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>app.js        GET      200      script
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>logo.png      GET      200      image
+</span></code></pre></div>
+<p>Informazio horretatik egiaztatu dezakegu:</p>
+<ul>
+<li>Orri nagusia behar bezala kargatu dela.</li>
+<li>CSS eta JavaScript fitxategiak errorerik gabe deskargatu direla.</li>
+<li>Irudiak ere behar bezala jaso direla.</li>
+<li>Ez dela karga-errorea duen baliabiderik ageri.</li>
+</ul>
+<h3 id="eskaera-bat-pausoz-pauso-aztertzen">Eskaera bat pausoz pauso aztertzen<a class="headerlink" href="#eskaera-bat-pausoz-pauso-aztertzen" title="Permanent link">&para;</a></h3>
+<p>Eskaera zehatz bat hautatzen dugunean, analisi-prozesu txiki bat jarrai dezakegu.</p>
+<ol>
+<li>Eskatutako URLa egiaztatu.</li>
+<li>Erabilitako HTTP metodoa baieztatu.</li>
+<li>Erantzunaren egoera-kodea berrikusi.</li>
+<li>HTTP goiburuak aztertu.</li>
+<li>Bidalitako eta jasotako edukia aztertu.</li>
+<li>Eskaerak behar izan duen denbora egiaztatu.</li>
+</ol>
+<p>Prozedura hau erabilgarria da bai erroreak aurkitzeko bai aplikazio baten barne-funtzionamendua ulertzeko.</p>
+<pre class="mermaid"><code>flowchart LR
+    A[Seleccionar petición]
+    --&gt; B[Comprobar URL]
+
+    B --&gt; C[Verificar método HTTP]
+
+    C --&gt; D[Revisar código de estado]
+
+    D --&gt; E[Examinar cabeceras]
+
+    E --&gt; F[Analizar respuesta]
+
+    F --&gt; G[Buscar posibles problemas]</code></pre>
+<h3 id="teoria-eta-praktika-lotzen">Teoria eta praktika lotzen<a class="headerlink" href="#teoria-eta-praktika-lotzen" title="Permanent link">&para;</a></h3>
+<p>Aurreko kapituluetan HTTP, cookieak, saioak eta HTTPS bezalako kontzeptuak aztertu ditugu.</p>
+<p><strong>Network</strong> fitxak mekanismo horiek guztiak zuzenean behatzeko aukera ematen du.</p>
+<p>Adibidez, honako hauek egiaztatu ahal izango ditugu:</p>
+<ul>
+<li>Eskaera bakoitzak zer HTTP metodo erabiltzen duen.</li>
+<li>Zerbitzariak zer egoera-kode itzultzen duen.</li>
+<li>Zer HTTP goiburu trukatzen diren.</li>
+<li>Komunikazioak HTTP edo HTTPS erabiltzen duen.</li>
+<li>Nabigatzaileak eskaerarekin batera cookieak bidaltzen dituen.</li>
+</ul>
+<p>Horrela, teoria kontzeptu abstraktuen multzo hutsa izateari uzten dio, eta aplikazio baten exekuzioan behatu daitekeen informazio bihurtzen da.</p>
+<div class="admonition note">
+<p class="admonition-title">Eskaera guztiak ez dira web orriei dagozkienak</p>
+<p>Orri moderno batek eskaera osagarri ugari egin ohi ditu irudiak, estilo-orriak, JavaScript fitxategiak kargatzeko edo APIak kontsultatzeko.</p>
+<p><strong>Network</strong> fitxak horiek guztiak banaka aztertzeko aukera ematen du.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Aplikazio batek espero genuen bezala funtzionatzen ez duenean, lehen ekintzetako bat <strong>Network</strong> fitxa irekitzea eta zer eskaera egin diren eta zer erantzun itzuli dituen zerbitzariak egiaztatzea da.</p>
+</div>
+<h2 id="cookieak-eta-saioak-behatzen">Cookieak eta saioak behatzen<a class="headerlink" href="#cookieak-eta-saioak-behatzen" title="Permanent link">&para;</a></h2>
+<p>Aurreko kapituluan ikasi genuen cookieek eta saioek web aplikazio baten egoera mantentzeko aukera ematen dutela HTTP eskaera desberdinen artean.</p>
+<p>Nabigatzailearen garapen-tresnek mekanismo horiek nola funtzionatzen duten zuzenean egiaztatzeko aukera ematen dute, eta nabigatzaileak webgune bakoitzerako gordetzen duen informazioa behatzeko.</p>
+<p>Chrome eta Microsoft Edgen, informazio hori <strong>Application</strong> fitxatik kontsulta daiteke; Firefoxek, berriz, funtzionalitate baliokideak eskaintzen ditu <strong>Storage</strong> fitxan.</p>
+<p><img alt="Cookies almacenadas en el navegador mediante DevTools" src="../../assets/bloque1/devtools-cookies.png" width="900" /></p>
+<h3 id="cookieak-ikuskatzeko">Cookieak ikuskatzeko<a class="headerlink" href="#cookieak-ikuskatzeko" title="Permanent link">&para;</a></h3>
+<p>Garapen-tresnen barruan <strong>Cookies</strong> atala hautatzean, nabigatzaileak uneko webguneari lotutako cookie guztiak erakusten ditu.</p>
+<p>Cookie bakoitza hainbat atributurekin agertzen da, adibidez:</p>
+<ul>
+<li>Izena.</li>
+<li>Balioa.</li>
+<li>Domeinua.</li>
+<li>Bidea (<em>Path</em>).</li>
+<li>Iraungitze-data.</li>
+<li><strong>Secure</strong> adierazlea.</li>
+<li><strong>HttpOnly</strong> adierazlea.</li>
+<li><strong>SameSite</strong> adierazlea.</li>
+</ul>
+<p>Informazio horrek aplikazioak erabiltzailearen identifikazioa nola kudeatzen duen egiaztatzeko aukera ematen du, eta cookieak behar bezala konfiguratu diren baieztatzeko balio du.</p>
+<blockquote>
+<p><strong>Aquí insertaremos la Figura 4: Cookies almacenadas por el navegador.</strong></p>
+</blockquote>
+<h3 id="cookieak-saioekin-lotzen">Cookieak saioekin lotzen<a class="headerlink" href="#cookieak-saioekin-lotzen" title="Permanent link">&para;</a></h3>
+<p>Erabiltzaile batek aplikazio batean saioa hasten duenean, ohikoa da honako hauetako baten antzeko cookie bat agertzea:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PHPSESSID
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>laravel_session
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>JSESSIONID
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>ASP.NET_SessionId
+</span></code></pre></div>
+<p>Izena erabilitako teknologiaren araberakoa den arren, denek oso antzeko funtzioa betetzen dute: zerbitzariari dagokion saioa berreskuratzeko aukera emango dion identifikatzailea gordetzea.</p>
+<p>Garrantzitsua da gogoratzea <strong>saioa ez dagoela nabigatzailean gordeta</strong>.</p>
+<p>Nabigatzaileak saio-identifikatzailea bakarrik gordetzen du cookie baten bidez. Erabiltzaileari lotutako informazio guztia zerbitzarian gordetzen da.</p>
+<p>Behaketa honek aukera ematen du aurreko kapituluan aztertutako kontzeptu garrantzitsuenetako bat praktikan egiaztatzeko.</p>
+<h3 id="segurtasun-atributuak-egiaztatzen">Segurtasun-atributuak egiaztatzen<a class="headerlink" href="#segurtasun-atributuak-egiaztatzen" title="Permanent link">&para;</a></h3>
+<p>Saioaren identifikatzaileaz gain, garapen-tresnek aukera ematen dute cookieek hainbat babes-mekanismo behar bezala erabiltzen dituzten egiaztatzeko.</p>
+<p>Adibidez, egiaztatu ahal izango dugu cookie batek:</p>
+<ul>
+<li>HTTPS bidez bakarrik transmititzen den (<strong>Secure</strong>).</li>
+<li>JavaScripttik atzitu ezin den (<strong>HttpOnly</strong>).</li>
+<li>Beste webgune batzuetara bidalketa mugatzen duen <strong>SameSite</strong> bidez.</li>
+</ul>
+<p>Egiaztapen horiek bereziki erabilgarriak dira autentifikazioa edo informazio sentikorra kudeatzen duten aplikazioen garapenean.</p>
+<h3 id="aplikazioa-hobeto-ulertzeko-tresna-bat">Aplikazioa hobeto ulertzeko tresna bat<a class="headerlink" href="#aplikazioa-hobeto-ulertzeko-tresna-bat" title="Permanent link">&para;</a></h3>
+<p>Cookieak ikuskatzekoak ez du erroreak aurkitzeko bakarrik balio.</p>
+<p>Era berean, lagungarria da ulertzeko nola mantentzen duen aplikazio batek erabiltzailearen identitatea eskaera desberdinen artean eta nola inplementatzen dituen autentifikazio-mekanismoak.</p>
+<p>Informazio hori <strong>Network</strong> fitxarekin lotzeak eskaera baten ibilbide osoa jarraitzeko aukera ematen du: nabigatzaileak cookiea bidaltzen duenetik zerbitzariak sortutako erantzunera arte.</p>
+<div class="admonition note">
+<p class="admonition-title">Saioak ez dira nabigatzailean agertzen</p>
+<p>Garapen-tresnek nabigatzaileak gordetako cookieak erakusten dituzte, baina ez saioen edukia.</p>
+<p>Saioaren informazioa beti zerbitzarian geratzen da, eta aplikazio beretik bakarrik da eskuragarria.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Garapen-tresnen bidez cookieak egiaztatzea modu azkarra da autentifikazioak ondo funtzionatzen duela eta segurtasun-atributuak aurreikusitako moduan konfiguratu direla baieztatzeko.</p>
+</div>
+<h2 id="sare-trafikoa-aztertzen">Sare-trafikoa aztertzen<a class="headerlink" href="#sare-trafikoa-aztertzen" title="Permanent link">&para;</a></h2>
+<p>Nabigatzailearen garapen-tresnek komunikazioa nabigatzailearen beraren ikuspegitik behatzeko aukera ematen dute.</p>
+<p>Hala ere, sare batean benetan zirkulatzen duen trafikoa aztertzeko gai diren tresnak ere badaude.</p>
+<p>Ezagunenetako bat <strong>Wireshark</strong> da, protokoloen analizatzaile bat, garatzaileek ez ezik sistemetako administratzaileek, sare-ingeniariek eta segurtasun-espezialistek ere erabiltzen dutena.</p>
+<p>Haren funtzioa da sare-interfaze batetik zirkulatzen duten paketeak harrapatzea eta haietan dagoen informazioa erakustea.</p>
+<h3 id="zer-beha-daiteke-wiresharkekin">Zer beha daiteke Wiresharkekin?<a class="headerlink" href="#zer-beha-daiteke-wiresharkekin" title="Permanent link">&para;</a></h3>
+<p>Wiresharkek komunikazio-protokolo ugari aztertzeko aukera ematen du.</p>
+<p>Modulu honen testuinguruan, bereziki interesgarria da honako hau egiaztatzea:</p>
+<ul>
+<li>HTTP eta HTTPS konexioak.</li>
+<li>DNS eskaerak.</li>
+<li>TCP konexioen ezarpena.</li>
+<li>Bezeroaren eta zerbitzariaren arteko pakete-trukea.</li>
+</ul>
+<p>Informazio honek datuak sarean benetan nola bidaiatzen duten ulertzen laguntzen du.</p>
+<h3 id="http-eta-httpsen-arteko-aldea">HTTP eta HTTPSen arteko aldea<a class="headerlink" href="#http-eta-httpsen-arteko-aldea" title="Permanent link">&para;</a></h3>
+<p>Demostrazio argigarrienetako bat HTTP konexio bat eta HTTPS konexio bat alderatzea da.</p>
+<p>Aplikazio batek HTTP erabiltzen duenean, transmititutako informazioaren zati handi bat zuzenean beha daiteke sare-kapturan.</p>
+<p>Adibidez, honako hauek identifika daitezke:</p>
+<ul>
+<li>Eskatutako URLa.</li>
+<li>HTTP goiburuak.</li>
+<li>Eskaera eta erantzun askoren edukia.</li>
+<li>Formularioen bidez bidalitako informazioa.</li>
+</ul>
+<p>Aitzitik, aplikazioak HTTPS erabiltzen duenean, komunikazioaren edukia zifratuta agertzen da.</p>
+<p>Datu tekniko jakin batzuk ikusgai izaten jarraitzen duten arren —IP helbideak edo konexioaren ezarpena, adibidez—, nabigatzailearen eta zerbitzariaren artean trukatutako edukia ezin da zuzenean interpretatu.</p>
+<blockquote>
+<p><strong>Aquí insertaremos la Figura 5: Captura de tráfico HTTP con Wireshark.</strong></p>
+<p><strong>Aquí insertaremos la Figura 6: Captura de tráfico HTTPS con Wireshark.</strong></p>
+</blockquote>
+<p>Bi kapturak alderatzeak berehala ulertzeko aukera ematen du zergatik den hain garrantzitsua HTTPS erabiltzea informazio sentikorra kudeatzen duten aplikazioetan.</p>
+<h3 id="wireshark-ikaskuntza-tresna-gisa">Wireshark ikaskuntza-tresna gisa<a class="headerlink" href="#wireshark-ikaskuntza-tresna-gisa" title="Permanent link">&para;</a></h3>
+<p>Modulu honetan ez dugu Wireshark erabiliko auditoretzak egiteko edo sareen analisi aurreratuak egiteko.</p>
+<p>Helburua izango da web aplikazioak benetan nola komunikatzen diren ikusarazten laguntzea eta aurreko kapituluetan aztertutako kontzeptuak indartzea.</p>
+<p>HTTP eta HTTPS trafikoa zuzenean behatzeak errazten du ulertzea zergatik den komunikazioen babesa web garapen segururako oinarrizko eskakizuna.</p>
+<div class="admonition note">
+<p class="admonition-title">Beste ikuspegi bat</p>
+<p>Garapen-tresnek komunikazioa nabigatzailearen ikuspegitik erakusten duten bitartean, Wiresharkek trafikoa sarearen ikuspegitik behatzeko aukera ematen du.</p>
+<p>Bi tresnek informazio osagarria eskaintzen dute.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Laborategiko ingurune batean Wireshark erabiltzeak bezeroaren eta zerbitzariaren artean informazioa nola bidaiatzen duen ulertzen laguntzen du, eta zergatik den HTTPS ezinbestekoa aplikazio modernoetan.</p>
+</div>
+<h2 id="beste-analisi-tresna-batzuk">Beste analisi-tresna batzuk<a class="headerlink" href="#beste-analisi-tresna-batzuk" title="Permanent link">&para;</a></h2>
+<p>Nabigatzailean integratutako tresnez eta Wireshark bezalako trafiko-analizatzaileez gain, badira nabigatzailearen eta zerbitzariaren arteko komunikazioa ikuskatzeko aplikazio espezializatuak.</p>
+<p>Ezagunenetako bat <strong>Burp Suite</strong> da, web aplikazioen garapenean, segurtasun-probetan eta auditoretzetan oso erabilia den tresna.</p>
+<p>Haren funtzionamendua nabigatzailearen eta zerbitzariaren artean <strong>proxy</strong> gisa jardutean oinarritzen da.</p>
+<p>Aplikazioarekin zuzenean komunikatu beharrean, nabigatzaileak eskaerak Burp Suitera bidaltzen ditu. Tresnak jasotzen ditu, garatzaileari erakusten dizkio, eta ondoren zerbitzarira birbidaltzen ditu.</p>
+<p>Modu berean, zerbitzariaren erantzunak ere Burp Suitetik pasatzen dira nabigatzailera iritsi aurretik.</p>
+<pre class="mermaid"><code>flowchart LR
+    A[Navegador]
+    --&gt; B[Burp Suite]
+
+    B --&gt; C[Servidor]
+
+    C --&gt; B
+
+    B --&gt; A</code></pre>
+<p>Funtzionamendu horri esker, HTTP eskaerak eta erantzunak xehetasunez behatu daitezke, trukatutako goiburuak egiaztatu, edo aplikazio batek exekuzioan zehar nola jokatzen duen aztertu.</p>
+<h3 id="zertarako-erabil-dezake-garatzaile-batek">Zertarako erabil dezake garatzaile batek?<a class="headerlink" href="#zertarako-erabil-dezake-garatzaile-batek" title="Permanent link">&para;</a></h3>
+<p>Burp Suitek funtzionalitate aurreratu ugari dituen arren, modulu honetan web aplikazio baten funtzionamendua ulertzearekin lotutakoak interesatzen zaizkigu bereziki.</p>
+<p>Adibidez, aukera ematen du:</p>
+<ul>
+<li>HTTP eta HTTPS eskaerak behatzeko.</li>
+<li>Nabigatzaileak bidalitako goiburuak aztertzeko.</li>
+<li>Zerbitzariaren erantzunak ikuskatzeko.</li>
+<li>Bezeroaren eta zerbitzariaren arteko informazio-trukea ulertzeko.</li>
+<li>Formularioen eta APIen funtzionamendua egiaztatzeko.</li>
+</ul>
+<p>Zeregin horiek erabilgarriak dira garapenean, eta aplikazio baten portaera hobeto ulertzen laguntzen dute.</p>
+<h3 id="lehen-kontaktu-bat">Lehen kontaktu bat<a class="headerlink" href="#lehen-kontaktu-bat" title="Permanent link">&para;</a></h3>
+<p>Modulu honetan Burp Suite Community Edition-en oinarrizko funtzionalitate batzuk bakarrik erabiliko ditugu, helburu didaktikoekin.</p>
+<p>Helburua ez da teknika erasokorrak ikastea edo segurtasun-auditoretzak egitea; baizik eta nabigatzailearen eta zerbitzariaren artean informazioa nola zirkulatzen duen ulertzea, eta web aplikazio baten komunikazioak nola azter daitezkeen ikustea.</p>
+<div class="admonition note">
+<p class="admonition-title">Asko erabiltzen den tresna bat</p>
+<p>Burp Suite erreferentziazko tresna da web aplikazioen garapenaren eta segurtasunaren arloan.</p>
+<p>Modulu honetan behaketa- eta ikaskuntza-tresna gisa erabiliko dugu.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Aplikazio baten kodea aldatu aurretik, erabilgarria da HTTP eskaerak eta erantzunak benetan nola trukatzen diren behatzea. Burp Suite bezalako tresnek analisi-prozesu hori errazten dute.</p>
+</div>
+<h2 id="zein-tresna-erabili">Zein tresna erabili?<a class="headerlink" href="#zein-tresna-erabili" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>¿Qué permite observar?</th>
+<th>Uso habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DevTools</strong></td>
+<td>HTML, CSS, JavaScript, HTTP eskaerak, cookieak</td>
+<td>Eguneroko garapena</td>
+</tr>
+<tr>
+<td><strong>Wireshark</strong></td>
+<td>Sare-trafikoa eta protokoloak</td>
+<td>Komunikazioen analisia</td>
+</tr>
+<tr>
+<td><strong>Burp Suite</strong></td>
+<td>HTTP/HTTPS eskaerak eta erantzunak</td>
+<td>Garapena, arazketa eta aplikazio-probak</td>
+</tr>
+</tbody>
+</table>
+<h2 id="zer-aldatzen-da-garatzailearentzat">Zer aldatzen da garatzailearentzat<a class="headerlink" href="#zer-aldatzen-da-garatzailearentzat" title="Permanent link">&para;</a></h2>
+<p>Analisi-tresnak edozein web garatzaileren eguneroko lanaren parte dira.</p>
+<p>Ez dira errorea agertzen denean bakarrik erabiltzen. Aplikazio bat behar bezala jokatzen duela egiaztatzeko, nabigatzailearen eta zerbitzariaren arteko komunikazioa baieztatzeko eta diseinu-erabakiak aurreikusitako moduan inplementatu direla egiaztatzeko ere balio dute.</p>
+<p>Modulu honetan zehar tresna horiek ohiko moduan erabiliko ditugu erronketan garatutako aplikazioen funtzionamendua behatzeko.</p>
+<p>Adibidez, honako hauek egiaztatu ahal izango ditugu:</p>
+<ul>
+<li>Aplikazio batek zer eskaera egiten dituen orri bat kargatzean.</li>
+<li>Zer erantzun itzultzen dituen zerbitzariak.</li>
+<li>Nola bidaltzen diren saio-cookieak.</li>
+<li>Komunikazioak HTTPS erabiltzen duen.</li>
+<li>Nabigatzaileak eta API batek zer informazio trukatzen duten.</li>
+<li>HTTP egoera-kode nagusiak nola interpretatu.</li>
+</ul>
+<p>Ikuspegi horrek behaketan eta egiaztapenean oinarritutako lan-modua garatzea ahalbidetuko du, erabakiak iturburu-kodean bakarrik oinarrituta hartzea saihestuz.</p>
+<p>Denborarekin, analisi-tresnak kontsultatzea kodea idaztea edo araztaile bat erabiltzea bezain ohiko praktika bihurtuko da.</p>
+<div class="admonition note">
+<p class="admonition-title">Behatu, zuzendu aurretik</p>
+<p>Aplikazio batek behar bezala funtzionatzen ez duenean, gomendagarria da lehenik nabigatzailearen eta zerbitzariaren arteko komunikazioan zer gertatzen den egiaztatzea.</p>
+<p>Askotan, arazoa aurkitzeko behar den informazioa analisi-tresnetan bertan dago eskuragarri.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Garatzailearen ikuspegitik</p>
+<p>Garatzaile batek ez du HTTP goiburu guztiak edo egoera-kode guztiak buruz ikasi behar.</p>
+<p>Garrantzitsuena da tresna egokiak erabiltzen jakitea informazio hori behar denean eskuratzeko.</p>
+</div>
+<hr />
+<h2 id="gogoratzeko">Gogoratzeko<a class="headerlink" href="#gogoratzeko" title="Permanent link">&para;</a></h2>
+<p>Analisi-tresnek web aplikazio baten benetako portaera behatzeko aukera ematen dute martxan dagoen bitartean.</p>
+<p>Nabigatzailearen DevTools tresnek HTTP eskaeren analisia, zerbitzariaren erantzunak, cookieak eta eguneroko garapenarekin lotutako beste elementu batzuk aztertzea errazten dute.</p>
+<p>Wiresharkek sarean zirkulatzen duen trafikoaren ikuspegia eskaintzen du, eta HTTP komunikazio baten eta HTTPS bidez babestutako beste baten arteko aldea ulertzeko aukera ematen du.</p>
+<p>Burp Suitek bitartekari gisa jarduten du nabigatzailearen eta zerbitzariaren artean, eta oso modu erabilgarria ematen du garapenean eta probetan zehar HTTP komunikazioa ikuskatzeko.</p>
+<p>Tresna horiek erabiltzen ikasteak aplikazio baten funtzionamendua hobeto ulertzeko eta arazoak azkarrago aurkitzeko aukera ematen du.</p>
+<hr />
+<h2 id="ideia-nagusiak">Ideia nagusiak<a class="headerlink" href="#ideia-nagusiak" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Analisi-tresnek web aplikazio baten benetako portaera behatzeko aukera ematen dute.</li>
+<li>DevTools tresnak edozein garatzaileren ohiko lan-ingurunearen parte dira.</li>
+<li><strong>Network</strong> fitxak HTTP eskaerak eta erantzunak aztertzeko aukera ematen du.</li>
+<li><strong>Application</strong> edo <strong>Storage</strong> fitxak nabigatzaileak gordetako cookieak ikuskatzeko aukera ematen du.</li>
+<li>Wiresharkek sare-trafikoa erakusten du, eta HTTP eta HTTPS komunikazioak alderatzeko aukera ematen du.</li>
+<li>Burp Suitek nabigatzailearen eta zerbitzariaren arteko komunikazioa aztertzea errazten du.</li>
+<li>Aplikazio bat behatzea garapen-prozesuaren funtsezko zatia da.</li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Igo goraino
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Orri-oina" >
+        
+          
+          <a href="5.https-certificados.html" class="md-footer__link md-footer__link--prev" aria-label="Aurrekoa: HTTPS eta ziurtagiri digitalak">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Aurrekoa
+              </span>
+              <div class="md-ellipsis">
+                HTTPS eta ziurtagiri digitalak
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="7.conclusiones.html" class="md-footer__link md-footer__link--next" aria-label="Hurrengoa: Ondorioak">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Hurrengoa
+              </span>
+              <div class="md-ellipsis">
+                Ondorioak
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  <div class="md-copyright__highlight">
+    © 2026 Jose Insausti · CIFP Txurdinaga LHII
+  </div>
+
+  Material desarrollado para el módulo Desarrollo Web Seguro.
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Arbelean kopiatuta", "clipboard.copy": "Kopiatu arbelean", "search.result.more.one": "Bat gehiago orri honetan", "search.result.more.other": "# gehiago orri honetan", "search.result.none": "Bat datorren dokumenturik ez", "search.result.one": "Bat datorren dokumentu bat", "search.result.other": "Bat datozen # dokumentu", "search.result.placeholder": "Idatzi bilatzen hasteko", "search.result.term.missing": "Falta da", "select.version": "Hautatu bertsioa"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="../../scripts/checkboxes.js"></script>
+      
+    
+  </body>
+</html>
