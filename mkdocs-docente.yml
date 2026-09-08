@@ -1,0 +1,15 @@
+site_name: Desarrollo Web Seguro - Guía docente
+
+docs_dir: docente
+
+theme:
+  name: material
+  language: es
+
+nav:
+  - Inicio: index.md
+  - Primera evaluación:
+      - Semana 1: evaluacion1/semana01.md
+      - Semana 2: evaluacion1/semana02.md
+  - Segunda evaluación:
+      - Semana 12: evaluacion2/semana12.md
