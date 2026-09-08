@@ -1,5 +1,16 @@
 # Semana 1 — Introducción al desarrollo web seguro
 
+## Foco docente
+
+No intentar presentar en esta primera sesión toda la seguridad web.
+
+El objetivo principal es que el alumnado comprenda dos ideas:
+
+1. la seguridad forma parte del desarrollo de una aplicación;
+2. una aplicación puede funcionar correctamente y, aun así, ser insegura.
+
+---
+
 ## Objetivos de la sesión
 
 Al finalizar la sesión, el alumnado debería ser capaz de:
@@ -373,7 +384,9 @@ Si algún grupo no sabe por dónde empezar, se pueden utilizar preguntas como:
 
 ## Puesta en común
 
-Cada equipo explica uno o dos riesgos.
+Cada equipo explica **un riesgo principal**.
+
+Si hay pocos grupos y queda tiempo, se puede comentar un segundo riesgo.
 
 El profesor puede agrupar las respuestas en categorías generales:
 

@@ -1,5 +1,13 @@
 # Semana 2 — HTTP y análisis de peticiones con DevTools
 
+## Foco docente
+
+HTTP no es el objetivo final de la sesión.
+
+El objetivo es que el alumnado sea capaz de observar qué envía realmente el navegador al servidor y comprenda que esos datos pueden ser inspeccionados y modificados por el usuario.
+
+---
+
 ## Objetivos de la sesión
 
 Al finalizar la sesión, el alumnado debería ser capaz de:
@@ -78,19 +86,22 @@ No es necesario memorizar listas extensas de códigos.
 
 ### Cabeceras HTTP
 
-Mostrar ejemplos reales:
+Mostrar en DevTools algunas cabeceras reales de una petición y una respuesta.
+
+Priorizar:
 
 - `Host`;
-- `Content-Type`;
-- `Accept`.
+- `Accept`;
+- `Content-Type`.
 
-Se pueden enseñar también, sin desarrollarlas todavía:
+Si aparecen de forma natural, señalar también:
 
 - `Cookie`;
-- `Set-Cookie`;
-- `Authorization`.
+- `Set-Cookie`.
 
-Estas últimas se retomarán en la siguiente sesión al trabajar cookies, sesiones y autenticación.
+No desarrollar todavía su funcionamiento; se trabajará en la siguiente sesión.
+
+Mencionar `Authorization` únicamente como ejemplo de cabecera relacionada con autenticación, sin necesidad de reproducirla en la demostración.
 
 ### Estado en HTTP
 
@@ -419,7 +430,12 @@ pedir al alumnado que modifique manualmente el identificador:
 
 Observar el resultado.
 
-No presentar todavía esto como una vulnerabilidad de autorización.
+!!! note "Nota docente"
+    No explicar todavía este comportamiento como IDOR o Broken Access Control.
+
+    El objetivo en esta sesión es únicamente reforzar una idea:
+
+    > El cliente controla los parámetros que envía.
 
 Simplemente preguntar:
 
