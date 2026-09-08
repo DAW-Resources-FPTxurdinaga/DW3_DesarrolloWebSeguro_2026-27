@@ -3539,8 +3539,6 @@
       
         
       
-        
-      
     
     
     
@@ -3631,8 +3629,6 @@
           
         
       
-        
-      
     
     
     
@@ -3662,11 +3658,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
@@ -3680,34 +3671,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/2.revision-codigo/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3729,8 +3692,6 @@
       
         
           
-        
-      
         
       
     
@@ -3762,11 +3723,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
@@ -3780,34 +3736,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/3.pruebas-seguridad/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3829,8 +3757,6 @@
       
         
           
-        
-      
         
       
     
@@ -3862,11 +3788,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
@@ -3880,34 +3801,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/4.herramientas-verificacion/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -4017,34 +3910,6 @@
     
   
     Conclusiones
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/actividades/index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Actividades
   
 
     
@@ -4315,79 +4180,79 @@
 <li>APIs.</li>
 </ul>
 <p>Por ejemplo, en un formulario enviado mediante <code>POST</code>:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$email = $_POST[&#39;email&#39;] ?? &#39;&#39;;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">$nota = $_POST[&#39;nota&#39;] ?? null;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$email = $_POST['email'] ?? '';</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="x">$nota = $_POST['nota'] ?? null;</span>
 </span></code></pre></div>
 <p>Utilizar <code>??</code> evita avisos cuando el parámetro no existe y permite tratar explícitamente la ausencia del dato.</p>
 <h2 id="validar-campos-obligatorios">Validar campos obligatorios<a class="headerlink" href="#validar-campos-obligatorios" title="Permanent link">&para;</a></h2>
 <p>Antes de comprobar formatos o rangos, conviene verificar que los datos necesarios existen.</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">$email = trim($_POST[&#39;email&#39;] ?? &#39;&#39;);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">$email = trim($_POST['email'] ?? '');</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">if ($email === &#39;&#39;) {</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">    $errores[&#39;email&#39;] = &#39;El correo electrónico es obligatorio.&#39;;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="x">if ($email === '') {</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="x">    $errores['email'] = 'El correo electrónico es obligatorio.';</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>Para una nota:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">if (!isset($_POST[&#39;nota&#39;]) || $_POST[&#39;nota&#39;] === &#39;&#39;) {</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota es obligatoria.&#39;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">if (!isset($_POST['nota']) || $_POST['nota'] === '') {</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">    $errores['nota'] = 'La nota es obligatoria.';</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">}</span>
 </span></code></pre></div>
 <h2 id="validar-tipos-y-formatos">Validar tipos y formatos<a class="headerlink" href="#validar-tipos-y-formatos" title="Permanent link">&para;</a></h2>
 <p>PHP ofrece funciones que permiten validar algunos formatos habituales.</p>
 <h3 id="correo-electronico">Correo electrónico<a class="headerlink" href="#correo-electronico" title="Permanent link">&para;</a></h3>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">$email = trim($_POST[&#39;email&#39;] ?? &#39;&#39;);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">$email = trim($_POST['email'] ?? '');</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">    $errores[&#39;email&#39;] = &#39;El correo electrónico no tiene un formato válido.&#39;;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">    $errores['email'] = 'El correo electrónico no tiene un formato válido.';</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">}</span>
 </span></code></pre></div>
 <h3 id="numero-entero">Número entero<a class="headerlink" href="#numero-entero" title="Permanent link">&para;</a></h3>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$edad = filter_input(INPUT_POST, &#39;edad&#39;, FILTER_VALIDATE_INT);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$edad = filter_input(INPUT_POST, 'edad', FILTER_VALIDATE_INT);</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">if ($edad === false || $edad === null) {</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">    $errores[&#39;edad&#39;] = &#39;La edad debe ser un número entero.&#39;;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">    $errores['edad'] = 'La edad debe ser un número entero.';</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">}</span>
 </span></code></pre></div>
 <h3 id="numero-decimal">Número decimal<a class="headerlink" href="#numero-decimal" title="Permanent link">&para;</a></h3>
 <p>Para valores decimales puede realizarse una conversión y comprobar posteriormente el resultado.</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">$nota = filter_input(INPUT_POST, &#39;nota&#39;, FILTER_VALIDATE_FLOAT);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">$nota = filter_input(INPUT_POST, 'nota', FILTER_VALIDATE_FLOAT);</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">if ($nota === false || $nota === null) {</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota debe ser un número.&#39;;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">    $errores['nota'] = 'La nota debe ser un número.';</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">}</span>
 </span></code></pre></div>
 <h2 id="validar-rangos">Validar rangos<a class="headerlink" href="#validar-rangos" title="Permanent link">&para;</a></h2>
 <p>Comprobar el tipo no es suficiente. También deben aplicarse las restricciones propias del dato.</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$nota = filter_input(INPUT_POST, &#39;nota&#39;, FILTER_VALIDATE_FLOAT);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$nota = filter_input(INPUT_POST, 'nota', FILTER_VALIDATE_FLOAT);</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">if ($nota === false || $nota === null) {</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota debe ser un número.&#39;;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">    $errores['nota'] = 'La nota debe ser un número.';</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">} elseif ($nota &lt; 0 || $nota &gt; 10) {</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota debe estar comprendida entre 0 y 10.&#39;;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    $errores['nota'] = 'La nota debe estar comprendida entre 0 y 10.';</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>Un valor como <code>99</code> es numéricamente correcto, pero no es válido para una calificación.</p>
 <h2 id="validar-valores-permitidos">Validar valores permitidos<a class="headerlink" href="#validar-valores-permitidos" title="Permanent link">&para;</a></h2>
 <p>Cuando un campo solo admite un conjunto cerrado de valores, es preferible comprobarlo mediante una lista explícita.</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">$estadosPermitidos = [</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">    &#39;pendiente&#39;,</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">    &#39;aprobada&#39;,</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">    &#39;rechazada&#39;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">    'pendiente',</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">    'aprobada',</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">    'rechazada'</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="x">];</span>
 </span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">$estado = $_POST[&#39;estado&#39;] ?? &#39;&#39;;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">$estado = $_POST['estado'] ?? '';</span>
 </span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="x">if (!in_array($estado, $estadosPermitidos, true)) {</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="x">    $errores[&#39;estado&#39;] = &#39;El estado indicado no es válido.&#39;;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="x">    $errores['estado'] = 'El estado indicado no es válido.';</span>
 </span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>Este enfoque evita aceptar valores inesperados.</p>
 <h2 id="validar-longitud">Validar longitud<a class="headerlink" href="#validar-longitud" title="Permanent link">&para;</a></h2>
 <p>Las cadenas también deben respetar límites razonables.</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">$nombre = trim($_POST[&#39;nombre&#39;] ?? &#39;&#39;);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">$nombre = trim($_POST['nombre'] ?? '');</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">if (mb_strlen($nombre) &lt; 2 || mb_strlen($nombre) &gt; 60) {</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">    $errores[&#39;nombre&#39;] = &#39;El nombre debe tener entre 2 y 60 caracteres.&#39;;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">    $errores['nombre'] = 'El nombre debe tener entre 2 y 60 caracteres.';</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>Los límites deben definirse según las necesidades reales de la aplicación.</p>
@@ -4396,12 +4261,12 @@
 <p>Por ejemplo, en <strong>TxurdiGest</strong> una nota puede cumplir todas las reglas anteriores y, aun así, no debería aceptarse si el profesor intenta modificar las calificaciones de un grupo que no tiene asignado.</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">if (!$profesorTieneGrupo($usuarioId, $grupoId)) {</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="x">    http_response_code(403);</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">    exit(&#39;No dispone de permisos para realizar esta operación.&#39;);</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="x">    exit('No dispone de permisos para realizar esta operación.');</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>Otro ejemplo:</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">if ($alumnoYaEstaMatriculado($alumnoId, $moduloId)) {</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">    $errores[&#39;matricula&#39;] = &#39;El alumno ya está matriculado en este módulo.&#39;;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">    $errores['matricula'] = 'El alumno ya está matriculado en este módulo.';</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>Estas comprobaciones forman parte de la lógica de negocio y deben realizarse siempre en el servidor.</p>
@@ -4409,17 +4274,17 @@
 <p>Una forma sencilla de organizar la validación consiste en almacenar todos los errores antes de ejecutar la operación.</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">$errores = [];</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">$email = trim($_POST[&#39;email&#39;] ?? &#39;&#39;);</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$nota = filter_input(INPUT_POST, &#39;nota&#39;, FILTER_VALIDATE_FLOAT);</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">$email = trim($_POST['email'] ?? '');</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">$nota = filter_input(INPUT_POST, 'nota', FILTER_VALIDATE_FLOAT);</span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
 </span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="x">if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">    $errores[&#39;email&#39;] = &#39;El correo electrónico no es válido.&#39;;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="x">    $errores['email'] = 'El correo electrónico no es válido.';</span>
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="x">}</span>
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
 </span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="x">if ($nota === false || $nota === null) {</span>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota debe ser un número.&#39;;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="x">    $errores['nota'] = 'La nota debe ser un número.';</span>
 </span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="x">} elseif ($nota &lt; 0 || $nota &gt; 10) {</span>
-</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota debe estar comprendida entre 0 y 10.&#39;;</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="x">    $errores['nota'] = 'La nota debe estar comprendida entre 0 y 10.';</span>
 </span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="x">}</span>
 </span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
 </span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="x">if (!empty($errores)) {</span>
@@ -4433,12 +4298,12 @@
 <h2 id="validar-peticiones-json">Validar peticiones JSON<a class="headerlink" href="#validar-peticiones-json" title="Permanent link">&para;</a></h2>
 <p>En una API, los datos pueden llegar en el cuerpo de una petición JSON.</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">$datos = json_decode(</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">    file_get_contents(&#39;php://input&#39;),</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="x">    file_get_contents('php://input'),</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">    true</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">);</span>
 </span></code></pre></div>
 <p>Después deben validarse exactamente igual que cualquier otro dato recibido.</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">$nota = $datos[&#39;nota&#39;] ?? null;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">$nota = $datos['nota'] ?? null;</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">if (!is_numeric($nota)) {</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">    http_response_code(422);</span>
@@ -4464,11 +4329,11 @@
 <p>En una API puede utilizarse un código como <code>422 Unprocessable Content</code> junto con una respuesta JSON.</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="x">http_response_code(422);</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="x">header(&#39;Content-Type: application/json&#39;);</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="x">header('Content-Type: application/json');</span>
 </span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
 </span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="x">echo json_encode([</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="x">    &#39;errors&#39; =&gt; [</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="x">        &#39;nota&#39; =&gt; &#39;La nota debe estar comprendida entre 0 y 10.&#39;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="x">    'errors' =&gt; [</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="x">        'nota' =&gt; 'La nota debe estar comprendida entre 0 y 10.'</span>
 </span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="x">    ]</span>
 </span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="x">]);</span>
 </span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
@@ -4485,7 +4350,7 @@
 <p><strong>¿Cómo debe mostrarse este dato sin que se interprete como código?</strong></p>
 </blockquote>
 <p>Por ejemplo:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">$nombre = $_POST[&#39;nombre&#39;] ?? &#39;&#39;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">$nombre = $_POST['nombre'] ?? '';</span>
 </span></code></pre></div>
 <p>Comprobar que <code>$nombre</code> tiene una longitud válida no significa que pueda imprimirse directamente en HTML.</p>
 <p>La salida segura se estudiará en el apartado dedicado a XSS.</p>
@@ -4497,17 +4362,17 @@
 <p>El servidor podría realizar un flujo similar:</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="x">$errores = [];</span>
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="x">$alumnoId = filter_input(INPUT_POST, &#39;alumnoId&#39;, FILTER_VALIDATE_INT);</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="x">$nota = filter_input(INPUT_POST, &#39;nota&#39;, FILTER_VALIDATE_FLOAT);</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="x">$alumnoId = filter_input(INPUT_POST, 'alumnoId', FILTER_VALIDATE_INT);</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="x">$nota = filter_input(INPUT_POST, 'nota', FILTER_VALIDATE_FLOAT);</span>
 </span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
 </span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="x">if ($alumnoId === false || $alumnoId === null) {</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="x">    $errores[&#39;alumnoId&#39;] = &#39;El alumno indicado no es válido.&#39;;</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="x">    $errores['alumnoId'] = 'El alumno indicado no es válido.';</span>
 </span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="x">}</span>
 </span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
 </span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="x">if ($nota === false || $nota === null) {</span>
-</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota debe ser un número.&#39;;</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="x">    $errores['nota'] = 'La nota debe ser un número.';</span>
 </span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="x">} elseif ($nota &lt; 0 || $nota &gt; 10) {</span>
-</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="x">    $errores[&#39;nota&#39;] = &#39;La nota debe estar comprendida entre 0 y 10.&#39;;</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="x">    $errores['nota'] = 'La nota debe estar comprendida entre 0 y 10.';</span>
 </span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="x">}</span>
 </span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
 </span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="x">if (!empty($errores)) {</span>

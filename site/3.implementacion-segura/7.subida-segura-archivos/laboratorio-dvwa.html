@@ -3578,8 +3578,6 @@
       
         
       
-        
-      
     
     
     
@@ -3670,8 +3668,6 @@
           
         
       
-        
-      
     
     
     
@@ -3701,11 +3697,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
@@ -3719,34 +3710,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/2.revision-codigo/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3768,8 +3731,6 @@
       
         
           
-        
-      
         
       
     
@@ -3801,11 +3762,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
@@ -3819,34 +3775,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/3.pruebas-seguridad/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3868,8 +3796,6 @@
       
         
           
-        
-      
         
       
     
@@ -3901,11 +3827,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
@@ -3919,34 +3840,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/4.herramientas-verificacion/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -4056,34 +3949,6 @@
     
   
     Conclusiones
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/actividades/index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Actividades
   
 
     
@@ -4422,10 +4287,10 @@
 <p>Utiliza la opción de DVWA que permite visualizar el código fuente del ejercicio.</p>
 <p>Localiza las comprobaciones que se realizan antes de guardar el archivo.</p>
 <p>Busca especialmente si la aplicación utiliza únicamente elementos como:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">$_FILES[&#39;archivo&#39;][&#39;name&#39;]</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">$_FILES['archivo']['name']</span>
 </span></code></pre></div>
 <p>o:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$_FILES[&#39;archivo&#39;][&#39;type&#39;]</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$_FILES['archivo']['type']</span>
 </span></code></pre></div>
 <p>o una comprobación simple de extensión.</p>
 <p>La pregunta importante es:</p>
@@ -4434,19 +4299,19 @@
 </blockquote>
 <h2 id="4-identificar-una-validacion-insuficiente">4. Identificar una validación insuficiente<a class="headerlink" href="#4-identificar-una-validacion-insuficiente" title="Permanent link">&para;</a></h2>
 <p>Una implementación demasiado simple podría comprobar solo el nombre:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">$nombre = $_FILES[&#39;archivo&#39;][&#39;name&#39;];</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">$nombre = $_FILES['archivo']['name'];</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">if (!str_ends_with($nombre, &#39;.jpg&#39;)) {</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">    exit(&#39;Archivo no permitido.&#39;);</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">if (!str_ends_with($nombre, '.jpg')) {</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="x">    exit('Archivo no permitido.');</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>El problema es que el nombre está controlado por el cliente.</p>
 <p>Otro ejemplo insuficiente sería:</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">if (</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">    $_FILES[&#39;archivo&#39;][&#39;type&#39;]</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">    !== &#39;image/jpeg&#39;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="x">    $_FILES['archivo']['type']</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">    !== 'image/jpeg'</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="x">) {</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">    exit(&#39;Archivo no permitido.&#39;);</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">    exit('Archivo no permitido.');</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">}</span>
 </span></code></pre></div>
 <p>El tipo enviado por el navegador tampoco constituye una prueba fiable del contenido real.</p>
@@ -4489,34 +4354,34 @@
 <p>Una implementación más robusta debe combinar varias comprobaciones.</p>
 <h3 id="comprobar-el-resultado-de-la-subida">Comprobar el resultado de la subida<a class="headerlink" href="#comprobar-el-resultado-de-la-subida" title="Permanent link">&para;</a></h3>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">if (</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">    $_FILES[&#39;archivo&#39;][&#39;error&#39;]</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">    $_FILES['archivo']['error']</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">    !== UPLOAD_ERR_OK</span>
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="x">) {</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">    exit(&#39;Error de subida.&#39;);</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="x">    exit('Error de subida.');</span>
 </span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="x">}</span>
 </span></code></pre></div>
 <h3 id="limitar-el-tamano">Limitar el tamaño<a class="headerlink" href="#limitar-el-tamano" title="Permanent link">&para;</a></h3>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="x">$maxSize = 5 * 1024 * 1024;</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">if ($_FILES[&#39;archivo&#39;][&#39;size&#39;] &gt; $maxSize) {</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">    exit(&#39;Archivo demasiado grande.&#39;);</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="x">if ($_FILES['archivo']['size'] &gt; $maxSize) {</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="x">    exit('Archivo demasiado grande.');</span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="x">}</span>
 </span></code></pre></div>
 <h3 id="detectar-el-mime-en-el-servidor">Detectar el MIME en el servidor<a class="headerlink" href="#detectar-el-mime-en-el-servidor" title="Permanent link">&para;</a></h3>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="x">$finfo = new finfo(FILEINFO_MIME_TYPE);</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="x">$mime = $finfo-&gt;file(</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">    $_FILES[&#39;archivo&#39;][&#39;tmp_name&#39;]</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="x">    $_FILES['archivo']['tmp_name']</span>
 </span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="x">);</span>
 </span></code></pre></div>
 <h3 id="utilizar-una-lista-cerrada">Utilizar una lista cerrada<a class="headerlink" href="#utilizar-una-lista-cerrada" title="Permanent link">&para;</a></h3>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">$tiposPermitidos = [</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">    &#39;image/jpeg&#39; =&gt; &#39;jpg&#39;,</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">    &#39;image/png&#39; =&gt; &#39;png&#39;</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="x">    'image/jpeg' =&gt; 'jpg',</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="x">    'image/png' =&gt; 'png'</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="x">];</span>
 </span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
 </span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="x">if (!isset($tiposPermitidos[$mime])) {</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">    exit(&#39;Tipo no permitido.&#39;);</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="x">    exit('Tipo no permitido.');</span>
 </span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="x">}</span>
 </span></code></pre></div>
 <h3 id="generar-el-nombre-en-el-servidor">Generar el nombre en el servidor<a class="headerlink" href="#generar-el-nombre-en-el-servidor" title="Permanent link">&para;</a></h3>
@@ -4524,15 +4389,15 @@
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="x">$nombreSeguro = bin2hex(</span>
 </span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="x">    random_bytes(16)</span>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="x">) . &#39;.&#39; . $extension;</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="x">) . '.' . $extension;</span>
 </span></code></pre></div>
 <h3 id="guardar-mediante-move_uploaded_file">Guardar mediante <code>move_uploaded_file()</code><a class="headerlink" href="#guardar-mediante-move_uploaded_file" title="Permanent link">&para;</a></h3>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="x">$rutaDestino =</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="x">    &#39;/var/www/app/storage/uploads/&#39;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="x">    '/var/www/app/storage/uploads/'</span>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="x">    . $nombreSeguro;</span>
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
 </span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="x">move_uploaded_file(</span>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="x">    $_FILES[&#39;archivo&#39;][&#39;tmp_name&#39;],</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="x">    $_FILES['archivo']['tmp_name'],</span>
 </span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="x">    $rutaDestino</span>
 </span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="x">);</span>
 </span></code></pre></div>
@@ -4585,11 +4450,11 @@
 <h2 id="aplicacion-a-txurdigest">Aplicación a TxurdiGest<a class="headerlink" href="#aplicacion-a-txurdigest" title="Permanent link">&para;</a></h2>
 <p>Supongamos que TxurdiGest permite subir un justificante PDF.</p>
 <p>Una implementación insegura podría hacer:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="x">$nombre = $_FILES[&#39;documento&#39;][&#39;name&#39;];</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="x">$nombre = $_FILES['documento']['name'];</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="x">move_uploaded_file(</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="x">    $_FILES[&#39;documento&#39;][&#39;tmp_name&#39;],</span>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="x">    &#39;/var/www/html/uploads/&#39; . $nombre</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="x">    $_FILES['documento']['tmp_name'],</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="x">    '/var/www/html/uploads/' . $nombre</span>
 </span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="x">);</span>
 </span></code></pre></div>
 <p>La aplicación está confiando en el nombre enviado y guarda directamente el archivo en una ubicación pública.</p>

@@ -3578,8 +3578,6 @@
       
         
       
-        
-      
     
     
     
@@ -3670,8 +3668,6 @@
           
         
       
-        
-      
     
     
     
@@ -3701,11 +3697,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
@@ -3719,34 +3710,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/2.revision-codigo/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3768,8 +3731,6 @@
       
         
           
-        
-      
         
       
     
@@ -3801,11 +3762,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
@@ -3819,34 +3775,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/3.pruebas-seguridad/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3868,8 +3796,6 @@
       
         
           
-        
-      
         
       
     
@@ -3901,11 +3827,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
@@ -3919,34 +3840,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/4.herramientas-verificacion/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Práctica
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -4056,34 +3949,6 @@
     
   
     Conclusiones
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/actividades/index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Actividades
   
 
     
@@ -4387,38 +4252,38 @@
 </blockquote>
 <h2 id="salida-segura-en-php">Salida segura en PHP<a class="headerlink" href="#salida-segura-en-php" title="Permanent link">&para;</a></h2>
 <p>Una implementación insegura puede imprimir directamente un valor recibido:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$comentario = $_POST[&#39;comentario&#39;] ?? &#39;&#39;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$comentario = $_POST['comentario'] ?? '';</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">echo $comentario;</span>
 </span></code></pre></div>
 <p>Si <code>$comentario</code> contiene HTML, el navegador puede interpretarlo.</p>
 <p>Por ejemplo:</p>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;XSS&#39;</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="s1">'XSS'</span><span class="p">)&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>podría convertirse en código ejecutable dentro de la página.</p>
 <h2 id="escapar-html-con-htmlspecialchars">Escapar HTML con <code>htmlspecialchars()</code><a class="headerlink" href="#escapar-html-con-htmlspecialchars" title="Permanent link">&para;</a></h2>
 <p>Cuando un dato debe mostrarse como texto dentro de HTML, PHP ofrece <code>htmlspecialchars()</code>.</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">$comentario = $_POST[&#39;comentario&#39;] ?? &#39;&#39;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">$comentario = $_POST['comentario'] ?? '';</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">echo htmlspecialchars(</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">    $comentario,</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    ENT_QUOTES,</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &#39;UTF-8&#39;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    'UTF-8'</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">);</span>
 </span></code></pre></div>
 <p>Esta función transforma caracteres especiales para que el navegador los trate como texto.</p>
 <p>Por ejemplo:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;script&gt;alert(&#39;XSS&#39;)&lt;/script&gt;
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;script&gt;alert('XSS')&lt;/script&gt;
 </span></code></pre></div>
 <p>se representa internamente utilizando entidades HTML en lugar de interpretarse como una etiqueta <code>&lt;script&gt;</code>.</p>
 <p>El usuario verá el contenido, pero el navegador no lo ejecutará.</p>
 <h2 id="escapar-en-el-momento-de-generar-la-salida">Escapar en el momento de generar la salida<a class="headerlink" href="#escapar-en-el-momento-de-generar-la-salida" title="Permanent link">&para;</a></h2>
 <p>Una práctica recomendable es mantener el dato original y aplicar el escape cuando se incorpora al HTML.</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$nombre = $usuario[&#39;nombre&#39;];</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$nombre = $usuario['nombre'];</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">echo &#39;&lt;p&gt;&#39; .</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">    htmlspecialchars($nombre, ENT_QUOTES, &#39;UTF-8&#39;) .</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    &#39;&lt;/p&gt;&#39;;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">echo '&lt;p&gt;' .</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">    htmlspecialchars($nombre, ENT_QUOTES, 'UTF-8') .</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    '&lt;/p&gt;';</span>
 </span></code></pre></div>
 <p>Esto permite conservar la información original en la base de datos y adaptar posteriormente su representación al contexto donde vaya a utilizarse.</p>
 <div class="admonition tip">
@@ -4429,9 +4294,9 @@
 <p>También puede utilizarse directamente dentro del HTML:</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">&lt;p&gt;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="nv">$usuario</span><span class="p">[</span><span class="s1">&#39;nombre&#39;</span><span class="p">],</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="nv">$usuario</span><span class="p">[</span><span class="s1">'nombre'</span><span class="p">],</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        <span class="nx">ENT_QUOTES</span><span class="p">,</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="s1">&#39;UTF-8&#39;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        <span class="s1">'UTF-8'</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="p">)</span> <span class="cp">?&gt;</span>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="x">&lt;/p&gt;</span>
 </span></code></pre></div>
@@ -4445,7 +4310,7 @@
 </ul>
 <h2 id="no-utilizar-strip_tags-como-proteccion-general">No utilizar <code>strip_tags()</code> como protección general<a class="headerlink" href="#no-utilizar-strip_tags-como-proteccion-general" title="Permanent link">&para;</a></h2>
 <p>Puede resultar tentador eliminar etiquetas HTML:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$comentario = strip_tags($_POST[&#39;comentario&#39;]);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$comentario = strip_tags($_POST['comentario']);</span>
 </span></code></pre></div>
 <p>Pero <code>strip_tags()</code> no sustituye al escape contextual.</p>
 <p>Además, eliminar contenido puede modificar datos que la aplicación debería conservar.</p>
@@ -4471,11 +4336,11 @@
 <div class="language-html highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Aquí aparece un dato<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>no es el mismo contexto que:</p>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;AQUI_APARECE_UN_DATO&quot;</span><span class="p">&gt;</span>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"AQUI_APARECE_UN_DATO"</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>o:</p>
 <div class="language-html highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;AQUI_APARECE_UN_DATO&quot;</span><span class="p">;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">valor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AQUI_APARECE_UN_DATO"</span><span class="p">;</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></code></pre></div>
 <p>En este módulo trabajaremos principalmente con salida de texto en HTML y manipulación segura del DOM.</p>
@@ -4483,7 +4348,7 @@
 <p>JavaScript puede introducir datos en una página de diferentes formas.</p>
 <p>Una de las diferencias más importantes es la existente entre <code>innerHTML</code> y <code>textContent</code>.</p>
 <h3 id="innerhtml"><code>innerHTML</code><a class="headerlink" href="#innerhtml" title="Permanent link">&para;</a></h3>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">comentario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;strong&gt;Hola&lt;/strong&gt;&#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">comentario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'&lt;strong&gt;Hola&lt;/strong&gt;'</span><span class="p">;</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nx">elemento</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">comentario</span><span class="p">;</span>
 </span></code></pre></div>
@@ -4506,7 +4371,7 @@
 </span></code></pre></div>
 <p>No lo convertirá en una etiqueta HTML.</p>
 <h2 id="comparacion">Comparación<a class="headerlink" href="#comparacion" title="Permanent link">&para;</a></h2>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">dato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;em&gt;Prueba&lt;/em&gt;&#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">dato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'&lt;em&gt;Prueba&lt;/em&gt;'</span><span class="p">;</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
 </span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nx">elemento1</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dato</span><span class="p">;</span>
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nx">elemento2</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">dato</span><span class="p">;</span>
@@ -4535,7 +4400,7 @@
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="sb">`</span><span class="p">;</span>
 </span></code></pre></div>
 <p>pueden crearse los elementos mediante el DOM:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">li</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">li</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">);</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nx">li</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombreUsuario</span><span class="p">;</span>
 </span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
@@ -4545,13 +4410,13 @@
 <h2 id="ejemplo-con-datos-recibidos-desde-una-api">Ejemplo con datos recibidos desde una API<a class="headerlink" href="#ejemplo-con-datos-recibidos-desde-una-api" title="Permanent link">&para;</a></h2>
 <p>Supongamos que una aplicación recibe:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="nt">&quot;nombre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ane&quot;</span><span class="p">,</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nt">&quot;observacion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Necesita reforzar JavaScript&quot;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="nt">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ane"</span><span class="p">,</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nt">"observacion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Necesita reforzar JavaScript"</span>
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Una implementación segura puede ser:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#nombre&#39;</span><span class="p">);</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">observacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#observacion&#39;</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#nombre'</span><span class="p">);</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">observacion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'#observacion'</span><span class="p">);</span>
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
 </span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="nx">nombre</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">nombre</span><span class="p">;</span>
 </span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nx">observacion</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">datos</span><span class="p">.</span><span class="nx">observacion</span><span class="p">;</span>
@@ -4567,7 +4432,7 @@
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="x">    </span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nb">htmlspecialchars</span><span class="p">(</span>
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>        <span class="nv">$observacion</span><span class="p">,</span>
 </span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>        <span class="nx">ENT_QUOTES</span><span class="p">,</span>
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>        <span class="s1">&#39;UTF-8&#39;</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>        <span class="s1">'UTF-8'</span>
 </span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>    <span class="p">)</span> <span class="cp">?&gt;</span>
 </span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="x">&lt;/p&gt;</span>
 </span></code></pre></div>
@@ -4582,17 +4447,17 @@
 <p><code>innerHTML</code> no es inseguro por sí mismo.</p>
 <p>Puede utilizarse cuando el contenido HTML está completamente controlado por la aplicación.</p>
 <p>Por ejemplo:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;strong&gt;Operación completada&lt;/strong&gt;&#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'&lt;strong&gt;Operación completada&lt;/strong&gt;'</span><span class="p">;</span>
 </span></code></pre></div>
 <p>Aquí no intervienen datos externos.</p>
 <p>El problema aparece cuando se mezclan cadenas HTML con información no confiable:</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="s1">&#39;&lt;strong&gt;Usuario:&lt;/strong&gt; &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombreUsuario</span><span class="p">;</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span><span class="s1">'&lt;strong&gt;Usuario:&lt;/strong&gt; '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">nombreUsuario</span><span class="p">;</span>
 </span></code></pre></div>
 <p>Si <code>nombreUsuario</code> puede ser manipulado, la construcción deja de ser segura.</p>
 <p>Una alternativa es:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">etiqueta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;strong&#39;</span><span class="p">);</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nx">etiqueta</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Usuario: &#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">etiqueta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'strong'</span><span class="p">);</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nx">etiqueta</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Usuario: '</span><span class="p">;</span>
 </span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
 </span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">etiqueta</span><span class="p">);</span>
 </span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="nx">mensaje</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span>

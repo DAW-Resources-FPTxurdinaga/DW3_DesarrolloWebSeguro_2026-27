@@ -47,7 +47,9 @@ La documentación actúa como una guía de consulta permanente y como apoyo para
 
 ## Recomendaciones
 
-Se recomienda seguir el orden de los bloques, ya que cada uno se apoya en los conocimientos adquiridos en el anterior.
+Esta documentación no está pensada únicamente para realizar una lectura lineal de principio a fin.
+
+Durante el curso se indicarán los apartados que deben trabajarse en cada momento. Muchos de ellos volverán a consultarse durante el desarrollo de los retos.
 
 Aunque algunos conceptos puedan parecer teóricos, todos volverán a utilizarse posteriormente durante el desarrollo, el despliegue y la auditoría de aplicaciones reales.
 

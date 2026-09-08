@@ -47,7 +47,9 @@ Dokumentazio honek etengabeko kontsulta-gida gisa balioko du, baita erronketan h
 
 ## Gomendioak
 
-Blokeak proposatutako ordenan jarraitzea gomendatzen da, bakoitza aurrekoan eskuratutako ezagutzetan oinarritzen baita.
+Dokumentazio hau ez dago hasieratik amaierara modu linealean irakurtzeko soilik pentsatuta. 
+
+Ikasturtean zehar, une bakoitzean landu beharreko atalak adieraziko dira. Horietako asko berriro kontsultatuko dira erronkak garatzeko prozesuan.
 
 Kontzeptu batzuk hasieran teorikoak iruditu arren, guztiak berriro erabiliko dira aplikazio errealen garapenean, hedapenean eta auditorian.
 

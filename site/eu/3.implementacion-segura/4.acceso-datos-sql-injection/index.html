@@ -3299,8 +3299,6 @@
       
         
       
-        
-      
     
     
     
@@ -3391,8 +3389,6 @@
           
         
       
-        
-      
     
     
     
@@ -3422,11 +3418,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
@@ -3440,34 +3431,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/2.revision-codigo/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Praktika
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3489,8 +3452,6 @@
       
         
           
-        
-      
         
       
     
@@ -3522,11 +3483,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
@@ -3540,34 +3496,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/3.pruebas-seguridad/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Praktika
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3589,8 +3517,6 @@
       
         
           
-        
-      
         
       
     
@@ -3622,11 +3548,6 @@
 
             </a>
             
-              
-              <label class="md-nav__link " for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
@@ -3640,34 +3561,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/4.herramientas-verificacion/practica.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Praktika
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
               
             
           </ul>
@@ -3777,34 +3670,6 @@
     
   
     Ondorioak
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../5.verificacion-seguridad/actividades/index.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Jarduerak
   
 
     
@@ -3974,9 +3839,9 @@
 <h2 id="arazoa-sql-n-ez-dago-baizik-eta-kontsulta-nola-eraikitzen-den">Arazoa SQL-n ez dago, baizik eta kontsulta nola eraikitzen den<a class="headerlink" href="#arazoa-sql-n-ez-dago-baizik-eta-kontsulta-nola-eraikitzen-den" title="Permanent link">&para;</a></h2>
 <p>Demagun bilaketa sinple bat posta elektronikoaren arabera.</p>
 <p>Inplementazio ez-seguru batek honela izan lezake:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$email = $_POST[&#39;email&#39;] ?? &#39;&#39;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="x">$email = $_POST['email'] ?? '';</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">$sql = &quot;SELECT * FROM usuarios WHERE email = &#39;$email&#39;&quot;;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="x">$sql = "SELECT * FROM usuarios WHERE email = '$email'";</span>
 </span></code></pre></div>
 <p>Hemen <code>$email</code> balioa zuzenean kontsultaren barruan konkatena da.</p>
 <p>Aplikazioak bi gauza desberdin nahasten ari da:</p>
@@ -3992,12 +3857,12 @@
 </blockquote>
 <p>PHP-n PDO-rekin kontsulta prestatuak erabiliz lortzen da.</p>
 <p>Adibidez:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">$sql = &quot;SELECT * FROM usuarios WHERE email = :email&quot;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">$sql = "SELECT * FROM usuarios WHERE email = :email";</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">$stmt = $pdo-&gt;prepare($sql);</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">$stmt-&gt;execute([</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &#39;email&#39; =&gt; $email</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    'email' =&gt; $email</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">]);</span>
 </span></code></pre></div>
 <p>Orain <code>:email</code> parametro bat da.</p>
@@ -4046,32 +3911,32 @@
 <li>zerbitzu kanpokoak.</li>
 </ul>
 <p>Adibidez:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$id = $_GET[&#39;id&#39;] ?? &#39;&#39;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">$id = $_GET['id'] ?? '';</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">$sql = &quot;SELECT * FROM alumnos WHERE id = $id&quot;;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">$sql = "SELECT * FROM alumnos WHERE id = $id";</span>
 </span></code></pre></div>
 <p>Nahiz eta interfazea normalean baliozko identifikatzaileak sortu, eskaera alda daiteke.</p>
 <p>Kontsulta oraindik eraikuntza ez-seguru batean dago.</p>
 <h2 id="txurdigest-en-adibidea">TxurdiGest-en adibidea<a class="headerlink" href="#txurdigest-en-adibidea" title="Permanent link">&para;</a></h2>
 <p>Demagun TxurdiGest-ek ikasle baten datuak identifikatzaile baten bidez kontsultatzeko aukera ematen duela.</p>
 <p>Inplementazio ez-seguru batek honela eraikiko luke:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">$id = $_GET[&#39;id&#39;] ?? &#39;&#39;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="x">$id = $_GET['id'] ?? '';</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">$sql = &quot;SELECT * FROM alumnos WHERE id = $id&quot;;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="x">$sql = "SELECT * FROM alumnos WHERE id = $id";</span>
 </span></code></pre></div>
 <p>Modu segurua parametro bat erabiltzea da:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$sql = &quot;SELECT * FROM alumnos WHERE id = :id&quot;;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="x">$sql = "SELECT * FROM alumnos WHERE id = :id";</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="x">$stmt = $pdo-&gt;prepare($sql);</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="x">$stmt-&gt;execute([</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    &#39;id&#39; =&gt; $id</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="x">    'id' =&gt; $id</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="x">]);</span>
 </span></code></pre></div>
 <p>Gainera, identifikatzailea erabili aurretik balidatu beharko litzateke:</p>
 <div class="language-php highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">$id = filter_input(</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">    INPUT_GET,</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">    &#39;id&#39;,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">    'id',</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">    FILTER_VALIDATE_INT</span>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="x">);</span>
 </span></code></pre></div>
@@ -4080,17 +3945,17 @@
 <h2 id="irakurketa-eta-idazketa-kontsultak">Irakurketa eta idazketa kontsultak<a class="headerlink" href="#irakurketa-eta-idazketa-kontsultak" title="Permanent link">&para;</a></h2>
 <p>Parametrizazioa bai irakurtzeko bai aldatzeko kontsultetan erabili behar da.</p>
 <p>Adibidez:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">$sql = &quot;</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">$sql = "</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">    UPDATE alumnos</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">    SET email = :email</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">    WHERE id = :id</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">&quot;;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="x">";</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
 </span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="x">$stmt = $pdo-&gt;prepare($sql);</span>
 </span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="x">$stmt-&gt;execute([</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">    &#39;email&#39; =&gt; $email,</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">    &#39;id&#39; =&gt; $id</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="x">    'email' =&gt; $email,</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="x">    'id' =&gt; $id</span>
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="x">]);</span>
 </span></code></pre></div>
 <p>Berbera aplikatzen da:</p>
@@ -4103,12 +3968,12 @@
 <h2 id="ez-egin-behar-dena">Ez egin behar dena<a class="headerlink" href="#ez-egin-behar-dena" title="Permanent link">&para;</a></h2>
 <p>Ez da gomendagarria kontsulta babestea kate-konkatenezioak eta iragazki improvisatuekin saiatzea.</p>
 <p>Adibidez:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">$email = str_replace(&quot;&#39;&quot;, &quot;&quot;, $_POST[&#39;email&#39;]);</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">$email = str_replace("'", "", $_POST['email']);</span>
 </span></code></pre></div>
 <p>edo:</p>
-<div class="language-php highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">$sql = &quot;SELECT * FROM usuarios WHERE email = &#39;&quot; .</span>
+<div class="language-php highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">$sql = "SELECT * FROM usuarios WHERE email = '" .</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="x">       addslashes($email) .</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">       &quot;&#39;&quot;;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="x">       "'";</span>
 </span></code></pre></div>
 <p>Soluzio hauek datuaren arazoa eta kontsultaren eraikuntza nahasten dituzte eta segurtasun sentsazio faltsua sor dezakete.</p>
 <h2 id="atalak">Atalak<a class="headerlink" href="#atalak" title="Permanent link">&para;</a></h2>
