@@ -10,7 +10,7 @@ theme:
   name: material
   language: es
   logo: images/Icono_TX.png
-  favicon: http://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png
+  favicon: https://fptxurdinaga.eus/wp-content/uploads/2022/10/favicon-96x96-1.png
   custom_dir: overrides
 
   features:
